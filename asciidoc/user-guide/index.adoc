@@ -1,6 +1,6 @@
 :sectnum:
 
-= Index
+= DINA User Guide
 :leveloffset: 1
 :icons: font
 
