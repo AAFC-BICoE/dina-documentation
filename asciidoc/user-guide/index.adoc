@@ -1,0 +1,9 @@
+:sectnum:
+
+= Index
+:leveloffset: 1
+:icons: font
+
+NOTE: To search the User Guide, press Ctrl+f and enter a keyword.
+
+include::glossary.adoc[]
