@@ -1,3 +1,5 @@
+= Glossary
+
 [[agent-string]]
 == Agent String
 In-place, in-context verbatim, character-by-character representations of one or more person and/or one or more organization. Example: "M. et Mme Jacques Brossard" as Verbatim Collector in a Collecting Event.
