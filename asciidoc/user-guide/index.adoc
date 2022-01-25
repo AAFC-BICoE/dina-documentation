@@ -1,4 +1,4 @@
-:sectnum:
+:sectnums:
 
 = DINA User Guide
 :leveloffset: 1
