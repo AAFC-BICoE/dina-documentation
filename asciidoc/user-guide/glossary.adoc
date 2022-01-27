@@ -35,10 +35,6 @@ Fixed values include: Whole Organism, Molecular Sample, Organism Part or Mixed O
 == Person
 A definitive, canonical representation of a human in the Agent module that has been ideally disambiguated through inclusion of an externally referenced identifier.
 
-[[preparation-type]]
-== Preparation Type
-A noun representing the state of a material sample. Examples: sheet, liquid nitrogen
-
 [[reverse-geocoding]]
 == Reverse geocoding
 Reverse geocoding is the process of converting a location as described by geographic coordinates (latitude, longitude) to a human-readable place name.
