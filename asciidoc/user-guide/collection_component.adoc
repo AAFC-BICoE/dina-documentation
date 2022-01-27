@@ -8,7 +8,7 @@ A Collection represents the top entity that can contain material-sample. Top col
 
 [[organism]]
 == Organism
-A particular organism or defined group of organisms considered to be taxonomically homogeneous. [DarwinCore Definition](https://dwc.tdwg.org/terms/#organism).
+A particular organism or defined group of organisms considered to be taxonomically homogeneous. https://dwc.tdwg.org/terms/#organism[DarwinCore Definition].
 
 [[project]]
 == Project
