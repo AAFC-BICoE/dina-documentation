@@ -14,3 +14,5 @@ A Collection represents the top entity that can contain material-sample. Top col
 
 [[preparation-type]]
 == Preparation Type
+
+A noun representing the state of a material sample. Examples: sheet, liquid nitrogen
