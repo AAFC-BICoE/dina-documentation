@@ -16,12 +16,6 @@ Georeferencing means to associate an object with a position in physical space. P
 [[habitat]]
 == Habitat
 
-[[mat-sample]]
-== Material Sample
-A physical result of a sampling event.
-
-In natural history collections, the material sample is typically collected, and either preserved or destructively processed. (from Darwin Core)
-
 [[mat-samp-state]]
 == Material Sample State
 Represents the state of a material sample when its condition is negatively impacted. Fixed values include: destroyed, damaged, lost or decommissioned
