@@ -9,15 +9,8 @@ A Collection represents the top entity that can contain material-sample. Top col
 [[project]]
 == Project
 
-[[agent-component]]
-== Agent Component
+[[collection-method]]
+== Collection Method
 
-[[obj-store-component]]
-== Object-Store Component
-
-[[identifiers]]
-== Identifiers
-
-All object in DINA are identified with UUID (universally unique identifier). While this type of identifier is not considered human-readable (123e4567-e89b-12d3-a456-426614174000) it has the property to be virtually universally unique (chances of duplicates are close enough to zero to be considered negligible). Objects can be uniquely identifed even outside DINA the DINA system.
-
-
+[[preparation-type]]
+== Preparation Type
