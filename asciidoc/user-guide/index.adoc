@@ -6,8 +6,8 @@
 
 NOTE: To search the User Guide, press Ctrl+f and enter a keyword.
 
-include::Glossary.adoc[Glossary]
+include::glossary.adoc[Glossary]
 
-include::Collection_component.adoc[]
+include::general_concepts.adoc[]
 
-include::General_concepts.adoc[]
+include::collection_component.adoc[]
