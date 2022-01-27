@@ -437,50 +437,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article toc2 toc-left">
+<body class="article">
 <div id="header">
 <h1>DINA User Guide</h1>
-<div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_glossary">1. Glossary</a>
-<ul class="sectlevel2">
-<li><a href="#agent-string">1.1. Agent String</a></li>
-<li><a href="#geo-names">1.2. Geographic names</a></li>
-<li><a href="#geoferencing">1.3. Georeferencing</a></li>
-<li><a href="#habitat">1.4. Habitat</a></li>
-<li><a href="#mat-sample">1.5. Material Sample</a></li>
-<li><a href="#mat-samp-state">1.6. Material Sample State</a></li>
-<li><a href="#mat-samp-type">1.7. Material Sample Type</a></li>
-<li><a href="#person">1.8. Person</a></li>
-<li><a href="#preparation-type">1.9. Preparation Type</a></li>
-<li><a href="#reverse-geocoding">1.10. Reverse geocoding</a></li>
-</ul>
-</li>
-<li><a href="#collection-component">2. Collection Component</a>
-<ul class="sectlevel2">
-<li><a href="#collection">2.1. Collection</a></li>
-<li><a href="#project">2.2. Project</a></li>
-<li><a href="#agent-component">2.3. Agent Component</a></li>
-<li><a href="#obj-store-component">2.4. Object-Store Component</a></li>
-<li><a href="#identifiers">2.5. Identifiers</a></li>
-</ul>
-</li>
-<li><a href="#general-concepts">3. General Concepts</a>
-<ul class="sectlevel2">
-<li><a href="#group">3.1. Group</a></li>
-<li><a href="#role">3.2. Role</a></li>
-<li><a href="#permissons">3.3. Permissions</a></li>
-<li><a href="#user">3.4. User</a></li>
-<li><a href="#managed_attributes">3.5. Managed Attributes</a></li>
-</ul>
-</li>
-</ul>
-</div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -493,180 +454,19 @@ To search the User Guide, press Ctrl+f and enter a keyword.
 </tr>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_glossary">1. Glossary</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="agent-string">1.1. Agent String</h3>
 <div class="paragraph">
-<p>In-place, in-context verbatim, character-by-character representations of one or more person and/or one or more organization. Example: "M. et Mme Jacques Brossard" as Verbatim Collector in a Collecting Event.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="geo-names">1.2. Geographic names</h3>
-<div class="paragraph">
-<p>Names of any geographical or topographical feature of public or historical interest. A geographical name is a proper noun applied to a natural, man-made or cultural feature on Earth. A feature can have different names in one or several languages and the names may be provided, together with appropriate information on the feature, in different products like maps and gazetteers as well as respective services. Based on defintion from <a href="https://inspire.ec.europa.eu/theme/gn">EU INSPIRE</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="geoferencing">1.3. Georeferencing</h3>
-<div class="paragraph">
-<p>Georeferencing means to associate an object with a position in physical space. Postion is most commonly represented using a coordinate reference system, which in turn can be related to a geodetic reference system such as WGS-84.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="habitat">1.4. Habitat</h3>
-
-</div>
-<div class="sect2">
-<h3 id="mat-sample">1.5. Material Sample</h3>
-<div class="paragraph">
-<p>A physical result of a sampling event.</p>
+<p>Unresolved directive in index.adoc - include::glossary.adoc[Glossary]</p>
 </div>
 <div class="paragraph">
-<p>In natural history collections, the material sample is typically collected, and either preserved or destructively processed. (from Darwin Core)</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="mat-samp-state">1.6. Material Sample State</h3>
-<div class="paragraph">
-<p>Represents the state of a material sample when its condition is negatively impacted. Fixed values include: destroyed, damaged, lost or decommissioned</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="mat-samp-type">1.7. Material Sample Type</h3>
-<div class="paragraph">
-<p>A Material Sample is a physical result of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed. A Material Sample Type is a system-defined term that prescribes the downstream expectations and logic in how derivative (or child) Material Samples are to be interpreted and digitally managed.
-Fixed values include: Whole Organism, Molecular Sample, Organism Part or Mixed Organisms.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="person">1.8. Person</h3>
-<div class="paragraph">
-<p>A definitive, canonical representation of a human in the Agent module that has been ideally disambiguated through inclusion of an externally referenced identifier.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="preparation-type">1.9. Preparation Type</h3>
-<div class="paragraph">
-<p>A noun representing the state of a material sample. Examples: sheet, liquid nitrogen</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="reverse-geocoding">1.10. Reverse geocoding</h3>
-<div class="paragraph">
-<p>Reverse geocoding is the process of converting a location as described by geographic coordinates (latitude, longitude) to a human-readable place name.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="collection-component">2. Collection Component</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="collection">2.1. Collection</h3>
-<div class="paragraph">
-<p>A Collection represents the top entity that can contain material-sample. Top collections (or parent collections) generally represent a natural history collection or a laboratory. A collection can contain multiple sub-collection(s).</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="project">2.2. Project</h3>
-
-</div>
-<div class="sect2">
-<h3 id="agent-component">2.3. Agent Component</h3>
-
-</div>
-<div class="sect2">
-<h3 id="obj-store-component">2.4. Object-Store Component</h3>
-
-</div>
-<div class="sect2">
-<h3 id="identifiers">2.5. Identifiers</h3>
-<div class="paragraph">
-<p>All object in DINA are identified with UUID (universally unique identifier). While this type of identifier is not considered human-readable (123e4567-e89b-12d3-a456-426614174000) it has the property to be virtually universally unique (chances of duplicates are close enough to zero to be considered negligible). Objects can be uniquely identifed even outside DINA the DINA system.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="general-concepts">3. General Concepts</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="group">3.1. Group</h3>
-<div class="paragraph">
-<p>Groups are used to define set of users for administration purpose (mostly permissions). They usually align with collections.
-A user can belong to more than 1 group.</p>
+<p>Unresolved directive in index.adoc - include::general_concepts.adoc[]</p>
 </div>
 <div class="paragraph">
-<p>Groups are also used to defined who owns an object. For example, an object in the object store always belongs to a group.
-Objects can only have 1 owner.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="role">3.2. Role</h3>
-<div class="paragraph">
-<p>Roles are specific to groups. A Collection Manager in Group A is not Collection Manager in Group B.</p>
-</div>
-<div class="paragraph">
-<p>Current roles are:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Administrator</p>
-</li>
-<li>
-<p>Collection Manager</p>
-</li>
-<li>
-<p>Staff</p>
-</li>
-<li>
-<p>Student</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="permissons">3.3. Permissions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Admins can do everything</p>
-</li>
-<li>
-<p>Read permission are given to all authenticated user</p>
-</li>
-<li>
-<p>For most of the objects, all members of a group will have Write permission for objects within that same group (Collecting-Event, Material Sample)</p>
-</li>
-<li>
-<p>For some objects, Write permission are only available to the Collection Manager role (Agent, Managed Attribute)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="user">3.4. User</h3>
-<div class="paragraph">
-<p>Users (when enabled) can access the system. What a user can and cannot do is based on the group(s)/permission(s). When using an external Identity Provider (e.g. ESAS) the user account must be linked to the Identity Provider account. Once done, the user will be able to use a third-party authentication (e.g. ESAS) to access the system.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="managed_attributes">3.5. Managed Attributes</h3>
-<div class="paragraph">
-<p>Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field.</p>
-</div>
-</div>
-</div>
+<p>Unresolved directive in index.adoc - include::collection_component.adoc[]</p>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-01-27 01:17:48 UTC
+Last updated 2022-01-27 01:19:35 UTC
 </div>
 </div>
 </body>
