@@ -29,6 +29,17 @@ Fixed values include: Whole Organism, Molecular Sample, Organism Part or Mixed O
 == Person
 A definitive, canonical representation of a human in the Agent module that has been ideally disambiguated through inclusion of an externally referenced identifier.
 
+[[preparation-fixative]]
+== Preparation Fixative
+Solution that was applied to or in which the material sample is preserved.
+Examples: EtOH 95%, EtOH 75%, EtOH 70%, saline, glue
+
+[[preparation-medium]]
+== Preparation Medium
+Additional, typically inert physical environments or objects in which or on which the organism in a material sample is stored. It does not express the state of the organism nor the fixatives used but rather the materials that allow the organism to be presented.
+
+Examples: pinned, glass vial, plastic jar, glass jar, microscope slide, acid-free paper, sticky trap/card, Eppendorf tube
+
 [[preparation-substrate]]
 == Preparation Substrate
 Material on which the organism in the material sample is presented or grows.
