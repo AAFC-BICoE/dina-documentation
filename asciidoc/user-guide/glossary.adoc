@@ -29,6 +29,11 @@ Fixed values include: Whole Organism, Molecular Sample, Organism Part or Mixed O
 == Person
 A definitive, canonical representation of a human in the Agent module that has been ideally disambiguated through inclusion of an externally referenced identifier.
 
+[[preparation-substrate]]
+== Preparation Substrate
+Material on which the organism in the material sample is presented or grows.
+Examples: rock, log, agar
+
 [[reverse-geocoding]]
 == Reverse geocoding
 Reverse geocoding is the process of converting a location as described by geographic coordinates (latitude, longitude) to a human-readable place name.
