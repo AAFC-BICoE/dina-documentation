@@ -12,6 +12,13 @@ A Collection represents the top entity that can contain material-sample. Top col
 Darwin Core defines "event" as : An action that occurs at some location during some time. (from https://dwc.tdwg.org/terms/#event[DarwinCore]).
 In a Collection Event, the action is the extration from nature.
 
+[[collection_numbers]]
+=== Collection Numbers
+
+An identifier given to the event in the field. Often serves as a link between field notes and the Event.
+
+Same as DarwinCore https://dwc.tdwg.org/terms/#dwc:fieldNumber[fieldNumber]
+
 [[mat-sample]]
 == Material Sample
 A physical result of a sampling event.
