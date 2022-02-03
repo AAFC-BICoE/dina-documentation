@@ -28,6 +28,10 @@ A particular organism or defined group of organisms considered to be taxonomical
 [[collection-method]]
 == Collection Method
 
+Methods used during an Collecting Event. Examples: UV light trap, bottom traw
+
+Similar to DarwinCore https://dwc.tdwg.org/terms/#dwc:samplingProtocol[samplingProtocol].
+
 [[preparation-type]]
 == Preparation Type
 
