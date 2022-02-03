@@ -19,6 +19,13 @@ An identifier given to the event in the field. Often serves as a link between fi
 
 Same as DarwinCore https://dwc.tdwg.org/terms/#dwc:fieldNumber[fieldNumber]
 
+[[collection-method]]
+=== Collection Method
+
+Method used during an Collecting Event. Examples: UV light trap, bottom traw
+
+Similar to DarwinCore https://dwc.tdwg.org/terms/#dwc:samplingProtocol[samplingProtocol].
+
 [[mat-sample]]
 == Material Sample
 A physical result of a sampling event.
@@ -31,13 +38,6 @@ A particular organism or defined group of organisms considered to be taxonomical
 
 [[project]]
 == Project
-
-[[collection-method]]
-== Collection Method
-
-Method used during an Collecting Event. Examples: UV light trap, bottom traw
-
-Similar to DarwinCore https://dwc.tdwg.org/terms/#dwc:samplingProtocol[samplingProtocol].
 
 [[preparation-type]]
 == Preparation Type
