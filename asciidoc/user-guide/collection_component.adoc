@@ -41,22 +41,26 @@ Fixed values include: Whole Organism, Molecular Sample, Organism Part or Mixed O
 === Material Sample State
 Represents the state of a material sample when its condition is negatively impacted. Fixed values include: destroyed, damaged, lost or decommissioned
 
+[[preparation]]
+== Preparation
 
 [[preparation-type]]
-== Preparation Type
+=== Preparation Type
 
-A noun representing the state of a material sample.
+A noun representing the preparation protocol. Preparation can either be for preservation or multiplication purpose.
+
+Examples: `culture`, `mechanical innoculation`
 
 [[preparation-fixative]]
 === Preparation Fixative
 Solution that was applied to or in which the material sample is preserved.
-Examples: EtOH 95%, EtOH 75%, EtOH 70%, saline, glue
+Examples: `EtOH 95%`, `EtOH 75%`, `EtOH 70%`, `saline`, `glue`
 
 [[preparation-medium]]
 === Preparation Medium
 Additional, typically inert physical environments or objects in which or on which the organism in a material sample is stored. It does not express the state of the organism nor the fixatives used but rather the materials that allow the organism to be presented.
 
-Examples: pinned, glass vial, plastic jar, glass jar, microscope slide, acid-free paper, sticky trap/card, Eppendorf tube
+Examples: `pinned`, `glass vial`, `plastic jar`, `glass jar`, `microscope slide`, `acid-free paper`, `sticky trap/card`, `Eppendorf tube`
 
 [[preparation-substrate]]
 === Preparation Substrate
