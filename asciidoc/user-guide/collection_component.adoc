@@ -51,6 +51,13 @@ A noun representing the preparation protocol. Preparation can either be for pres
 
 Examples: `culture`, `mechanical innoculation`
 
+[[preservation-type]]
+=== Preservation Type
+Description of the preservation type of the material sample.
+
+Examples: `Freeze-Dry`
+(from https://abcd.tdwg.org/terms/#preservationType[ABCD 3.0])
+
 [[preparation-fixative]]
 === Preparation Fixative
 Solution that was applied to or in which the material sample is preserved.
