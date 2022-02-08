@@ -12,3 +12,5 @@ include::glossary.adoc[Glossary]
 include::general_concepts.adoc[]
 
 include::collection_component.adoc[]
+
+include::object_store_component.adoc[]
