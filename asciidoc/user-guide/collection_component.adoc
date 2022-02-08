@@ -44,12 +44,21 @@ Represents the state of a material sample when its condition is negatively impac
 [[preparation]]
 == Preparation
 
+Preparation can either be for preservation or multiplication purpose.
+
 [[preparation-type]]
 === Preparation Type
 
-A noun representing the preparation protocol. Preparation can either be for preservation or multiplication purpose.
+A noun representing the what is prepared.
 
-Examples: `culture`, `mechanical innoculation`
+Examples: `leg`, `tissues`, `DNA`
+
+[[preparation-method]]
+=== Preparation Method
+
+A noun representing the how the material sample is prepared.
+
+Examples: `culture`, `mechanical innoculation`, `dissection`
 
 [[preservation-type]]
 === Preservation Type
