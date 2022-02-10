@@ -483,9 +483,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#preparation">3.4. Preparation</a>
 <ul class="sectlevel3">
 <li><a href="#preparation-type">3.4.1. Preparation Type</a></li>
-<li><a href="#preparation-fixative">3.4.2. Preparation Fixative</a></li>
-<li><a href="#preparation-medium">3.4.3. Preparation Medium</a></li>
-<li><a href="#preparation-substrate">3.4.4. Preparation Substrate</a></li>
+<li><a href="#preparation-method">3.4.2. Preparation Method</a></li>
+<li><a href="#preservation-type">3.4.3. Preservation Type</a></li>
+<li><a href="#preparation-fixative">3.4.4. Preparation Fixative</a></li>
+<li><a href="#preparation-medium">3.4.5. Preparation Medium</a></li>
+<li><a href="#preparation-substrate">3.4.6. Preparation Substrate</a></li>
 </ul>
 </li>
 <li><a href="#organism">3.5. Organism</a></li>
@@ -694,7 +696,7 @@ In a Collection Event, the action is the extration from nature.</p>
 <h4 id="mat-samp-type">3.3.1. Material Sample Type</h4>
 <div class="paragraph">
 <p>A Material Sample is a physical result of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed. A Material Sample Type is a system-defined term that prescribes the downstream expectations and logic in how derivative (or child) Material Samples are to be interpreted and digitally managed.
-Fixed values include: Whole Organism, Molecular Sample, Organism Part or Mixed Organisms.</p>
+Fixed values include: <code>Whole Organism</code>, <code>Molecular Sample</code>, <code>Organism Part</code> or <code>Mixed Organisms</code>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -706,24 +708,52 @@ Fixed values include: Whole Organism, Molecular Sample, Organism Part or Mixed O
 </div>
 <div class="sect2">
 <h3 id="preparation">3.4. Preparation</h3>
+<div class="paragraph">
+<p>Preparation can either be for preservation or multiplication purpose.</p>
+</div>
 <div class="sect3">
 <h4 id="preparation-type">3.4.1. Preparation Type</h4>
 <div class="paragraph">
-<p>A noun representing the preparation protocol. Preparation can either be for preservation or multiplication purpose.</p>
+<p>A noun representing what is getting prepared.</p>
 </div>
 <div class="paragraph">
-<p>Examples: <code>culture</code>, <code>mechanical innoculation</code></p>
+<p>(inspired by <a href="https://abcd.tdwg.org/terms/#preparationType">ABCD 3.0</a>)</p>
+</div>
+<div class="paragraph">
+<p>Examples: <code>leg</code>, <code>tissues</code>, <code>DNA</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-fixative">3.4.2. Preparation Fixative</h4>
+<h4 id="preparation-method">3.4.2. Preparation Method</h4>
+<div class="paragraph">
+<p>A noun representing the process (the how) used in preparing the material sample.</p>
+</div>
+<div class="paragraph">
+<p>(inspired by <a href="https://abcd.tdwg.org/">ABCD 3.0</a>)</p>
+</div>
+<div class="paragraph">
+<p>Examples: <code>culture</code>, <code>mechanical innoculation</code>, <code>dissection</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="preservation-type">3.4.3. Preservation Type</h4>
+<div class="paragraph">
+<p>Description of the preservation type of the material sample.</p>
+</div>
+<div class="paragraph">
+<p>Examples: <code>Freeze-Dry</code>
+(from <a href="https://abcd.tdwg.org/terms/#preservationType">ABCD 3.0</a>)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="preparation-fixative">3.4.4. Preparation Fixative</h4>
 <div class="paragraph">
 <p>Solution that was applied to or in which the material sample is preserved.
 Examples: <code>EtOH 95%</code>, <code>EtOH 75%</code>, <code>EtOH 70%</code>, <code>saline</code>, <code>glue</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-medium">3.4.3. Preparation Medium</h4>
+<h4 id="preparation-medium">3.4.5. Preparation Medium</h4>
 <div class="paragraph">
 <p>Additional, typically inert physical environments or objects in which or on which the organism in a material sample is stored. It does not express the state of the organism nor the fixatives used but rather the materials that allow the organism to be presented.</p>
 </div>
@@ -732,7 +762,7 @@ Examples: <code>EtOH 95%</code>, <code>EtOH 75%</code>, <code>EtOH 70%</code>, <
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-substrate">3.4.4. Preparation Substrate</h4>
+<h4 id="preparation-substrate">3.4.6. Preparation Substrate</h4>
 <div class="paragraph">
 <p>Material on which the organism in the material sample is presented or grows.
 Examples: rock, log, agar</p>
@@ -771,7 +801,7 @@ Examples: rock, log, agar</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-02-08 19:44:50 UTC
+Last updated 2022-02-10 19:43:32 UTC
 </div>
 </div>
 </body>
