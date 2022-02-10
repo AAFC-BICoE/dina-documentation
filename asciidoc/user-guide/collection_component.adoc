@@ -35,7 +35,7 @@ In natural history collections, the material sample is typically collected, and 
 [[mat-samp-type]]
 === Material Sample Type
 A Material Sample is a physical result of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed. A Material Sample Type is a system-defined term that prescribes the downstream expectations and logic in how derivative (or child) Material Samples are to be interpreted and digitally managed.
-Fixed values include: Whole Organism, Molecular Sample, Organism Part or Mixed Organisms.
+Fixed values include: `Whole Organism`, `Molecular Sample`, `Organism Part` or `Mixed Organisms`.
 
 [[mat-samp-state]]
 === Material Sample State
@@ -44,12 +44,32 @@ Represents the state of a material sample when its condition is negatively impac
 [[preparation]]
 == Preparation
 
+Preparation can either be for preservation or multiplication purpose.
+
 [[preparation-type]]
 === Preparation Type
 
-A noun representing the preparation protocol. Preparation can either be for preservation or multiplication purpose.
+A noun representing what is getting prepared.
 
-Examples: `culture`, `mechanical innoculation`
+(inspired by https://abcd.tdwg.org/terms/#preparationType[ABCD 3.0])
+
+Examples: `leg`, `tissues`, `DNA`
+
+[[preparation-method]]
+=== Preparation Method
+
+A noun representing the process (the how) used in preparing the material sample.
+
+(inspired by https://abcd.tdwg.org/[ABCD 3.0])
+
+Examples: `culture`, `mechanical innoculation`, `dissection`
+
+[[preservation-type]]
+=== Preservation Type
+Description of the preservation type of the material sample.
+
+Examples: `Freeze-Dry`
+(from https://abcd.tdwg.org/terms/#preservationType[ABCD 3.0])
 
 [[preparation-fixative]]
 === Preparation Fixative
