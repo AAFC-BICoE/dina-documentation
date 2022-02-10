@@ -58,7 +58,7 @@ Examples: `leg`, `tissues`, `DNA`
 [[preparation-method]]
 === Preparation Method
 
-A noun representing the process (the how) used in preparing the material sample.
+A noun representing the process used (the how) in preparing the material sample.
 
 (inspired by https://abcd.tdwg.org/[ABCD 3.0])
 
