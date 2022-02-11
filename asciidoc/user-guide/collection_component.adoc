@@ -44,7 +44,7 @@ Represents the state of a material sample when its condition is negatively impac
 [[preparation]]
 == Preparation
 
-Preparation can either be for preservation or multiplication purpose.
+Preparation can either be for preservation or propagation purpose.
 
 [[preparation-type]]
 === Preparation Type
