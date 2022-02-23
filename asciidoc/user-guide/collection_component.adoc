@@ -76,8 +76,8 @@ Examples: `Freeze-Dry`
 Solution that was applied to or in which the material sample is preserved.
 Examples: `EtOH 95%`, `EtOH 75%`, `EtOH 70%`, `saline`, `glue`
 
-[[preparation-medium]]
-=== Preparation Medium
+[[preparation-materials]]
+=== Preparation Materials
 Additional, typically inert physical environments or objects in which or on which the organism in a material sample is stored. It does not express the state of the organism nor the fixatives used but rather the materials that allow the organism to be presented.
 
 Examples: `pinned`, `glass vial`, `plastic jar`, `glass jar`, `microscope slide`, `acid-free paper`, `sticky trap/card`, `Eppendorf tube`
