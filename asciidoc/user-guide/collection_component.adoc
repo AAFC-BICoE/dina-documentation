@@ -94,3 +94,6 @@ A particular organism or defined group of organisms considered to be taxonomical
 [[project]]
 == Project
 
+[[split]]
+== Split
+In Dina, the concept of a split represents the action of creating new material sample(s) from an existing material sample. The provenance of the new material sample(s) is preserved.
