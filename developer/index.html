@@ -464,33 +464,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_rename_key_in_jsonb_array">1.1.1. Rename key in jsonb array</h4>
 <div class="paragraph">
-<p>The following example is not the most performatn but is easier to follow.</p>
+<p>The example is not aiming at perfomance.</p>
 </div>
 <div class="paragraph">
-<p>The example is based on a table like :</p>
+<p>Considering the following table :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>CREATE TABLE organism (id integer, determinations jsonb);</pre>
+<pre class="highlight"><code class="language-sql" data-lang="sql">CREATE TABLE organism (id integer, determinations jsonb);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The table has jsonb array in the <code>determinations</code> column:</p>
+<p>With jsonb array in the <code>determinations</code> column:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre>INSERT INTO organism VALUES (1, '[
-					{
-						"scientificNameSource": "GNA",
-						"isPrimary": true,
-						"isFileAs": true
-					},
-          {
-						"scientificNameSource": "GNA",
-						"isPrimary": false,
-						"isFileAs": false
-					}
-				]');</pre>
+{
+  "scientificNameSource": "GNA",
+  "isPrimary": true,
+  "isFileAs": true
+},
+{
+  "scientificNameSource": "GNA",
+  "isPrimary": false,
+  "isFileAs": false
+}
+]');</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -523,7 +523,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-04-14 01:14:26 UTC
+Last updated 2022-04-14 01:21:31 UTC
 </div>
 </div>
 </body>
