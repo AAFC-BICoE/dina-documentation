@@ -1,4 +1,5 @@
 :sectnums:
+:source-highlighter: pygments
 
 = DINA Developer Guide
 :toclevels: 3
