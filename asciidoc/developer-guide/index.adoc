@@ -1,5 +1,5 @@
 :sectnums:
-:source-highlighter: pygments
+:source-highlighter: coderay
 
 = DINA Developer Guide
 :toclevels: 3
