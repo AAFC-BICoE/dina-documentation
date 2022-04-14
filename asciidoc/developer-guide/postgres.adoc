@@ -13,8 +13,8 @@ CREATE TABLE organism (id integer, determinations jsonb);
 ----
 
 With jsonb array in the `determinations` column:
-----
 [source,sql]
+----
 INSERT INTO organism VALUES (1, '[
 {
   "scientificNameSource": "GNA",
@@ -30,9 +30,8 @@ INSERT INTO organism VALUES (1, '[
 ----
 
 We want to rename the key `isFileAs` to `isFiledAs`:
-
-----
 [source,sql]
+----
 -- unwrap the array and extract the value
 WITH subquery AS (
   SELECT id, item, item -> 'isFileAs' as att_value
