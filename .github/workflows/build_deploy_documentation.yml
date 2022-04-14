@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install asciidoctor
         run: |
-           sudo apt-get install -y asciidoctor
+           sudo apt-get install -y asciidoctor coderay
       - name: Run generate documentation for User Guide
         run: asciidoctor -a toc=left -D generated-docs asciidoc/user-guide/index.adoc
         
