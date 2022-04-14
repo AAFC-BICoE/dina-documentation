@@ -11,8 +11,11 @@ jobs:
       - name: Install asciidoctor
         run: |
            sudo apt-get install -y asciidoctor
-      - name: Run generate documentation
+      - name: Run generate documentation for User Guide
         run: asciidoctor -a toc=left -D generated-docs asciidoc/user-guide/index.adoc
+        
+      - name: Run generate documentation for Developer Guide
+        run: asciidoctor -a toc=left -D generated-docs/developer asciidoc/developer-guide/index.adoc
 
       - name: Deploy GitHub Pages (only on master branch)
         if: ${{ github.ref == 'refs/heads/main' }}
