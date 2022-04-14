@@ -1,0 +1,8 @@
+:sectnums:
+
+= DINA Developer Guide
+:toclevels: 3
+:leveloffset: 1
+:icons: font
+
+include::postgres.adoc[PostgreSQL]
