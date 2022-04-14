@@ -4,4 +4,46 @@
 == Useful Queries
 
 === Rename key in jsonb array
+The following example is not the most performatn but is easier to follow.
 
+The example is based on a table like :
+----
+CREATE TABLE organism (id integer, determinations jsonb);
+----
+
+The table has jsonb array in the `determinations` column:
+----
+INSERT INTO organism VALUES (1, '[
+					{
+						"scientificNameSource": "GNA",
+						"isPrimary": true,
+						"isFileAs": true
+					},
+          {
+						"scientificNameSource": "GNA",
+						"isPrimary": false,
+						"isFileAs": false
+					}
+				]');
+----
+
+We want to rename the key `isFileAs` to `isFiledAs`:
+
+----
+-- unwrap the array and extract the value
+WITH subquery AS (
+  SELECT id, item, item -> 'isFileAs' as att_value
+  FROM organism, jsonb_array_elements(determinations) as item
+),
+-- remove the old attribute and create the new one with the value
+-- reconstruct the array by grouping by id
+subquery2 AS (
+  select id, json_agg(jsonb_set(item-'isFileAs', '{isFiledAs}', att_value)) as updated_jsonb from subquery
+  GROUP BY id
+)
+ 
+UPDATE organism
+  SET determinations = updated_jsonb
+  FROM subquery2
+  WHERE organism.id = subquery2.id;
+----
