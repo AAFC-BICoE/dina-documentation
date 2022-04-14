@@ -479,19 +479,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>[source,sql]
-INSERT INTO organism VALUES (1, '[
+<pre class="CodeRay highlight"><code data-lang="sql"><span class="class">INSERT</span> <span class="class">INTO</span> organism <span class="keyword">VALUES</span> (<span class="integer">1</span>, <span class="string"><span class="delimiter">'</span><span class="content">[
 {
-  "scientificNameSource": "GNA",
-  "isPrimary": true,
-  "isFileAs": true
+  &quot;scientificNameSource&quot;: &quot;GNA&quot;,
+  &quot;isPrimary&quot;: true,
+  &quot;isFileAs&quot;: true
 },
 {
-  "scientificNameSource": "GNA",
-  "isPrimary": false,
-  "isFileAs": false
+  &quot;scientificNameSource&quot;: &quot;GNA&quot;,
+  &quot;isPrimary&quot;: false,
+  &quot;isFileAs&quot;: false
 }
-]');</pre>
+]</span><span class="delimiter">'</span></span>);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -499,23 +498,22 @@ INSERT INTO organism VALUES (1, '[
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>[source,sql]
--- unwrap the array and extract the value
-WITH subquery AS (
-  SELECT id, item, item -&gt; 'isFileAs' as att_value
-  FROM organism, jsonb_array_elements(determinations) as item
+<pre class="CodeRay highlight"><code data-lang="sql"><span class="comment">-- unwrap the array and extract the value</span>
+WITH subquery <span class="keyword">AS</span> (
+  <span class="class">SELECT</span> id, item, item -&gt; <span class="string"><span class="delimiter">'</span><span class="content">isFileAs</span><span class="delimiter">'</span></span> <span class="keyword">as</span> att_value
+  <span class="keyword">FROM</span> organism, jsonb_array_elements(determinations) <span class="keyword">as</span> item
 ),
--- remove the old attribute and create the new one with the value
--- reconstruct the array by grouping by id
-subquery2 AS (
-  select id, json_agg(jsonb_set(item-'isFileAs', '{isFiledAs}', att_value)) as updated_jsonb from subquery
-  GROUP BY id
+<span class="comment">-- remove the old attribute and create the new one with the value</span>
+<span class="comment">-- reconstruct the array by grouping by id</span>
+subquery2 <span class="keyword">AS</span> (
+  <span class="class">select</span> id, json_agg(jsonb_set(item-<span class="string"><span class="delimiter">'</span><span class="content">isFileAs</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">{isFiledAs}</span><span class="delimiter">'</span></span>, att_value)) <span class="keyword">as</span> updated_jsonb <span class="keyword">from</span> subquery
+  <span class="keyword">GROUP</span> <span class="keyword">BY</span> id
 )
 
-UPDATE organism
-  SET determinations = updated_jsonb
-  FROM subquery2
-  WHERE organism.id = subquery2.id;</pre>
+<span class="class">UPDATE</span> organism
+  <span class="class">SET</span> determinations = updated_jsonb
+  <span class="keyword">FROM</span> subquery2
+  <span class="keyword">WHERE</span> organism.id = subquery2.id;</code></pre>
 </div>
 </div>
 </div>
@@ -525,7 +523,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-04-14 01:36:04 UTC
+Last updated 2022-04-14 01:36:35 UTC
 </div>
 </div>
 <style>
