@@ -479,7 +479,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>INSERT INTO organism VALUES (1, '[
+<pre>[source,sql]
+INSERT INTO organism VALUES (1, '[
 {
   "scientificNameSource": "GNA",
   "isPrimary": true,
@@ -498,7 +499,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>-- unwrap the array and extract the value
+<pre>[source,sql]
+-- unwrap the array and extract the value
 WITH subquery AS (
   SELECT id, item, item -&gt; 'isFileAs' as att_value
   FROM organism, jsonb_array_elements(determinations) as item
@@ -523,7 +525,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-04-14 01:34:33 UTC
+Last updated 2022-04-14 01:36:04 UTC
 </div>
 </div>
 <style>
