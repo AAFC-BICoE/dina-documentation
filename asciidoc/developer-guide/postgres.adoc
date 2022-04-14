@@ -4,27 +4,28 @@
 == Useful Queries
 
 === Rename key in jsonb array
-The following example is not the most performatn but is easier to follow.
+The example is not aiming at perfomance.
 
-The example is based on a table like :
+Considering the following table :
+[source,sql]
 ----
 CREATE TABLE organism (id integer, determinations jsonb);
 ----
 
-The table has jsonb array in the `determinations` column:
+With jsonb array in the `determinations` column:
 ----
 INSERT INTO organism VALUES (1, '[
-					{
-						"scientificNameSource": "GNA",
-						"isPrimary": true,
-						"isFileAs": true
-					},
-          {
-						"scientificNameSource": "GNA",
-						"isPrimary": false,
-						"isFileAs": false
-					}
-				]');
+{
+  "scientificNameSource": "GNA",
+  "isPrimary": true,
+  "isFileAs": true
+},
+{
+  "scientificNameSource": "GNA",
+  "isPrimary": false,
+  "isFileAs": false
+}
+]');
 ----
 
 We want to rename the key `isFileAs` to `isFiledAs`:
