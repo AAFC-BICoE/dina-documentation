@@ -14,3 +14,5 @@ include::general_concepts.adoc[]
 include::collection_component.adoc[]
 
 include::object_store_component.adoc[]
+
+include::sequence_component.adoc[]
