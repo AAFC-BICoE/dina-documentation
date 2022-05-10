@@ -1,2 +1,6 @@
+[[sequence-component]]
+= Sequence Component
 
-PcrBatch
+[[PcrBatch]]
+== PcrBatch
+
