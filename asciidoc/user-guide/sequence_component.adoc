@@ -7,7 +7,8 @@ Information about Primers used for gene amplification of a targeted organism.
 
 == Thermocycler Profile
 
-[[PcrBatch]]
+Used to track different amplification cycles and melting temperature programmed for each gene region and its associated primer pairs.
+
 == PcrBatch
 
 Details of the PCR Master Mix used for gene amplification. PCRBatch will connect to Gene Region, PCR Primers and Thermocycler Profiles.
