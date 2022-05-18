@@ -33,7 +33,7 @@ The horizontal distance in meters from the given decimalLatitude and decimalLong
 
 === Host
 
-Host of the material-sample at the time of the collecting-event. The collecting-event host is mostly an observation since no physical evidence is collected.
+Observed host of the material-sample at the time of the collecting-event.
 
 [[mat-sample]]
 == Material Sample
