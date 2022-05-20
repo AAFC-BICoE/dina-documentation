@@ -35,6 +35,12 @@ The horizontal distance in meters from the given decimalLatitude and decimalLong
 
 Observed host of the material-sample at the time of the collecting-event.
 
+=== Substrate
+
+Observed surface on which an organism was collected and understood to have lived.
+
+(based on http://www.wikidata.org/entity/Q5824490)
+
 [[mat-sample]]
 == Material Sample
 A physical result of a sampling event.
