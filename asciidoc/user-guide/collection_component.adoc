@@ -109,6 +109,11 @@ A particular organism or defined group of organisms considered to be taxonomical
 [[project]]
 == Project
 
+== Protocol
+
+Predefined written procedural method in the design and implementation of experiments in natural sciences.
+(from http://www.wikidata.org/entity/Q367158[Wikidata])
+
 [[split]]
 == Split
 In DINA, the concept of a split represents the action of creating new material sample(s) from an existing material sample. The provenance of the new material sample(s) is preserved. For example, the action can be a dissection or fungal/bacterial propagation.
