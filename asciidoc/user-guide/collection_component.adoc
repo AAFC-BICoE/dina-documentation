@@ -13,11 +13,17 @@ Darwin Core defines "event" as : An action that occurs at some location during s
 In a Collection Event, the action is the extraction from nature.
 
 [[collection_numbers]]
-=== Collection Numbers
+=== Collection Number
 
 An identifier given to the event in the field. Often serves as a link between field notes and the Event.
-
 Same as DarwinCore https://dwc.tdwg.org/terms/#dwc:fieldNumber[fieldNumber]
+
+=== Collector's Number
+
+An identifier given to the Occurrence at the time it was recorded. Often serves as a link between field notes and an Occurrence record, such as a specimen collector's number.
+
+Same as DarwinCore https://dwc.tdwg.org/terms/#dwc:recordNumber[recordNumber]
+
 
 [[collection-method]]
 === Collection Method
