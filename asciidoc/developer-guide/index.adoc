@@ -7,4 +7,5 @@
 :icons: font
 
 include::release_module.adoc[Release Module]
+
 include::postgres.adoc[PostgreSQL]
