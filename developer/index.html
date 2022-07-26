@@ -443,11 +443,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_releasing_a_dina_module">1. Releasing a dina module</a>
+<li><a href="#_releasing_a_dina_module">1. Releasing a dina module</a></li>
+<li><a href="#_postgresql">2. PostgreSQL</a>
 <ul class="sectlevel2">
-<li><a href="#useful_queries">1.1. Useful Queries</a>
+<li><a href="#useful_queries">2.1. Useful Queries</a>
 <ul class="sectlevel3">
-<li><a href="#_rename_key_in_jsonb_array">1.1.1. Rename key in jsonb array</a></li>
+<li><a href="#_rename_key_in_jsonb_array">2.1.1. Rename key in jsonb array</a></li>
 </ul>
 </li>
 </ul>
@@ -521,18 +522,22 @@ in the master/main branch.</p>
 <p>Change the version by running <code>mvn versions:set -DnewVersion=X.X-SNAPSHOT</code> from the root where X.X is the next increment in the version number</p>
 </li>
 <li>
-<p>Add and Push to dev with message like "Prepare next development version"
-= PostgreSQL</p>
+<p>Add and Push to dev with message like "Prepare next development version"</p>
 </li>
 </ol>
 </div>
 </li>
 </ol>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_postgresql">2. PostgreSQL</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="useful_queries">1.1. Useful Queries</h3>
+<h3 id="useful_queries">2.1. Useful Queries</h3>
 <div class="sect3">
-<h4 id="_rename_key_in_jsonb_array">1.1.1. Rename key in jsonb array</h4>
+<h4 id="_rename_key_in_jsonb_array">2.1.1. Rename key in jsonb array</h4>
 <div class="paragraph">
 <p>The example is not aiming at perfomance.</p>
 </div>
@@ -593,7 +598,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-26 15:59:24 UTC
+Last updated 2022-07-26 16:01:38 UTC
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
