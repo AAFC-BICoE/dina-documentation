@@ -1,6 +1,6 @@
-= Releasing a dina module
+= Releasing a DINA module
 
-The process of releasing a dina module is the same for all modules. The CI will automaticaly build and release a new Docker image to Docker Hub when something is merged
+The process of releasing a dina module is the same for all modules. The CI will automatically build and release a new Docker image to Docker Hub when something is merged
 in the master/main branch.
 
 BICoE Docker Hub: https://hub.docker.com/u/aafcbicoe
@@ -22,3 +22,11 @@ Java-based API:
 . From dev branch
 .. Change the version by running `mvn versions:set -DnewVersion=X.X-SNAPSHOT` from the root where X.X is the next increment in the version number
 .. Add and Push to dev with message like "Prepare next development version"
+
+DINA-UI:
+
+. From dev branch
+.. Edit the the file `packages/dina-ui/package.json` and set the `version` value
+
+Same as the Java-based API except the second `From dev branch` can be skipped since the ui is not using development version.
+
