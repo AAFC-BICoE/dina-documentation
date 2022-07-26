@@ -443,7 +443,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_postgresql">1. PostgreSQL</a>
+<li><a href="#_releasing_a_dina_module">1. Releasing a dina module</a>
 <ul class="sectlevel2">
 <li><a href="#useful_queries">1.1. Useful Queries</a>
 <ul class="sectlevel3">
@@ -457,8 +457,78 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_postgresql">1. PostgreSQL</h2>
+<h2 id="_releasing_a_dina_module">1. Releasing a dina module</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The process of releasing a dina module is the same for all modules. The CI will automaticaly build and release a new Docker image to Docker Hub when something is merged
+in the master/main branch.</p>
+</div>
+<div class="paragraph">
+<p>BICoE Docker Hub: <a href="https://hub.docker.com/u/aafcbicoe" class="bare">https://hub.docker.com/u/aafcbicoe</a></p>
+</div>
+<div class="paragraph">
+<p>Java-based API:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From dev branch</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Change the version by running <code>mvn versions:set -DnewVersion=X.X</code> from the root where <code>X.X</code> is the current version minus the <code>-SNAPSHOT</code></p>
+</li>
+<li>
+<p>Add and Push to dev with message like "Prepare version x.x release"</p>
+</li>
+<li>
+<p>Wait for CI to complete</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>From master/main</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Merge dev into master (do NOT use Pull Request)</p>
+</li>
+<li>
+<p>Push to master (it will trigger the deployment Docker Hub)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a new <a href="https://github.com/AAFC-BICoE/dina-base-api/releases">GitHub release</a></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Add a Summary of the changes (looks at the previous versions for an example)</p>
+</li>
+<li>
+<p>Publish the Release</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>From dev branch</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Change the version by running <code>mvn versions:set -DnewVersion=X.X-SNAPSHOT</code> from the root where X.X is the next increment in the version number</p>
+</li>
+<li>
+<p>Add and Push to dev with message like "Prepare next development version"
+= PostgreSQL</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
 <div class="sect2">
 <h3 id="useful_queries">1.1. Useful Queries</h3>
 <div class="sect3">
@@ -523,7 +593,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-26 15:58:45 UTC
+Last updated 2022-07-26 15:59:24 UTC
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
