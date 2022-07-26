@@ -443,7 +443,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_releasing_a_dina_module">1. Releasing a dina module</a></li>
+<li><a href="#_releasing_a_dina_module">1. Releasing a DINA module</a></li>
 <li><a href="#_postgresql">2. PostgreSQL</a>
 <ul class="sectlevel2">
 <li><a href="#useful_queries">2.1. Useful Queries</a>
@@ -458,10 +458,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_releasing_a_dina_module">1. Releasing a dina module</h2>
+<h2 id="_releasing_a_dina_module">1. Releasing a DINA module</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The process of releasing a dina module is the same for all modules. The CI will automaticaly build and release a new Docker image to Docker Hub when something is merged
+<p>The process of releasing a dina module is the same for all modules. The CI will automatically build and release a new Docker image to Docker Hub when something is merged
 in the master/main branch.</p>
 </div>
 <div class="paragraph">
@@ -535,6 +535,26 @@ in the master/main branch.</p>
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p>DINA-UI:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From dev branch</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Edit the the file <code>packages/dina-ui/package.json</code> and set the <code>version</code> value</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Same as the Java-based API except the second <code>From dev branch</code> can be skipped since the ui is not using development version.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -604,7 +624,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-26 16:03:41 UTC
+Last updated 2022-07-26 20:25:45 UTC
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
