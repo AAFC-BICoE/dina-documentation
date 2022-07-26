@@ -14,7 +14,9 @@ Java-based API:
 . From master/main
 .. Merge dev into master (do NOT use Pull Request)
 .. Push to master (it will trigger the deployment Docker Hub)
-. Create a new https://github.com/AAFC-BICoE/dina-base-api/releases[GitHub release]
+. Create a new GitHub release
+.. The tag should be the version prefixed with v (e.g. v0.19)
+.. The title should be the version (e.g. 0.19)
 .. Add a Summary of the changes (looks at the previous versions for an example)
 .. Publish the Release
 . From dev branch
