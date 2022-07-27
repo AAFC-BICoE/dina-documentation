@@ -1,6 +1,11 @@
 [[collection-component]]
 = Collection Component
 
+[[assemblage]]
+== Assemblage
+
+Mechanism used to group material samples according to some organizational theme. Should not be confused with <<project>>. 
+
 [[collection]]
 == Collection
 
