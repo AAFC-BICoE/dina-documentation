@@ -119,6 +119,8 @@ A particular organism or defined group of organisms considered to be taxonomical
 
 [[project]]
 == Project
+Project has a start and an end date. It usually links to the organizational definition of project where an objective, a scope, resources and deliverable are defined.
+A material sample can be linked to multiple projects.
 
 == Protocol
 
