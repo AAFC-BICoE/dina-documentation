@@ -467,37 +467,38 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#collection-component">3. Collection Component</a>
 <ul class="sectlevel2">
-<li><a href="#collection">3.1. Collection</a></li>
-<li><a href="#collecting-event">3.2. Collecting Event</a>
+<li><a href="#assemblage">3.1. Assemblage</a></li>
+<li><a href="#collection">3.2. Collection</a></li>
+<li><a href="#collecting-event">3.3. Collecting Event</a>
 <ul class="sectlevel3">
-<li><a href="#_collection_number">3.2.1. Collection Number</a></li>
-<li><a href="#_collectors_number">3.2.2. Collector&#8217;s Number</a></li>
-<li><a href="#collection-method">3.2.3. Collection Method</a></li>
-<li><a href="#_coordinate_uncertainty_in_meters">3.2.4. Coordinate Uncertainty In Meters</a></li>
-<li><a href="#_host">3.2.5. Host</a></li>
-<li><a href="#_substrate">3.2.6. Substrate</a></li>
+<li><a href="#_collection_number">3.3.1. Collection Number</a></li>
+<li><a href="#_collectors_number">3.3.2. Collector&#8217;s Number</a></li>
+<li><a href="#collection-method">3.3.3. Collection Method</a></li>
+<li><a href="#_coordinate_uncertainty_in_meters">3.3.4. Coordinate Uncertainty In Meters</a></li>
+<li><a href="#_host">3.3.5. Host</a></li>
+<li><a href="#_substrate">3.3.6. Substrate</a></li>
 </ul>
 </li>
-<li><a href="#mat-sample">3.3. Material Sample</a>
+<li><a href="#mat-sample">3.4. Material Sample</a>
 <ul class="sectlevel3">
-<li><a href="#mat-samp-type">3.3.1. Material Sample Type</a></li>
-<li><a href="#mat-samp-state">3.3.2. Material Sample State</a></li>
+<li><a href="#mat-samp-type">3.4.1. Material Sample Type</a></li>
+<li><a href="#mat-samp-state">3.4.2. Material Sample State</a></li>
 </ul>
 </li>
-<li><a href="#preparation">3.4. Preparation</a>
+<li><a href="#preparation">3.5. Preparation</a>
 <ul class="sectlevel3">
-<li><a href="#preparation-type">3.4.1. Preparation Type</a></li>
-<li><a href="#preparation-method">3.4.2. Preparation Method</a></li>
-<li><a href="#preservation-type">3.4.3. Preservation Type</a></li>
-<li><a href="#preparation-fixative">3.4.4. Preparation Fixative</a></li>
-<li><a href="#preparation-materials">3.4.5. Preparation Materials</a></li>
-<li><a href="#preparation-substrate">3.4.6. Preparation Substrate</a></li>
+<li><a href="#preparation-type">3.5.1. Preparation Type</a></li>
+<li><a href="#preparation-method">3.5.2. Preparation Method</a></li>
+<li><a href="#preservation-type">3.5.3. Preservation Type</a></li>
+<li><a href="#preparation-fixative">3.5.4. Preparation Fixative</a></li>
+<li><a href="#preparation-materials">3.5.5. Preparation Materials</a></li>
+<li><a href="#preparation-substrate">3.5.6. Preparation Substrate</a></li>
 </ul>
 </li>
-<li><a href="#organism">3.5. Organism</a></li>
-<li><a href="#project">3.6. Project</a></li>
-<li><a href="#_protocol">3.7. Protocol</a></li>
-<li><a href="#split">3.8. Split</a></li>
+<li><a href="#organism">3.6. Organism</a></li>
+<li><a href="#project">3.7. Project</a></li>
+<li><a href="#_protocol">3.8. Protocol</a></li>
+<li><a href="#split">3.9. Split</a></li>
 </ul>
 </li>
 <li><a href="#object-store-component">4. Object Store Component</a>
@@ -668,19 +669,25 @@ Objects can only have 1 owner.</p>
 <h2 id="collection-component">3. Collection Component</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="collection">3.1. Collection</h3>
+<h3 id="assemblage">3.1. Assemblage</h3>
+<div class="paragraph">
+<p>Mechanism used to group material samples according to some organizational theme. Should not be confused with <a href="#project">Project</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="collection">3.2. Collection</h3>
 <div class="paragraph">
 <p>A Collection represents the top entity that can contain material-sample. Top collections (or parent collections) generally represent a natural history collection or a laboratory. A collection can contain multiple sub-collection(s).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="collecting-event">3.2. Collecting Event</h3>
+<h3 id="collecting-event">3.3. Collecting Event</h3>
 <div class="paragraph">
 <p>Darwin Core defines "event" as : An action that occurs at some location during some time. (from <a href="https://dwc.tdwg.org/terms/#event">DarwinCore</a>).
 In a Collection Event, the action is the extraction from nature.</p>
 </div>
 <div class="sect3">
-<h4 id="_collection_number">3.2.1. Collection Number</h4>
+<h4 id="_collection_number">3.3.1. Collection Number</h4>
 <div class="paragraph">
 <p>An identifier given to the event in the field at the time of collecting one or more samples. Often serves as a link between field notes and the Event.</p>
 </div>
@@ -689,7 +696,7 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_collectors_number">3.2.2. Collector&#8217;s Number</h4>
+<h4 id="_collectors_number">3.3.2. Collector&#8217;s Number</h4>
 <div class="paragraph">
 <p>An identifier given to the Occurrence, by the collector, at the time it was recorded. Often serves as a link between field notes and an Occurrence record, such as a specimen collector&#8217;s number.</p>
 </div>
@@ -698,7 +705,7 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="collection-method">3.2.3. Collection Method</h4>
+<h4 id="collection-method">3.3.3. Collection Method</h4>
 <div class="paragraph">
 <p>Method used during an Collecting Event. Examples: UV light trap, bottom traw</p>
 </div>
@@ -707,20 +714,20 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_coordinate_uncertainty_in_meters">3.2.4. Coordinate Uncertainty In Meters</h4>
+<h4 id="_coordinate_uncertainty_in_meters">3.3.4. Coordinate Uncertainty In Meters</h4>
 <div class="paragraph">
 <p>The horizontal distance in meters from the given decimalLatitude and decimalLongitude describing the smallest circle containing the whole of the Location.
 (from <a href="https://dwc.tdwg.org/terms/#dwc:coordinateUncertaintyInMeters">Darwin Core</a>)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_host">3.2.5. Host</h4>
+<h4 id="_host">3.3.5. Host</h4>
 <div class="paragraph">
 <p>Observed host of the material-sample at the time of the collecting-event.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_substrate">3.2.6. Substrate</h4>
+<h4 id="_substrate">3.3.6. Substrate</h4>
 <div class="paragraph">
 <p>Observed surface on which an organism was collected and understood to have lived.</p>
 </div>
@@ -730,7 +737,7 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mat-sample">3.3. Material Sample</h3>
+<h3 id="mat-sample">3.4. Material Sample</h3>
 <div class="paragraph">
 <p>A physical result of a sampling event.</p>
 </div>
@@ -738,26 +745,26 @@ In a Collection Event, the action is the extraction from nature.</p>
 <p>In natural history collections, the material sample is typically collected, and either preserved or destructively processed. (from <a href="https://dwc.tdwg.org/terms/#materialsample">DarwinCore</a>).</p>
 </div>
 <div class="sect3">
-<h4 id="mat-samp-type">3.3.1. Material Sample Type</h4>
+<h4 id="mat-samp-type">3.4.1. Material Sample Type</h4>
 <div class="paragraph">
 <p>A Material Sample is a physical result of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed. A Material Sample Type is a system-defined term that prescribes the downstream expectations and logic in how derivative (or child) Material Samples are to be interpreted and digitally managed.
 Fixed values include: <code>Whole Organism</code>, <code>Molecular Sample</code>, <code>Organism Part</code> or <code>Mixed Organisms</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="mat-samp-state">3.3.2. Material Sample State</h4>
+<h4 id="mat-samp-state">3.4.2. Material Sample State</h4>
 <div class="paragraph">
 <p>Represents the state of a material sample when its condition is negatively impacted. Fixed values include: destroyed, damaged, lost or decommissioned</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="preparation">3.4. Preparation</h3>
+<h3 id="preparation">3.5. Preparation</h3>
 <div class="paragraph">
 <p>Preparation can either be for preservation or propagation purpose.</p>
 </div>
 <div class="sect3">
-<h4 id="preparation-type">3.4.1. Preparation Type</h4>
+<h4 id="preparation-type">3.5.1. Preparation Type</h4>
 <div class="paragraph">
 <p>A noun representing what is getting prepared.</p>
 </div>
@@ -769,7 +776,7 @@ Fixed values include: <code>Whole Organism</code>, <code>Molecular Sample</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-method">3.4.2. Preparation Method</h4>
+<h4 id="preparation-method">3.5.2. Preparation Method</h4>
 <div class="paragraph">
 <p>A noun representing the process used (the how) in preparing the material sample.</p>
 </div>
@@ -781,7 +788,7 @@ Fixed values include: <code>Whole Organism</code>, <code>Molecular Sample</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preservation-type">3.4.3. Preservation Type</h4>
+<h4 id="preservation-type">3.5.3. Preservation Type</h4>
 <div class="paragraph">
 <p>Description of the preservation type of the material sample.</p>
 </div>
@@ -791,14 +798,14 @@ Fixed values include: <code>Whole Organism</code>, <code>Molecular Sample</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-fixative">3.4.4. Preparation Fixative</h4>
+<h4 id="preparation-fixative">3.5.4. Preparation Fixative</h4>
 <div class="paragraph">
 <p>Solution that was applied to or in which the material sample is preserved.
 Examples: <code>EtOH 95%</code>, <code>EtOH 75%</code>, <code>EtOH 70%</code>, <code>saline</code>, <code>glue</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-materials">3.4.5. Preparation Materials</h4>
+<h4 id="preparation-materials">3.5.5. Preparation Materials</h4>
 <div class="paragraph">
 <p>Additional, typically inert physical environments or objects in which or on which the organism in a material sample is stored. It does not express the state of the organism nor the fixatives used but rather the materials that allow the organism to be presented.</p>
 </div>
@@ -807,7 +814,7 @@ Examples: <code>EtOH 95%</code>, <code>EtOH 75%</code>, <code>EtOH 70%</code>, <
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-substrate">3.4.6. Preparation Substrate</h4>
+<h4 id="preparation-substrate">3.5.6. Preparation Substrate</h4>
 <div class="paragraph">
 <p>Material on which the organism in the material sample is presented or grows.
 Examples: rock, log, agar</p>
@@ -815,24 +822,24 @@ Examples: rock, log, agar</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="organism">3.5. Organism</h3>
+<h3 id="organism">3.6. Organism</h3>
 <div class="paragraph">
 <p>A particular organism or defined group of organisms considered to be taxonomically homogeneous. (from <a href="https://dwc.tdwg.org/terms/#organism">DarwinCore</a>).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="project">3.6. Project</h3>
+<h3 id="project">3.7. Project</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_protocol">3.7. Protocol</h3>
+<h3 id="_protocol">3.8. Protocol</h3>
 <div class="paragraph">
 <p>Predefined written procedural method in the design and implementation of experiments in natural sciences.
 (from <a href="http://www.wikidata.org/entity/Q367158">Wikidata</a>)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="split">3.8. Split</h3>
+<h3 id="split">3.9. Split</h3>
 <div class="paragraph">
 <p>In DINA, the concept of a split represents the action of creating new material sample(s) from an existing material sample. The provenance of the new material sample(s) is preserved. For example, the action can be a dissection or fungal/bacterial propagation.</p>
 </div>
@@ -889,7 +896,7 @@ Examples: rock, log, agar</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-26 20:25:45 UTC
+Last updated 2022-07-27 14:19:07 UTC
 </div>
 </div>
 </body>
