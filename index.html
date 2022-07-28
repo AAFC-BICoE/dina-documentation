@@ -479,26 +479,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_substrate">3.3.6. Substrate</a></li>
 </ul>
 </li>
-<li><a href="#mat-sample">3.4. Material Sample</a>
+<li><a href="#_determination">3.4. Determination</a></li>
+<li><a href="#mat-sample">3.5. Material Sample</a>
 <ul class="sectlevel3">
-<li><a href="#mat-samp-type">3.4.1. Material Sample Type</a></li>
-<li><a href="#mat-samp-state">3.4.2. Material Sample State</a></li>
+<li><a href="#mat-samp-type">3.5.1. Material Sample Type</a></li>
+<li><a href="#mat-samp-state">3.5.2. Material Sample State</a></li>
 </ul>
 </li>
-<li><a href="#preparation">3.5. Preparation</a>
+<li><a href="#preparation">3.6. Preparation</a>
 <ul class="sectlevel3">
-<li><a href="#preparation-type">3.5.1. Preparation Type</a></li>
-<li><a href="#preparation-method">3.5.2. Preparation Method</a></li>
-<li><a href="#preservation-type">3.5.3. Preservation Type</a></li>
-<li><a href="#preparation-fixative">3.5.4. Preparation Fixative</a></li>
-<li><a href="#preparation-materials">3.5.5. Preparation Materials</a></li>
-<li><a href="#preparation-substrate">3.5.6. Preparation Substrate</a></li>
+<li><a href="#preparation-type">3.6.1. Preparation Type</a></li>
+<li><a href="#preparation-method">3.6.2. Preparation Method</a></li>
+<li><a href="#preservation-type">3.6.3. Preservation Type</a></li>
+<li><a href="#preparation-fixative">3.6.4. Preparation Fixative</a></li>
+<li><a href="#preparation-materials">3.6.5. Preparation Materials</a></li>
+<li><a href="#preparation-substrate">3.6.6. Preparation Substrate</a></li>
 </ul>
 </li>
-<li><a href="#organism">3.6. Organism</a></li>
-<li><a href="#project">3.7. Project</a></li>
-<li><a href="#_protocol">3.8. Protocol</a></li>
-<li><a href="#split">3.9. Split</a></li>
+<li><a href="#organism">3.7. Organism</a></li>
+<li><a href="#project">3.8. Project</a></li>
+<li><a href="#_protocol">3.9. Protocol</a></li>
+<li><a href="#split">3.10. Split</a></li>
 </ul>
 </li>
 <li><a href="#object-store-component">4. Object Store Component</a>
@@ -737,7 +738,13 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mat-sample">3.4. Material Sample</h3>
+<h3 id="_determination">3.4. Determination</h3>
+<div class="paragraph">
+<p>Determinations are attached to an <a href="#organim">[organim]</a>. There is always a primary determination defined.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mat-sample">3.5. Material Sample</h3>
 <div class="paragraph">
 <p>A physical result of a sampling event.</p>
 </div>
@@ -745,26 +752,26 @@ In a Collection Event, the action is the extraction from nature.</p>
 <p>In natural history collections, the material sample is typically collected, and either preserved or destructively processed. (from <a href="https://dwc.tdwg.org/terms/#materialsample">DarwinCore</a>).</p>
 </div>
 <div class="sect3">
-<h4 id="mat-samp-type">3.4.1. Material Sample Type</h4>
+<h4 id="mat-samp-type">3.5.1. Material Sample Type</h4>
 <div class="paragraph">
 <p>A Material Sample is a physical result of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed. A Material Sample Type is a system-defined term that prescribes the downstream expectations and logic in how derivative (or child) Material Samples are to be interpreted and digitally managed.
 Fixed values include: <code>Whole Organism</code>, <code>Molecular Sample</code>, <code>Organism Part</code> or <code>Mixed Organisms</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="mat-samp-state">3.4.2. Material Sample State</h4>
+<h4 id="mat-samp-state">3.5.2. Material Sample State</h4>
 <div class="paragraph">
 <p>Represents the state of a material sample when its condition is negatively impacted. Fixed values include: destroyed, damaged, lost or decommissioned</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="preparation">3.5. Preparation</h3>
+<h3 id="preparation">3.6. Preparation</h3>
 <div class="paragraph">
 <p>Preparation can either be for preservation or propagation purpose.</p>
 </div>
 <div class="sect3">
-<h4 id="preparation-type">3.5.1. Preparation Type</h4>
+<h4 id="preparation-type">3.6.1. Preparation Type</h4>
 <div class="paragraph">
 <p>A noun representing what is getting prepared.</p>
 </div>
@@ -776,7 +783,7 @@ Fixed values include: <code>Whole Organism</code>, <code>Molecular Sample</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-method">3.5.2. Preparation Method</h4>
+<h4 id="preparation-method">3.6.2. Preparation Method</h4>
 <div class="paragraph">
 <p>A noun representing the process used (the how) in preparing the material sample.</p>
 </div>
@@ -788,7 +795,7 @@ Fixed values include: <code>Whole Organism</code>, <code>Molecular Sample</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preservation-type">3.5.3. Preservation Type</h4>
+<h4 id="preservation-type">3.6.3. Preservation Type</h4>
 <div class="paragraph">
 <p>Description of the preservation type of the material sample.</p>
 </div>
@@ -798,14 +805,14 @@ Fixed values include: <code>Whole Organism</code>, <code>Molecular Sample</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-fixative">3.5.4. Preparation Fixative</h4>
+<h4 id="preparation-fixative">3.6.4. Preparation Fixative</h4>
 <div class="paragraph">
 <p>Solution that was applied to or in which the material sample is preserved.
 Examples: <code>EtOH 95%</code>, <code>EtOH 75%</code>, <code>EtOH 70%</code>, <code>saline</code>, <code>glue</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-materials">3.5.5. Preparation Materials</h4>
+<h4 id="preparation-materials">3.6.5. Preparation Materials</h4>
 <div class="paragraph">
 <p>Additional, typically inert physical environments or objects in which or on which the organism in a material sample is stored. It does not express the state of the organism nor the fixatives used but rather the materials that allow the organism to be presented.</p>
 </div>
@@ -814,7 +821,7 @@ Examples: <code>EtOH 95%</code>, <code>EtOH 75%</code>, <code>EtOH 70%</code>, <
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-substrate">3.5.6. Preparation Substrate</h4>
+<h4 id="preparation-substrate">3.6.6. Preparation Substrate</h4>
 <div class="paragraph">
 <p>Material on which the organism in the material sample is presented or grows.
 Examples: rock, log, agar</p>
@@ -822,27 +829,28 @@ Examples: rock, log, agar</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="organism">3.6. Organism</h3>
+<h3 id="organism">3.7. Organism</h3>
 <div class="paragraph">
-<p>A particular organism or defined group of organisms considered to be taxonomically homogeneous. (from <a href="https://dwc.tdwg.org/terms/#organism">DarwinCore</a>).</p>
+<p>A particular organism or defined group of organisms considered to be taxonomically homogeneous. (from <a href="https://dwc.tdwg.org/terms/#organism">DarwinCore</a>).
+Optionally, it is possible to define a target organism within a material sample.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="project">3.7. Project</h3>
+<h3 id="project">3.8. Project</h3>
 <div class="paragraph">
 <p>Project has a start and an end date. It usually links to the organizational definition of project where an objective, a scope, resources and deliverable are defined.
 A material sample can be linked to multiple projects.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_protocol">3.8. Protocol</h3>
+<h3 id="_protocol">3.9. Protocol</h3>
 <div class="paragraph">
 <p>Predefined written procedural method in the design and implementation of experiments in natural sciences.
 (from <a href="http://www.wikidata.org/entity/Q367158">Wikidata</a>)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="split">3.9. Split</h3>
+<h3 id="split">3.10. Split</h3>
 <div class="paragraph">
 <p>In DINA, the concept of a split represents the action of creating new material sample(s) from an existing material sample. The provenance of the new material sample(s) is preserved. For example, the action can be a dissection or fungal/bacterial propagation.</p>
 </div>
@@ -899,7 +907,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-27 14:24:17 UTC
+Last updated 2022-07-28 13:44:31 UTC
 </div>
 </div>
 </body>
