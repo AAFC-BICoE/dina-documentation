@@ -4,7 +4,7 @@
 [[assemblage]]
 == Assemblage
 
-Mechanism used to group material samples according to some organizational theme. Should not be confused with <<project>>. 
+Mechanism used to group material samples according to a generic, administrative theme. Should not be confused with <<project>>. Examples might include specimen books or exsiccatae in herbaria where there is a title and a description and possibly enhanced with managed attributes for additional metadata that depicts the group's identity.
 
 [[collection]]
 == Collection
