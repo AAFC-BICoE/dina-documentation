@@ -29,7 +29,6 @@ An identifier given to the Occurrence, by the collector, at the time it was reco
 
 Same as DarwinCore https://dwc.tdwg.org/terms/#dwc:recordNumber[recordNumber]
 
-
 [[collection-method]]
 === Collection Method
 
@@ -51,6 +50,9 @@ Observed host of the material-sample at the time of the collecting-event.
 Observed surface on which an organism was collected and understood to have lived.
 
 (based on http://www.wikidata.org/entity/Q5824490)
+
+== Determination
+Determinations are attached to an <<organim>>. There is always a primary determination defined.
 
 [[mat-sample]]
 == Material Sample
@@ -116,6 +118,7 @@ Examples: rock, log, agar
 [[organism]]
 == Organism
 A particular organism or defined group of organisms considered to be taxonomically homogeneous. (from https://dwc.tdwg.org/terms/#organism[DarwinCore]).
+Optionally, it is possible to define a target organism within a material sample.
 
 [[project]]
 == Project
