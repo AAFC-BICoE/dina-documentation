@@ -4,7 +4,7 @@
 [[assemblage]]
 == Assemblage
 
-Mechanism used to group material samples according to a generic, administrative theme. Should not be confused with <<project>>. Examples might include specimen books or exsiccatae in herbaria where there is a title and a description and possibly enhanced with managed attributes for additional metadata that depicts the group's identity.
+Mechanism used to group material samples according to a generic, administrative theme. Should not be confused with <<project>>. Examples might include specimen books or exsiccatae in herbaria where there is a title and a description and possibly enhanced with <<managed_attributes>> for additional metadata that depicts the group's identity.
 
 [[collection]]
 == Collection
@@ -52,7 +52,7 @@ Observed surface on which an organism was collected and understood to have lived
 (based on http://www.wikidata.org/entity/Q5824490)
 
 == Determination
-Determinations are attached to an <<organim>>. There is always a primary determination defined.
+Determinations are attached to an <<organism>>. There is always a primary determination defined.
 
 [[mat-sample]]
 == Material Sample
