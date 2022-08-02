@@ -1,0 +1,3 @@
+= IDE Setup
+
+DINA Java-based projects are using https://projectlombok.org/[Lombok], which may require additional setup in your IDE: https://projectlombok.org/setup/overview[IDE setup guides].
