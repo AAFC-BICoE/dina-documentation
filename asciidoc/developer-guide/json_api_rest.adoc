@@ -1,4 +1,4 @@
-= Using the DINA modules API
+= DINA modules API
 
 The modules provide a REST API that conforms to the https://jsonapi.org/[JSON:API] specification. 
 
@@ -118,12 +118,6 @@ The second page:
 
 ----
 /api/region?page[limit]=100&page[offset]=100
-----
-
-The third page:
-
-----
-/api/region?page[limit]=100&page[offset]=200
 ----
 
 == Sorting
