@@ -8,6 +8,8 @@
 
 include::ide.adoc[IDE]
 
+include::json_api_rest.adoc[JSON:API]
+
 include::liquibase.adoc[Liquibase]
 
 include::release_module.adoc[Release Module]
