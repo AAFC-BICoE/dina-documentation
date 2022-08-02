@@ -448,7 +448,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_liquibase_contexts">2.1. Liquibase Contexts</a></li>
 <li><a href="#_liquibase_migration_file_convention">2.2. Liquibase migration file convention</a></li>
-<li><a href="#_run_liquibase_exclusively">2.3. Run Liquibase exclusively</a></li>
+<li><a href="#_run_liquibase_from_maven">2.3. Run Liquibase from Maven</a></li>
 </ul>
 </li>
 <li><a href="#_releasing_a_dina_module">3. Releasing a DINA module</a></li>
@@ -476,30 +476,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_liquibase">2. Liquibase</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Liquibase is used to generate the database and migrate to new versions of the database.</p>
-</li>
-<li>
-<p>Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed.</p>
-</li>
-<li>
-<p>When the application starts, any changelogs that have not been executed are executed.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p><a href="http://www.liquibase.org/index.html">Liquibase</a> is used to generate the database and migrate to new versions of the database schema. Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed. When the application starts, any changelogs that have not been executed are executed.</p>
 </div>
 <div class="paragraph">
-<p><a href="http://www.liquibase.org/index.html">Liquibase home</a></p>
-</div>
-<div class="paragraph">
-<p><a href="http://www.liquibase.org/bestpractices.html">Liquibase Best Practices</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://www.liquibase.org/documentation/changes/add_column.html">Change example: addColumn</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://www.liquibase.org/documentation/generating_changelogs.html">Adding Liquibase support to an existing database</a></p>
+<p>Additional information:
+* <a href="http://www.liquibase.org/bestpractices.html">Liquibase Best Practices</a>
+* <a href="https://www.liquibase.org/documentation/changes/add_column.html">Change example: addColumn</a>
+* <a href="https://www.liquibase.org/documentation/generating_changelogs.html">Adding Liquibase support to an existing database</a></p>
 </div>
 <div class="sect2">
 <h3 id="_liquibase_contexts">2.1. Liquibase Contexts</h3>
@@ -563,52 +547,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_run_liquibase_exclusively">2.3. Run Liquibase exclusively</h3>
+<h3 id="_run_liquibase_from_maven">2.3. Run Liquibase from Maven</h3>
 <div class="paragraph">
-<p>Make sure the liquibase.properties file has the required parameter/value pairs for the target environment, an example is provided in the project folder under /src/main/resources.</p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Unresolved directive in liquibase.adoc - include::../src/main/resources/liquibase.example.properties[]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>At project root folder:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code data-lang="bash" class="language-bash hljs">mvn liquibase:status</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>To run all contexts you can use:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code data-lang="bash" class="language-bash hljs">mvn liquibase:update</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can also perform a specific context while running the update command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code data-lang="bash" class="language-bash hljs">mvn liquibase:update -Dliquibase.contexts="initial-data"</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Note: You can run multiple contexts by using a comma separated list, for example: "initial-data, schema-change".</p>
-</div>
-<div class="paragraph">
-<p>You can also reset your database using the following command:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code data-lang="bash" class="language-bash hljs">mvn liquibase:dropAll</code></pre>
-</div>
+<p>It may be useful to run Liquibase without running the application. The Liquibase website has an <a href="https://docs.liquibase.com/tools-integrations/maven/workflows/creating-liquibase-projects-with-maven-postgresql.html">example</a> and <a href="https://github.com/AAFC-BICoE/seqdb-api">seqdb-api</a> contains the plugin defition and an example <code>liquibase.properties</code> file.</p>
 </div>
 </div>
 </div>
@@ -780,7 +721,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-02 13:25:28 UTC
+Last updated 2022-08-02 13:41:22 UTC
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
