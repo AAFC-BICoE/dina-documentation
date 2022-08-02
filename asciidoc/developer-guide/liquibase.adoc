@@ -3,6 +3,7 @@
 http://www.liquibase.org/index.html[Liquibase] is used to generate the database and migrate to new versions of the database schema. Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed. When the application starts, any changelogs that have not been executed are executed.
 
 Additional information:
+
 * http://www.liquibase.org/bestpractices.html[Liquibase Best Practices]
 * https://www.liquibase.org/documentation/changes/add_column.html[Change example: addColumn]
 * https://www.liquibase.org/documentation/generating_changelogs.html[Adding Liquibase support to an existing database]
