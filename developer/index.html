@@ -444,12 +444,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_ide_setup">1. IDE Setup</a></li>
-<li><a href="#_releasing_a_dina_module">2. Releasing a DINA module</a></li>
-<li><a href="#_postgresql">3. PostgreSQL</a>
+<li><a href="#_liquibase">2. Liquibase</a>
 <ul class="sectlevel2">
-<li><a href="#useful_queries">3.1. Useful Queries</a>
+<li><a href="#_liquibase_contexts">2.1. Liquibase Contexts</a></li>
+<li><a href="#_liquibase_migration_file_convention">2.2. Liquibase migration file convention</a></li>
+<li><a href="#_run_liquibase_exclusively">2.3. Run Liquibase exclusively</a></li>
+</ul>
+</li>
+<li><a href="#_releasing_a_dina_module">3. Releasing a DINA module</a></li>
+<li><a href="#_postgresql">4. PostgreSQL</a>
+<ul class="sectlevel2">
+<li><a href="#useful_queries">4.1. Useful Queries</a>
 <ul class="sectlevel3">
-<li><a href="#_rename_key_in_jsonb_array">3.1.1. Rename key in jsonb array</a></li>
+<li><a href="#_rename_key_in_jsonb_array">4.1.1. Rename key in jsonb array</a></li>
 </ul>
 </li>
 </ul>
@@ -467,7 +474,147 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_releasing_a_dina_module">2. Releasing a DINA module</h2>
+<h2 id="_liquibase">2. Liquibase</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Liquibase is used to generate the database and migrate to new versions of the database.</p>
+</li>
+<li>
+<p>Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed.</p>
+</li>
+<li>
+<p>When the application starts, any changelogs that have not been executed are executed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="http://www.liquibase.org/index.html">Liquibase home</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.liquibase.org/bestpractices.html">Liquibase Best Practices</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.liquibase.org/documentation/changes/add_column.html">Change example: addColumn</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.liquibase.org/documentation/generating_changelogs.html">Adding Liquibase support to an existing database</a></p>
+</div>
+<div class="sect2">
+<h3 id="_liquibase_contexts">2.1. Liquibase Contexts</h3>
+<div class="paragraph">
+<p>When developing for Dina modules certain data is needed for the application to run properly and to make testing easier. Which is why we separate our database migrations into categories known as contexts. The two main contexts are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>schema-change</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Changes to the schema such as adding new columns, renaming tables, adding new tables.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>sample-data</p>
+<div class="ulist">
+<ul>
+<li>
+<p>sample data for developers, this should not be ran on PROD/UAT since it&#8217;s used for inserting sample data for developers and the data is already in PROD/UAT databases.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For PROD/UAT purposes, the context can be changed by editing the application.yml file which has all of the liquibase configurations. The contexts are a comma separated list of all of the contexts to be performed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_liquibase_migration_file_convention">2.2. Liquibase migration file convention</h3>
+<div class="paragraph">
+<p>The following convention should be followed by all Liquibase database migration files:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Migration scripts live in <code>src/main/resources/db/changelog</code></p>
+</li>
+<li>
+<p>Filename should follow the convention <code>&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;.xml</code> (e.g. <code>2-new_specimen_field_PHAC_containment_level.xml</code>)</p>
+</li>
+<li>
+<p>A new migration file&#8217;s path should be added in an "include" tag of <code>src/main/resources/db/changelog/db.changelog-master.xml</code></p>
+</li>
+<li>
+<p>The context of a <code>changeSet</code> in the migration xml file should always be set (e.g. <code>context="schema-change"</code>)</p>
+</li>
+<li>
+<p>The <code>&lt;id&gt;</code> should use the filename convention without the file extension <code>&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;</code> if the file only includes 1 changeset, otherwise the following convention should be used: <code>&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;-&lt;WHAT_THE_CHANGESET_DOES&gt;</code> (ex: <code>id="11-Implement_new_workflow_entitie-Create_enum_types"</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When merging code to dev, we need to make sure the incremental number is always unique. If we have a duplicate, we should be reassigned a new identifier and update the <code>db.changelog-master.xml</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_run_liquibase_exclusively">2.3. Run Liquibase exclusively</h3>
+<div class="paragraph">
+<p>Make sure the liquibase.properties file has the required parameter/value pairs for the target environment, an example is provided in the project folder under /src/main/resources.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Unresolved directive in liquibase.adoc - include::../src/main/resources/liquibase.example.properties[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>At project root folder:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="bash" class="language-bash hljs">mvn liquibase:status</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To run all contexts you can use:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="bash" class="language-bash hljs">mvn liquibase:update</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also perform a specific context while running the update command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="bash" class="language-bash hljs">mvn liquibase:update -Dliquibase.contexts="initial-data"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note: You can run multiple contexts by using a comma separated list, for example: "initial-data, schema-change".</p>
+</div>
+<div class="paragraph">
+<p>You can also reset your database using the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="bash" class="language-bash hljs">mvn liquibase:dropAll</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_releasing_a_dina_module">3. Releasing a DINA module</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The process of releasing a dina module is the same for all modules. The CI will automatically build and release a new Docker image to Docker Hub when something is merged
@@ -567,12 +714,12 @@ in the master/main branch.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_postgresql">3. PostgreSQL</h2>
+<h2 id="_postgresql">4. PostgreSQL</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="useful_queries">3.1. Useful Queries</h3>
+<h3 id="useful_queries">4.1. Useful Queries</h3>
 <div class="sect3">
-<h4 id="_rename_key_in_jsonb_array">3.1.1. Rename key in jsonb array</h4>
+<h4 id="_rename_key_in_jsonb_array">4.1.1. Rename key in jsonb array</h4>
 <div class="paragraph">
 <p>The example is not aiming at perfomance.</p>
 </div>
@@ -633,7 +780,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-02 13:24:30 UTC
+Last updated 2022-08-02 13:25:28 UTC
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
