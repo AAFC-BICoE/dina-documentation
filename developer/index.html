@@ -443,12 +443,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_releasing_a_dina_module">1. Releasing a DINA module</a></li>
-<li><a href="#_postgresql">2. PostgreSQL</a>
+<li><a href="#_ide_setup">1. IDE Setup</a></li>
+<li><a href="#_releasing_a_dina_module">2. Releasing a DINA module</a></li>
+<li><a href="#_postgresql">3. PostgreSQL</a>
 <ul class="sectlevel2">
-<li><a href="#useful_queries">2.1. Useful Queries</a>
+<li><a href="#useful_queries">3.1. Useful Queries</a>
 <ul class="sectlevel3">
-<li><a href="#_rename_key_in_jsonb_array">2.1.1. Rename key in jsonb array</a></li>
+<li><a href="#_rename_key_in_jsonb_array">3.1.1. Rename key in jsonb array</a></li>
 </ul>
 </li>
 </ul>
@@ -458,7 +459,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_releasing_a_dina_module">1. Releasing a DINA module</h2>
+<h2 id="_ide_setup">1. IDE Setup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>DINA Java-based projects are using <a href="https://projectlombok.org/">Lombok</a>, which may require additional setup in your IDE: <a href="https://projectlombok.org/setup/overview">IDE setup guides</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_releasing_a_dina_module">2. Releasing a DINA module</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The process of releasing a dina module is the same for all modules. The CI will automatically build and release a new Docker image to Docker Hub when something is merged
@@ -558,12 +567,12 @@ in the master/main branch.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_postgresql">2. PostgreSQL</h2>
+<h2 id="_postgresql">3. PostgreSQL</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="useful_queries">2.1. Useful Queries</h3>
+<h3 id="useful_queries">3.1. Useful Queries</h3>
 <div class="sect3">
-<h4 id="_rename_key_in_jsonb_array">2.1.1. Rename key in jsonb array</h4>
+<h4 id="_rename_key_in_jsonb_array">3.1.1. Rename key in jsonb array</h4>
 <div class="paragraph">
 <p>The example is not aiming at perfomance.</p>
 </div>
@@ -624,7 +633,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-02 13:07:09 UTC
+Last updated 2022-08-02 13:07:33 UTC
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
