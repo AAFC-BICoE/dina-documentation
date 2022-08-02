@@ -8,6 +8,8 @@
 
 include::ide.adoc[IDE]
 
+include::liquibase.adoc[Liquibase]
+
 include::release_module.adoc[Release Module]
 
 include::postgres.adoc[PostgreSQL]
