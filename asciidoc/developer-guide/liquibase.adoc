@@ -1,16 +1,11 @@
 = Liquibase
 
-* Liquibase is used to generate the database and migrate to new versions of the database.
-* Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed. 
-* When the application starts, any changelogs that have not been executed are executed.
+http://www.liquibase.org/index.html[Liquibase] is used to generate the database and migrate to new versions of the database schema. Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed. When the application starts, any changelogs that have not been executed are executed.
 
-http://www.liquibase.org/index.html[Liquibase home]
-
-http://www.liquibase.org/bestpractices.html[Liquibase Best Practices]
-
-https://www.liquibase.org/documentation/changes/add_column.html[Change example: addColumn]
-
-https://www.liquibase.org/documentation/generating_changelogs.html[Adding Liquibase support to an existing database]
+Additional information:
+* http://www.liquibase.org/bestpractices.html[Liquibase Best Practices]
+* https://www.liquibase.org/documentation/changes/add_column.html[Change example: addColumn]
+* https://www.liquibase.org/documentation/generating_changelogs.html[Adding Liquibase support to an existing database]
 
 == Liquibase Contexts
 
@@ -35,41 +30,6 @@ The following convention should be followed by all Liquibase database migration 
 
 When merging code to dev, we need to make sure the incremental number is always unique. If we have a duplicate, we should be reassigned a new identifier and update the `db.changelog-master.xml`.
 
-== Run Liquibase exclusively
+== Run Liquibase from Maven
 
-Make sure the liquibase.properties file has the required parameter/value pairs for the target environment, an example is provided in the project folder under /src/main/resources.
-
-Example:
-----
-include::../src/main/resources/liquibase.example.properties[]
-----
-
-At project root folder:
- 
-[source,bash]
-----
-mvn liquibase:status
-----
-
-To run all contexts you can use:
-
-[source,bash]
-----
-mvn liquibase:update
-----
-
-You can also perform a specific context while running the update command:
-
-[source,bash]
-----
-mvn liquibase:update -Dliquibase.contexts="initial-data"
-----
-
-Note: You can run multiple contexts by using a comma separated list, for example: "initial-data, schema-change".
-
-You can also reset your database using the following command:
-
-[source,bash]
-----
-mvn liquibase:dropAll
-----
+It may be useful to run Liquibase without running the application. The Liquibase website has an https://docs.liquibase.com/tools-integrations/maven/workflows/creating-liquibase-projects-with-maven-postgresql.html[example] and https://github.com/AAFC-BICoE/seqdb-api[seqdb-api] contains the plugin defition and an example `liquibase.properties` file.
