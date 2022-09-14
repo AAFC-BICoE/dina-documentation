@@ -18,10 +18,10 @@ Roles are specific to groups. A Collection Manager in Group A is not Collection 
 Current roles are:
 
 * Administrator
-* Collection Manager
-* Staff
-* Student
-
+* Super User
+* User
+* Guest
+* Read-Only
 
 [[permissons]]
 == Permissions
