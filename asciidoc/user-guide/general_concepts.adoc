@@ -49,6 +49,11 @@ All object in DINA are identified with UUID (universally unique identifier). Whi
 [[primary_id]]
 == Primary ID
 
+[[field_extensions]]
+== Field extensions
+
+Field extensions are fields with specific definitions that are defined by known standards. In order to add a specific field extension, a system administrator needs to provide a configuration file to the application.
+
 [[managed_attributes]]
 == Managed Attributes
 
