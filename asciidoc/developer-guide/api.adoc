@@ -1,3 +1,5 @@
 = API Specifications
 
 * https://dina-web.github.io/collection-specs/[collection-api]
+* https://dina-web.github.io/object-store-specs/[object-store-api]
+* https://dina-web.github.io/agent-specs/[agent-api]
