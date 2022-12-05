@@ -2,4 +2,6 @@
 
 * https://dina-web.github.io/collection-specs/[collection-api]
 * https://dina-web.github.io/object-store-specs/[object-store-api]
+** https://github.com/AAFC-BICoE/object-store-api/blob/master/docs/file_upload_download.adoc[File Upload]
 * https://dina-web.github.io/agent-specs/[agent-api]
+* https://github.com/DINA-Web/sequence-specs[sequence-api]
