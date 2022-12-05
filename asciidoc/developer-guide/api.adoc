@@ -1,0 +1,3 @@
+= API Specifications
+
+* https://dina-web.github.io/collection-specs/[collection-api]
