@@ -19,7 +19,7 @@ jobs:
       - name: Copy images for Developer Guide
         run: |
           mkdir generated-docs/developer/images
-          cp -r asciidoc/developer-guide/images/ generated-docs/developer/images/
+          cp -r asciidoc/developer-guide/images/. generated-docs/developer/images
 
       - name: Deploy GitHub Pages (only on master branch)
         if: ${{ github.ref == 'refs/heads/main' }}
