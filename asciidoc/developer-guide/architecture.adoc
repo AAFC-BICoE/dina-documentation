@@ -1,3 +1,3 @@
 = High Level Architecture
 
-image::DINA-AAFC%20High%20Level%20Architecture.jpeg[]
+image::DINA-AAFC_High_Level_Architecture.jpeg[]
