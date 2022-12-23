@@ -10,6 +10,8 @@ This guide includes genaral developer documentation for DINA modules. Topics tha
 
 include::api.adoc[API]
 
+include::architecture.adoc[High Level Architecture]
+
 include::ide.adoc[IDE]
 
 include::json_api_rest.adoc[JSON:API]
