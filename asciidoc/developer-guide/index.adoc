@@ -1,5 +1,6 @@
 :sectnums:
 :source-highlighter: highlight.js
+:imagesdir: images
 
 = DINA Developer Guide
 :toclevels: 3
