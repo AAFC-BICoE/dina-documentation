@@ -465,19 +465,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_bulk_operations">4.8. Bulk operations</a></li>
 </ul>
 </li>
-<li><a href="#_liquibase">5. Liquibase</a>
+<li><a href="#_controlled_vocabulary">5. Controlled Vocabulary</a>
 <ul class="sectlevel2">
-<li><a href="#_liquibase_contexts">5.1. Liquibase Contexts</a></li>
-<li><a href="#_liquibase_migration_file_convention">5.2. Liquibase migration file convention</a></li>
-<li><a href="#_run_liquibase_from_maven">5.3. Run Liquibase from Maven</a></li>
+<li><a href="#_vocabulary">5.1. Vocabulary</a></li>
+<li><a href="#_managed_attribute">5.2. Managed Attribute</a></li>
+<li><a href="#_field_extension">5.3. Field Extension</a></li>
 </ul>
 </li>
-<li><a href="#_releasing_a_dina_module">6. Releasing a DINA module</a></li>
-<li><a href="#_postgresql">7. PostgreSQL</a>
+<li><a href="#_liquibase">6. Liquibase</a>
 <ul class="sectlevel2">
-<li><a href="#useful_queries">7.1. Useful Queries</a>
+<li><a href="#_liquibase_contexts">6.1. Liquibase Contexts</a></li>
+<li><a href="#_liquibase_migration_file_convention">6.2. Liquibase migration file convention</a></li>
+<li><a href="#_run_liquibase_from_maven">6.3. Run Liquibase from Maven</a></li>
+</ul>
+</li>
+<li><a href="#_releasing_a_dina_module">7. Releasing a DINA module</a></li>
+<li><a href="#_postgresql">8. PostgreSQL</a>
+<ul class="sectlevel2">
+<li><a href="#useful_queries">8.1. Useful Queries</a>
 <ul class="sectlevel3">
-<li><a href="#_rename_key_in_jsonb_array">7.1.1. Rename key in jsonb array</a></li>
+<li><a href="#_rename_key_in_jsonb_array">8.1.1. Rename key in jsonb array</a></li>
 </ul>
 </li>
 </ul>
@@ -830,7 +837,39 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_liquibase">5. Liquibase</h2>
+<h2 id="_controlled_vocabulary">5. Controlled Vocabulary</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_vocabulary">5.1. Vocabulary</h3>
+<div class="paragraph">
+<p>A Vocabulary represents a single thing/concept. An entry is composed of a <code>name</code>, a <code>term</code> and a <code>multilingualTitle</code>. They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.</p>
+</div>
+<div class="paragraph">
+<p>Examples of vocabulary are : spatial reference system (SRS), type status, coordinate system &#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_managed_attribute">5.2. Managed Attribute</h3>
+<div class="paragraph">
+<p>A managed attribute also represents a single thing/concept. As opposed to vocabulary, they are user defined and values are loaded from the database.</p>
+</div>
+<div class="paragraph">
+<p>Manage attribute extends vocabulary and adds the attributes <code>key</code>, <code>vocabularyElementType</code>, <code>acceptedValues</code>, and <code>multilingualDescription</code> through the <code>TypedVocabularyElement</code> interface.</p>
+</div>
+<div class="paragraph">
+<p>They are used as semi-structured data where the <code>key</code> is stored with a value on the DINA models that support them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_field_extension">5.3. Field Extension</h3>
+<div class="paragraph">
+<p>Field extension represents a set a terms/concept that are logicialy grouped. They usualy comes from a standard defined by an external body.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_liquibase">6. Liquibase</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://www.liquibase.org/index.html">Liquibase</a> is used to generate the database and migrate to new versions of the database schema. Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed. When the application starts, any changelogs that have not been executed are executed.</p>
@@ -852,7 +891,7 @@ submit multiple resources linking to each other.</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_liquibase_contexts">5.1. Liquibase Contexts</h3>
+<h3 id="_liquibase_contexts">6.1. Liquibase Contexts</h3>
 <div class="paragraph">
 <p>When developing for Dina modules certain data is needed for the application to run properly and to make testing easier. Which is why we separate our database migrations into categories known as contexts. The two main contexts are as follows:</p>
 </div>
@@ -885,7 +924,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_liquibase_migration_file_convention">5.2. Liquibase migration file convention</h3>
+<h3 id="_liquibase_migration_file_convention">6.2. Liquibase migration file convention</h3>
 <div class="paragraph">
 <p>The following convention should be followed by all Liquibase database migration files:</p>
 </div>
@@ -913,7 +952,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_run_liquibase_from_maven">5.3. Run Liquibase from Maven</h3>
+<h3 id="_run_liquibase_from_maven">6.3. Run Liquibase from Maven</h3>
 <div class="paragraph">
 <p>It may be useful to run Liquibase without running the application. The Liquibase website has an <a href="https://docs.liquibase.com/tools-integrations/maven/workflows/creating-liquibase-projects-with-maven-postgresql.html">example</a> and <a href="https://github.com/AAFC-BICoE/seqdb-api">seqdb-api</a> contains the plugin defition and an example <code>liquibase.properties</code> file.</p>
 </div>
@@ -921,7 +960,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_releasing_a_dina_module">6. Releasing a DINA module</h2>
+<h2 id="_releasing_a_dina_module">7. Releasing a DINA module</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The process of releasing a dina module is the same for all modules. The CI will automatically build and release a new Docker image to Docker Hub when something is merged
@@ -1021,12 +1060,12 @@ in the master/main branch.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_postgresql">7. PostgreSQL</h2>
+<h2 id="_postgresql">8. PostgreSQL</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="useful_queries">7.1. Useful Queries</h3>
+<h3 id="useful_queries">8.1. Useful Queries</h3>
 <div class="sect3">
-<h4 id="_rename_key_in_jsonb_array">7.1.1. Rename key in jsonb array</h4>
+<h4 id="_rename_key_in_jsonb_array">8.1.1. Rename key in jsonb array</h4>
 <div class="paragraph">
 <p>The example is not aiming at perfomance.</p>
 </div>
@@ -1087,7 +1126,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-01-10 16:51:57 UTC
+Last updated 2023-01-10 19:18:49 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
