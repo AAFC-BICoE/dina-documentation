@@ -17,6 +17,8 @@ include::ide.adoc[IDE]
 
 include::json_api_rest.adoc[JSON:API]
 
+include::controlled_vocabulary.adoc[Controlled Vocabulary]
+
 include::liquibase.adoc[Liquibase]
 
 include::release_module.adoc[Release Module]
