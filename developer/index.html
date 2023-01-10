@@ -842,7 +842,7 @@ submit multiple resources linking to each other.</p>
 <div class="sect2">
 <h3 id="_vocabulary">5.1. Vocabulary</h3>
 <div class="paragraph">
-<p>A Vocabulary represents a single thing/concept. An entry is composed of a <code>name</code>, a <code>term</code> and a <code>multilingualTitle</code>. They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.</p>
+<p>A Vocabulary represents a single thing/concept. An entry is composed of a <code>name</code>, a <code>term</code> and a <code>multilingualTitle</code> (<code>VocabularyElement</code> interface). They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.</p>
 </div>
 <div class="paragraph">
 <p>Examples of vocabulary are : spatial reference system (SRS), type status, coordinate system &#8230;&#8203;</p>
@@ -857,13 +857,16 @@ submit multiple resources linking to each other.</p>
 <p>Manage attribute extends vocabulary and adds the attributes <code>key</code>, <code>vocabularyElementType</code>, <code>acceptedValues</code>, and <code>multilingualDescription</code> through the <code>TypedVocabularyElement</code> interface.</p>
 </div>
 <div class="paragraph">
-<p>They are used as semi-structured data where the <code>key</code> is stored with a value on the DINA models that support them.</p>
+<p>They are used as semi-structured data where the <code>key</code> is stored with a value on the DINA models that support them. The fields of a specific field extension are also implementing the <code>TypedVocabularyElement</code> interface.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_field_extension">5.3. Field Extension</h3>
 <div class="paragraph">
 <p>Field extension represents a set a terms/concept that are logicialy grouped. They usualy comes from a standard defined by an external body.</p>
+</div>
+<div class="paragraph">
+<p>They are used as semi-structured data where the extension, the version and the <code>key</code> are stored with a value on the DINA models that support them.</p>
 </div>
 </div>
 </div>
@@ -1126,7 +1129,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-01-10 19:18:49 UTC
+Last updated 2023-01-10 19:24:13 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
