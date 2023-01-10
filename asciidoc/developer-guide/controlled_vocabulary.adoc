@@ -12,10 +12,10 @@ A managed attribute also represents a single thing/concept. As opposed to vocabu
 
 Manage attribute extends vocabulary and adds the attributes `key`, `vocabularyElementType`, `acceptedValues`, and `multilingualDescription` through the `TypedVocabularyElement` interface.
 
-They are used as semi-structured data where the `key` is stored with a value on the DINA models that support them. The fields of a specific field extension are also implementing the `TypedVocabularyElement` interface.
+They are used as semi-structured data where the `key` is stored with a value on the DINA models that support them.
 
 == Field Extension
 
-Field extension represents a set a terms/concept that are logicialy grouped. They usualy comes from a standard defined by an external body.
+Field extension represents a set a terms/concepts that are logicialy grouped. They usualy comes from a standard defined by an external body. The `fields` of a specific field extension are also implementing the `TypedVocabularyElement` interface. Field extensions are platform defined and loaded from configuration files. 
 
 They are used as semi-structured data where the extension, the version and the `key` are stored with a value on the DINA models that support them.
