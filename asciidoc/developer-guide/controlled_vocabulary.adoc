@@ -2,7 +2,7 @@
 
 == Vocabulary
 
-A Vocabulary represents a single thing/concept. An entry is composed of a `name`, a `term` and a `multilingualTitle`. They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.
+A Vocabulary represents a single thing/concept. An entry is composed of a `name`, a `term` and a `multilingualTitle` (`VocabularyElement` interface). They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.
 
 Examples of vocabulary are : spatial reference system (SRS), type status, coordinate system ...
 
@@ -12,9 +12,10 @@ A managed attribute also represents a single thing/concept. As opposed to vocabu
 
 Manage attribute extends vocabulary and adds the attributes `key`, `vocabularyElementType`, `acceptedValues`, and `multilingualDescription` through the `TypedVocabularyElement` interface.
 
-They are used as semi-structured data where the `key` is stored with a value on the DINA models that support them.
+They are used as semi-structured data where the `key` is stored with a value on the DINA models that support them. The fields of a specific field extension are also implementing the `TypedVocabularyElement` interface.
 
 == Field Extension
 
 Field extension represents a set a terms/concept that are logicialy grouped. They usualy comes from a standard defined by an external body.
 
+They are used as semi-structured data where the extension, the version and the `key` are stored with a value on the DINA models that support them.
