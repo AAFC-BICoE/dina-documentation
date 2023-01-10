@@ -1,1 +1,13 @@
+= Controlled Vocabulary
 
+== Vocabulary
+
+A Vocabulary represents a single thing/concept. An entry is composed of a name, a term and a multilingual title. They are platform defined and values are loaded from configuration files.
+
+Examples of vocabalary are : spatial reference system (SRS), type status, coordinat system ...
+
+== Managed Attribute
+
+A managed attribute also represents a single thing/concept. As opposed to vocabulary, they are user defined and values are loaded from the database.
+
+== Field Extension
