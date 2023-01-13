@@ -90,7 +90,7 @@ A noun representing the process used (the how) in preparing the material sample.
 
 (inspired by https://abcd.tdwg.org/[ABCD 3.0])
 
-Examples: `culture`, `mechanical innoculation`, `dissection`
+Examples: `culture`, `mechanical inoculation`, `dissection`
 
 [[preservation-type]]
 === Preservation Type
