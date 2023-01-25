@@ -41,6 +41,10 @@ Similar to DarwinCore https://dwc.tdwg.org/terms/#dwc:samplingProtocol[samplingP
 The horizontal distance in meters from the given decimalLatitude and decimalLongitude describing the smallest circle containing the whole of the Location.
 (from https://dwc.tdwg.org/terms/#dwc:coordinateUncertaintyInMeters[Darwin Core])
 
+=== Habitat
+
+An environmental system which can sustain and allow the growth of an ecological population. (from https://ontobee.org/ontology/ENVO?iri=http://purl.obolibrary.org/obo/ENVO_01000739[Ontobee])
+
 === Host
 
 Observed host of the material-sample at the time of the collecting-event.
