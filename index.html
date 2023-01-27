@@ -870,6 +870,43 @@ A material sample can be linked to multiple projects.</p>
 <div class="paragraph">
 <p>Limitation: The result of a split (called children) cannot have their own collecting event. Since the extraction from nature happened on the first material sample, children will inherit the one from the first parent.</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Split Series Options</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Split From</th>
+<th class="tableblock halign-left valign-top">Children of ABC-01</th>
+<th class="tableblock halign-left valign-top">Series Option</th>
+<th class="tableblock halign-left valign-top">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">New Series</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Continue Series</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-B</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A, ABC-01-B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Continue Series from Parent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-C</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -920,7 +957,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-01-25 20:21:18 UTC
+Last updated 2023-01-27 20:04:54 UTC
 </div>
 </div>
 </body>
