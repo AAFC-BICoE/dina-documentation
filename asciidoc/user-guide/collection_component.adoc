@@ -139,3 +139,14 @@ Predefined written procedural method in the design and implementation of experim
 In DINA, the concept of a split represents the action of creating new material sample(s) from an existing material sample. The provenance of the new material sample(s) is preserved. For example, the action can be a dissection or fungal/bacterial propagation.
 
 Limitation: The result of a split (called children) cannot have their own collecting event. Since the extraction from nature happened on the first material sample, children will inherit the one from the first parent.
+
+[options="header"]
+.Split Series Options
+|============================================================================
+| Split From  | Children of ABC-01  | Series Option                | Result  
+| ABC-01      |                     | New Series                   | ABC-01-A
+| ABC-01      | ABC-01-A            | Continue Series              | ABC-01-B
+| ABC-01-A    | ABC-01-A, ABC-01-B  | Continue Series from Parent  | ABC-01-C
+|============================================================================
+
+
