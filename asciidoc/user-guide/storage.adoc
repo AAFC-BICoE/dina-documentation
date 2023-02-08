@@ -1,1 +1,6 @@
+[[storage-component]]
+= Storage Component
 
+== Storage Unit Type
+
+== Storage Unit
