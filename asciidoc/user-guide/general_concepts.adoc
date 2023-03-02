@@ -26,10 +26,13 @@ Current roles are:
 [[permissons]]
 == Permissions
 
-* Admins can do everything
-* Read permission are given to all authenticated user
-* For most of the objects, all members of a group will have Write permission for objects within that same group (Collecting-Event, Material Sample)
-* For some objects, Write permission are only available to the Collection Manager role (Agent, Managed Attribute)
+Admins can do everything.
+
+Read permission are given to all authenticated user.
+
+For most of the objects, all members of a group will have Write permission for objects within that same group (Collecting-Event, Material Sample).
+
+For some objects, Write permission are only available to the Collection Manager role (Agent, Managed Attribute).
 
 [[user]]
 == User
@@ -44,10 +47,22 @@ DINA has some fields that are prefixed with the word "verbatim". Verbatim is def
 [[identifiers]]
 == DINA Identifiers
 
-All object in DINA are identified with UUID (universally unique identifier). While this type of identifier is not considered human-readable (123e4567-e89b-12d3-a456-426614174000) it has the property to be virtually universally unique (chances of duplicates are close enough to zero to be considered negligible). Objects can be uniquely identifed even outside DINA the DINA system.
+All object in DINA are identified with UUID (universally unique identifier). While this type of identifier is not considered human-readable (123e4567-e89b-12d3-a456-426614174000) it has the property to be virtually universally unique (chances of duplicates are close enough to zero to be considered negligible). Objects can be uniquely identifed even outside the DINA system.
 
 [[primary_id]]
 == Primary ID
+
+Unique identifier set by user. Non-unique identifiers are allowed and will require user to override duplication alert by clicking "Allow Duplicate". This should *only* be done for historical bookkeeping purposes when copying duplicated primary keys.
+
+[[next_identifier]]
+=== Next Available Identifier
+
+Unique Primary ID creation by system for a material by concatenating the associated Collection string with the lowest unused integer. Ticking off the box will block manual <<primary_id>> entry.
+
+[[barcode]]
+== Barcode
+
+*definition to be created*
 
 [[field_extensions]]
 == Field extensions
@@ -58,3 +73,12 @@ Field extensions are fields with specific definitions that are defined by known 
 == Managed Attributes
 
 Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type `integer`, `string`, `date` or `boolean`.
+
+[[material_sample_attachement]]
+== Material Sample Attachements
+
+References to the sample can be either be done through `Upload New Attachements` or `Attach Existing Objects`.
+
+New attachements can be dragged and dropped into the window or clicked upon to open a system browse dialog. *file type limitations for objs? seems to have worked for .png, .docx, .csv, .xlsx*. The `Save` button will redirect to a wizard for tagging, and file descriptors. By default, the attachment is toggled to be Not Publicly Releasable, and with an Open Government Licence. <<managed_attributes>> can also be added.
+
+Objects already stored can be searched through filters and then selected and attached.
