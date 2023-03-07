@@ -1,4 +1,0 @@
-[[scheduled_actions]]
-= Scheduled Actions
-
-Future directives or actions to be undertaken for sampled specimen. *ACTION* will be created to be delivered on the specified day and assigned to a user.

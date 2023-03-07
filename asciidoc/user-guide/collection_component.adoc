@@ -149,4 +149,16 @@ Limitation: The result of a split (called children) cannot have their own collec
 | ABC-01-A    | ABC-01-A, ABC-01-B  | Continue Series from Parent  | ABC-01-C
 |============================================================================
 
+[[restrictions]]
+== Restrictions
 
+Restriction levels are regulations set by the Public Health Agency of Canada (PHAC) and the Canadian Food Inspection Agency (CFIA). Levels set, or restrictions remarks made will tag the material sample with the appropriate level or note. The “Restricted” button toggle is decoupled from the tags.
+
+Risk groups(RG) are classifications defined by the PHAC based on a biologic’s inherent characteristics and its prevalence for pathogenicity, virulence, risk of spread and availability of effective treatment. The risk group directs the appropriate containment level required to safely handle the specimen and dictates standard operating procedures.
+
+Notes made in the `Restrictions Remarks` section will have its own red alert box when viewing the material sample. Note that only a single box will be created for the restrictions remarks; a new line does not create a new box.
+
+[[scheduled_actions]]
+== Scheduled Actions
+
+Only for reporting and record keeping purposes. No real actions will be taken on assigned date. Multiple actions can exist, and each action can be edited or deleted.

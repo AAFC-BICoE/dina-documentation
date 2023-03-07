@@ -1,8 +1,0 @@
-[[restrictions]]
-= Restrictions
-
-Restriction levels are regulations set by the Public Health Agency of Canada (PHAC) and the Canadian Food Inspection Agency (CFIA). Levels set, or restrictions remarks made will tag the material sample with the appropriate level or note. The “Restricted” button toggle is decoupled from the tags and is used as *insert purpose*.
-
-Risk groups(RG) are classifications defined by the PHAC based on a biologic’s inherent characteristics and its prevalence for pathogenicity, virulence, risk of spread and availability of effective treatment. The risk group directs the appropriate containment level required to safely handle the specimen and dictates standard operating procedures.
-
-

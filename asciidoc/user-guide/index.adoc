@@ -15,10 +15,6 @@ include::collection_component.adoc[]
 
 include::storage_component.adoc[]
 
-include::restrictions.adoc[]
-
-include::scheduled_actions.adoc[]
-
 include::object_store_component.adoc[]
 
 include::sequence_component.adoc[]
