@@ -77,10 +77,4 @@ Managed attributes are attributes that can be created and used by the users on-d
 [[material_sample_attachement]]
 == Material Sample Attachements
 
-References to the sample can be either be done through `Upload New Attachements` or `Attach Existing Objects`.
-
-New attachements can be dragged and dropped into the window or clicked upon to open a system browse dialog. The `Save` button will redirect to a wizard for tagging, and file descriptors. By default, the attachment is toggled to be Not Publicly Releasable, and with an Open Government Licence. <<managed_attributes>> can also be added.
-
-Objects already stored can be searched through filters and then selected and attached.
-
-Refer to <<mat-sample>> and <<object-store-component>> for further details.
+Attachments refer to <<object-store-component>>.
