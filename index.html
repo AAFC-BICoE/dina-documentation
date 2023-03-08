@@ -461,9 +461,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#user">2.4. User</a></li>
 <li><a href="#verbatim">2.5. Verbatim</a></li>
 <li><a href="#identifiers">2.6. DINA Identifiers</a></li>
-<li><a href="#primary_id">2.7. Primary ID</a></li>
-<li><a href="#field_extensions">2.8. Field extensions</a></li>
-<li><a href="#managed_attributes">2.9. Managed Attributes</a></li>
+<li><a href="#primary_id">2.7. Primary ID</a>
+<ul class="sectlevel3">
+<li><a href="#next_identifier">2.7.1. Next Available Identifier</a></li>
+</ul>
+</li>
+<li><a href="#barcode">2.8. Barcode</a></li>
+<li><a href="#field_extensions">2.9. Field extensions</a></li>
+<li><a href="#managed_attributes">2.10. Managed Attributes</a></li>
+<li><a href="#material_sample_attachement">2.11. Material Sample Attachements</a></li>
 </ul>
 </li>
 <li><a href="#collection-component">3. Collection Component</a>
@@ -502,12 +508,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#project">3.8. Project</a></li>
 <li><a href="#_protocol">3.9. Protocol</a></li>
 <li><a href="#split">3.10. Split</a></li>
+<li><a href="#restrictions">3.11. Restrictions</a></li>
+<li><a href="#scheduled_actions">3.12. Scheduled Actions</a></li>
 </ul>
 </li>
 <li><a href="#storage-component">4. Storage Component</a>
 <ul class="sectlevel2">
-<li><a href="#_storage_unit_type">4.1. Storage Unit Type</a></li>
-<li><a href="#_storage_unit">4.2. Storage Unit</a></li>
+<li><a href="#storage-unit-type">4.1. Storage Unit Type</a></li>
+<li><a href="#storage-unit">4.2. Storage Unit</a></li>
 </ul>
 </li>
 <li><a href="#object-store-component">5. Object Store Component</a>
@@ -626,21 +634,17 @@ Objects can only have 1 owner.</p>
 </div>
 <div class="sect2">
 <h3 id="permissons">2.3. Permissions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Admins can do everything</p>
-</li>
-<li>
-<p>Read permission are given to all authenticated user</p>
-</li>
-<li>
-<p>For most of the objects, all members of a group will have Write permission for objects within that same group (Collecting-Event, Material Sample)</p>
-</li>
-<li>
-<p>For some objects, Write permission are only available to the Collection Manager role (Agent, Managed Attribute)</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Admins can do everything.</p>
+</div>
+<div class="paragraph">
+<p>Read permission are given to all authenticated user.</p>
+</div>
+<div class="paragraph">
+<p>For most of the objects, all members of a group will have Write permission for objects within that same group (Collecting-Event, Material Sample).</p>
+</div>
+<div class="paragraph">
+<p>For some objects, Write permission are only available to the Collection Manager role (Agent, Managed Attribute).</p>
 </div>
 </div>
 <div class="sect2">
@@ -658,23 +662,43 @@ Objects can only have 1 owner.</p>
 <div class="sect2">
 <h3 id="identifiers">2.6. DINA Identifiers</h3>
 <div class="paragraph">
-<p>All object in DINA are identified with UUID (universally unique identifier). While this type of identifier is not considered human-readable (123e4567-e89b-12d3-a456-426614174000) it has the property to be virtually universally unique (chances of duplicates are close enough to zero to be considered negligible). Objects can be uniquely identifed even outside DINA the DINA system.</p>
+<p>All object in DINA are identified with UUID (universally unique identifier). While this type of identifier is not considered human-readable (123e4567-e89b-12d3-a456-426614174000) it has the property to be virtually universally unique (chances of duplicates are close enough to zero to be considered negligible). Objects can be uniquely identifed even outside the DINA system.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="primary_id">2.7. Primary ID</h3>
-
+<div class="paragraph">
+<p>Preferably unique identifier set by user. Non-unique identifiers are allowed and will require user to override duplication alert "Allowing Duplicate". This should <strong>only</strong> be done for historical bookkeeping purposes.</p>
+</div>
+<div class="sect3">
+<h4 id="next_identifier">2.7.1. Next Available Identifier</h4>
+<div class="paragraph">
+<p>Unique Primary ID creation by system for a material by concatenating the associated Collection string with the lowest unused integer. Ticking off the box will block manual <a href="#primary_id">Primary ID</a> entry.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="field_extensions">2.8. Field extensions</h3>
+<h3 id="barcode">2.8. Barcode</h3>
+<div class="paragraph">
+<p>Machine readable code output that would be obtained from a scanning gun. Can be used as another means of searching the database.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="field_extensions">2.9. Field extensions</h3>
 <div class="paragraph">
 <p>Field extensions are fields with specific definitions that are defined by known standards. In order to add a specific field extension, a system administrator needs to provide a configuration file to the application.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="managed_attributes">2.9. Managed Attributes</h3>
+<h3 id="managed_attributes">2.10. Managed Attributes</h3>
 <div class="paragraph">
 <p>Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type <code>integer</code>, <code>string</code>, <code>date</code> or <code>boolean</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="material_sample_attachement">2.11. Material Sample Attachements</h3>
+<div class="paragraph">
+<p>Attachments refer to <a href="#object-store-component">Object Store Component</a>.</p>
 </div>
 </div>
 </div>
@@ -914,18 +938,52 @@ A material sample can be linked to multiple projects.</p>
 </tbody>
 </table>
 </div>
+<div class="sect2">
+<h3 id="restrictions">3.11. Restrictions</h3>
+<div class="paragraph">
+<p>Restriction levels are regulations set by the Public Health Agency of Canada (PHAC) and the Canadian Food Inspection Agency (CFIA). Levels set, or restrictions remarks made will tag the material sample with the appropriate level or note. The “Restricted” button toggle is decoupled from the tags.</p>
+</div>
+<div class="paragraph">
+<p>Risk groups(RG) are classifications defined by the PHAC based on a biologic’s inherent characteristics and its prevalence for pathogenicity, virulence, risk of spread and availability of effective treatment. The risk group directs the appropriate containment level required to safely handle the specimen and dictates standard operating procedures.</p>
+</div>
+<div class="paragraph">
+<p>Notes made in the <code>Restrictions Remarks</code> section will have its own red alert box when viewing the material sample. Note that only a single box will be created for the restrictions remarks; a new line does not create a new box.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="scheduled_actions">3.12. Scheduled Actions</h3>
+<div class="paragraph">
+<p>Only for reporting and record keeping purposes. No alerts will be triggered automatically on assigned date. Multiple actions can exist.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="storage-component">4. Storage Component</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_storage_unit_type">4.1. Storage Unit Type</h3>
-
+<div class="paragraph">
+<p>Storage components follow a tree-like hierarchy, with each subsequent child storage unit created having the parent as its location. Each storage component can hold material samples.</p>
+</div>
+<div class="paragraph">
+<p>For example, suppose a <code>Room</code> Storage Unit Type is to be created with name "Room 101" that exists as a place within a building and has a freezer within the room. The <code>Building</code> should be first created, and then the <code>Room</code> as a <code>Add New Child Storage Unit</code>. Once the room is created, <code>Freezer</code> storage unit type should be created as a <code>Add New Child Storage Unit</code> for the <code>Room</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Freezer</code> will have location Building &gt; Room.</p>
+</div>
+<div class="paragraph">
+<p>Components that are created can be assigned as a child of another Storage Unit using the <code>Add Existing Storage Unit</code> button.</p>
 </div>
 <div class="sect2">
-<h3 id="_storage_unit">4.2. Storage Unit</h3>
-
+<h3 id="storage-unit-type">4.1. Storage Unit Type</h3>
+<div class="paragraph">
+<p>Generic classification description for object that is created. Used as a means of categorizing.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="storage-unit">4.2. Storage Unit</h3>
+<div class="paragraph">
+<p>Individual instance of a <a href="#storage-unit-type">Storage Unit Type</a>. For example, "Room 101" is a storage unit that has a storage unit type of <code>Room</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -976,7 +1034,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-13 19:40:22 UTC
+Last updated 2023-03-08 19:23:31 UTC
 </div>
 </div>
 </body>
