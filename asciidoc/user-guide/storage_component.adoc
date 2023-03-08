@@ -1,6 +1,20 @@
 [[storage-component]]
 = Storage Component
 
+Storage components follow a tree-like hierarchy, with each subsequent child storage unit created having the parent as its location. Each storage component can hold material samples.
+
+For example, suppose a `Room` Storage Unit Type is to be created with name "Room 101" that exists as a place within a building and has a freezer within the room. The `Building` should be first created, and then the `Room` as a `Add New Child Storage Unit`. Once the room is created, `Freezer` storage unit type should be created as a `Add New Child Storage Unit` for the `Room`.
+
+The `Freezer` will have location Building > Room.
+
+Components that are created can be assigned as a child of another Storage Unit using the `Add Existing Storage Unit` button. 
+
+[[storage-unit-type]]
 == Storage Unit Type
 
+Generic classification description for object that is created. Used as a means of categorizing.
+
+[[storage-unit]]
 == Storage Unit
+
+Individual instance of a <<storage-unit-type>>. For example, "Room 101" is a storage unit that has a storage unit type of `Room`.
