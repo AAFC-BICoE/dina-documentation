@@ -83,4 +83,4 @@ New attachements can be dragged and dropped into the window or clicked upon to o
 
 Objects already stored can be searched through filters and then selected and attached.
 
-Refer to <<mat-sample>> for further details.
+Refer to <<mat-sample>> and <<object-store-component>> for further details.
