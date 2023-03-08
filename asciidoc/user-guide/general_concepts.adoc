@@ -52,7 +52,7 @@ All object in DINA are identified with UUID (universally unique identifier). Whi
 [[primary_id]]
 == Primary ID
 
-Unique identifier set by user. Non-unique identifiers are allowed and will require user to override duplication alert by clicking "Allow Duplicate". This should *only* be done for historical bookkeeping purposes when copying duplicated primary keys.
+Preferably unique identifier set by user. Non-unique identifiers are allowed and will require user to override duplication alert "Allowing Duplicate". This should *only* be done for historical bookkeeping purposes.
 
 [[next_identifier]]
 === Next Available Identifier
