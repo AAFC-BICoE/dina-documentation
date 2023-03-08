@@ -161,4 +161,4 @@ Notes made in the `Restrictions Remarks` section will have its own red alert box
 [[scheduled_actions]]
 == Scheduled Actions
 
-Only for reporting and record keeping purposes. No real actions will be taken on assigned date. Multiple actions can exist, and each action can be edited or deleted.
+Only for reporting and record keeping purposes. No alerts will be triggered automatically on assigned date. Multiple actions can exist.
