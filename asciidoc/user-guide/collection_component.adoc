@@ -157,16 +157,13 @@ Using that strategy, the generated children will get the next name available amo
 
 Using that strategy, the generated children will get the next name available among the complete set of material sample of type in the entire lineage.
 
-[plantuml, format=svg, opts="inline"]
 ----
-legend
 ABC-01 (Whole Organism)
 |_ ABC-01-A
   |_ ABC-01-B
   |_ ABC-01-E
 |_ ABC-01-C
   |_ ABC-01-D
-end legend
 ----
 
 [[restrictions]]
