@@ -144,6 +144,15 @@ Limitation: The result of a split (called children) cannot have their own collec
 
 Using that strategy, the generated children will get the next name available among the list of children of the direct parent.
 
+----
+ABC-01
+|_ ABC-01-A
+  |_ ABC-01-A-a
+  |_ ABC-01-A-b
+|_ ABC-01-B
+  |_ ABC-01-B-a
+----
+
 [options="header"]
 .Direct Parent Strategy example
 |==============================================
