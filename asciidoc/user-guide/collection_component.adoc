@@ -155,7 +155,7 @@ ABC-01
 
 Based on the structure above:
 [options="header"]
-.Direct Parent Strategy example
+.Direct Parent Strategy examples
 |==========================
 | Split From  | Result  
 | ABC-01      | ABC-01-C
@@ -178,7 +178,7 @@ ABC-01 (Whole Organism)
 
 Based on the structure above:
 [options="header"]
-. Type Based Strategy example
+.Type Based Strategy examples
 |==========================
 | Split From  | Type Created    |Result  
 | ABC-01      | Culture Strain   | ABC-01-F
