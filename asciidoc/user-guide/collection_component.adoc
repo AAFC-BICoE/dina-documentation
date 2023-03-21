@@ -140,7 +140,7 @@ The concept of a split represents the action of creating new material sample(s) 
 
 Limitation: The result of a split (called children) cannot have their own collecting event. Since the extraction from nature happened on the first material sample, children will inherit the one from the first parent.
 
-=== Direct Parent Strategy
+=== Direct Parent Naming Strategy
 
 Using that strategy, the generated children will get the next name available among the list of children of the direct parent.
 
@@ -153,8 +153,21 @@ Using that strategy, the generated children will get the next name available amo
 | ABC-01-A    | ABC-01-A-a, ABC-01-A-b  | ABC-01-A-c
 |==============================================
 
-=== Material Sample Type Strategy
+=== Material Sample Type Naming Strategy
 
+Using that strategy, the generated children will get the next name available among the complete set of material sample of type in the entire lineage.
+
+[plantuml, format=svg, opts="inline"]
+----
+legend
+ABC-01 (Whole Organism)
+|_ ABC-01-A
+  |_ ABC-01-B
+  |_ ABC-01-E
+|_ ABC-01-C
+  |_ ABC-01-D
+end legend
+----
 
 [[restrictions]]
 == Restrictions
