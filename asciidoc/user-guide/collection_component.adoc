@@ -169,12 +169,22 @@ Using that strategy, the generated children will get the next name available amo
 
 ----
 ABC-01 (Whole Organism)
-|_ ABC-01-A
+|_ ABC-01-A (Culture Strain)
   |_ ABC-01-B
   |_ ABC-01-E
 |_ ABC-01-C
   |_ ABC-01-D
 ----
+
+Based on the structure above:
+[options="header"]
+. Type Based Strategy example
+|==========================
+| Split From  | Type Created    |Result  
+| ABC-01      | Culture Strain   | ABC-01-F
+| ABC-01-A    | Culture Strain   | ABC-01-F
+| ABC-01-B    | Molecular Extract| ABC-01-B-a
+|==========================
 
 [[restrictions]]
 == Restrictions
