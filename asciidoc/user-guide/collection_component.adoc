@@ -165,7 +165,7 @@ Based on the structure above:
 
 === Material Sample Type Naming Strategy
 
-Using that strategy, the generated children will get the next name available among the complete set of material sample of type in the entire lineage.
+Using that strategy, the generated children will get the next name available among the complete set of material sample of the same <<mat-samp-type>> in the entire lineage.
 
 ----
 ABC-01 (Whole Organism)
