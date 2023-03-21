@@ -150,7 +150,7 @@ Using that strategy, the generated children will get the next name available amo
 | Split From  | Children            | Result  
 | ABC-01      |                     | ABC-01-A
 | ABC-01      | ABC-01-A            | ABC-01-B
-| ABC-01-A    | ABC-01-a, ABC-01-b  | ABC-01-A-c
+| ABC-01-A    | ABC-01-A-a, ABC-01-A-b  | ABC-01-A-c
 |==============================================
 
 === Material Sample Type Strategy
