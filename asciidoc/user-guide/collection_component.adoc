@@ -156,10 +156,10 @@ ABC-01
 [options="header"]
 .Direct Parent Strategy example
 |==============================================
-| Split From  | Children            | Result  
-| ABC-01      |                     | ABC-01-A
-| ABC-01      | ABC-01-A            | ABC-01-B
-| ABC-01-A    | ABC-01-A-a, ABC-01-A-b  | ABC-01-A-c
+| Split From  | Result  
+| ABC-01      | ABC-01-C
+| ABC-01-A    | ABC-01-A-c
+| ABC-01-B    | ABC-01-B-b
 |==============================================
 
 === Material Sample Type Naming Strategy
