@@ -64,6 +64,14 @@ Unique Primary ID creation by system for a material by concatenating the associa
 
 Machine readable code output that would be obtained from a scanning gun. Can be used as another means of searching the database.
 
+[[form_template]]
+== Form Template
+
+Form templates are used to customized the user interface by allowing to choose field visbility and default values. The user can then use them for data entry on a single page of through a split operation.
+
+=== Form Template visibilty
+The owner (the user who created the template) can always see/use its templates. Optionnaly, the tempalte can be made available to an entire group that the user has access to.
+
 [[field_extensions]]
 == Field extensions
 
