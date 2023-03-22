@@ -69,8 +69,13 @@ Machine readable code output that would be obtained from a scanning gun. Can be 
 
 Form templates are used to customized the user interface by allowing to choose field visbility and default values. The user can then use them for data entry on a single page of through a split operation.
 
-=== Form Template visibilty
-The owner (the user who created the template) can always see/use its templates. Optionnaly, the tempalte can be made available to an entire group that the user has access to.
+=== Visibilty
+The owner (the user who created the template) can always see/use its templates. Optionnaly, the tempalte can be made available to an entire <<group>> that the user has access to.
+
+=== Split Configuration
+
+The Split configuration includes a condition that is used to decide when to display the specific template for a split operation. The Name Generation section refers to 
+the startegy to use for naming material-sample in a <<split>> operation.
 
 [[field_extensions]]
 == Field extensions
