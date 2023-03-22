@@ -507,7 +507,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#organism">3.7. Organism</a></li>
 <li><a href="#project">3.8. Project</a></li>
 <li><a href="#_protocol">3.9. Protocol</a></li>
-<li><a href="#split">3.10. Split</a></li>
+<li><a href="#split">3.10. Split</a>
+<ul class="sectlevel3">
+<li><a href="#_direct_parent_naming_strategy">3.10.1. Direct Parent Naming Strategy</a></li>
+<li><a href="#_material_sample_type_naming_strategy">3.10.2. Material Sample Type Naming Strategy</a></li>
+</ul>
+</li>
 <li><a href="#restrictions">3.11. Restrictions</a></li>
 <li><a href="#scheduled_actions">3.12. Scheduled Actions</a></li>
 </ul>
@@ -895,48 +900,108 @@ A material sample can be linked to multiple projects.</p>
 <div class="sect2">
 <h3 id="split">3.10. Split</h3>
 <div class="paragraph">
-<p>In DINA, the concept of a split represents the action of creating new material sample(s) from an existing material sample. The provenance of the new material sample(s) is preserved. For example, the action can be a dissection or fungal/bacterial propagation.</p>
+<p>The concept of a split represents the action of creating new material sample(s) from an existing material sample. The provenance of the new material sample(s) is preserved. For example, the action can be a dissection or fungal/bacterial propagation.</p>
 </div>
 <div class="paragraph">
 <p>Limitation: The result of a split (called children) cannot have their own collecting event. Since the extraction from nature happened on the first material sample, children will inherit the one from the first parent.</p>
 </div>
+<div class="sect3">
+<h4 id="_direct_parent_naming_strategy">3.10.1. Direct Parent Naming Strategy</h4>
+<div class="paragraph">
+<p>Using that strategy, the generated children will get the next name available among the list of children of the direct parent.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ABC-01
+|_ ABC-01-A
+  |_ ABC-01-A-a
+  |_ ABC-01-A-b
+|_ ABC-01-B
+  |_ ABC-01-B-a</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Based on the structure above:</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Split Series Options</caption>
+<caption class="title">Table 1. Direct Parent Strategy examples</caption>
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Split From</th>
-<th class="tableblock halign-left valign-top">Children of ABC-01</th>
-<th class="tableblock halign-left valign-top">Series Option</th>
 <th class="tableblock halign-left valign-top">Result</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">New Series</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Continue Series</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-B</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A, ABC-01-B</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Continue Series from Parent</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-C</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A-c</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-B-b</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect3">
+<h4 id="_material_sample_type_naming_strategy">3.10.2. Material Sample Type Naming Strategy</h4>
+<div class="paragraph">
+<p>Using that strategy, the generated children will get the next name available among the complete set of material sample of the same <a href="#mat-samp-type">Material Sample Type</a> in the entire lineage.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ABC-01 (Whole Organism)
+|_ ABC-01-A (Culture Strain)
+  |_ ABC-01-B
+  |_ ABC-01-E
+|_ ABC-01-C
+  |_ ABC-01-D</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Based on the structure above:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Type Based Strategy examples</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Split From</th>
+<th class="tableblock halign-left valign-top">Type Created</th>
+<th class="tableblock halign-left valign-top">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Culture Strain</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-F</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Culture Strain</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-F</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Molecular Extract</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ABC-01-B-a</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="restrictions">3.11. Restrictions</h3>
@@ -1034,7 +1099,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-03-08 19:23:31 UTC
+Last updated 2023-03-22 13:29:06 UTC
 </div>
 </div>
 </body>
