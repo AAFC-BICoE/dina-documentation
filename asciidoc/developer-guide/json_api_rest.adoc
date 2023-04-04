@@ -41,9 +41,6 @@ returns:
                 "symbol": "ITS",
                 "name": "ITS",
                 "description": "Internal Transcribed Spacer"
-            },
-            "links": {
-                "self": "/api/region/43"
             }
         }
     ]
@@ -71,9 +68,6 @@ returns
                 "symbol": "142",
                 "name": "142",
                 "description": ""
-            },
-            "links": {
-                "self": "/api/region/142"
             }
         },
         {
@@ -83,9 +77,6 @@ returns
                 "symbol": "12S",
                 "name": "12S",
                 "description": "mitochondrial"
-            },
-            "links": {
-                "self": "/api/region/284"
             }
         },
         {
@@ -95,9 +86,6 @@ returns
                 "symbol": "12S",
                 "name": "12S",
                 "description": null
-            },
-            "links": {
-                "self": "/api/region/366"
             }
         }
     ]
@@ -213,9 +201,6 @@ Reponse:
                 "symbol": "symbol",
                 "name": "region-1",
                 "description": "desc"
-            },
-            "links": {
-                "self": "/api/region/4"
             }
         },
         "status": 201
@@ -228,9 +213,6 @@ Reponse:
                 "symbol": "symbol",
                 "name": "region-2",
                 "description": "desc"
-            },
-            "links": {
-                "self": "/api/region/5"
             }
         },
         "status": 201
