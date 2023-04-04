@@ -15,6 +15,8 @@ include::architecture.adoc[High Level Architecture]
 
 include::ide.adoc[IDE]
 
+include::keycloak.adoc[Keycloak]
+
 include::json_api_rest.adoc[JSON:API]
 
 include::controlled_vocabulary.adoc[Controlled Vocabulary]
