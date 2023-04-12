@@ -467,9 +467,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#barcode">2.8. Barcode</a></li>
-<li><a href="#field_extensions">2.9. Field extensions</a></li>
-<li><a href="#managed_attributes">2.10. Managed Attributes</a></li>
-<li><a href="#material_sample_attachement">2.11. Material Sample Attachements</a></li>
+<li><a href="#form_template">2.9. Form Template</a>
+<ul class="sectlevel3">
+<li><a href="#_visibility">2.9.1. Visibility</a></li>
+<li><a href="#_split_configuration">2.9.2. Split Configuration</a></li>
+</ul>
+</li>
+<li><a href="#field_extensions">2.10. Field extensions</a></li>
+<li><a href="#managed_attributes">2.11. Managed Attributes</a></li>
+<li><a href="#material_sample_attachement">2.12. Material Sample Attachements</a></li>
 </ul>
 </li>
 <li><a href="#collection-component">3. Collection Component</a>
@@ -689,19 +695,37 @@ Objects can only have 1 owner.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="field_extensions">2.9. Field extensions</h3>
+<h3 id="form_template">2.9. Form Template</h3>
+<div class="paragraph">
+<p>Form templates are used to customize the user interface by allowing you to choose field visibility and default values. The user can then use them for data entry on a single page or through a split operation.</p>
+</div>
+<div class="sect3">
+<h4 id="_visibility">2.9.1. Visibility</h4>
+<div class="paragraph">
+<p>The owner (the user who created the template) can always see/use its templates. Optionally, the template can be made available to an entire <a href="#group">Group</a> that the user has access to.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_split_configuration">2.9.2. Split Configuration</h4>
+<div class="paragraph">
+<p>The Split configuration includes a condition used to decide when to display the specific template for a split operation. The Name Generation section refers to the strategy to use for naming material-sample in a <a href="#split">Split</a> operation.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="field_extensions">2.10. Field extensions</h3>
 <div class="paragraph">
 <p>Field extensions are fields with specific definitions that are defined by known standards. In order to add a specific field extension, a system administrator needs to provide a configuration file to the application.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="managed_attributes">2.10. Managed Attributes</h3>
+<h3 id="managed_attributes">2.11. Managed Attributes</h3>
 <div class="paragraph">
 <p>Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type <code>integer</code>, <code>string</code>, <code>date</code> or <code>boolean</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="material_sample_attachement">2.11. Material Sample Attachements</h3>
+<h3 id="material_sample_attachement">2.12. Material Sample Attachements</h3>
 <div class="paragraph">
 <p>Attachments refer to <a href="#object-store-component">Object Store Component</a>.</p>
 </div>
@@ -1099,7 +1123,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-04 14:25:44 UTC
+Last updated 2023-04-12 18:52:10 UTC
 </div>
 </div>
 </body>
