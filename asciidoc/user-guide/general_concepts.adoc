@@ -64,6 +64,18 @@ Unique Primary ID creation by system for a material by concatenating the associa
 
 Machine readable code output that would be obtained from a scanning gun. Can be used as another means of searching the database.
 
+[[form_template]]
+== Form Template
+
+Form templates are used to customize the user interface by allowing you to choose field visibility and default values. The user can then use them for data entry on a single page or through a split operation.
+
+=== Visibility
+The owner (the user who created the template) can always see/use its templates. Optionally, the template can be made available to an entire <<group>> that the user has access to.
+
+=== Split Configuration
+
+The Split configuration includes a condition used to decide when to display the specific template for a split operation. The Name Generation section refers to the strategy to use for naming material-sample in a <<split>> operation.
+
 [[field_extensions]]
 == Field extensions
 
