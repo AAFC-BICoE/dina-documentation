@@ -9,7 +9,7 @@ If the new mapping requires new Analyzer, an https://www.elastic.co/guide/en/ela
 
 Example:
 
-Assuming `keyword_lowercase_analyzer` is alreay declared, add it to the multi-field `data.attributes.originalFilename`:
+Assuming `keyword_lowercase_analyzer` is already declared, add it to the multi-field `data.attributes.originalFilename`:
 ----
 curl -X PUT "localhost:9200/dina_object_store_index/_mapping?pretty" -H 'Content-Type: application/json' -d'
 {
