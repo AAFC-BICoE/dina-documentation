@@ -6,3 +6,38 @@ When a new mapping or new mapping property must be added to a live index the
 https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html[Update mapping API] can be used.
 
 If the new mapping requires new Analyzer, an https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-update-settings.html[update settings analysis] is required first.
+
+Example:
+
+Assuming `keyword_lowercase_analyzer` is alreay declared, add it to the multi-field `data.attributes.originalFilename`:
+----
+curl -X PUT "localhost:9200/dina_object_store_index/_mapping?pretty" -H 'Content-Type: application/json' -d'
+{
+  "properties": {
+    "data.attributes.originalFilename": {
+      "type": "text",
+      "fields": {
+        "prefix": {
+          "type": "text",
+          "analyzer": "keyword_lowercase_analyzer",
+          "index_prefixes": {
+            "min_chars" : 1,
+            "max_chars" : 10
+          }
+        },
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    }
+  }
+}
+'
+----
+
+Refesh the index:
+
+----
+curl -X POST "localhost:9200/dina_object_store_index/_update_by_query?refresh"
+----
