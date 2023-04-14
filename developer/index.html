@@ -495,6 +495,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><a href="#_elasticsearch">10. Elasticsearch</a>
+<ul class="sectlevel2">
+<li><a href="#_update_mapping">10.1. Update Mapping</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1137,10 +1142,66 @@ UPDATE organism
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_elasticsearch">10. Elasticsearch</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_update_mapping">10.1. Update Mapping</h3>
+<div class="paragraph">
+<p>When a new mapping or new mapping property must be added to a live index the
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html">Update mapping API</a> can be used.</p>
+</div>
+<div class="paragraph">
+<p>If the new mapping requires new Analyzer, an <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-update-settings.html">update settings analysis</a> is required first.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p>Assuming <code>keyword_lowercase_analyzer</code> is already declared, add it to the multi-field <code>data.attributes.originalFilename</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X PUT "localhost:9200/dina_object_store_index/_mapping?pretty" -H 'Content-Type: application/json' -d'
+{
+  "properties": {
+    "data.attributes.originalFilename": {
+      "type": "text",
+      "fields": {
+        "prefix": {
+          "type": "text",
+          "analyzer": "keyword_lowercase_analyzer",
+          "index_prefixes": {
+            "min_chars" : 1,
+            "max_chars" : 10
+          }
+        },
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    }
+  }
+}
+'</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Refesh the index:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -X POST "localhost:9200/dina_object_store_index/_update_by_query?refresh"</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-14 20:50:06 UTC
+Last updated 2023-04-14 20:50:56 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
