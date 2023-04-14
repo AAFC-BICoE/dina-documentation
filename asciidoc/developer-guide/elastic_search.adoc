@@ -1,0 +1,8 @@
+= Elasticsearch
+
+== Update Mapping
+
+When a new mapping or new mapping property must be added to a live index the
+https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html[Update mapping API] can be used.
+
+If the new mapping requires new Analyzer, an https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-update-settings.html[update settings analysis] is required first.
