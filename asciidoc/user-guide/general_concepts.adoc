@@ -15,13 +15,16 @@ Objects can only have 1 owner.
 With the exception of Administrator, roles are always assigned per group.
 
 .Roles:
-* Administrator
-DINA Administrator 
-* Super User
-
-* User
-* Guest
-* Read-Only
+Administrator::
+    DINA Administrator
+Super User::
+    Group administrator
+User::
+    Regular user
+Guest::
+    Similar to a regular user but with less permissions on destructive operations
+Read-Only::
+    No data alteration possible
 
 == Permissions
 
