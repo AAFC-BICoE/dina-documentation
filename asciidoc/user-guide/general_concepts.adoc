@@ -16,7 +16,9 @@ With the exception of Administrator, roles are always assigned per group.
 
 .Roles:
 * Administrator
+DINA Administrator 
 * Super User
+
 * User
 * Guest
 * Read-Only
