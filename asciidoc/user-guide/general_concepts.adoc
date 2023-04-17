@@ -25,21 +25,23 @@ With the exception of Administrator, roles are always assigned per group.
 
 Permissions in DINA are strictly related to roles per the table below:
 
-.An example table
+.Minimum role required for operation
 [options="header"]
 |=======================
-|Resource              |Create     |Update     |Delete
-|material-sample       |Guest      |Guest      |User
-|Controlled Vocabulary |Super User |Super User |Super User
+|Resource              |Create      |Update      |Delete
+|Material Sample       |Guest       |Guest       |User
+|Controlled Vocabulary |Super User  |Super User  |Super User
+|Form Template         |Object Owner|Object Owner|Object Owner
+|Object Store objects  |Guest       |Guest       |Super User
 |=======================
 
-Technicals: Permissions are mostly https://en.wikipedia.org/wiki/Role-based_access_control[Role-based access control] combined with https://en.wikipedia.org/wiki/Discretionary_access_control[Discretionary access control] with owners.
+Technicals: Permissions are mostly https://en.wikipedia.org/wiki/Role-based_access_control[Role-based access control] combined with https://en.wikipedia.org/wiki/Discretionary_access_control[Discretionary access control] with owner.
 
 
 [[user]]
 == User
 
-Users (when enabled) can access the system. What a user can and cannot do is based on the group(s)/permission(s). When using an external Identity Provider (e.g. ESAS) the user account must be linked to the Identity Provider account. Once done, the user will be able to use a third-party authentication (e.g. ESAS) to access the system.
+Users (when explicitly allowed) can access the system. What a user can and cannot do is based on the group(s)/permission(s). When using an external Identity Provider (e.g. ESAS) the user account must be linked to the Identity Provider account. Once done, the user will be able to use a third-party authentication (e.g. ESAS) to access the system.
 
 [[verbatim]]
 == Verbatim
