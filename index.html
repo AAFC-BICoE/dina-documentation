@@ -647,7 +647,7 @@ Objects can only have 1 owner.</p>
 <p>Permissions in DINA are strictly related to roles per the table below:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. An example table</caption>
+<caption class="title">Table 1. Minimum role required for operation</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -664,7 +664,7 @@ Objects can only have 1 owner.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">material-sample</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Material Sample</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Guest</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Guest</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">User</p></td>
@@ -675,16 +675,28 @@ Objects can only have 1 owner.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Super User</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Super User</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Form Template</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object Owner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object Owner</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object Owner</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Object Store objects</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Super User</p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Technicals: Permissions are mostly <a href="https://en.wikipedia.org/wiki/Role-based_access_control">Role-based access control</a> combined with <a href="https://en.wikipedia.org/wiki/Discretionary_access_control">Discretionary access control</a> with owners.</p>
+<p>Technicals: Permissions are mostly <a href="https://en.wikipedia.org/wiki/Role-based_access_control">Role-based access control</a> combined with <a href="https://en.wikipedia.org/wiki/Discretionary_access_control">Discretionary access control</a> with owner.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="user">2.4. User</h3>
 <div class="paragraph">
-<p>Users (when enabled) can access the system. What a user can and cannot do is based on the group(s)/permission(s). When using an external Identity Provider (e.g. ESAS) the user account must be linked to the Identity Provider account. Once done, the user will be able to use a third-party authentication (e.g. ESAS) to access the system.</p>
+<p>Users (when explicitly allowed) can access the system. What a user can and cannot do is based on the group(s)/permission(s). When using an external Identity Provider (e.g. ESAS) the user account must be linked to the Identity Provider account. Once done, the user will be able to use a third-party authentication (e.g. ESAS) to access the system.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1146,7 +1158,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-17 14:30:53 UTC
+Last updated 2023-04-17 14:37:53 UTC
 </div>
 </div>
 </body>
