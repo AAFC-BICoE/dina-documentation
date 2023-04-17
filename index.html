@@ -456,8 +456,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#general-concepts">2. General Concepts</a>
 <ul class="sectlevel2">
 <li><a href="#group">2.1. Group</a></li>
-<li><a href="#role">2.2. Role</a></li>
-<li><a href="#permissons">2.3. Permissions</a></li>
+<li><a href="#_role">2.2. Role</a></li>
+<li><a href="#_permissions">2.3. Permissions</a></li>
 <li><a href="#user">2.4. User</a></li>
 <li><a href="#verbatim">2.5. Verbatim</a></li>
 <li><a href="#identifiers">2.6. DINA Identifiers</a></li>
@@ -611,14 +611,14 @@ To search the User Guide, press Ctrl+f and enter a keyword.
 A user can belong to more than 1 group.</p>
 </div>
 <div class="paragraph">
-<p>Groups are also used to defined who owns an object. For example, an object in the object store always belongs to a group.
+<p>Groups are also used to defined who owns an object. For example, an object in the object-store always belongs to a group.
 Objects can only have 1 owner.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="role">2.2. Role</h3>
+<h3 id="_role">2.2. Role</h3>
 <div class="paragraph">
-<p>Roles are specific to groups. A Collection Manager in Group A is not Collection Manager in Group B.</p>
+<p>With the exception of Administrator, roles are always assigned per group.</p>
 </div>
 <div class="ulist">
 <div class="title">Roles:</div>
@@ -642,18 +642,43 @@ Objects can only have 1 owner.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="permissons">2.3. Permissions</h3>
+<h3 id="_permissions">2.3. Permissions</h3>
 <div class="paragraph">
-<p>Admins can do everything.</p>
+<p>Permissions in DINA are strictly related to roles per the table below:</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. An example table</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Resource</th>
+<th class="tableblock halign-left valign-top">Create</th>
+<th class="tableblock halign-left valign-top">Update</th>
+<th class="tableblock halign-left valign-top">Delete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">material-sample</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controlled Vocabulary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Super User</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Super User</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Super User</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>Read permission are given to all authenticated user.</p>
-</div>
-<div class="paragraph">
-<p>For most of the objects, all members of a group will have Write permission for objects within that same group (Collecting-Event, Material Sample).</p>
-</div>
-<div class="paragraph">
-<p>For some objects, Write permission are only available to the Collection Manager role (Agent, Managed Attribute).</p>
+<p>Technicals: Permissions are mostly <a href="https://en.wikipedia.org/wiki/Role-based_access_control">Role-based access control</a> combined with <a href="https://en.wikipedia.org/wiki/Discretionary_access_control">Discretionary access control</a> with owners.</p>
 </div>
 </div>
 <div class="sect2">
@@ -946,7 +971,7 @@ A material sample can be linked to multiple projects.</p>
 <p>Based on the structure above:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Direct Parent Strategy examples</caption>
+<caption class="title">Table 2. Direct Parent Strategy examples</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -992,7 +1017,7 @@ A material sample can be linked to multiple projects.</p>
 <p>Based on the structure above:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Type Based Strategy examples</caption>
+<caption class="title">Table 3. Type Based Strategy examples</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1121,7 +1146,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-17 14:02:09 UTC
+Last updated 2023-04-17 14:30:53 UTC
 </div>
 </div>
 </body>
