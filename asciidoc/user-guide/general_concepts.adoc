@@ -33,6 +33,7 @@ Permissions in DINA are strictly related to roles per the table below:
 |Controlled Vocabulary |Super User  |Super User  |Super User
 |Form Template         |Object Owner|Object Owner|Object Owner
 |Object Store objects  |Guest       |Guest       |Super User
+|Agent (person)        |Guest       |Super User  |Super User
 |=======================
 
 Technicals: Permissions are mostly https://en.wikipedia.org/wiki/Role-based_access_control[Role-based access control] combined with https://en.wikipedia.org/wiki/Discretionary_access_control[Discretionary access control] with owner.
