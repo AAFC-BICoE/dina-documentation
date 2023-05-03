@@ -87,44 +87,15 @@ Allowing other users to see a group does not give them access to edit the form t
 [[split-configuration]]
 === Split Configuration
 
-==== Core Concepts
-
-Split Configurations enable you to configure how Material Sample splits are automatically named and under what conditions they can be used.
-
-Split Configurations are included with a form template, so you can have multiple split configurations depending on the type of material samples you're working with.
-
-Check out the <<split>> section for more information on Material Sample splits.
-
-==== Defining a Split Configuration
-
-You can add a split configuration to an existing form template, or you can create a new template for the split configuration.
-
-When editing a form template, you can enable the split configuration in the Data Component sidebar by toggling the switch.
-
-After enabling it, you will see a Split Configuration section added at the top of the page.
+Split Configurations enable you to configure how Material Sample <<split>>s are automatically named and under what conditions they can be used.
 
 ==== Condition Setup
 
-The Condition section defines when a split configuration can be used. Currently, the only supported Condition Type is `Material Sample Type` condition.
+The Condition controls when a split configuration can be used. Currently, the only supported Condition Type is `Material Sample Type` condition but multiple Material Sample Types can be configured.
 
 A condition can be applied that this split configuration can only be used if the Material Sample being split from is a specific Material Sample Type.
 
-The condition's primary purpose is to prevent split configurations from being used where they shouldn't be.
-
-[source]
-----
-CNC-01 [Whole Organism]
-  CNC-01-A [Culture Strain]
-CNC-02 [Whole Organism]
-----
-
-If you have a condition where a split configuration can only be used if the material sample type is `Whole Organism`, then you will only be able to use that split configuration on `CNC-01` and `CNC-02`. You cannot use the `CNC-01-A` since it's not the correct type based on the condition.
-
-Multiple Material Sample Types can be configured as the condition.
-
 ==== Material Sample Name Generation
-
-The Material Sample Name Generation section defines how the name of the new material samples should be generated.
 
 The <<direct-parent-strategy>> and <<material-sample-type-strategy>> are available to use as strategies.
 
