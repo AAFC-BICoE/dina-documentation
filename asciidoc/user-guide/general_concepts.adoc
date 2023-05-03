@@ -115,39 +115,6 @@ The split configuration contains the following parts:
 
 ==== Condition Setup
 
-Sure, here's an improved version of the documentation:
-
-=== Split Configuration
-
-==== Core Concepts
-
-Split Configurations enable you to define how material sample splits are automatically named and under what conditions they can be used.
-
-Split Configurations are included with a form template, so you can have multiple split configurations depending on the type of material samples you're working with.
-
-==== Defining a Split Configuration
-
-You can add a split configuration to an existing form template, or you can create a new template for the split configuration.
-
-When editing a form template, you can enable the split configuration in the Data Component sidebar by toggling the switch as shown in the following image:
-
-image::form-template-split-configuration-toggle.png[]
-
-After enabling it, you will see a Split Configuration section added at the top of the page, as shown in the following image:
-
-image::form-template-split-configuration-overview.png[]
-
-The split configuration comprises the following parts:
-
-1. The Condition section
-2. Condition Type
-3. Material Sample Type
-4. The Material Sample Name Generation section
-5. Strategy
-6. Generation Options
-
-==== Condition Setup
-
 The Condition section defines when a split configuration can be used. Currently, the only supported Condition Type is `Material Sample Type` condition.
 
 A condition can be applied that this split configuration can only be used if the Material Sample being split from is a specific Material Sample Type.
