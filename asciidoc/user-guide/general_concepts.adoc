@@ -84,67 +84,24 @@ The owner (the user who created the template) can always see/use its templates. 
 
 Allowing other users to see a group does not give them access to edit the form template, they are only able to use the form template.
 
+[[split-configuration]]
 === Split Configuration
 
 ==== Core Concepts
 
-Split Configurations enable you to define how material sample splits are automatically named and under what conditions they can be used.
+Split Configurations enable you to configure how Material Sample splits are automatically named and under what conditions they can be used.
 
 Split Configurations are included with a form template, so you can have multiple split configurations depending on the type of material samples you're working with.
 
-==== Defining a split configuration
-
-You can add a split configuration to an existing form template, or you can create a new template for the split configuration.
-
-When editing a form template, you can enable the split configuration in the Data Component sidebar by toggling the switch as shown in the following image:
-
-image::form-template-split-configuration-toggle.png[]
-
-After enabling it, you will see a Split Configuration section added at the top of the page, as shown in the following image:
-
-image::form-template-split-configuration-overview.png[]
-
-The split configuration contains the following parts:
-
-1. The condition section
-2. Condition Type
-3. Material Sample Type
-4. The Material Sample Name Generation section
-5. Strategy
-6. Generation Options
-
-==== Condition Setup
-
-Sure, here's an improved version of the documentation:
-
-=== Split Configuration
-
-==== Core Concepts
-
-Split Configurations enable you to define how material sample splits are automatically named and under what conditions they can be used.
-
-Split Configurations are included with a form template, so you can have multiple split configurations depending on the type of material samples you're working with.
+Check out the <<split>> section for more information on Material Sample splits.
 
 ==== Defining a Split Configuration
 
 You can add a split configuration to an existing form template, or you can create a new template for the split configuration.
 
-When editing a form template, you can enable the split configuration in the Data Component sidebar by toggling the switch as shown in the following image:
+When editing a form template, you can enable the split configuration in the Data Component sidebar by toggling the switch.
 
-image::form-template-split-configuration-toggle.png[]
-
-After enabling it, you will see a Split Configuration section added at the top of the page, as shown in the following image:
-
-image::form-template-split-configuration-overview.png[]
-
-The split configuration comprises the following parts:
-
-1. The Condition section
-2. Condition Type
-3. Material Sample Type
-4. The Material Sample Name Generation section
-5. Strategy
-6. Generation Options
+After enabling it, you will see a Split Configuration section added at the top of the page.
 
 ==== Condition Setup
 
@@ -161,7 +118,7 @@ CNC-01 [Whole Organism]
 CNC-02 [Whole Organism]
 ----
 
-If you have a condition where a split configuration can only be used if the material sample type is Whole Organism, then you will only be able to use that split configuration on `CNC-01` and `CNC-02`. You cannot use the `CNC-01-A` since it's not the correct type based on the condition.
+If you have a condition where a split configuration can only be used if the material sample type is `Whole Organism`, then you will only be able to use that split configuration on `CNC-01` and `CNC-02`. You cannot use the `CNC-01-A` since it's not the correct type based on the condition.
 
 Multiple Material Sample Types can be configured as the condition.
 
@@ -169,121 +126,13 @@ Multiple Material Sample Types can be configured as the condition.
 
 The Material Sample Name Generation section defines how the name of the new material samples should be generated.
 
-Currently, two `Strategies` are offered:
+The <<direct-parent-strategy>> and <<material-sample-type-strategy>> are available to use as strategies.
 
-* Direct Parent
-* Material Sample Type
-
-==== Direct Parent Strategy
-
-The `Direct Parent` strategy looks at all of the children of the parent being split off from and generates the new sequence based on that.
-
-For example:
-[source]
-----
-CNC-01 [Whole Organism]
-  CNC-01-A [Culture Strain]
-    CNC-01-A-a [Organism Part]
-CNC-02 [Whole Organism]
-----
-
-If splitting from `CNC-01-A` using the Direct Parent strategy and generating 2 children, it will generate more children in sequence to `CNC-01-A-a`. The new material sample records will be:
-
-[source]
-----
-CNC-01 [Whole Organism]
-  CNC-01-A [Culture Strain]
-    CNC-01-A-a [Organism Part]
-    CNC-01-A-b [Organism Part] <-- Newly generated
-    CNC-01-A-c [Organism Part] <-- Newly generated
-CNC-02 [Whole Organism]
-----
-
-==== Material Sample Type Strategy
-
-The `Material Sample Type` strategy is used to generate material sample names based on Material Sample Types that exist anywhere in the hierarchy tree, using a common top-level parent. For example, consider the following hierarchy:
-
-For example:
-
-[source]
-----
-CNC-01 [Whole Organism]
-  CNC-01-A [Culture Strain]
-    CNC-01-A-a [Organism Part]
-      CNC-01-A-c [Organism Part]
-    CNC-01-A-b [Organism Part]
-  CNC-01-B [Culture Strain]
-
-CNC-02 [Whole Organism]
-  CNC-02-A [Culture Strain]
-----
-
-If we want to split off the `CNC-01-B` material sample using the Material Sample Type strategy with Organism Part as the selected type, it will generate the following material sample names:
-
-[source]
-----
-CNC-01 [Whole Organism]
-  CNC-01-A [Culture Strain]
-    CNC-01-A-a [Organism Part]
-      CNC-01-A-c [Organism Part]
-    CNC-01-A-b [Organism Part]
-  CNC-01-B [Culture Strain]
-    CNC-01-B-d [Organism Part] <-- Newly generated
-
-CNC-02 [Whole Organism]
-  CNC-02-A [Culture Strain]
-----
-
-In this example, `CNC-01-B-d` was generated, and it continues the series from `CNC-01-A-c` because they share the same material sample type, even though they are not direct parent-child nodes. Note that this strategy is based on the highest level parent, so `CNC-02` is ignored since `CNC-01` would be the highest shared parent for splitting off `CNC-01-B`.
-
-When using the Material Sample Type strategy, you need to specify the material sample type under Material Sample Info.
+When using the `Material Sample Type` strategy, you will need to define the `Material Sample Type` in the `Material Sample Info` data component.
 
 ==== Generation Options
 
-Once you have configured the `Strategy`, you can choose how the sequence should be generated. You can select one of the following options:
-
-* a (Lowercase letters) - generates a sequence of lowercase letters: a, b, c, d, e, f, g, ..., z, aa, ab, ac, ...
-* A (Uppercase letters) - generates a sequence of uppercase letters: A, B, C, D, E, F, G, ..., Z, AA, AB, AC, ...
-* 1 (Numerical) - generates a sequence of numbers: 1, 2, 3, 4, 5, 6, 7, ...
-
-==== Using Split Configurations
-
-Now that your split configuration has been configured, it can now be used when you want to split a material sample to generate children material sample records.
-
-The following settings will be used to demonstrate how to use a split configuration:
-
-image::form-template-split-configuration-example.png[]
-
-1. This split configuration can only be used when splitting from a material sample with `Whole Organism`.
-2. The strategy to generate the name will use the Material Sample Type with capital letters.
-3. Since the `Material Sample Type` strategy is used, the Material Sample Type in the `Material Sample Info` section must be provided and visible. The strategy will generate the sequence based on the `Culture Strain` material sample type.
-
-This example form template will be called: "Culture Strain Split".
-
-
-Next, on any Material Sample with a Material Sample Type of `Whole Organism`, the split configuration created can be used. On the Material Sample view page, there is a dropdown in the button bar to "Split":
-
-image::form-template-split-configuration-select-split.png[]
-
-If you do not see your split configuration appear, it means your condition configured is not allowing it to be used.
-
-Click the "Split" button in the dropdown to continue the split.
-
-The next screen will allow you to determine the number of Material Samples you wish to create and to see a preview of the generated names.
-
-image::form-template-split-configuration-split-preview.png[]
-
-1. This is the Material Sample name of the record you are splitting of from.
-2. Configure the number of Material Samples you wish to generate.
-3. A preview of the generated name based on the split configuration. Notice the capital letters at the end which was configured as the Generation option. This is also the first child with Culture Strain so it will start from "A".
-4. This is the parent that these generated material samples will share. Same as 1.
-5. The Material Sample Type of the generated records, this is configured in the form template.
-
-Click the "Split" button to continue if the generated preview is correct.
-
-You will now be brought to a bulk edit view where you can full edit all the records that will be generated. Notice how the Form Template is selected automatically.
-
-Once you are finished editing the records, you can now click the "Save All" option which will actually create the records.
+Once you have configured the `Strategy`, you can choose how the sequence should be generated. Using `a (Lowercase letters)` and `A (Uppercase letters)` options will start the sequence at the beginning of the alphabet, before moving on to two-letter sequences starting with "AA", "AB", and so on.
 
 [[field_extensions]]
 == Field extensions
