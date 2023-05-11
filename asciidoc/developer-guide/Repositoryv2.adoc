@@ -1,0 +1,11 @@
+
+Sequence of operation for PATCHing:
+
+# Extract PATCH metadata (provided attributes and relationships)
+# Load entity from database including the provided relationships
+# Map to DTO (unless already done) to discard any unrecognized attributes
+# Iterate over provided attributes and set them on the Entity
+# Iterate over provided relationships and set them on the Entity
+# Save Entity
+# map to DTO
+# Return
