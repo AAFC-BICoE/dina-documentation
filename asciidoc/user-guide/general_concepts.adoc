@@ -82,9 +82,28 @@ Form templates are used to customize the user interface by allowing you to choos
 === Visibility
 The owner (the user who created the template) can always see/use its templates. Optionally, the template can be made available to an entire <<group>> that the user has access to.
 
+Allowing other users to see a group does not give them access to edit the form template, they are only able to use the form template.
+
+[[split-configuration]]
 === Split Configuration
 
-The Split configuration includes a condition used to decide when to display the specific template for a split operation. The Name Generation section refers to the strategy to use for naming material-sample in a <<split>> operation.
+Split Configurations enable you to configure how Material Sample <<split>>s are automatically named and under what conditions they can be used.
+
+==== Condition Setup
+
+The Condition controls when a split configuration can be used. Currently, the only supported Condition Type is `Material Sample Type` condition but multiple Material Sample Types can be configured.
+
+A condition can be applied that this split configuration can only be used if the Material Sample being split from is a specific Material Sample Type.
+
+==== Material Sample Name Generation
+
+The <<direct-parent-strategy>> and <<material-sample-type-strategy>> are available to use as strategies.
+
+When using the `Material Sample Type` strategy, you will need to define the `Material Sample Type` in the `Material Sample Info` data component.
+
+==== Generation Options
+
+Once you have configured the `Strategy`, you can choose how the sequence should be generated. Using `a (Lowercase letters)` and `A (Uppercase letters)` options will start the sequence at the beginning of the alphabet, before moving on to two-letter sequences starting with "AA", "AB", and so on.
 
 [[field_extensions]]
 == Field extensions
