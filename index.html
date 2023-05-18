@@ -470,7 +470,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#form_template">2.9. Form Template</a>
 <ul class="sectlevel3">
 <li><a href="#_visibility">2.9.1. Visibility</a></li>
-<li><a href="#_split_configuration">2.9.2. Split Configuration</a></li>
+<li><a href="#split-configuration">2.9.2. Split Configuration</a></li>
 </ul>
 </li>
 <li><a href="#field_extensions">2.10. Field extensions</a></li>
@@ -515,8 +515,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_protocol">3.9. Protocol</a></li>
 <li><a href="#split">3.10. Split</a>
 <ul class="sectlevel3">
-<li><a href="#_direct_parent_naming_strategy">3.10.1. Direct Parent Naming Strategy</a></li>
-<li><a href="#_material_sample_type_naming_strategy">3.10.2. Material Sample Type Naming Strategy</a></li>
+<li><a href="#direct-parent-strategy">3.10.1. Direct Parent Naming Strategy</a></li>
+<li><a href="#material-sample-type-strategy">3.10.2. Material Sample Type Naming Strategy</a></li>
 </ul>
 </li>
 <li><a href="#restrictions">3.11. Restrictions</a></li>
@@ -750,11 +750,38 @@ Objects can only have 1 owner.</p>
 <div class="paragraph">
 <p>The owner (the user who created the template) can always see/use its templates. Optionally, the template can be made available to an entire <a href="#group">Group</a> that the user has access to.</p>
 </div>
+<div class="paragraph">
+<p>Allowing other users to see a group does not give them access to edit the form template, they are only able to use the form template.</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_split_configuration">2.9.2. Split Configuration</h4>
+<h4 id="split-configuration">2.9.2. Split Configuration</h4>
 <div class="paragraph">
-<p>The Split configuration includes a condition used to decide when to display the specific template for a split operation. The Name Generation section refers to the strategy to use for naming material-sample in a <a href="#split">Split</a> operation.</p>
+<p>Split Configurations enable you to configure how Material Sample <a href="#split">Split</a>s are automatically named and under what conditions they can be used.</p>
+</div>
+<div class="sect4">
+<h5 id="_condition_setup">Condition Setup</h5>
+<div class="paragraph">
+<p>The Condition controls when a split configuration can be used. Currently, the only supported Condition Type is <code>Material Sample Type</code> condition but multiple Material Sample Types can be configured.</p>
+</div>
+<div class="paragraph">
+<p>A condition can be applied that this split configuration can only be used if the Material Sample being split from is a specific Material Sample Type.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_material_sample_name_generation">Material Sample Name Generation</h5>
+<div class="paragraph">
+<p>The <a href="#direct-parent-strategy">Direct Parent Naming Strategy</a> and <a href="#material-sample-type-strategy">Material Sample Type Naming Strategy</a> are available to use as strategies.</p>
+</div>
+<div class="paragraph">
+<p>When using the <code>Material Sample Type</code> strategy, you will need to define the <code>Material Sample Type</code> in the <code>Material Sample Info</code> data component.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_generation_options">Generation Options</h5>
+<div class="paragraph">
+<p>Once you have configured the <code>Strategy</code>, you can choose how the sequence should be generated. Using <code>a (Lowercase letters)</code> and <code>A (Uppercase letters)</code> options will start the sequence at the beginning of the alphabet, before moving on to two-letter sequences starting with "AA", "AB", and so on.</p>
+</div>
 </div>
 </div>
 </div>
@@ -973,10 +1000,13 @@ A material sample can be linked to multiple projects.</p>
 <p>The concept of a split represents the action of creating new material sample(s) from an existing material sample. The provenance of the new material sample(s) is preserved. For example, the action can be a dissection or fungal/bacterial propagation.</p>
 </div>
 <div class="paragraph">
+<p>Split can be configured using a form template with a <a href="#split-configuration">Split Configuration</a> setup.</p>
+</div>
+<div class="paragraph">
 <p>Limitation: The result of a split (called children) cannot have their own collecting event. Since the extraction from nature happened on the first material sample, children will inherit the one from the first parent.</p>
 </div>
 <div class="sect3">
-<h4 id="_direct_parent_naming_strategy">3.10.1. Direct Parent Naming Strategy</h4>
+<h4 id="direct-parent-strategy">3.10.1. Direct Parent Naming Strategy</h4>
 <div class="paragraph">
 <p>Using that strategy, the generated children will get the next name available among the list of children of the direct parent.</p>
 </div>
@@ -1022,7 +1052,7 @@ A material sample can be linked to multiple projects.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_material_sample_type_naming_strategy">3.10.2. Material Sample Type Naming Strategy</h4>
+<h4 id="material-sample-type-strategy">3.10.2. Material Sample Type Naming Strategy</h4>
 <div class="paragraph">
 <p>Using that strategy, the generated children will get the next name available among the complete set of material sample of the same <a href="#mat-samp-type">Material Sample Type</a> in the entire lineage.</p>
 </div>
@@ -1169,7 +1199,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-05-17 14:54:36 UTC
+Last updated 2023-05-18 18:35:21 UTC
 </div>
 </div>
 </body>
