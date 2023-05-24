@@ -5,6 +5,8 @@ Groups are used to represent ownership access. A user can be in groups like `gro
 This could be done by checking the metadata of the particular item the user is trying to access against their group membership. New groups could be added without having to recompile or edit the configuration
 of the deployment.
 
+IMPORTANT: If you are planning to use the object-store, make sure the group names are following [https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.htmls3 bucket naming rules]¸
+
 == Roles per group
 Roles per group are not directly supported by Keycloak. Groups are mostly used to assign a set of Roles to users inside a group. For example, a user with the role "Super User" could be in 2 groups `group-1` and `group-2`
 but we would have no way to restrict to role to a certain group so the user would be a "Super User" in both groups. Creating very specific roles like “Group 1 Super User” is not really an option since it
