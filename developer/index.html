@@ -572,6 +572,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 This could be done by checking the metadata of the particular item the user is trying to access against their group membership. New groups could be added without having to recompile or edit the configuration
 of the deployment.</p>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If you are planning to use the object-store, make sure the group names are following [<a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.htmls3" class="bare">https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.htmls3</a> bucket naming rules]¸
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_roles_per_group">4.2. Roles per group</h3>
@@ -1228,7 +1240,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-05-24 12:48:12 UTC
+Last updated 2023-05-24 15:21:31 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
