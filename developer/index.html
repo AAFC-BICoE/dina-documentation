@@ -593,7 +593,7 @@ That would let us use the native role-based features of Spring Security as an in
 <p>User attributes can be set using the Keycloak console. They will be returned in the Keycloak token so the services and user interface can use it.</p>
 </div>
 <div class="paragraph">
-<p><code>agentId</code>: UUID of the person in the agent module</p>
+<p><code>agentId</code>: UUID of the person in the agent module to allow all the modules to be aware of the agent identifier that represents the authenticated users.</p>
 </div>
 </div>
 <div class="sect2">
@@ -602,7 +602,7 @@ That would let us use the native role-based features of Spring Security as an in
 <p>Group attributes can be set using the Keycloak console. They will be returned by the user module.</p>
 </div>
 <div class="paragraph">
-<p><code>groupLabel-en</code>: label to display by language (specified in the suffix with 2 letters ISO code)</p>
+<p><code>groupLabel-en</code>: label to display the group label by language (specified in the suffix with 2 letters ISO code)</p>
 </div>
 </div>
 </div>
@@ -1228,7 +1228,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-05-24 12:45:11 UTC
+Last updated 2023-05-24 12:48:12 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
