@@ -1,14 +1,9 @@
 = Keycloak
 
-== User Attributes
-User attributes can be set using the Keycloak console. They will be returned in the Keycloak token so the services and user interface can use it.
-
-`agentId`: UUID of the person in the agent module
-
-== Group Attributes
-Group attributes can be set using the Keycloak console. They will be returned by the user module.
-
-`groupLabel-en`: label to display by language (specified in the suffix with 2 letters ISO code)
+== Groups
+Groups are used to represent ownership access. A user can be in groups like `group-1`, `group-2`, etc, which would let them access certain collections and data sets but not others.
+This could be done by checking the metadata of the particular item the user is trying to access against their group membership. New groups could be added without having to recompile or edit the configuration
+of the deployment.
 
 == Roles per group
 Roles per group are not directly supported by Keycloak. Groups are mostly used to assign a set of Roles to users inside a group. For example, a user with the role "Super User" could be in 2 groups `group-1` and `group-2`
@@ -19,3 +14,13 @@ Since Keycloak supports subgroups, we can have subgroups like `/group-1/super-us
 separation of using roles for functional access and groups for ownership, but it still represents a functional solution that mixes both concepts.
 Groups, including subgroups, can also have role mappings, which assign a specified role to all members of a group. As an example, a group-admin role which would be role-mapped to each of the .../admins groups.
 That would let us use the native role-based features of Spring Security as an initial check, then verify in code that the user belongs to the correct admin subgroup for whatever they're trying to do.
+
+== User Attributes
+User attributes can be set using the Keycloak console. They will be returned in the Keycloak token so the services and user interface can use it.
+
+`agentId`: UUID of the person in the agent module
+
+== Group Attributes
+Group attributes can be set using the Keycloak console. They will be returned by the user module.
+
+`groupLabel-en`: label to display by language (specified in the suffix with 2 letters ISO code)
