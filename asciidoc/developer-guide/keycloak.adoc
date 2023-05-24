@@ -18,9 +18,9 @@ That would let us use the native role-based features of Spring Security as an in
 == User Attributes
 User attributes can be set using the Keycloak console. They will be returned in the Keycloak token so the services and user interface can use it.
 
-`agentId`: UUID of the person in the agent module
+`agentId`: UUID of the person in the agent module to allow all the modules to be aware of the agent identifier that represents the authenticated users.
 
 == Group Attributes
 Group attributes can be set using the Keycloak console. They will be returned by the user module.
 
-`groupLabel-en`: label to display by language (specified in the suffix with 2 letters ISO code)
+`groupLabel-en`: label to display the group label by language (specified in the suffix with 2 letters ISO code)
