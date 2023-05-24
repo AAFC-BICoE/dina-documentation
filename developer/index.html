@@ -452,6 +452,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_user_attributes">4.1. User Attributes</a></li>
 <li><a href="#_group_attributes">4.2. Group Attributes</a></li>
+<li><a href="#_roles_per_group">4.3. Roles per group</a></li>
 </ul>
 </li>
 <li><a href="#_dina_modules_api">5. DINA modules API</a>
@@ -579,6 +580,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <p><code>groupLabel-en</code>: label to display by language (specified in the suffix with 2 letters ISO code)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_roles_per_group">4.3. Roles per group</h3>
+<div class="paragraph">
+<p>Roles per group are not directly supported by Keycloak. Groups are mostly used to assign a set of Roles to users inside a group. For example, a user with the role "Super User" could be in 2 groups <code>group-1</code> and <code>group-2</code>
+but we would have no way to restrict to role to a certain group so the user would be a "Super User" in both groups. Creating very specific roles like “Group 1 Super User” is not really an option since it
+would make the implementation quite complex in all the modules.</p>
+</div>
+<div class="paragraph">
+<p>Since Keycloak supports subgroups, we can have subgroups like <code>/group-1/super-user</code> (subgroup of <code>group-1</code>) and use that to determine access in group-specific situations. It breaks away somewhat from the conceptual
+separation of using roles for functional access and groups for ownership, but it still represents a functional solution that mixes both concepts.
+Groups, including subgroups, can also have role mappings, which assign a specified role to all members of a group. As an example, a group-admin role which would be role-mapped to each of the &#8230;&#8203;/admins groups.
+That would let us use the native role-based features of Spring Security as an initial check, then verify in code that the user belongs to the correct admin subgroup for whatever they&#8217;re trying to do.</p>
 </div>
 </div>
 </div>
@@ -1204,7 +1219,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-05-18 18:35:21 UTC
+Last updated 2023-05-24 12:42:30 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
