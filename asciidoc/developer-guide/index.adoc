@@ -9,7 +9,7 @@
 
 This guide includes general developer documentation for DINA modules. Topics that are more related to the DINA system as a whole are covered in local-deployment https://aafc-bicoe.github.io/dina-local-deployment/[documentation]. Documentation about modules implementation is in https://aafc-bicoe.github.io/dina-base-api/[dina-base-api]
 
-UI development documentation is covered in the dina-ui https://github.com/AAFC-BICoE/dina-ui/blob/master/docs/index.adoc[documentation] including the UI design guidelines https://github.com/AAFC-BICoE/dina-ui/blob/master/docs/dina_design_guidelines.adoc[here].
+UI development documentation (including the UI design guidelines) is covered in the dina-ui https://aafc-bicoe.github.io/dina-ui/[documentation].
 
 include::api.adoc[API]
 
