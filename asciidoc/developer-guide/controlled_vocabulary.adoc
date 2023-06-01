@@ -1,5 +1,9 @@
 = Controlled Vocabulary
 
+image::Controlled_Vocabulary_Diagram.drawio.png[]
+
+
+
 == Vocabulary
 
 A Vocabulary represents a single thing/concept. An entry is composed of a `name`, a `term` and a `multilingualTitle` (`VocabularyElement` interface). They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.
