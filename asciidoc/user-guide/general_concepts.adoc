@@ -115,7 +115,14 @@ Field extensions are fields with specific definitions that are defined by known 
 
 Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type `integer`, `string`, `date` or `boolean`.
 
-[[material_sample_attachement]]
-== Material Sample Attachements
+[[material_sample_attachment]]
+== Material Sample Attachments
 
 Attachments refer to <<object-store-component>>.
+
+[[date_search]]
+== Date Search
+
+Resources may contain fields of the date type in the format YYYY-MM-DD. These date fields can be used to search for resources with a few different parameters including equals to, before, or after the input date. 
+
+For example, a Material Sample, Sample 1, may have a Created On field with the value 2023-05-16. Searching by Created On with the parameter Equals and an input value 2023-05-16 will correctly filter for Sample 1. However, searching with partial date values such as 2023-05 or 2023 will not correctly filter for Sample 1. Users should approach date searches with the full, correct date format of YYYY-MM-DD.
