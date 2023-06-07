@@ -1,7 +1,8 @@
-= DINA modules API
+= DINA APIs
 
-DINA modules provide a REST API that conforms to the https://jsonapi.org/[JSON:API] specification.
+DINA modules provide a REST API that conforms to the https://jsonapi.org/[JSON:API] specification. DINA https://github.com/DINA-Web/guidelines/blob/master/DINA-Web-API-Guidelines.md[Web API Guidelines] provides a more specific context and includes some design decisions.
 
+.JSON:API Concept
 image::jsonapi.drawio.png[]
 
 == Sparse field selection
