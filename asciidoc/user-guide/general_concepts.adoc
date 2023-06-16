@@ -123,6 +123,12 @@ Attachments refer to <<object-store-component>>.
 [[date_search]]
 == Date Search
 
-Resources may contain fields of the date type in the format YYYY-MM-DD. These date fields can be used to search for resources with a few different parameters including equals to, before, or after the input date. 
+Resources may contain fields of the date type in the format YYYY-MM-DD. These date fields can be used to search for resources with a few different parameters including equals to, before, or after the input date. Some date fields such as Collecting Event Start Event Date Time support partial dates
 
-For example, a Material Sample, Sample 1, may have a Created On field with the value 2023-05-16. Searching by Created On with the parameter Equals and an input value 2023-05-16 will correctly filter for Sample 1. However, searching with partial date values such as 2023-05 or 2023 will not correctly filter for Sample 1. Users should approach date searches with the full, correct date format of YYYY-MM-DD.
+For example, we have 2 material samples as follows:
+
+1. Material Sample 1 with a Collecting Event with the Start Event Date Time equals 2023-05. 
+
+2. Material Sample 2 with a Collecting Event with Start Event Date time equals 2023-05-16. 
+
+Then, searching by Collecting Event Start Event Date Time with the parameter Equals and an input value 2023-05 will filter for only Material Sample 1. Searching for 2023-05-16 will only filter for Material Sample 2.
