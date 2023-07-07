@@ -533,11 +533,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#object-store-component">5. Object Store Component</a>
 <ul class="sectlevel2">
 <li><a href="#Metadata">5.1. Metadata</a></li>
-<li><a href="#_derivative">5.2. Derivative</a>
-<ul class="sectlevel3">
-<li><a href="#_external_resource">5.2.1. External Resource</a></li>
-</ul>
-</li>
+<li><a href="#_derivative">5.2. Derivative</a></li>
+<li><a href="#_file_upload">5.3. File Upload</a></li>
+<li><a href="#_external_resource">5.4. External Resource</a></li>
 </ul>
 </li>
 <li><a href="#sequence-component">6. Sequence Component</a>
@@ -1175,11 +1173,17 @@ A material sample can be linked to multiple projects.</p>
 <p>Represents a derivative from a metadata object. Its lifecycle is directly attached to the metadata object meaning that if the metadata object is deleted the derivative will automatically be deleted.
 Derivatives are usualy a visual representation of the main object when the main object can&#8217;t be easily represented like raw formats. They are also used to store thumbnails.</p>
 </div>
-<div class="sect3">
-<h4 id="_external_resource">5.2.1. External Resource</h4>
+</div>
+<div class="sect2">
+<h3 id="_file_upload">5.3. File Upload</h3>
+<div class="paragraph">
+<p>Represents a file uploaded to the object-store-api. The files are uniquely identified and available to attach metadata or derivative.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_external_resource">5.4. External Resource</h3>
 <div class="paragraph">
 <p>External resources are represented in the object-store by a URL. No copy or storage of the file is available in the object-store but instead a link to the resource. This is mostly used to allow the object-store to point to a resource that could not be represented as a file (e.g. <a href="https://www.protocols.io/">protocols.io</a>) or that the level of protection required is higher than what the object-store can support.</p>
-</div>
 </div>
 </div>
 </div>
@@ -1214,7 +1218,7 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-07-07 14:23:50 UTC
+Last updated 2023-07-07 14:28:31 UTC
 </div>
 </div>
 </body>
