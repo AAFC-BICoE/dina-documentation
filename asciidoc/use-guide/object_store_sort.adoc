@@ -1,0 +1,59 @@
+[[object_store_sort]]
+= Sorting Objects in the Object store page
+
+[[Metadata]]
+== Metadata
+
+List of software and network requirments to access DINA.
+
+== Sorting Objects in the Object store page
+
+By default the gallary or table out put is sorted by #TODO#
+
+=== Columns useable in sort
+
+It is possible to sort on the following columns: 
+
+* Original Filename. 
+* Captions. 
+* Date Original Version Created. 
+* Last Update On. 
+* Uploaded By.
+
+=== Asseding and decending order
+
+* Clicking on one of these columes will sort by that column in accending order. A bar will appear at the top of the column heading now sorted in ascending order (Dina Page Detains Immage 11).
+* A second click on the same column will reverse the order. The bar will now appear on the bottom of the column heading sorted in decending order (see Dina Page details Image 12)
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 11
+|image:Screenshot15.png[Screenshot15.png]
+|===
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 12
+|image:Screenshot16.png[Screenshot (16).png]
+|===
+
+=== Multi-column sorting
+
+Multi-column sorting is possible by holding down shift and selecting another column header
+
+As an example, we can sort on the "Date originall created on" and "Caption" fields. 
+
+* Start by clicking on "Caption" field. - See image 13
+* Hold down the shift key and click "Caption". - The table is now sored first by "Date originall created on" then by "Caption" - see image 14
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 13
+|image:Screenshot58.png[Screenshot (58).png]
+|===
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 14
+|image:Screenshot59.png[Screenshot (58).png]
+|===

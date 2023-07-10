@@ -1,0 +1,138 @@
+[[object_store_search]]
+= Searching Objects from the Object store page
+
+[[Metadata]]
+== Metadata
+
+List of software and network requirments to access DINA.
+
+=== Searching Objects from the Object store page
+
+As seen in Dina Stored Objects Page Image 3 the search section is in the middle of the page under the Search secion. It includes controls 
+
+* recalling saved searches 
+* the gear icon which will allow users to create a new saved query 
+* The field selector for the query 
+* Adding a new query 
+* Adding a sub-query 
+* The Search button for attivating a search 
+* The Reset button for clearing all searches
+
+To create a new search for "Select a field to search against by click in the pull down menu valid fields include 
+
+* Bucket - text 
+* Caption - text
+* Created by - text 
+* Created on - date - 
+* Licencee - list 
+* Managed Attributes 
+    - Original directory name - text 
+    - Folder directory name - text 
+    - Folder barcode - text 
+    - Folder colour - text 
+    - Barcode - text
+    - Country - text
+    - State Provence -text
+    - Filed as name - text
+    - OCR - text 
+* Media Format - list 
+* Original file name - text 
+* Stored Object Type - list 
+* AC metadata creator - Display Name -text 
+* DC creator -Display Name - text
+
+As noted all of these options take one of three types of data: 
+
+* Text: Any text 
+* List: A pulldown list with limited choices 
+* Data: A Calender data
+
+These data types have two different sets of comparison operators. Different field types have differnet opperators 
+
+* Text or List data type have the following comparitores 
+- Exact Match 
+- Partial Match 
+- Not Equals 
+- Empty 
+- Not Empty 
+* Date data type has the following comparitors 
+- Equals 
+- Not Equals 
+- Greater Than 
+- Greater Than or Equal to 
+- Less Than 
+- Less Than or Equal to
+
+The DINA search function is powered by the same sort of technology the powers search engines. So it is very fast over a large amount of data but behaves differently from traditional searches
+
+The system works by dividing up information fields into groups and indexing all the fields. This makes searches fast but it can miss a search in which only part of the field is supplied
+
+let's look at some of the properties.
+
+==== Searches are not case sensitive.
+
+As we can see the search on "book1" returns the object "Book1.xlsx"
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 5
+|image:Screenshot57.png[Screenshot]
+|===
+
+==== It is important to note that with a pre-indexed list we are not guaranteed to match an object with partial information.
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 6
+|image:Screenshot56.png[Screenshot]
+|===
+
+Here we know we have a object with a filename "Book1.xlsx" but searching on "book" returns no results. This is one of the trade-offs made for fast searches.
+
+==== We connect multiple searches with "AND" and "OR" conditions
+
+By using the OR condition of the field of text returned from an optical character read of the sample we can see there are 561 objects that contain either "DAO" or "1979" in the OCR Character Field
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 7
+|image:Screenshot52.png[Screenshot]
+|===
+
+Using the AND condition requires both and delivers fewer matches
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 8
+|image:Screenshot53.png[Screenshot]
+|===
+
+Only 16 matches in this case.
+
+The Preview Panel can be opened and under the OCR attribute
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 9
+|image:Screenshot51.png[Screenshot]
+|===
+
+both "DOA" and "1979" can be seen
+
+A search for "1979" only reveals 25 matches.
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 10
+|image:Screenshot54.png[Screenshot]
+|===
+
+Given there were 16 matches to "DOA" and "1979", It is possible to predict how many matches to have "1979" but not "DOA"
+
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 11
+|image:Screenshot55.png[Screenshot55.png]
+|===
+
+Using the "not equals" operator to confirm this number. It is, as expected, 9
