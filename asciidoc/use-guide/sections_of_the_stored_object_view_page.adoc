@@ -1,0 +1,66 @@
+[[sections-of-the-stored=object-view-page]]
+= Sections of the Stored Object View page
+
+[[Metadata]]
+== Metadata
+
+List of software and network requirments to access DINA.
+
+=== Sections of the Stored Object View page :
+
+The Stored Objects page has several sections some of which are common with other DINA pages.
+
+.Dina Stored Objects Page Image 3
+image:2210_dinastoredobjectspage.png[[Screenshot (21).png]]
+
+There are a number of sections on the "Object store" page. Listing from the top down we have 
+
+==== Login and Language Section
+
+The "Login" option with login information 
+
+* The logout button 
+* A link to the English or French version of the page. 
+
+==== Naviagtion Section
+
+A group of pull down menus that connect to all the pages seen on the Dina Home Page 
+
+==== List or Gallery / file upload
+
+Allows the switch betweentable view or a gallery view of the objects. This is on the  left of the page. - On the right is a link that will allow uploading of objects.
+
+==== Search Section 
+
+The "Search section" of the page. This is discussed in more detail in the Search section of this document
+
+==== Sort Section 
+
+Controls are at the top of columns and sort section. This will be discussed in more detail in the Sort Section of this
+document.
+
+==== Table or Gallery of Objects.
+
+These have links to the information page of each object, a button which opens the Preview Page of each object, and a check box for selecting objects
+
+==== Pagination section
+
+At the bottom of the page, Is the pagination section. These are the controls which divide the large amount of content into multiple pages. These controls include: 
+
+* A dispaly of the number of pages and the
+current page 
+* A pull down menu that controls the number of objects
+currently displayed. 
+* Navigation buttons to move to the next or
+previous page. 
+* A box, to move directly to a given page.
+
+==== The Preview Page View
+
+[cols="^",options="header",]
+.Preview Page Dina Image 3
+image:2211_dinapreviewpage.png[Screenshot]
+
+* Clicking on the Preview button of a Object displays a Preview Panel on the right side of the page.
+* The information on the preview panel depends on the object.
+

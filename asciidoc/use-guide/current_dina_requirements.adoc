@@ -1,0 +1,25 @@
+[[current-dina-requirements]]
+= Current DINA Requirements
+
+[[Metadata]]
+== Metadata
+
+List of software and network requirments to access DINA.
+
+=== Current DINA requirements :
+
+This document assumes you are logged into the Agriculture & Agri-food
+Canada (AAFC) network either through the Virtual Private Network (VPN)
+or with a computer connected to the network on site at a Government of
+Canada(GoC) location.
+
+This document assumes you have a working web browser.
+
+DINA is currently a work in progress and has some limitations
+
+As of January 01 2023
+
+The system only allows users to view data. Adding data is not currently
+an option
+
+Most of the data is in the "Object Store" option
