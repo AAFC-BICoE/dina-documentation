@@ -1,3 +1,5 @@
+:imagesdir: ./images
+
 [[object_store_sort]]
 = Sorting Objects in the Object store page
 
@@ -26,10 +28,10 @@ It is possible to sort on the following columns:
 * A second click on the same column will reverse the order. The bar will now appear on the bottom of the column heading sorted in decending order (see Dina Page details Image 12)
 
 .Dina List Acending 3100_dinasortacending.png
-image:3100_dinasortacending.png[Dina List Acending]
+image:4100_dinasortacending.png[Dina List Acending]
 
 .Dina List Decending 3110_dinasortdecending
-image:3110_dinasortdecending.png[Dina List Decending]
+image:4110_dinasortdecending.png[Dina List Decending]
 
 === Multi-column sorting
 
@@ -40,8 +42,8 @@ As an example, we can sort on the "Date originall created on" and "Caption" fiel
 * Start by clicking on "Caption" field. - See image 13
 * Hold down the shift key and click "Caption". - The table is now sored first by "Date originall created on" then by "Caption" - see image 14
 
-.Dina One Column Sort 4200_dinasinglecolumsort
-image:4200_dinasinglecolumsort.png[Dina Single Column Sort]
+.Dina One Column Sort 4320_dinasinglecolumsort
+image:4320_dinasinglecolumsort.png[Dina Single Column Sort]
 
-.Details Two Column Sort 4210_dinatwocolumnsort
-image:4210_dinatwocolumnsort.png[Details Two Column Sort]
+.Details Two Column Sort 4231_dinatwocolumnsort
+image:4231_dinatwocolumnsort.png[Details Two Column Sort]
