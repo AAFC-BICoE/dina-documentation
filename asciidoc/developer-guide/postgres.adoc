@@ -49,3 +49,72 @@ UPDATE organism
   FROM subquery2
   WHERE organism.id = subquery2.id;
 ----
+
+[[restore_backup]]
+== Restore Backup (DINA Local Deployment)
+
+These instructions are designed for core dump backups; other types of backup will require a different solution for restoring.
+
+1. Move your database dump file
+
+Move your DINA dump `.sql.gz` file into the `dina-local-deployment` repository.
+
+[start=2]
+2. Remove Existing Docker Volumes
+
+It's recommended to delete your existing DINA Docker volumes to avoid conflicts with the existing data. You can use this command or use the VS Code Docker extension to remove the existing volumes.
+
+[source,sh]
+----
+./start_stop_dina.sh down --volumes
+----
+
+[start=3]
+3. Extract and make changes to the file
+
+Depending on what version of PostgreSQL the dump was generated from, the dump might not be compatible with your current version. To get around this, you can extract the `.gz` file and run this `sed` command to convert it:
+
+[source,sh]
+----
+gzip -d dina_dump.sql.gz
+sed -i "s/ LOCALE = 'en_US\.utf8'//g" dina_dump.sql
+----
+
+[start=4]
+4. Change the database connection settings
+
+In the `dina-compose.local.yml` file you will need to change the `spring.datasource.url` for each of the APIs you will need to use:
+
+[source,yml]
+----
+spring.datasource.url: jdbc:postgresql://dina-db/v0_object_store?currentSchema=object_store
+----
+
+In the example above, it was changed from `object_store` to `v0_object_store` to match the dump.
+
+[start=5]
+5. Start up the application
+
+[source,sh]
+----
+./start_stop_dina.sh up -d
+----
+
+Once the `dina-db` container starts, the `init-db` container will set up the database. Once the application has loaded with the empty database, the database dump can be copied over to it:
+
+[source,sh]
+----
+docker cp ./dina_dump.sql dina-local-deployment-dina-db-1:/home/dina_dump.sql
+----
+
+[start=6]
+6. Restore the dump file
+
+With the file copied over to the home folder, you can now run this command to import the file into the Postgresql database:
+
+[source,sh]
+----
+docker exec -it dina-local-deployment-dina-db-1 psql -f /home/dina_dump.sql -d dina -U pguser
+----
+
+At this point, you should be able to log in to the application and verify that the backup worked correctly.
