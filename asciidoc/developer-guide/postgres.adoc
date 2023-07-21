@@ -80,8 +80,15 @@ gzip -d dina_dump.sql.gz
 sed -i "s/ LOCALE = 'en_US\.utf8'//g" dina_dump.sql
 ----
 
+The database dump might also contain database names like "v0_agent", it can be converted to what local deployment expects using:
+
+[source,sh]
+----
+sed -i "s/v0_//g" dina_dump.sql
+----
+
 [start=4]
-4. Change the database connection settings
+4. Change the database connection settings if needed
 
 In the `dina-compose.local.yml` file you will need to change the `spring.datasource.url` for each of the APIs you will need to use:
 
@@ -90,7 +97,7 @@ In the `dina-compose.local.yml` file you will need to change the `spring.datasou
 spring.datasource.url: jdbc:postgresql://dina-db/v0_object_store?currentSchema=object_store
 ----
 
-In the example above, it was changed from `object_store` to `v0_object_store` to match the dump.
+In the example above, it was changed from `object_store` to `v0_object_store` to match the dump. That's if you did not convert it using the sed command, otherwise it can remain the same.
 
 [start=5]
 5. Start up the application
