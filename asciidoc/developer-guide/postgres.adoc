@@ -121,7 +121,7 @@ With the file copied over to the home folder, you can now run this command to im
 
 [source,sh]
 ----
-docker exec -it dina-local-deployment-dina-db-1 psql -f /home/dina_dump.sql -d dina -U pguser
+docker exec -it dina-local-deployment-dina-db-1 psql -f /home/dina_dump.sql -d dina -U postgres
 ----
 
 At this point, you should be able to log in to the application and verify that the backup worked correctly.
