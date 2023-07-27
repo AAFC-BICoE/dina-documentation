@@ -5,3 +5,10 @@
 == Metadata
 
 Work for the imediate future
+
+adding sections to index logging: 
+
+include::object_store_search.adoc[Searching Objects from the Object store page]
+
+include::object_store_sort.adoc[Sorting Objects in the Object store page]
+
