@@ -1,3 +1,5 @@
 #generated docs ignore
 
 generated-docs/
+*.md
+*.adoc
