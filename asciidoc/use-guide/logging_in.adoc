@@ -1,11 +1,3 @@
-:sectnums:
-
-:toclevels: 3
-:leveloffset: 1
-:icons: font
-:imagesdir: ./images
-
-
 [[logging-in]]
 = Logging in to the DINA Homepage
 
@@ -14,55 +6,25 @@
 
 List of software and network requirments to access DINA.
 
-=== Production or Development environment: 
-
-NOTE: If you want to examine the data in the produciton environment log into the server at https://dina.biodiversity.agr.gc.ca/ the Dina Welcome page
-
-NOTE: If you want to test the newest features of the development environment log into the servera at https://dina-dev2.biodiversity.agr.gc.ca/ the Dina Welcome page
-
 === Logging in to the DINA Homepage :
 
-[TODO: remove red arrow from image]
-
-.Dina Welcome Page 2110_dinawelcomepage.png
+.Dina Welcome Page
 image::2110_dinawelcomepage.png[Dina Welcome Page image 1]
 
-* Once you are at the Dina Welcome Page, press the AAFC button (Fig. 1 the blue arrow). Two outcomes are possible/
-
-Case I: If you are using a browser with Single-Sign-on capacity, such as MS Edge, the system should log you in.
-
-Case II: If your browser does not have Single-Sign-On capacity, such as Firefox, you be forwarded to the Internal User Login screen: 
-
-[TODO: put black border around image]
-
-.Internal User Login 21105_dinaInternaluserlogin.png
-image::21105_dinaInternaluserlogin.png[Internal User Login]
-
-If you are forwarded to the Internal User Login screen you should.
-
-Step 1: Fill in your Network User Name and Network Password in the Interan Uers Login. Make sure your Department is correctly listed. When done press Submit
-
-[TODO: I think the directive was made to not incude secure information like interanl address or email address on public documentation ] 
-Step 2: Let Christian.Gendreau@agr.gc.ca know you have completed Step 3 (via email is good) and they will complete the account linking in DINA
-
-Step 3: After DINA Account is linked, re-log in to DINA using the TEST URL (https://dina-dev2.biodiversity.agr.gc.ca/) and the AAFC button from Step 1.  Use your real LAN account name and password for all future login’s.
-
-Your account is fully linked at this point.
-If the system asks for a username and password Enter your aafc credendtals in the boxes approprate boxes 
-
+* Go to https://dina-dev2.biodiversity.agr.gc.ca/ the Dina Welcome page
+(image 1).
 * Press the AAFC button (Image 1 the blue arrow).
- 
+
+The system should log you in.
+
+If the system asks for a username and password
+
+* Enter your aafc credendtals in the boxes approprate boxes (Image 1 the
+red arrow)
 * Press the "Sign in" button.
 
-=== At the Dina Home Page
-
-At this point you should be able to get to the Dina Homepage
-
-[TODO: fix extra lines on image]
-[TODO: fix name/number]
-
-.Dina Home Page 2111_dinahomepage.png
-image:2111_dinahomepage.png[Dina Home Page]
+.Dina Home Page
+image:2111_dinahomepage.png[Screenshot (13).png]
 
 From the Home Page (Image 2) - Look for the "Object Store" heading -
 Choose the "Stored Objects" link (Image 2, the red arrow)

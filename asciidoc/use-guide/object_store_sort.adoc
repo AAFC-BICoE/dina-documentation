@@ -25,11 +25,17 @@ It is possible to sort on the following columns:
 * Clicking on one of these columes will sort by that column in accending order. A bar will appear at the top of the column heading now sorted in ascending order (Dina Page Detains Immage 11).
 * A second click on the same column will reverse the order. The bar will now appear on the bottom of the column heading sorted in decending order (see Dina Page details Image 12)
 
-.Dina List Acending 3100_dinasortacending.png
-image:3100_dinasortacending.png[Dina List Acending]
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 11
+|image:Screenshot15.png[Screenshot15.png]
+|===
 
-.Dina List Decending 3110_dinasortdecending
-image:3110_dinasortdecending.png[Dina List Decending]
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 12
+|image:Screenshot16.png[Screenshot (16).png]
+|===
 
 === Multi-column sorting
 
@@ -40,8 +46,14 @@ As an example, we can sort on the "Date originall created on" and "Caption" fiel
 * Start by clicking on "Caption" field. - See image 13
 * Hold down the shift key and click "Caption". - The table is now sored first by "Date originall created on" then by "Caption" - see image 14
 
-.Dina One Column Sort 4200_dinasinglecolumsort
-image:4200_dinasinglecolumsort.png[Dina Single Column Sort]
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 13
+|image:Screenshot58.png[Screenshot (58).png]
+|===
 
-.Details Two Column Sort 4210_dinatwocolumnsort
-image:4210_dinatwocolumnsort.png[Details Two Column Sort]
+[cols="^",options="header",]
+|===
+|Details Page Dina Image 14
+|image:Screenshot59.png[Screenshot (58).png]
+|===

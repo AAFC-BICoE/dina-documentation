@@ -1,11 +1,3 @@
-:sectnums:
-
-:toclevels: 3
-:leveloffset: 1
-:icons: font
-:imagesdir: ./images
-
-
 [[sections-of-the-stored=object-view-page]]
 = Sections of the Stored Object View page
 
@@ -18,8 +10,8 @@ List of software and network requirments to access DINA.
 
 The Stored Objects page has several sections some of which are common with other DINA pages.
 
-.Dina Stored Objects Page 2210_dinastoredobjectspage.png
-image:2210_dinastoredobjectspage.png[[Dina Stored Objects Page]]
+.Dina Stored Objects Page Image 3
+image:2210_dinastoredobjectspage.png[[Screenshot (21).png]]
 
 There are a number of sections on the "Object store" page. Listing from the top down we have 
 
@@ -66,8 +58,8 @@ previous page.
 ==== The Preview Page View
 
 [cols="^",options="header",]
-.Preview Page Dina Image 3 2211_dinapreviewpage.png
-image:2211_dinapreviewpage.png[2211_dinapreviewpage.png]
+.Preview Page Dina Image 3
+image:2211_dinapreviewpage.png[Screenshot]
 
 * Clicking on the Preview button of a Object displays a Preview Panel on the right side of the page.
 * The information on the preview panel depends on the object.
