@@ -14,6 +14,8 @@ include::logging_in.adoc[Logging in to the DINA Homepage]
 
 include::sections_of_the_stored_object_view_page.adoc[Sections of the Stored Object View page]
 
+include::object_store_search.adoc[Searching Objects from the Object store page]
+
 include::future_work.adoc[Future Work]
 
 include::references.adoc[References]
