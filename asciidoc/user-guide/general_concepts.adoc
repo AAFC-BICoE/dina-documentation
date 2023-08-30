@@ -77,6 +77,17 @@ Machine readable code output that would be obtained from a scanning gun. Can be 
 [[date-time]]
 == Date/Time
 
+In the context of DINA, date/time can organized in 4 categories:
+
+LocalDate::
+  Locate date represents a date without time that is local (no timezone information). Example: Date of employement
+LocalDateTime::
+  Locate date/time represents a date with time that is local (no timezone information). Example: Physical store opening date/time
+DateTime::
+  Date/time that includes timezone information. Example: Exact date/time a record was created.
+DateTimeOptionalTz::
+  Date/time that may or may not include timezone information.
+
 [[form_template]]
 == Form Template
 
