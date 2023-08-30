@@ -74,6 +74,9 @@ Unique Primary ID creation by system for a material by concatenating the associa
 
 Machine readable code output that would be obtained from a scanning gun. Can be used as another means of searching the database.
 
+[[date-time]]
+== Date/Time
+
 [[form_template]]
 == Form Template
 
