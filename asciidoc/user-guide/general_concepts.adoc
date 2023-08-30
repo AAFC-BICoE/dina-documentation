@@ -80,9 +80,9 @@ Machine readable code output that would be obtained from a scanning gun. Can be 
 In the context of DINA, date/time can organized in 4 categories:
 
 LocalDate::
-  Locate date represents a date without time that is local (no timezone information). Example: Date of employement
+  Local date represents a date, without time, that is local (no timezone information). Example: Date of employement
 LocalDateTime::
-  Locate date/time represents a date with time that is local (no timezone information). Example: Physical store opening date/time
+  Local date/time represents a date, with time, that is local (no timezone information). Example: Physical store inauguration date/time
 DateTime::
   Date/time that includes timezone information. Example: Exact date/time a record was created.
 DateTimeOptionalTz::
