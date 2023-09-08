@@ -5,13 +5,13 @@
 [[Metadata]]
 == Metadata
 
-Quick exlaination of searchs
+A quick explanation of searches
 
 === Search object attributes
-While there are many attribues to search they fall into three groups
-* Text - which can have any text in them
-* List - a drop down list of limited choses
-* Date - a calender data and time.
+While there are many attributes to search they fall into three groups
+* Text – a label of any text
+* List - a drop down list of limited choices
+* Date - a calendar date and time.
 
 The search options for Text and List are the same
 
@@ -23,15 +23,15 @@ The search options for Text and List are the same
 
 ---
 
-A Note on partal match.
+A note on partial matches.
 
-The method to make these searches fast on large dataset results in a partial search not gareunteeing to file a longer bit of text. For example there was a archive where doing a search on "book" did not return a "book1.txt"
+The method used to make searches fast on large datasets results in a partial search not gareunteeing to find a label containing those characters. For example there was a archive where doing a search on "book" did not return a "book1.txt"
 
-Work is still being done to find the optimal tradoff between speed and returns
+Work is still being done to find the optimal tradeoff between speed and the completeness of results.
 
 ---
 
-Date data type has the following comparitors
+Date has the following search options
 
 * Equals 
 * Not Equals 
@@ -40,17 +40,19 @@ Date data type has the following comparitors
 * Less Than 
 * Less Than or Equal to
 
-=== Parts of the spearch page
+=== Parts of the search page
 
 Searches are created in the search section of the page
 
 Two buttons exist at the right hand side of the page. These are Add Query and Add Sub Query.
 
-The add Query button is used to create a new entery to the search. 
+The Add Query button is used to create a new criteria for the search. 
 
-When a new query is added the object attributre to be searched os chosen, A comparison choice is chosen, And a value that is compared to is enerted into the field.
+When a new criteria is added, an attribute , a search option, and a value for comparison are specified.
 
-Addition query can be added to the search by pressing the add button
+Only objects who’s attributes meet the criteria are included in the results
+
+Additional queries can be added to the search by pressing the add button
 
 .Dina Search section
 image::search05.png[Dina Search section]
@@ -63,12 +65,12 @@ image::search05.png[Dina Search section]
 . "Query value" This options is to always present when it is the value compared to the query field
 . "Search" and "Reset" buttons. The Search button applies the search to the object store showing only those object that meet the query. The Reset button ends the search and the page will display the full list of objects
 
-=== combinigng multiple searches
+=== combining multiple searches
 
 Multiple searches can be combined for more accuray. For example all samples with a date of 2019 could be found by searching for those that are 
-have a creation date Greather than or Equal to Jaunary 1st 2019
+have a creation date Greater than or Equal to January 1st 2019
 And
-a create date Less than or Equal to Decepmber 31st 2019
+a create date Less than or Equal to December 31st 2019
 
 The Or search can be used for combining multiple    
 
@@ -84,5 +86,6 @@ image::search04.png[Double Query AND Search]
 
 Adding a second query as a AND will return all object that match all queries. In the case of Figure 3 above, All object that are jpeg images and have a Capation that is empty. As we can see there are 2 results.
 
+ 
 
  
