@@ -11,11 +11,8 @@ Data about an object stored or represented in the object-store.
 Represents a derivative from a metadata object. Its lifecycle is directly attached to the metadata object meaning that if the metadata object is deleted the derivative will automatically be deleted.
 Derivatives are usualy a visual representation of the main object when the main object can't be easily represented like raw formats. They are also used to store thumbnails.
 
-== File Upload
 
-Represents a file uploaded to the object-store-api. The files are uniquely identified and available to attach metadata or derivative.
-
-== External Resource
+=== External Resource
 
 External resources are represented in the object-store by a URL. No copy or storage of the file is available in the object-store but instead a link to the resource. This is mostly used to allow the object-store to point to a resource that could not be represented as a file (e.g. https://www.protocols.io/[protocols.io]) or that the level of protection required is higher than what the object-store can support.
 

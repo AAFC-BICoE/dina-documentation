@@ -1,0 +1,19 @@
+:sectnums:
+
+= DINA Use Guide
+:toclevels: 3
+:leveloffset: 1
+:icons: font
+:imagesdir: ./images
+
+NOTE: To search the User Guide, press Ctrl+f and enter a keyword.
+
+include::current_dina_requirements.adoc[Current DINA Requirements]
+
+include::logging_in.adoc[Logging in to the DINA Homepage]
+
+include::sections_of_the_stored_object_view_page.adoc[Sections of the Stored Object View page]
+
+include::object_store_search.adoc[Searching Objects from the Object store page]
+
+include::references.adoc[References]

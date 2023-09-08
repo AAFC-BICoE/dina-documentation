@@ -1,0 +1,86 @@
+[[Search]]
+
+= Searching the Stored objects
+
+[[Metadata]]
+== Metadata
+
+A quick explanation of searches
+
+=== Search object attributes
+While there are many attributes to search they fall into three groups
+* Text – a label of any text
+* List - a drop down list of limited choices
+* Date - a calendar date and time.
+
+The search options for Text and List are the same
+
+* Exact match
+* Partial Match
+* Not Equals 
+* Empty 
+* Not Empty 
+
+---
+
+A note on partial matches.
+
+The method used to make searches fast on large datasets results in a partial search not gareunteeing to find a label containing those characters. For example there was a archive where doing a search on "book" did not return a "book1.txt"
+
+Work is still being done to find the optimal tradeoff between speed and the completeness of results.
+
+---
+
+Date has the following search options
+
+* Equals 
+* Not Equals 
+* Greater Than 
+* Greater Than or Equal to 
+* Less Than 
+* Less Than or Equal to
+
+=== Parts of the search page
+
+Searches are created in the search section of the page
+
+Two buttons exist at the right hand side of the page. These are Add Query and Add Sub Query.
+
+The Add Query button is used to create a new criteria for the search. 
+
+When a new criteria is added, an attribute , a search option, and a value for comparison are specified.
+
+Only objects who’s attributes meet the criteria are included in the results
+
+Additional queries can be added to the search by pressing the add button
+
+.Dina Search section
+image::search05.png[Dina Search section]
+
+[start = 1]
+. "Add Query" button allows adding a criteria to the search
+. "And" / "OR" specifies whether the search is the intersection of  all the criteria or the union of all the criteria
+. "Query Field" sets the object attribute that is part of the criteria.
+. "Query comparators" sets how the object attribute is compared to the query value.
+. "Query value" this sets the value the object attribute is compared to.
+. "Search" and "Reset" buttons. The Search button applies the new criteria to the object store showing only those object that meet the criteria. The Reset button ends the search and the page will display the full list of objects
+
+=== combining multiple searches
+
+Multiple searches can be combined for more accuracy. For example all samples with a date of 2019 could be found by searching for those that have a creation date Greater than or Equal to January 1st 2019
+And
+a creation date Less than or Equal to December 31st 2019
+
+The Or search can be used for combining multiple non overlapping dates. Such as all objects created before January 1 2019 or after December 31 2019
+
+==== Example searches
+
+.Dina Single Query Search
+image::search03.png[Dina Single Query Search]
+
+A single query Search will retrieve all objects that match the criteria. In the case of Figure 2 above, all jpeg images. It can be seen that there are 15 results
+
+.Dina Double Query AND Search
+image::search04.png[Double Query AND Search]
+
+Adding a second query as a AND will return all object that match all criteria. In the case of Figure 3 above, All objects that are jpeg images and have a caption that is empty. As we can see there are 2 results.
