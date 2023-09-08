@@ -58,34 +58,29 @@ Additional queries can be added to the search by pressing the add button
 image::search05.png[Dina Search section]
 
 [start = 1]
-. "Add Query" button allows adding a new query to the existing one if the search needs to be refined more
-. "And" "OR" allows the search to be switched between the intersection of  all the queries and the union of all the querys
-. "Query Field" selector sets the field the query comparison and the query value are set to
-. "Query comparitors" determined how the Field value for an object is comparted to the query value
-. "Query value" This options is to always present when it is the value compared to the query field
-. "Search" and "Reset" buttons. The Search button applies the search to the object store showing only those object that meet the query. The Reset button ends the search and the page will display the full list of objects
+. "Add Query" button allows adding a criteria to the search
+. "And" / "OR" specifies whether the search is the intersection of  all the criteria or the union of all the criteria
+. "Query Field" sets the object attribute that is part of the criteria.
+. "Query comparators" sets how the object attribute is compared to the query value.
+. "Query value" this sets the value the object attribute is compared to.
+. "Search" and "Reset" buttons. The Search button applies the new criteria to the object store showing only those object that meet the criteria. The Reset button ends the search and the page will display the full list of objects
 
 === combining multiple searches
 
-Multiple searches can be combined for more accuray. For example all samples with a date of 2019 could be found by searching for those that are 
-have a creation date Greater than or Equal to January 1st 2019
+Multiple searches can be combined for more accuracy. For example all samples with a date of 2019 could be found by searching for those that have a creation date Greater than or Equal to January 1st 2019
 And
-a create date Less than or Equal to December 31st 2019
+a creation date Less than or Equal to December 31st 2019
 
-The Or search can be used for combining multiple    
+The Or search can be used for combining multiple non overlapping dates. Such as all objects created before January 1 2019 or after December 31 2019
 
 ==== Example searches
 
 .Dina Single Query Search
 image::search03.png[Dina Single Query Search]
 
-A single query Search will retrieve all abjects that match the query. In the case of Figure 2 above, all jpeg images. It can be see that there are 15 matches
+A single query Search will retrieve all objects that match the criteria. In the case of Figure 2 above, all jpeg images. It can be seen that there are 15 results
 
 .Dina Double Query AND Search
 image::search04.png[Double Query AND Search]
 
-Adding a second query as a AND will return all object that match all queries. In the case of Figure 3 above, All object that are jpeg images and have a Capation that is empty. As we can see there are 2 results.
-
- 
-
- 
+Adding a second query as a AND will return all object that match all criteria. In the case of Figure 3 above, All objects that are jpeg images and have a caption that is empty. As we can see there are 2 results.
