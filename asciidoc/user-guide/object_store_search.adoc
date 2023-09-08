@@ -55,12 +55,13 @@ Addition query can be added to the search by pressing the add button
 .Dina Search section
 image::search05.png[Dina Search section]
 
-1) "Add Query" button allows adding a new query to the existing one if the search needs to be refined more
-2) "And" "OR" allows the search to be switched between the intersection of  all the queries and the union of all the querys
-3) "Query Field" selector sets the field the query comparison and the query value are set to
-4) "Query comparitors" determined how the Field value for an object is comparted to the query value
-5) "Query value" This options is to always present when it is the value compared to the query field
-6) "Search" and "Reset" buttons. The Search button applies the search to the object store showing only those object that meet the query. The Reset button ends the search and the page will display the full list of objects
+[start = 1]
+. "Add Query" button allows adding a new query to the existing one if the search needs to be refined more
+. "And" "OR" allows the search to be switched between the intersection of  all the queries and the union of all the querys
+. "Query Field" selector sets the field the query comparison and the query value are set to
+. "Query comparitors" determined how the Field value for an object is comparted to the query value
+. "Query value" This options is to always present when it is the value compared to the query field
+. "Search" and "Reset" buttons. The Search button applies the search to the object store showing only those object that meet the query. The Reset button ends the search and the page will display the full list of objects
 
 === combinigng multiple searches
 
