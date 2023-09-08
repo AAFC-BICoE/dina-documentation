@@ -8,17 +8,18 @@
 Quick exlaination of searchs
 
 === Search object attributes
-While there are many attribues to search the fall into three groups
+While there are many attribues to search they fall into three groups
 * Text - which can have any text in them
 * List - a drop down list of limited choses
 * Date - a calender data and time.
 
-The search options for Text and list are the same
+The search options for Text and List are the same
+
 * Exact match
 * Partial Match
-- Not Equals 
-- Empty 
-- Not Empty 
+* Not Equals 
+* Empty 
+* Not Empty 
 
 ---
 
@@ -30,18 +31,16 @@ Work is still being done to find the optimal tradoff between speed and returns
 
 ---
 
-* Date data type has the following comparitors
-- Equals 
-- Not Equals 
-- Greater Than 
-- Greater Than or Equal to 
-- Less Than 
-- Less Than or Equal to
+Date data type has the following comparitors
+
+* Equals 
+* Not Equals 
+* Greater Than 
+* Greater Than or Equal to 
+* Less Than 
+* Less Than or Equal to
 
 === Parts of the spearch page
-
-The search allow one to select one of the object attributes
-A comprisons opperation depending on the type of the object attribute
 
 Searches are created in the search section of the page
 
@@ -55,6 +54,7 @@ Addition query can be added to the search by pressing the add button
 
 .Dina Search section
 image::search05.png[Dina Search section]
+
 1) "Add Query" button allows adding a new query to the existing one if the search needs to be refined more
 2) "And" "OR" allows the search to be switched between the intersection of  all the queries and the union of all the querys
 3) "Query Field" selector sets the field the query comparison and the query value are set to
@@ -76,12 +76,12 @@ The Or search can be used for combining multiple
 .Dina Single Query Search
 image::search03.png[Dina Single Query Search]
 
-A single query Search will retrieve all abjects that mache the query. In the case of Figure #TODO above, all jpeg images. It can be see that there are 15 matches
+A single query Search will retrieve all abjects that match the query. In the case of Figure 2 above, all jpeg images. It can be see that there are 15 matches
 
 .Dina Double Query AND Search
-image::search03.png[Double Query AND Search]
+image::search04.png[Double Query AND Search]
 
-Adding a second query as a AND will return all object that match all queries. In the case of Figuer #TODO above, All object that are jpeg images and have a Capation that is empty. As we can see there are 2 results.
+Adding a second query as a AND will return all object that match all queries. In the case of Figure 3 above, All object that are jpeg images and have a Capation that is empty. As we can see there are 2 results.
 
 
  
