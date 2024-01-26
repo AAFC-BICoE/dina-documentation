@@ -74,6 +74,20 @@ Unique Primary ID creation by system for a material by concatenating the associa
 
 Machine readable code output that would be obtained from a scanning gun. Can be used as another means of searching the database.
 
+[[date-time]]
+== Date/Time
+
+In the context of DINA, date/time can organized in 4 categories:
+
+LocalDate::
+  Local date represents a date, without time, that is local (no timezone information). Example: Date of employement
+LocalDateTime::
+  Local date/time represents a date, with time, that is local (no timezone information). Example: Physical store inauguration date/time
+DateTime::
+  Date/time that includes timezone information. Example: Exact date/time a record was created.
+DateTimeOptionalTz::
+  Date/time that may or may not include timezone information.
+
 [[form_template]]
 == Form Template
 
