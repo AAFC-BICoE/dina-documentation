@@ -16,6 +16,7 @@ We have a soil extract gathered during a single event. From this extract, we are
 ```
 
 Steps:
+
 . Create a material-sample representing the soil (Mixed Organism): `ENV-1`
 . Split `ENV-1` to create 2 material-sample for the 2 extracts (Mixed Organism): `EXT-1`, `EXT-2`
 
@@ -39,7 +40,7 @@ Steps:
 Notes:
 
 * `EXT-1` and `EXT-2` can hold all the determinations that sequencing would return.
-* `EXT-1` and `EXT-2` can, optionally, have target organim of the sequencing is looking for something specific
+* `EXT-1` and `EXT-2` can, optionally, have target organim if the sequencing is looking for something specific.
 * The event (collecting-event) is only attached to `ENV-1`. material-sample `EXT-1` and `EXT-2` will inherit it through `ENV-1`.
 
 == Insect jar
