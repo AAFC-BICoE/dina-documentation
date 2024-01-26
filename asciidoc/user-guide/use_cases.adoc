@@ -1,6 +1,47 @@
 [[use-cases]]
 = Use Cases
 
+== Environmental Sample
+
+We have a soil extract gathered during a single event. From this extract, we are taking 2 samples for eDNA.
+
+```
+          ┌────────┐
+      ┌───►extract1│
+┌─────┤   └────────┘
+│soil │
+└─────┤   ┌────────┐
+      └───►extract2│
+          └────────┘
+```
+
+Steps:
+. Create a material-sample representing the soil (Mixed Organism): `ENV-1`
+. Split `ENV-1` to create 2 material-sample for the 2 extracts (Mixed Organism): `EXT-1`, `EXT-2`
+
+```
+┌─────┐    ┌─────┐
+│ENV-1├─┬─►│EXT-1│
+├─────┤ │  ├─────┤
+├─────┤ │ ┌┴─────┴──────┐
+│Event│ │ │Determination│
+└─────┘ │ ├─────────────┤
+        │ │Determination│
+        │ └─────────────┘
+        │
+        │  ┌──────┐
+        └─►│EXT-2 │
+          ┌┴──────┴─────┐
+          │Determination│
+          └─────────────┘
+```
+
+Notes:
+
+* `EXT-1` and `EXT-2` can hold all the determinations that sequencing would return.
+* `EXT-1` and `EXT-2` can, optionally, have target organim of the sequencing is looking for something specific
+* The event (collecting-event) is only attached to `ENV-1`. material-sample `EXT-1` and `EXT-2` will inherit it through `ENV-1`.
+
 == Insect jar
 
 We have a jar of insects gathered during a single event. From this jar, we are extract a single insect, from which we pull a leg for DNA sequencing.
