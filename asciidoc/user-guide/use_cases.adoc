@@ -27,3 +27,10 @@ Steps:
 │Event│ │Determination│ │Determination│
 └─────┘ └─────────────┘ └─────────────┘
 ```
+
+Notes:
+
+* The event (collecting-event) is only attached to `JAR-1`. material-sample `BUG-1` and `BUG-1-1` will inherit it through `JAR-1`.
+* Determination on `BUG-1` and `BUG-1-1` can differ based on the scientific activities of each.
+
+Source: https://doi.org/10.3897/biss.5.75178
