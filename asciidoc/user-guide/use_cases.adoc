@@ -1,0 +1,29 @@
+[[use-cases]]
+= Use Cases
+
+== Insect jar
+
+We have a jar of insects gathered during a single event. From this jar, we are extract a single insect, from which we pull a leg for DNA sequencing.
+
+In DINA this would be represented by 3 material samples.
+
+```
+┌───┐  ┌──────┐  ┌────┐
+│jar├─►│insect├─►│leg │
+└───┘  └──────┘  └────┘
+```
+
+Steps:
+
+. Create a material-sample representing the jar (Mixed Organism): `JAR-1`
+. Split `JAR-1` to create the material-sample for the single insect (Whole Organism): `BUG-1`
+. Split `BUG-1` to create the material-sample for the dissection (Organism Part): `BUG-1-1`
+
+```
+┌─────┐  ┌─────┐       ┌───────┐
+│JAR-1├─►│BUG-1├──────►│BUG-1-1│
+├─────┤  ├─────┤       └┬──────┤
+├─────┤ ┌┴─────┴──────┐ ├──────┴──────┐
+│Event│ │Determination│ │Determination│
+└─────┘ └─────────────┘ └─────────────┘
+```
