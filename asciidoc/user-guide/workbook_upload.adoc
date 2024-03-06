@@ -1,6 +1,6 @@
 = Workbook Upload
 
-The Workbook Upload functionality can be used to quickly add some records to DINA. It should be used to add small number of new records and but it a mechanism designed to perform a migration of data from another source. Migration should be done at the API level since a lot of coordination is necessary and rollback mechanism and validation are required to be defined.
+The Workbook Upload functionality can be used to quickly add some records to DINA. It should be used to add small number of new records but it is not a mechanism designed to perform a migration of data from another source. Migration should be done at the API level since a lot of coordination, validation and checks are necessary.
 
 == Challenges
 
@@ -8,3 +8,4 @@ The Workbook Upload functionality can be used to quickly add some records to DIN
 In a Workbook, textual representation are used to express concepts. For example, the text "Michael Jordan" could mean https://en.wikipedia.org/wiki/Michael_Jordan[Michael Jordan] or https://en.wikipedia.org/wiki/Michael_Jordan_(mycologist)[Michael Jordan] or one of https://en.wikipedia.org/wiki/Michael_Jordan_(disambiguation)[multiple people]. There is no way to automatically pick the right person without having more information. Sometimes globally unique and persistent identifier exists and can be used to clearly identified a concept. For researchers https://orcid.org/[ORCID] can be used to identify researchers without any ambiguity.
 
 === Relationships
+Relationships in Workbooks are expressed as textual representation. The Workbook Upload will need to map the textual representation to existing concepts in the DINA system.
