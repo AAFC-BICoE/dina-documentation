@@ -4,12 +4,11 @@ The Workbook Upload functionality can be used to quickly add some records to DIN
 
 == Limitations
 
-* Usage limited to material-sample and its relationships
+* Usage limited to link:collection_component.adoc#material-sample[material-sample] and its relationships
 * The relationships should already exist in the system and can't be created by the same Workbook with the exception of the followings:
-** collecting-event that is only linked to the new material-sample
-** organism
+** link:collection_component.adoc#collecting-event[collecting-event] that is only linked to the new material-sample
+** link:collection_component.adoc#organism[organism]
 * No records can be updated using the Workbook Upload, records can only be added
-
 
 == Challenges
 
