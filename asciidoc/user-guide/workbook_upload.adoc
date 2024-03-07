@@ -1,6 +1,15 @@
 = Workbook Upload
 
-The Workbook Upload functionality can be used to quickly add some records to DINA. It should be used to add small number of new records but it is not a mechanism designed to perform a migration of data from another source. Migration should be done at the API level since a lot of coordination, validation and checks are necessary. No updates to existing records can be done using the Workbook Upload.
+The Workbook Upload functionality can be used to quickly add some records to DINA. It should be used to add a small number of new records but it is not a mechanism designed to perform a data migration from another source. Migration should be done at the API level since a lot of coordination, validation and checks are necessary.
+
+== Limitations
+
+* Usage limited to material-sample and its relationships
+* The relationships should already exist in the system and can't be created by the same Workbook with the exception of the followings:
+** collecting-event that is only linked to the new material-sample
+** organism
+* No records can be updated using the Workbook Upload, records can only be added
+
 
 == Challenges
 
