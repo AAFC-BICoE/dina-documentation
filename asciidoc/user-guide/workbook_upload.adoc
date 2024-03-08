@@ -4,16 +4,14 @@ The Workbook Upload functionality can be used to quickly add some records to DIN
 
 == Limitations
 
-* Usage limited to link:collection_component.adoc#material-sample[material-sample] and its relationships
+* Usage limited to <<material-sample>> and its relationships
 * The relationships should already exist in the system and can't be created by the same Workbook with the exception of the followings:
-** link:collection_component.adoc#collecting-event[collecting-event] that is only linked to the new material-sample
-** link:collection_component.adoc#organism[organism]
+** <<collecting-event>> that is only linked to the new material-sample
+** <<organism>>
 * No records can be updated using the Workbook Upload, records can only be added
 
-== Challenges
+== Relationships
+Relationships in Workbooks are expressed as textual representation unless a UUID (Universal Unique Identifier) is provided. The Workbook Upload will need to map the textual representation to existing concepts in the DINA system. With the exception of collecting-event, all records where the relationships are pointing must already exist before the import.
 
 === Text vs Concept
-In a Workbook, textual representation are used to express concepts. For example, the text "Michael Jordan" could mean https://en.wikipedia.org/wiki/Michael_Jordan[Michael Jordan] or https://en.wikipedia.org/wiki/Michael_Jordan_(mycologist)[Michael Jordan] or one of https://en.wikipedia.org/wiki/Michael_Jordan_(disambiguation)[multiple people]. There is no way to automatically pick the right person without having more information. Sometimes globally unique and persistent identifier exists and can be used to clearly identified a concept. For researchers https://orcid.org/[ORCID] can be used to identify researchers without any ambiguity. DINA generates https://en.wikipedia.org/wiki/Universally_unique_identifier[UUID] for all of the data that it stores.
-
-=== Relationships
-Relationships in Workbooks are expressed as textual representation. The Workbook Upload will need to map the textual representation to existing concepts in the DINA system. With the exception of collecting-event, all records where the relationships are pointing must already exist before the import.
+In a Workbook, textual representation are used to express concepts. For example, the text "Michael Jordan" could mean https://en.wikipedia.org/wiki/Michael_Jordan[Michael Jordan] or https://en.wikipedia.org/wiki/Michael_Jordan_(mycologist)[Michael Jordan] or one of https://en.wikipedia.org/wiki/Michael_Jordan_(disambiguation)[multiple people]. There is no way to automatically pick the right person without having more information. A globally unique and persistent identifier exists and can be used to clearly identified a concept. For researchers https://orcid.org/[ORCID] can be used to identify researchers without any ambiguity. DINA generates https://en.wikipedia.org/wiki/Universally_unique_identifier[UUID] for all of the data that it stores.
