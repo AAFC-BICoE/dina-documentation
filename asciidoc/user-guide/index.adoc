@@ -20,3 +20,5 @@ include::object_store_component.adoc[]
 include::sequence_component.adoc[]
 
 include::workbook_upload.adoc[]
+
+include::collection_guide.adoc[]
