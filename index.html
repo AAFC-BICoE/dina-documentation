@@ -477,6 +477,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#field_extensions">2.11. Field extensions</a></li>
 <li><a href="#managed_attributes">2.12. Managed Attributes</a></li>
 <li><a href="#material_sample_attachement">2.13. Material Sample Attachements</a></li>
+<li><a href="#global_search_syntax">2.14. Global Search Syntax</a></li>
 </ul>
 </li>
 <li><a href="#collection-component">3. Collection Component</a>
@@ -839,6 +840,126 @@ Objects can only have 1 owner.</p>
 <h3 id="material_sample_attachement">2.13. Material Sample Attachements</h3>
 <div class="paragraph">
 <p>Attachments refer to <a href="#object-store-component">Object Store Component</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="global_search_syntax">2.14. Global Search Syntax</h3>
+<div class="paragraph">
+<p>This section explains the special characters you can use to refine your searches within the Global Search feature. These options allow you to construct more precise and targeted global searches, helping you find the information you need more effectively.</p>
+</div>
+<div class="paragraph">
+<p><strong>Operators:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>+</code> (AND):</strong> This operator requires all specified terms to be present in a record for it to be considered a match.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: <code>apple + banana</code> will only find records containing both "apple" and "banana".</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong><code>|</code> (OR):</strong> This operator includes records containing any of the specified terms in your search.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: <code>apple | banana</code> will find records containing either "apple" or "banana" or both.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong><code>-</code> (NOT):</strong> This operator excludes records containing the following term.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: <code>red -apple</code> will find records containing "red" but not "apple".</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Phrases and Wildcards:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>" "</code>:</strong> Enclosing terms in quotation marks instructs the search to look for the exact phrase as a whole.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: <code>"red apple"</code> will only find records containing the exact phrase "red apple".</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong> <code>*</code>:</strong> Using an asterisk at the end of a term searches for words that start with that term.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: <code>app*</code> will find records containing "apple", "appliance", "application", etc.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Precedence and Grouping:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>( )</code>:</strong> Use parentheses to group search terms and control the order of operations within your query. This allows you to create more complex expressions.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: <code>(apple + banana) - orange</code> will first find records containing "apple" or "banana" and then exclude records containing "orange" from that set.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Advanced Options:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><code>~#</code>:</strong> This signifies edit distance. It allows for typos or variations in the search term with a maximum edit distance of #.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: <code>color~1</code> might match records containing "color" or "colour" due to the edit distance of 1 allowed. It will also allow typos of 1 character like "coloir".</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong><code>~#</code> after a phrase:</strong> This signifies word distance, which specifies the allowed distance (number of words) between terms within a phrase search.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Example: <code>"red apple"~1</code> might match records containing "green apple" or "red strawberries" due to the word distance of 1 allowed.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Escaping Characters:</strong></p>
+</div>
+<div class="paragraph">
+<p>If you want to use any of the special characters listed above literally in your search query (e.g., searching for <code>+</code> itself), you can escape them with a backslash (\) before the character.</p>
 </div>
 </div>
 </div>
@@ -1313,7 +1434,7 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-03-08 19:52:01 UTC
+Last updated 2024-03-18 22:06:25 UTC
 </div>
 </div>
 </body>
