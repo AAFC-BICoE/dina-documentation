@@ -1,0 +1,47 @@
+= Search
+
+== IN Operator
+
+== BETWEEN Operator
+
+[[global_search_syntax]]
+== Global Search Syntax
+
+This section explains the special characters you can use to refine your searches within the Global Search feature. These options allow you to construct more precise and targeted global searches, helping you find the information you need more effectively.
+
+**Operators:**
+
+* **`+` (AND):** This operator requires all specified terms to be present in a record for it to be considered a match. 
+** Example: `apple + banana` will only find records containing both "apple" and "banana".
+
+* **`|` (OR):** This operator includes records containing any of the specified terms in your search.
+** Example: `apple | banana` will find records containing either "apple" or "banana" or both.
+
+* **`-` (NOT):** This operator excludes records containing the following term.
+** Example: `red -apple` will find records containing "red" but not "apple".
+
+**Phrases and Wildcards:**
+
+* **`" "`:** Enclosing terms in quotation marks instructs the search to look for the exact phrase as a whole.
+** Example: `"red apple"` will only find records containing the exact phrase "red apple".
+
+* ** `*`:** Using an asterisk at the end of a term searches for words that start with that term.
+** Example: `app*` will find records containing "apple", "appliance", "application", etc.
+
+**Precedence and Grouping:**
+
+* **`( )`:** Use parentheses to group search terms and control the order of operations within your query. This allows you to create more complex expressions.
+** Example: `(apple + banana) - orange` will first find records containing "apple" or "banana" and then exclude records containing "orange" from that set.
+
+**Advanced Options:**
+
+* **`~#`:** This signifies edit distance. It allows for typos or variations in the search term with a maximum edit distance of #.
+** Example: `color~1` might match records containing "color" or "colour" due to the edit distance of 1 allowed. It will also allow typos of 1 character like "coloir".
+
+* **`~#` after a phrase:** This signifies word distance, which specifies the allowed distance (number of words) between terms within a phrase search.
+** Example: `"red apple"~1` might match records containing "green apple" or "red strawberries" due to the word distance of 1 allowed.
+
+**Escaping Characters:**
+
+If you want to use any of the special characters listed above literally in your search query (e.g., searching for `+` itself), you can escape them with a backslash (\) before the character.
+
