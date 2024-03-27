@@ -2,6 +2,11 @@
 
 == IN Operator
 
+The IN operator can be used to run a query that would return all the elements from a comma seprated list.
+
+.IN Operator
+image::search_IN_operator.jpg[IN Operator]
+
 == BETWEEN Operator
 
 [[global_search_syntax]]
