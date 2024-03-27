@@ -2,12 +2,23 @@
 
 == IN Operator
 
-The IN operator can be used to run a query that would return all the elements from a comma seprated list.
+The `IN` operator can be used to run a query that would return all the elements from a comma separated list.
 
 .IN Operator
 image::search_IN_operator.jpg[IN Operator]
 
+The previous query would return all records with `primaryID` is equal to `REC-1`, `REC-2` or `REC-4`.
+
 == BETWEEN Operator
+
+The `BETWEEN` operator can be used to run a query that would return all the elements that are within the upper and lower bound.
+
+The operator is also available on some alphanumeric fields (when configured).
+
+.BETWEEN Operator
+image::search_BETWEEN_operator.jpg[BETWEEN Operator]
+
+The previous query would return all records where the `primaryID` is greater or equals to `REC-1` and less or equals to `REC-9`.
 
 [[global_search_syntax]]
 == Global Search Syntax
