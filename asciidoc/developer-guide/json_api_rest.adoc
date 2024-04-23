@@ -41,6 +41,11 @@ returns:
 }
 ----
 
+Example of returning all derivitives of the metadata with UUID 44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7:
+
+----
+/metadata?filter[acDerivedFrom.id][EQ]=44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7
+----
 
 === RSQL
 
