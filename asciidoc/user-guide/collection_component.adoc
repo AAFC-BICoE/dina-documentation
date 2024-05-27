@@ -10,7 +10,7 @@ Mechanism used to group material samples according to a generic, administrative 
 == Association
 
 === Host Organism
-Organism that is the host of the material-sample. Usualy mean that we have the host (collected/cultivated). Not to be confused with <<host>> of the collecting-event where the host was observed but not collected.
+Organism that is the host of the material-sample. Usualy mean that we have the host (collected/cultivated). Not to be confused with <<ce-host>> of the collecting-event where the host was observed but not collected.
 
 [[collection]]
 == Collection
@@ -51,6 +51,7 @@ The horizontal distance in meters from the given decimalLatitude and decimalLong
 
 An environmental system which can sustain and allow the growth of an ecological population. (from https://ontobee.org/ontology/ENVO?iri=http://purl.obolibrary.org/obo/ENVO_01000739[Ontobee])
 
+[[ce-host]]
 === Host
 
 Observed host of the material-sample at the time of the collecting-event.
