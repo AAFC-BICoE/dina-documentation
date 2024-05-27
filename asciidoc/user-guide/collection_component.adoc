@@ -6,6 +6,12 @@
 
 Mechanism used to group material samples according to a generic, administrative theme. Should not be confused with <<project>>. Examples might include specimen books or exsiccatae in herbaria where there is a title and a description and possibly enhanced with <<managed_attributes>> for additional metadata that depicts the group's identity.
 
+[[association]]
+== Association
+
+=== Host Organism
+Organism that is the host of the material-sample. Usualy mean that we have the host (collected/cultivated). Not to be confused with <<host>> of the collecting-event where the host was observed but not collected.
+
 [[collection]]
 == Collection
 
