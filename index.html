@@ -482,47 +482,52 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#collection-component">3. Collection Component</a>
 <ul class="sectlevel2">
 <li><a href="#assemblage">3.1. Assemblage</a></li>
-<li><a href="#collection">3.2. Collection</a></li>
-<li><a href="#collecting-event">3.3. Collecting Event</a>
+<li><a href="#association">3.2. Association</a>
 <ul class="sectlevel3">
-<li><a href="#_collection_number">3.3.1. Collection Number</a></li>
-<li><a href="#_collectors_number">3.3.2. Collector&#8217;s Number</a></li>
-<li><a href="#collection-method">3.3.3. Collection Method</a></li>
-<li><a href="#_coordinate_uncertainty_in_meters">3.3.4. Coordinate Uncertainty In Meters</a></li>
-<li><a href="#_habitat">3.3.5. Habitat</a></li>
-<li><a href="#_host">3.3.6. Host</a></li>
-<li><a href="#_substrate">3.3.7. Substrate</a></li>
+<li><a href="#_host_organism">3.2.1. Host Organism</a></li>
 </ul>
 </li>
-<li><a href="#_determination">3.4. Determination</a></li>
-<li><a href="#_effective_determinations">3.5. Effective Determination(s)</a></li>
-<li><a href="#mat-sample">3.6. Material Sample</a>
+<li><a href="#collection">3.3. Collection</a></li>
+<li><a href="#collecting-event">3.4. Collecting Event</a>
 <ul class="sectlevel3">
-<li><a href="#mat-samp-type">3.6.1. Material Sample Type</a></li>
-<li><a href="#mat-samp-state">3.6.2. Material Sample State</a></li>
+<li><a href="#_collection_number">3.4.1. Collection Number</a></li>
+<li><a href="#_collectors_number">3.4.2. Collector&#8217;s Number</a></li>
+<li><a href="#collection-method">3.4.3. Collection Method</a></li>
+<li><a href="#_coordinate_uncertainty_in_meters">3.4.4. Coordinate Uncertainty In Meters</a></li>
+<li><a href="#_habitat">3.4.5. Habitat</a></li>
+<li><a href="#_host">3.4.6. Host</a></li>
+<li><a href="#_substrate">3.4.7. Substrate</a></li>
 </ul>
 </li>
-<li><a href="#preparation">3.7. Preparation</a>
+<li><a href="#_determination">3.5. Determination</a></li>
+<li><a href="#_effective_determinations">3.6. Effective Determination(s)</a></li>
+<li><a href="#mat-sample">3.7. Material Sample</a>
 <ul class="sectlevel3">
-<li><a href="#preparation-type">3.7.1. Preparation Type</a></li>
-<li><a href="#preparation-method">3.7.2. Preparation Method</a></li>
-<li><a href="#preservation-type">3.7.3. Preservation Type</a></li>
-<li><a href="#preparation-fixative">3.7.4. Preparation Fixative</a></li>
-<li><a href="#preparation-materials">3.7.5. Preparation Materials</a></li>
-<li><a href="#preparation-substrate">3.7.6. Preparation Substrate</a></li>
+<li><a href="#mat-samp-type">3.7.1. Material Sample Type</a></li>
+<li><a href="#mat-samp-state">3.7.2. Material Sample State</a></li>
 </ul>
 </li>
-<li><a href="#organism">3.8. Organism</a></li>
-<li><a href="#project">3.9. Project</a></li>
-<li><a href="#_protocol">3.10. Protocol</a></li>
-<li><a href="#split">3.11. Split</a>
+<li><a href="#preparation">3.8. Preparation</a>
 <ul class="sectlevel3">
-<li><a href="#direct-parent-strategy">3.11.1. Direct Parent Naming Strategy</a></li>
-<li><a href="#material-sample-type-strategy">3.11.2. Material Sample Type Naming Strategy</a></li>
+<li><a href="#preparation-type">3.8.1. Preparation Type</a></li>
+<li><a href="#preparation-method">3.8.2. Preparation Method</a></li>
+<li><a href="#preservation-type">3.8.3. Preservation Type</a></li>
+<li><a href="#preparation-fixative">3.8.4. Preparation Fixative</a></li>
+<li><a href="#preparation-materials">3.8.5. Preparation Materials</a></li>
+<li><a href="#preparation-substrate">3.8.6. Preparation Substrate</a></li>
 </ul>
 </li>
-<li><a href="#restrictions">3.12. Restrictions</a></li>
-<li><a href="#scheduled_actions">3.13. Scheduled Actions</a></li>
+<li><a href="#organism">3.9. Organism</a></li>
+<li><a href="#project">3.10. Project</a></li>
+<li><a href="#_protocol">3.11. Protocol</a></li>
+<li><a href="#split">3.12. Split</a>
+<ul class="sectlevel3">
+<li><a href="#direct-parent-strategy">3.12.1. Direct Parent Naming Strategy</a></li>
+<li><a href="#material-sample-type-strategy">3.12.2. Material Sample Type Naming Strategy</a></li>
+</ul>
+</li>
+<li><a href="#restrictions">3.13. Restrictions</a></li>
+<li><a href="#scheduled_actions">3.14. Scheduled Actions</a></li>
 </ul>
 </li>
 <li><a href="#storage-component">4. Storage Component</a>
@@ -860,19 +865,28 @@ Objects can only have 1 owner.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="collection">3.2. Collection</h3>
+<h3 id="association">3.2. Association</h3>
+<div class="sect3">
+<h4 id="_host_organism">3.2.1. Host Organism</h4>
+<div class="paragraph">
+<p>Organism that is the host of the material-sample. Usualy mean that we have the host (collected/cultivated). Not to be confused with <a href="#host">[host]</a> of the collecting-event where the host was observed but not collected.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="collection">3.3. Collection</h3>
 <div class="paragraph">
 <p>A Collection represents the top entity that can contain material-sample. Top collections (or parent collections) generally represent a natural history collection or a laboratory. A collection can contain multiple sub-collection(s).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="collecting-event">3.3. Collecting Event</h3>
+<h3 id="collecting-event">3.4. Collecting Event</h3>
 <div class="paragraph">
 <p>Darwin Core defines "event" as : An action that occurs at some location during some time. (from <a href="https://dwc.tdwg.org/terms/#event">DarwinCore</a>).
 In a Collection Event, the action is the extraction from nature.</p>
 </div>
 <div class="sect3">
-<h4 id="_collection_number">3.3.1. Collection Number</h4>
+<h4 id="_collection_number">3.4.1. Collection Number</h4>
 <div class="paragraph">
 <p>An identifier given to the event in the field at the time of collecting one or more samples. Often serves as a link between field notes and the Event.</p>
 </div>
@@ -881,7 +895,7 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_collectors_number">3.3.2. Collector&#8217;s Number</h4>
+<h4 id="_collectors_number">3.4.2. Collector&#8217;s Number</h4>
 <div class="paragraph">
 <p>An identifier given to the Occurrence, by the collector, at the time it was recorded. Often serves as a link between field notes and an Occurrence record, such as a specimen collector&#8217;s number.</p>
 </div>
@@ -890,7 +904,7 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="collection-method">3.3.3. Collection Method</h4>
+<h4 id="collection-method">3.4.3. Collection Method</h4>
 <div class="paragraph">
 <p>Method used during an Collecting Event. Examples: UV light trap, bottom traw</p>
 </div>
@@ -899,26 +913,26 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_coordinate_uncertainty_in_meters">3.3.4. Coordinate Uncertainty In Meters</h4>
+<h4 id="_coordinate_uncertainty_in_meters">3.4.4. Coordinate Uncertainty In Meters</h4>
 <div class="paragraph">
 <p>The horizontal distance in meters from the given decimalLatitude and decimalLongitude describing the smallest circle containing the whole of the Location.
 (from <a href="https://dwc.tdwg.org/terms/#dwc:coordinateUncertaintyInMeters">Darwin Core</a>)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_habitat">3.3.5. Habitat</h4>
+<h4 id="_habitat">3.4.5. Habitat</h4>
 <div class="paragraph">
 <p>An environmental system which can sustain and allow the growth of an ecological population. (from <a href="https://ontobee.org/ontology/ENVO?iri=http://purl.obolibrary.org/obo/ENVO_01000739">Ontobee</a>)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_host">3.3.6. Host</h4>
+<h4 id="_host">3.4.6. Host</h4>
 <div class="paragraph">
 <p>Observed host of the material-sample at the time of the collecting-event.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_substrate">3.3.7. Substrate</h4>
+<h4 id="_substrate">3.4.7. Substrate</h4>
 <div class="paragraph">
 <p>Observed surface on which an organism was collected and understood to have lived.</p>
 </div>
@@ -928,19 +942,19 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_determination">3.4. Determination</h3>
+<h3 id="_determination">3.5. Determination</h3>
 <div class="paragraph">
 <p>Determinations are attached to an <a href="#organism">Organism</a>. There is always a primary determination defined. Determination history is preserved.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_effective_determinations">3.5. Effective Determination(s)</h3>
+<h3 id="_effective_determinations">3.6. Effective Determination(s)</h3>
 <div class="paragraph">
 <p>The effective determination refers to the first primary determination that can be found in the material-sample lineage. If a target <a href="#organism">Organism</a> is defined, the effective determination will be restricted to it otherwise all the organism will be grouped to return the effective determinations.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mat-sample">3.6. Material Sample</h3>
+<h3 id="mat-sample">3.7. Material Sample</h3>
 <div class="paragraph">
 <p>A physical result of a sampling event.</p>
 </div>
@@ -948,26 +962,26 @@ In a Collection Event, the action is the extraction from nature.</p>
 <p>In natural history collections, the material sample is typically collected, and either preserved or destructively processed. (from <a href="https://dwc.tdwg.org/terms/#materialsample">DarwinCore</a>).</p>
 </div>
 <div class="sect3">
-<h4 id="mat-samp-type">3.6.1. Material Sample Type</h4>
+<h4 id="mat-samp-type">3.7.1. Material Sample Type</h4>
 <div class="paragraph">
 <p>A Material Sample is a physical result of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed. A Material Sample Type is a system-defined term that prescribes the downstream expectations and logic in how derivative (or child) Material Samples are to be interpreted and digitally managed.
 Fixed values include: <code>Whole Organism</code>, <code>Culture Strain</code>, <code>Molecular Sample</code>, <code>Organism Part</code> or <code>Mixed Organisms</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="mat-samp-state">3.6.2. Material Sample State</h4>
+<h4 id="mat-samp-state">3.7.2. Material Sample State</h4>
 <div class="paragraph">
 <p>Represents the state of a material sample when its condition is negatively impacted. Fixed values include: destroyed, damaged, lost or decommissioned</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="preparation">3.7. Preparation</h3>
+<h3 id="preparation">3.8. Preparation</h3>
 <div class="paragraph">
 <p>Preparation can either be for preservation or propagation purpose.</p>
 </div>
 <div class="sect3">
-<h4 id="preparation-type">3.7.1. Preparation Type</h4>
+<h4 id="preparation-type">3.8.1. Preparation Type</h4>
 <div class="paragraph">
 <p>A noun representing what is getting prepared.</p>
 </div>
@@ -979,7 +993,7 @@ Fixed values include: <code>Whole Organism</code>, <code>Culture Strain</code>, 
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-method">3.7.2. Preparation Method</h4>
+<h4 id="preparation-method">3.8.2. Preparation Method</h4>
 <div class="paragraph">
 <p>A noun representing the process used (the how) in preparing the material sample.</p>
 </div>
@@ -991,7 +1005,7 @@ Fixed values include: <code>Whole Organism</code>, <code>Culture Strain</code>, 
 </div>
 </div>
 <div class="sect3">
-<h4 id="preservation-type">3.7.3. Preservation Type</h4>
+<h4 id="preservation-type">3.8.3. Preservation Type</h4>
 <div class="paragraph">
 <p>Description of the preservation type of the material sample.</p>
 </div>
@@ -1001,14 +1015,14 @@ Fixed values include: <code>Whole Organism</code>, <code>Culture Strain</code>, 
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-fixative">3.7.4. Preparation Fixative</h4>
+<h4 id="preparation-fixative">3.8.4. Preparation Fixative</h4>
 <div class="paragraph">
 <p>Solution that was applied to or in which the material sample is preserved.
 Examples: <code>EtOH 95%</code>, <code>EtOH 75%</code>, <code>EtOH 70%</code>, <code>saline</code>, <code>glue</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-materials">3.7.5. Preparation Materials</h4>
+<h4 id="preparation-materials">3.8.5. Preparation Materials</h4>
 <div class="paragraph">
 <p>Additional, typically inert physical environments or objects in which or on which the organism in a material sample is stored. It does not express the state of the organism nor the fixatives used but rather the materials that allow the organism to be presented.</p>
 </div>
@@ -1017,7 +1031,7 @@ Examples: <code>EtOH 95%</code>, <code>EtOH 75%</code>, <code>EtOH 70%</code>, <
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-substrate">3.7.6. Preparation Substrate</h4>
+<h4 id="preparation-substrate">3.8.6. Preparation Substrate</h4>
 <div class="paragraph">
 <p>Material on which the organism in the material sample is presented or grows.
 Examples: rock, log, agar</p>
@@ -1025,28 +1039,28 @@ Examples: rock, log, agar</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="organism">3.8. Organism</h3>
+<h3 id="organism">3.9. Organism</h3>
 <div class="paragraph">
 <p>A particular organism or defined group of organisms considered to be taxonomically homogeneous. (from <a href="https://dwc.tdwg.org/terms/#organism">DarwinCore</a>).
 Optionally, it is possible to define a target organism within a material sample.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="project">3.9. Project</h3>
+<h3 id="project">3.10. Project</h3>
 <div class="paragraph">
 <p>Project has a start and an end date. It usually links to the organizational definition of project where an objective, a scope, resources and deliverable are defined.
 A material sample can be linked to multiple projects.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_protocol">3.10. Protocol</h3>
+<h3 id="_protocol">3.11. Protocol</h3>
 <div class="paragraph">
 <p>Predefined written procedural method in the design and implementation of experiments in natural sciences.
 (from <a href="http://www.wikidata.org/entity/Q367158">Wikidata</a>)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="split">3.11. Split</h3>
+<h3 id="split">3.12. Split</h3>
 <div class="paragraph">
 <p>The concept of a split represents the action of creating new material sample(s) from an existing material sample. The provenance of the new material sample(s) is preserved. For example, the action can be a dissection or fungal/bacterial propagation.</p>
 </div>
@@ -1057,7 +1071,7 @@ A material sample can be linked to multiple projects.</p>
 <p>Limitation: The result of a split (called children) cannot have their own collecting event. Since the extraction from nature happened on the first material sample, children will inherit the one from the first parent.</p>
 </div>
 <div class="sect3">
-<h4 id="direct-parent-strategy">3.11.1. Direct Parent Naming Strategy</h4>
+<h4 id="direct-parent-strategy">3.12.1. Direct Parent Naming Strategy</h4>
 <div class="paragraph">
 <p>Using that strategy, the generated children will get the next name available among the list of children of the direct parent.</p>
 </div>
@@ -1103,7 +1117,7 @@ A material sample can be linked to multiple projects.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="material-sample-type-strategy">3.11.2. Material Sample Type Naming Strategy</h4>
+<h4 id="material-sample-type-strategy">3.12.2. Material Sample Type Naming Strategy</h4>
 <div class="paragraph">
 <p>Using that strategy, the generated children will get the next name available among the complete set of material sample of the same <a href="#mat-samp-type">Material Sample Type</a> in the entire lineage.</p>
 </div>
@@ -1155,7 +1169,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="restrictions">3.12. Restrictions</h3>
+<h3 id="restrictions">3.13. Restrictions</h3>
 <div class="paragraph">
 <p>Restriction levels are regulations set by the Public Health Agency of Canada (PHAC) and the Canadian Food Inspection Agency (CFIA). Levels set, or restrictions remarks made will tag the material sample with the appropriate level or note. The “Restricted” button toggle is decoupled from the tags.</p>
 </div>
@@ -1167,7 +1181,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="scheduled_actions">3.13. Scheduled Actions</h3>
+<h3 id="scheduled_actions">3.14. Scheduled Actions</h3>
 <div class="paragraph">
 <p>Only for reporting and record keeping purposes. No alerts will be triggered automatically on assigned date. Multiple actions can exist.</p>
 </div>
@@ -1478,7 +1492,7 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-04-23 13:56:41 UTC
+Last updated 2024-05-27 17:18:04 UTC
 </div>
 </div>
 </body>
