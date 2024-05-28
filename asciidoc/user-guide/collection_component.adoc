@@ -62,6 +62,7 @@ Observed surface on which an organism was collected and understood to have lived
 
 (based on http://www.wikidata.org/entity/Q5824490)
 
+[[determination]]
 == Determination
 Determinations are attached to an <<organism>>. There is always a primary determination defined. Determination history is preserved.
 
