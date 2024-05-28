@@ -65,8 +65,11 @@ Observed surface on which an organism was collected and understood to have lived
 == Determination
 Determinations are attached to an <<organism>>. There is always a primary determination defined. Determination history is preserved.
 
-== Effective Determination(s)
+=== Effective Determination(s)
 The effective determination refers to the first primary determination that can be found in the material-sample lineage. If a target <<organism>> is defined, the effective determination will be restricted to it otherwise all the organism will be grouped to return the effective determinations.
+
+=== Target Organism Primary Scientific Name
+The scientific name (verbatim scientific name if absent) of the primary <<determination>> of the target <<organism>>. If there is no target organism, all scientifc names will be concatenated (pipe | separated).
 
 [[mat-sample]]
 == Material Sample
