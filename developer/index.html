@@ -461,7 +461,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_sparse_field_selection">5.1. Sparse field selection</a></li>
 <li><a href="#_filtering">5.2. Filtering</a>
 <ul class="sectlevel3">
-<li><a href="#_simple_key_value_filter">5.2.1. Simple key-value filter</a></li>
+<li><a href="#_simple_filters">5.2.1. Simple Filters</a></li>
 <li><a href="#_rsql">5.2.2. RSQL</a></li>
 </ul>
 </li>
@@ -646,30 +646,21 @@ That would let us use the native role-based features of Spring Security as an in
 <div class="sect2">
 <h3 id="_filtering">5.2. Filtering</h3>
 <div class="sect3">
-<h4 id="_simple_key_value_filter">5.2.1. Simple key-value filter</h4>
+<h4 id="_simple_filters">5.2.1. Simple Filters</h4>
+<div class="paragraph">
+<p>While JSON:API does not suggest a formal resource filtering mechanism, DINA is using a simple form of filtering based on filter, operator and value.</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>localhost:8080/api/region?filter[name]=ITS&amp;filter[description]=Internal%20Transcribed%20Spacer</pre>
+<pre>GET /person?filter[firstName][EQ]=John&amp;filter[lastName][EQ]=Doe</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>returns:</p>
+<p>Get the persons where the firstName is John OR Jane</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>{
-    "data": [
-        {
-            "id": "43",
-            "type": "region",
-            "attributes": {
-                "symbol": "ITS",
-                "name": "ITS",
-                "description": "Internal Transcribed Spacer"
-            }
-        }
-    ]
-}</pre>
+<pre>GET /person?filter[firstName][EQ]=John,Jane</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -677,7 +668,7 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>/metadata?filter[acDerivedFrom.id][EQ]=44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7</pre>
+<pre>GET /metadata?filter[acDerivedFrom.id][EQ]=44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7</pre>
 </div>
 </div>
 </div>
@@ -1244,7 +1235,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-07-26 14:04:57 UTC
+Last updated 2024-08-08 12:46:36 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
