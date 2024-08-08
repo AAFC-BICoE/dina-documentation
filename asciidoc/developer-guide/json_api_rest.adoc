@@ -30,15 +30,31 @@ Get the persons where the firstName is John OR Jane
 GET /person?filter[firstName][EQ]=John,Jane
 ----
 
+Get the persons where the lastName is null
+----
+GET /person?filter[lastName][EQ]=null
+----
+
 Example of returning all derivitives of the metadata with UUID 44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7:
 
 ----
 GET /metadata?filter[acDerivedFrom.id][EQ]=44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7
 ----
 
+Supported operators:
+
+* EQ
+* NEQ
+* GT (for numbers and dates)
+* GE (for numbers and dates)
+* LT (for numbers and dates)
+* LE (for numbers and dates)
+
+Implementation details can be found on https://aafc-bicoe.github.io/dina-base-api/#_filtering[dina-base documentation].
+
 === RSQL
 
-seqdb-api supports https://github.com/jirutka/rsql-parser[RSQL (REST query language)] for more complex filter queries.
+DINA supports https://github.com/jirutka/rsql-parser[RSQL (REST query language)] for more complex filter queries.
 
 ----
 localhost:8080/api/region?filter[rsql]=( name=='12S' or name=='142' )
