@@ -17,34 +17,23 @@ Listing regions with "name" and "description" as the only included fields:
 
 == Filtering
 
-=== Simple key-value filter
+=== Simple Filters
+
+While JSON:API does not suggest a formal resource filtering mechanism, DINA is using a simple form of filtering based on filter, operator and value.
 
 ----
-localhost:8080/api/region?filter[name]=ITS&filter[description]=Internal%20Transcribed%20Spacer
+GET /person?filter[firstName][EQ]=John&filter[lastName][EQ]=Doe
 ----
 
-returns:
-
+Get the persons where the firstName is John OR Jane
 ----
-{
-    "data": [
-        {
-            "id": "43",
-            "type": "region",
-            "attributes": {
-                "symbol": "ITS",
-                "name": "ITS",
-                "description": "Internal Transcribed Spacer"
-            }
-        }
-    ]
-}
+GET /person?filter[firstName][EQ]=John,Jane
 ----
 
 Example of returning all derivitives of the metadata with UUID 44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7:
 
 ----
-/metadata?filter[acDerivedFrom.id][EQ]=44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7
+GET /metadata?filter[acDerivedFrom.id][EQ]=44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7
 ----
 
 === RSQL
