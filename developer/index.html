@@ -664,6 +664,14 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 </div>
 <div class="paragraph">
+<p>Get the persons where the lastName is null</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>GET /person?filter[lastName][EQ]=null</pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Example of returning all derivitives of the metadata with UUID 44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7:</p>
 </div>
 <div class="listingblock">
@@ -671,11 +679,39 @@ That would let us use the native role-based features of Spring Security as an in
 <pre>GET /metadata?filter[acDerivedFrom.id][EQ]=44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7</pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Supported operators:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>EQ</p>
+</li>
+<li>
+<p>NEQ</p>
+</li>
+<li>
+<p>GT (for numbers and dates)</p>
+</li>
+<li>
+<p>GE (for numbers and dates)</p>
+</li>
+<li>
+<p>LT (for numbers and dates)</p>
+</li>
+<li>
+<p>LE (for numbers and dates)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Implementation details can be found on <a href="https://aafc-bicoe.github.io/dina-base-api/#_filtering">dina-base documentation</a>.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_rsql">5.2.2. RSQL</h4>
 <div class="paragraph">
-<p>seqdb-api supports <a href="https://github.com/jirutka/rsql-parser">RSQL (REST query language)</a> for more complex filter queries.</p>
+<p>DINA supports <a href="https://github.com/jirutka/rsql-parser">RSQL (REST query language)</a> for more complex filter queries.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1235,7 +1271,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-08 12:46:36 UTC
+Last updated 2024-08-08 13:00:29 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
