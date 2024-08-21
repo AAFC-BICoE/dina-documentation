@@ -461,22 +461,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#user">2.4. User</a></li>
 <li><a href="#verbatim">2.5. Verbatim</a></li>
 <li><a href="#identifiers">2.6. DINA Identifiers</a></li>
-<li><a href="#primary_id">2.7. Primary ID</a>
+<li><a href="#barcode">2.7. Barcode</a></li>
+<li><a href="#date-time">2.8. Date/Time</a></li>
+<li><a href="#form_template">2.9. Form Template</a>
 <ul class="sectlevel3">
-<li><a href="#next_identifier">2.7.1. Next Available Identifier</a></li>
+<li><a href="#_visibility">2.9.1. Visibility</a></li>
+<li><a href="#split-configuration">2.9.2. Split Configuration</a></li>
 </ul>
 </li>
-<li><a href="#barcode">2.8. Barcode</a></li>
-<li><a href="#date-time">2.9. Date/Time</a></li>
-<li><a href="#form_template">2.10. Form Template</a>
-<ul class="sectlevel3">
-<li><a href="#_visibility">2.10.1. Visibility</a></li>
-<li><a href="#split-configuration">2.10.2. Split Configuration</a></li>
-</ul>
-</li>
-<li><a href="#field_extensions">2.11. Field extensions</a></li>
-<li><a href="#managed_attributes">2.12. Managed Attributes</a></li>
-<li><a href="#material_sample_attachement">2.13. Material Sample Attachements</a></li>
+<li><a href="#field_extensions">2.10. Field extensions</a></li>
+<li><a href="#managed_attributes">2.11. Managed Attributes</a></li>
+<li><a href="#material_sample_attachement">2.12. Material Sample Attachements</a></li>
 </ul>
 </li>
 <li><a href="#collection-component">3. Collection Component</a>
@@ -751,25 +746,13 @@ Objects can only have 1 owner.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="primary_id">2.7. Primary ID</h3>
-<div class="paragraph">
-<p>Preferably unique identifier set by user. Non-unique identifiers are allowed and will require user to override duplication alert "Allowing Duplicate". This should <strong>only</strong> be done for historical bookkeeping purposes.</p>
-</div>
-<div class="sect3">
-<h4 id="next_identifier">2.7.1. Next Available Identifier</h4>
-<div class="paragraph">
-<p>Unique Primary ID creation by system for a material by concatenating the associated Collection string with the lowest unused integer. Ticking off the box will block manual <a href="#primary_id">Primary ID</a> entry.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="barcode">2.8. Barcode</h3>
+<h3 id="barcode">2.7. Barcode</h3>
 <div class="paragraph">
 <p>Machine readable code output that would be obtained from a scanning gun. Can be used as another means of searching the database.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="date-time">2.9. Date/Time</h3>
+<h3 id="date-time">2.8. Date/Time</h3>
 <div class="paragraph">
 <p>In the context of DINA, date/time can organized in 4 categories:</p>
 </div>
@@ -795,12 +778,12 @@ Objects can only have 1 owner.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="form_template">2.10. Form Template</h3>
+<h3 id="form_template">2.9. Form Template</h3>
 <div class="paragraph">
 <p>Form templates are used to customize the user interface by allowing you to choose field visibility and default values. The user can then use them for data entry on a single page or through a split operation.</p>
 </div>
 <div class="sect3">
-<h4 id="_visibility">2.10.1. Visibility</h4>
+<h4 id="_visibility">2.9.1. Visibility</h4>
 <div class="paragraph">
 <p>The owner (the user who created the template) can always see/use its templates. Optionally, the template can be made available to an entire <a href="#group">Group</a> that the user has access to.</p>
 </div>
@@ -809,7 +792,7 @@ Objects can only have 1 owner.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="split-configuration">2.10.2. Split Configuration</h4>
+<h4 id="split-configuration">2.9.2. Split Configuration</h4>
 <div class="paragraph">
 <p>Split Configurations enable you to configure how Material Sample <a href="#split">Split</a>s are automatically named and under what conditions they can be used.</p>
 </div>
@@ -840,19 +823,19 @@ Objects can only have 1 owner.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="field_extensions">2.11. Field extensions</h3>
+<h3 id="field_extensions">2.10. Field extensions</h3>
 <div class="paragraph">
 <p>Field extensions are fields with specific definitions that are defined by known standards. In order to add a specific field extension, a system administrator needs to provide a configuration file to the application.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="managed_attributes">2.12. Managed Attributes</h3>
+<h3 id="managed_attributes">2.11. Managed Attributes</h3>
 <div class="paragraph">
 <p>Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type <code>integer</code>, <code>string</code>, <code>date</code> or <code>boolean</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="material_sample_attachement">2.13. Material Sample Attachements</h3>
+<h3 id="material_sample_attachement">2.12. Material Sample Attachements</h3>
 <div class="paragraph">
 <p>Attachments refer to <a href="#object-store-component">Object Store Component</a>.</p>
 </div>
@@ -1502,7 +1485,7 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-08 13:00:29 UTC
+Last updated 2024-08-21 20:33:49 UTC
 </div>
 </div>
 </body>
