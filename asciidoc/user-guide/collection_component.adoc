@@ -83,6 +83,18 @@ In natural history collections, the material sample is typically collected, and 
 A Material Sample is a physical result of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed. A Material Sample Type is a system-defined term that prescribes the downstream expectations and logic in how derivative (or child) Material Samples are to be interpreted and digitally managed.
 Fixed values include: `Whole Organism`, `Culture Strain`, `Molecular Sample`, `Organism Part` or `Mixed Organisms`.
 
+[[primary_id]]
+=== Primary ID
+
+Primary identifier that is preferably globaly unique and human readable. When creating a new record, best pratice is to use collection code as prefix to allow the record to be referenceable outside the collection.
+
+Non-unique identifiers are allowed and will require user to override duplication alert "Allowing Duplicate". This should *only* be done for historical bookkeeping purposes.
+
+[[next_identifier]]
+=== Next Available Identifier
+
+Unique Primary ID creation by system for a material by concatenating the associated Collection string with the lowest unused integer. Ticking off the box will block manual <<primary_id>> entry.
+
 [[mat-samp-state]]
 === Material Sample State
 Represents the state of a material sample when its condition is negatively impacted. Fixed values include: destroyed, damaged, lost or decommissioned
