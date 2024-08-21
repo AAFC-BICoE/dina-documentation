@@ -503,7 +503,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#mat-sample">3.6. Material Sample</a>
 <ul class="sectlevel3">
 <li><a href="#mat-samp-type">3.6.1. Material Sample Type</a></li>
-<li><a href="#mat-samp-state">3.6.2. Material Sample State</a></li>
+<li><a href="#primary_id">3.6.2. Primary ID</a></li>
+<li><a href="#next_identifier">3.6.3. Next Available Identifier</a></li>
+<li><a href="#mat-samp-state">3.6.4. Material Sample State</a></li>
 </ul>
 </li>
 <li><a href="#preparation">3.7. Preparation</a>
@@ -962,7 +964,22 @@ Fixed values include: <code>Whole Organism</code>, <code>Culture Strain</code>, 
 </div>
 </div>
 <div class="sect3">
-<h4 id="mat-samp-state">3.6.2. Material Sample State</h4>
+<h4 id="primary_id">3.6.2. Primary ID</h4>
+<div class="paragraph">
+<p>Primary identifier that is preferably globaly unique and human readable. When creating a new record, best pratice is to use collection code as prefix to allow the record to be referenceable outside the collection.</p>
+</div>
+<div class="paragraph">
+<p>Non-unique identifiers are allowed and will require user to override duplication alert "Allowing Duplicate". This should <strong>only</strong> be done for historical bookkeeping purposes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="next_identifier">3.6.3. Next Available Identifier</h4>
+<div class="paragraph">
+<p>Unique Primary ID creation by system for a material by concatenating the associated Collection string with the lowest unused integer. Ticking off the box will block manual <a href="#primary_id">Primary ID</a> entry.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mat-samp-state">3.6.4. Material Sample State</h4>
 <div class="paragraph">
 <p>Represents the state of a material sample when its condition is negatively impacted. Fixed values include: destroyed, damaged, lost or decommissioned</p>
 </div>
@@ -1485,7 +1502,7 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-21 20:33:49 UTC
+Last updated 2024-08-21 20:46:03 UTC
 </div>
 </div>
 </body>
