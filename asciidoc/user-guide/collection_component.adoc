@@ -86,7 +86,10 @@ Fixed values include: `Whole Organism`, `Culture Strain`, `Molecular Sample`, `O
 [[primary_id]]
 === Primary ID
 
-Primary identifier that is preferably globaly unique and human readable. When creating a new record, best pratice is to use collection code as prefix to allow the record to be referenceable outside the collection.
+Primary, preferably unique and human readable, identifier for the material-sample.
+
+Best Practice: For reproducibility, data aggregation and interoperability reasons newly assigned Primary ID should be globally unique.
+For records that are in a collection, using collection code as prefix will generally give the identifier global uniqueness, at least within the institution.
 
 Non-unique identifiers are allowed and will require user to override duplication alert "Allowing Duplicate". This should *only* be done for historical bookkeeping purposes.
 
