@@ -74,13 +74,16 @@ The scientific name (verbatim scientific name if absent) of the primary <<determ
 
 [[mat-sample]]
 == Material Sample
-A physical result of a sampling event.
 
-In natural history collections, the material sample is typically collected, and either preserved or destructively processed. (from https://dwc.tdwg.org/terms/#materialsample[DarwinCore]).
+Material Sample represents the main unit of work in DINA. It can be described as: A physical result of a sampling(or subsampling) event.
+
+The material sample can be collected, cultivated, extracted and either preserved or destructively processed.
+
+The concept encompasses the terms https://dwc.tdwg.org/terms/#materialsample[materialSample] and https://dwc.tdwg.org/terms/#materialentity[materialSampleEntity] from DarwinCore.
 
 [[mat-samp-type]]
 === Material Sample Type
-A Material Sample is a physical result of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed. A Material Sample Type is a system-defined term that prescribes the downstream expectations and logic in how derivative (or child) Material Samples are to be interpreted and digitally managed.
+A Material Sample Type is a system-defined term that prescribes the downstream expectations and logic in how derivative (or child) Material Samples are to be interpreted and digitally managed.
 Fixed values include: `Whole Organism`, `Culture Strain`, `Molecular Sample`, `Organism Part` or `Mixed Organisms`.
 
 [[primary_id]]
