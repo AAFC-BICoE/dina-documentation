@@ -447,57 +447,58 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_api_specifications">1. API Specifications</a></li>
 <li><a href="#_high_level_architecture">2. High Level Architecture</a></li>
-<li><a href="#_ide_setup">3. IDE Setup</a></li>
-<li><a href="#_keycloak">4. Keycloak</a>
+<li><a href="#_high_level_design">3. High Level Design</a></li>
+<li><a href="#_ide_setup">4. IDE Setup</a></li>
+<li><a href="#_keycloak">5. Keycloak</a>
 <ul class="sectlevel2">
-<li><a href="#_groups">4.1. Groups</a></li>
-<li><a href="#_roles_per_group">4.2. Roles per group</a></li>
-<li><a href="#_user_attributes">4.3. User Attributes</a></li>
-<li><a href="#_group_attributes">4.4. Group Attributes</a></li>
+<li><a href="#_groups">5.1. Groups</a></li>
+<li><a href="#_roles_per_group">5.2. Roles per group</a></li>
+<li><a href="#_user_attributes">5.3. User Attributes</a></li>
+<li><a href="#_group_attributes">5.4. Group Attributes</a></li>
 </ul>
 </li>
-<li><a href="#_dina_apis">5. DINA APIs</a>
+<li><a href="#_dina_apis">6. DINA APIs</a>
 <ul class="sectlevel2">
-<li><a href="#_sparse_field_selection">5.1. Sparse field selection</a></li>
-<li><a href="#_filtering">5.2. Filtering</a>
+<li><a href="#_sparse_field_selection">6.1. Sparse field selection</a></li>
+<li><a href="#_filtering">6.2. Filtering</a>
 <ul class="sectlevel3">
-<li><a href="#_simple_filters">5.2.1. Simple Filters</a></li>
-<li><a href="#_rsql">5.2.2. RSQL</a></li>
+<li><a href="#_simple_filters">6.2.1. Simple Filters</a></li>
+<li><a href="#_rsql">6.2.2. RSQL</a></li>
 </ul>
 </li>
-<li><a href="#_pagination">5.3. Pagination</a></li>
-<li><a href="#_sorting">5.4. Sorting</a></li>
-<li><a href="#_creating_a_resource">5.5. Creating a resource</a></li>
-<li><a href="#_bulk_operations">5.6. Bulk operations</a></li>
+<li><a href="#_pagination">6.3. Pagination</a></li>
+<li><a href="#_sorting">6.4. Sorting</a></li>
+<li><a href="#_creating_a_resource">6.5. Creating a resource</a></li>
+<li><a href="#_bulk_operations">6.6. Bulk operations</a></li>
 </ul>
 </li>
-<li><a href="#_controlled_vocabulary">6. Controlled Vocabulary</a>
+<li><a href="#_controlled_vocabulary">7. Controlled Vocabulary</a>
 <ul class="sectlevel2">
-<li><a href="#_vocabulary">6.1. Vocabulary</a></li>
-<li><a href="#_managed_attribute">6.2. Managed Attribute</a></li>
-<li><a href="#_field_extension">6.3. Field Extension</a></li>
+<li><a href="#_vocabulary">7.1. Vocabulary</a></li>
+<li><a href="#_managed_attribute">7.2. Managed Attribute</a></li>
+<li><a href="#_field_extension">7.3. Field Extension</a></li>
 </ul>
 </li>
-<li><a href="#_liquibase">7. Liquibase</a>
+<li><a href="#_liquibase">8. Liquibase</a>
 <ul class="sectlevel2">
-<li><a href="#_liquibase_contexts">7.1. Liquibase Contexts</a></li>
-<li><a href="#_liquibase_migration_file_convention">7.2. Liquibase migration file convention</a></li>
-<li><a href="#_run_liquibase_from_maven">7.3. Run Liquibase from Maven</a></li>
+<li><a href="#_liquibase_contexts">8.1. Liquibase Contexts</a></li>
+<li><a href="#_liquibase_migration_file_convention">8.2. Liquibase migration file convention</a></li>
+<li><a href="#_run_liquibase_from_maven">8.3. Run Liquibase from Maven</a></li>
 </ul>
 </li>
-<li><a href="#_releasing_a_dina_module">8. Releasing a DINA module</a></li>
-<li><a href="#_postgresql">9. PostgreSQL</a>
+<li><a href="#_releasing_a_dina_module">9. Releasing a DINA module</a></li>
+<li><a href="#_postgresql">10. PostgreSQL</a>
 <ul class="sectlevel2">
-<li><a href="#useful_queries">9.1. Useful Queries</a>
+<li><a href="#useful_queries">10.1. Useful Queries</a>
 <ul class="sectlevel3">
-<li><a href="#_rename_key_in_jsonb_array">9.1.1. Rename key in jsonb array</a></li>
+<li><a href="#_rename_key_in_jsonb_array">10.1.1. Rename key in jsonb array</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_elasticsearch">10. Elasticsearch</a>
+<li><a href="#_elasticsearch">11. Elasticsearch</a>
 <ul class="sectlevel2">
-<li><a href="#_update_mapping">10.1. Update Mapping</a></li>
+<li><a href="#_update_mapping">11.1. Update Mapping</a></li>
 </ul>
 </li>
 </ul>
@@ -553,7 +554,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ide_setup">3. IDE Setup</h2>
+<h2 id="_high_level_design">3. High Level Design</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/dina_data_model.drawio.png" alt="dina data model.drawio">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ide_setup">4. IDE Setup</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>DINA Java-based projects are using <a href="https://projectlombok.org/">Lombok</a>, which may require additional setup in your IDE: <a href="https://projectlombok.org/setup/overview">IDE setup guides</a>.</p>
@@ -561,10 +572,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_keycloak">4. Keycloak</h2>
+<h2 id="_keycloak">5. Keycloak</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_groups">4.1. Groups</h3>
+<h3 id="_groups">5.1. Groups</h3>
 <div class="paragraph">
 <p>Groups are used to represent ownership access. A user can be in groups like <code>group-1</code>, <code>group-2</code>, etc, which would let them access certain collections and data sets but not others.
 This could be done by checking the metadata of the particular item the user is trying to access against their group membership. New groups could be added without having to recompile or edit the configuration
@@ -584,7 +595,7 @@ If you are planning to use the object-store, make sure the group names are follo
 </div>
 </div>
 <div class="sect2">
-<h3 id="_roles_per_group">4.2. Roles per group</h3>
+<h3 id="_roles_per_group">5.2. Roles per group</h3>
 <div class="paragraph">
 <p>Roles per group are not directly supported by Keycloak. Groups are mostly used to assign a set of Roles to users inside a group. For example, a user with the role "Super User" could be in 2 groups <code>group-1</code> and <code>group-2</code>
 but we would have no way to restrict to role to a certain group so the user would be a "Super User" in both groups. Creating very specific roles like “Group 1 Super User” is not really an option since it
@@ -598,7 +609,7 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 </div>
 <div class="sect2">
-<h3 id="_user_attributes">4.3. User Attributes</h3>
+<h3 id="_user_attributes">5.3. User Attributes</h3>
 <div class="paragraph">
 <p>User attributes can be set using the Keycloak console. They will be returned in the Keycloak token so the services and user interface can use it.</p>
 </div>
@@ -607,7 +618,7 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 </div>
 <div class="sect2">
-<h3 id="_group_attributes">4.4. Group Attributes</h3>
+<h3 id="_group_attributes">5.4. Group Attributes</h3>
 <div class="paragraph">
 <p>Group attributes can be set using the Keycloak console. They will be returned by the user module.</p>
 </div>
@@ -618,7 +629,7 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dina_apis">5. DINA APIs</h2>
+<h2 id="_dina_apis">6. DINA APIs</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>DINA modules provide a REST API that conforms to the <a href="https://jsonapi.org/">JSON:API</a> specification. DINA <a href="https://github.com/DINA-Web/guidelines/blob/master/DINA-Web-API-Guidelines.md">Web API Guidelines</a> provides a more specific context and includes some design decisions.</p>
@@ -630,7 +641,7 @@ That would let us use the native role-based features of Spring Security as an in
 <div class="title">Figure 1. JSON:API Concept</div>
 </div>
 <div class="sect2">
-<h3 id="_sparse_field_selection">5.1. Sparse field selection</h3>
+<h3 id="_sparse_field_selection">6.1. Sparse field selection</h3>
 <div class="paragraph">
 <p>You can limit which fields are included in a response using the fields.</p>
 </div>
@@ -644,9 +655,9 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 </div>
 <div class="sect2">
-<h3 id="_filtering">5.2. Filtering</h3>
+<h3 id="_filtering">6.2. Filtering</h3>
 <div class="sect3">
-<h4 id="_simple_filters">5.2.1. Simple Filters</h4>
+<h4 id="_simple_filters">6.2.1. Simple Filters</h4>
 <div class="paragraph">
 <p>While JSON:API does not suggest a formal resource filtering mechanism, DINA is using a simple form of filtering based on filter, operator and value.</p>
 </div>
@@ -709,7 +720,7 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rsql">5.2.2. RSQL</h4>
+<h4 id="_rsql">6.2.2. RSQL</h4>
 <div class="paragraph">
 <p>DINA supports <a href="https://github.com/jirutka/rsql-parser">RSQL (REST query language)</a> for more complex filter queries.</p>
 </div>
@@ -759,7 +770,7 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pagination">5.3. Pagination</h3>
+<h3 id="_pagination">6.3. Pagination</h3>
 <div class="paragraph">
 <p>You can paginate list data using "page[limit]" and "page[offset]" parameters.</p>
 </div>
@@ -781,7 +792,7 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sorting">5.4. Sorting</h3>
+<h3 id="_sorting">6.4. Sorting</h3>
 <div class="paragraph">
 <p>You can sort listed data in ascending or descending order, and specify multiple sort fields.</p>
 </div>
@@ -811,7 +822,7 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 </div>
 <div class="sect2">
-<h3 id="_creating_a_resource">5.5. Creating a resource</h3>
+<h3 id="_creating_a_resource">6.5. Creating a resource</h3>
 <div class="paragraph">
 <p>Creating a new Region:</p>
 </div>
@@ -824,7 +835,7 @@ http://localhost:8080/api/region</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_bulk_operations">5.6. Bulk operations</h3>
+<h3 id="_bulk_operations">6.6. Bulk operations</h3>
 <div class="paragraph">
 <p>Bulk operations are supported using the unofficial
 <a href="https://github.com/json-api/json-api/blob/9c7a03dbc37f80f6ca81b16d444c960e96dd7a57/extensions/jsonpatch/index.md">jsonpatch</a>
@@ -918,7 +929,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_controlled_vocabulary">6. Controlled Vocabulary</h2>
+<h2 id="_controlled_vocabulary">7. Controlled Vocabulary</h2>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
@@ -926,7 +937,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vocabulary">6.1. Vocabulary</h3>
+<h3 id="_vocabulary">7.1. Vocabulary</h3>
 <div class="paragraph">
 <p>A Vocabulary represents a single thing/concept. An entry is composed of a <code>name</code>, a <code>term</code> and a <code>multilingualTitle</code> (<code>VocabularyElement</code> interface). They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.</p>
 </div>
@@ -935,7 +946,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_managed_attribute">6.2. Managed Attribute</h3>
+<h3 id="_managed_attribute">7.2. Managed Attribute</h3>
 <div class="paragraph">
 <p>A managed attribute also represents a single thing/concept. As opposed to vocabulary, they are user defined and values are loaded from the database.</p>
 </div>
@@ -947,7 +958,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_field_extension">6.3. Field Extension</h3>
+<h3 id="_field_extension">7.3. Field Extension</h3>
 <div class="paragraph">
 <p>Field extension represents a set a terms/concepts that are logicialy grouped. They usualy comes from a standard defined by an external body. The <code>fields</code> of a specific field extension are also implementing the <code>TypedVocabularyElement</code> interface. Field extensions are platform defined and loaded from configuration files.</p>
 </div>
@@ -958,7 +969,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_liquibase">7. Liquibase</h2>
+<h2 id="_liquibase">8. Liquibase</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://www.liquibase.org/index.html">Liquibase</a> is used to generate the database and migrate to new versions of the database schema. Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed. When the application starts, any changelogs that have not been executed are executed.</p>
@@ -980,7 +991,7 @@ submit multiple resources linking to each other.</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_liquibase_contexts">7.1. Liquibase Contexts</h3>
+<h3 id="_liquibase_contexts">8.1. Liquibase Contexts</h3>
 <div class="paragraph">
 <p>When developing for Dina modules certain data is needed for the application to run properly and to make testing easier. Which is why we separate our database migrations into categories known as contexts. The two main contexts are as follows:</p>
 </div>
@@ -1013,7 +1024,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_liquibase_migration_file_convention">7.2. Liquibase migration file convention</h3>
+<h3 id="_liquibase_migration_file_convention">8.2. Liquibase migration file convention</h3>
 <div class="paragraph">
 <p>The following convention should be followed by all Liquibase database migration files:</p>
 </div>
@@ -1041,7 +1052,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_run_liquibase_from_maven">7.3. Run Liquibase from Maven</h3>
+<h3 id="_run_liquibase_from_maven">8.3. Run Liquibase from Maven</h3>
 <div class="paragraph">
 <p>It may be useful to run Liquibase without running the application. The Liquibase website has an <a href="https://docs.liquibase.com/tools-integrations/maven/workflows/creating-liquibase-projects-with-maven-postgresql.html">example</a> and <a href="https://github.com/AAFC-BICoE/seqdb-api">seqdb-api</a> contains the plugin defition and an example <code>liquibase.properties</code> file.</p>
 </div>
@@ -1049,7 +1060,7 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_releasing_a_dina_module">8. Releasing a DINA module</h2>
+<h2 id="_releasing_a_dina_module">9. Releasing a DINA module</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The process of releasing a dina module is the same for all modules. The CI will automatically build and release a new Docker image to Docker Hub when something is merged
@@ -1149,12 +1160,12 @@ in the master/main branch.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_postgresql">9. PostgreSQL</h2>
+<h2 id="_postgresql">10. PostgreSQL</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="useful_queries">9.1. Useful Queries</h3>
+<h3 id="useful_queries">10.1. Useful Queries</h3>
 <div class="sect3">
-<h4 id="_rename_key_in_jsonb_array">9.1.1. Rename key in jsonb array</h4>
+<h4 id="_rename_key_in_jsonb_array">10.1.1. Rename key in jsonb array</h4>
 <div class="paragraph">
 <p>The example is not aiming at perfomance.</p>
 </div>
@@ -1213,10 +1224,10 @@ UPDATE organism
 </div>
 </div>
 <div class="sect1">
-<h2 id="_elasticsearch">10. Elasticsearch</h2>
+<h2 id="_elasticsearch">11. Elasticsearch</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_update_mapping">10.1. Update Mapping</h3>
+<h3 id="_update_mapping">11.1. Update Mapping</h3>
 <div class="paragraph">
 <p>When a new mapping or new mapping property must be added to a live index the
 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html">Update mapping API</a> can be used.</p>
@@ -1271,7 +1282,7 @@ UPDATE organism
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-09-03 14:55:24 UTC
+Last updated 2024-09-03 14:59:31 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
