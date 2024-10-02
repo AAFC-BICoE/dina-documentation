@@ -18,7 +18,7 @@ image::2-CreateNew.png[]
 
 WARNING: It is mandatory to name your Collection.
 
-image::2-AddCollection.png[]
+//image::2-AddCollection.png[]
 
 [start=4]
 . Check that the information is correct. Note that this can be edited at any time. +

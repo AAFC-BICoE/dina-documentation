@@ -17,7 +17,7 @@ image::6-1-Homepage.png[]
 image::6-1-CreateNew.png[]
 
 [start=3]
-. In the Add Split Configuration page, enter all configurations the user wants to in regards to splitting the material samples
+. In the Add Split Configuration page, enter all configurations the user wants to in regards to splitting the material samples.
 
 WARNING: When creating Split Configurations, remember to choose options for the following required fields: + 
 • `Split Configuration Name` +
@@ -25,10 +25,11 @@ WARNING: When creating Split Configurations, remember to choose options for the 
 • `Strategy` +
 • `Generation Options`
 
-image::6-1-Required.png[]
+//image::6-1-Required.png[]
 
 [start=4]
 . Once the user has set the conditions and name and sample generation configurations, click the `Save` button on the top right corner of the page. This will make the configuration accessible when doing a Material Sample Split. +
+ +
 Also note that the configuration can be edited at any time.
 
 image::6-1-Save.png[]
@@ -42,9 +43,9 @@ To use a Split Configuration, the user must access the material sample they wish
 image::5-Homepage.png[]
 
 [start=2]
-. Search for and click on the material sample the user wants to use the Split Configuration on. If the sample has not been created yet, please refer to link:#createSample[Section 5.1 - Creating Material Sample(s)] of the guide.
+. Search for and click on the material sample the user wants to use the Split Configuration on. If the sample has not been created yet, please refer to the link:#createSample[Creating Material Sample(s) Section] of the guide.
 
-image::6-2-Samples.png[]
+//image::6-2-Samples.png[]
 
 [start=3]
 . Once the user is in the sample's read-only page, click on the `Split▾` drop-down button and select which Split Configuration the user wants to use. After doing so, click on `Split` button below it.
@@ -57,7 +58,7 @@ image::6-2-Split.png[]
 image::6-2-FinalSplit.png[]
 
 [start=5]
-. Now all that's left to do is edit the Material Samples generated through the split. This step is similar to the creation of material samples as in link:#createSample[Section 5.1 - Creating Material Sample(s)] - Step 3 and onwards.
+. Now all that's left to do is edit the Material Samples generated through the split. This step is similar to the creation of material samples as in the link:#createSample[Creating Material Sample(s) Section] - Step 3 and onwards.
 
 [start=6]
 . Once everything has been done, click on the `Save All` button at the top right corner of the page.

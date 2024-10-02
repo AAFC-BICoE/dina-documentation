@@ -60,7 +60,7 @@ image::5-2-Search.png[]
 image::5-2-SearchResult.png[]
 
 [start=4]
-. In the chosen sample's info page, click on the `Edit` button
+. In the chosen sample's read-only page, click on the `Edit` button.
 
 image::5-2-Edit.png[]
 

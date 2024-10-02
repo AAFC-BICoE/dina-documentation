@@ -13,10 +13,8 @@ jobs:
            sudo apt-get install -y asciidoctor
       - name: Run generate documentation for User Guide
         run: asciidoctor -a toc=left -D generated-docs asciidoc/user-guide/index.adoc
-
       - name: Run generate documentation for Basic Functionalities Guide
         run: asciidoctor -a toc=left -D generated-docs asciidoc/functionality-guide/index.adoc
-        
       - name: Run generate documentation for Developer Guide
         run: asciidoctor -a toc=left -b html5 -D generated-docs/developer asciidoc/developer-guide/index.adoc
       - name: Copy images for Developer Guide
