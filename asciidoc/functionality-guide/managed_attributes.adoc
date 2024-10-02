@@ -1,0 +1,38 @@
+[id=managedAttr]
+== Managed Attributes
+Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type `integer`, `string`, `date` or `boolean`. (from https://aafc-bicoe.github.io/dina-documentation/[AAFC-BICoE DINA User Guide])
+
+[id=createAttr]
+=== Creating Managed Attributes
+
+. In the DINA Homepage, under the Controlled Vocabulary submenu, click on the `Managed Attributes` option.
+
+image::4-Homepage.png[]
+
+[start=2]
+. In the Managed Atributes page, choose what object you would like to make an attribute for (`Collection`, `Object Store`, or `Transactions`).
+
+image::4-COsT.png[]
+
+[start=3]
+. In the same page, click on Create New
+
+image::4-CreateNew.png[]
+
+[start=4]
+. In the Add New Managed Attribute page, fill out relevant data about the new attribute to be added. After doing so, click `Save`.
+
+WARNING: The `Name`, `Target Data Component Type`, and `Vocabulary Element Type` fields are mandatory.
+
+image::4-AddAttr.png[]
+
+[start=5]
+. Check that the information is correct. Note that this can be edited at any time (except for the `Name` field). +
+If you wish to edit or delete the created attribute, you can do so through the buttons on the top right corner of the page.
+
+image::4-InfoPage.png[]
+
+[start=6]
+. The created attribute can now be accessed in the list page in the object type it was created for (`Collection`, `Object Store`, or `Transactions`).
+
+image::4-ListPage.png[]

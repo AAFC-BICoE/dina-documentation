@@ -1,0 +1,80 @@
+[id=collectingEvents]
+== Collecting Events
+Darwin Core defines "event" as : An action that occurs at some location during some time. (from https://dwc.tdwg.org/terms/#event[DarwinCore]). In a Collecting Event, the action is the extraction from nature. (from https://aafc-bicoe.github.io/dina-documentation/[AAFC-BICoE DINA User Guide])
+
+[id=createSample]
+=== Creating Material Sample(s)
+
+. In the DINA Homepage, under the Collection submenu, click on the `Material Samples` option.
+
+image::5-Homepage.png[]
+
+[start=2]
+. In the Material Samples page, click on the `Create new` button. +
+If you wish to input more than one sample, click on the `Create Multiple New` button.
+
+TIP: If the user has more than sample to input from a single collection, it is recommended to create multiple samples at once.
+
+image::5-1-Create.png[]
+
+If the user elects to create multiples samples at once, they will be taken to the following page where they will be asked how many samples will be created.They can then link the samples to a Collection and configure the naming scheme for each sample:
+
+image::5-1-CreateMultiple.png[]
+
+[start=3]
+. In the next step, the user can fill in specific information about the/each sample. For more information about each data component and field, please see the https://aafc-bicoe.github.io/dina-documentation/[AAFC-BICoE DINA User Guide].
+
+Note that none of these fields are required to be filled in and they can be edited at any time.
+
+The user can also add (or remove) which data components they want to in the left hand side of the page by clicking on the button beside each component.
+
+TIP: Clicking on an active data component on the left takes the user directly to the component's data fields.
+
+image::5-1-DataFields.png[]
+
+[start=4]
+. Once all relevant information has been filled out click the `Save` or `Save All` button at the right hand side of the page.
+
+image::5-1-Save.png[]
+[start=5]
+. All created samples will now be accessible through the list page and can be edited.
+
+image::5-1-ListPage.png[]
+
+[id=linkSampleToEvent]
+=== Linking a Material Sample to a Collecting Event
+If the user has not linked a sample to a Collecting Event when creating it, they can go back to the created sample and link the event by editing it.
+
+. To access the sample from the DINA Homepage, click on `Material Samples` from the Collection submenu
+
+image::5-Homepage.png[]
+
+[start=2]
+. If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.
+
+image::5-2-Search.png[]
+
+[start=3]
+. The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.
+
+image::5-2-SearchResult.png[]
+
+[start=4]
+. In the chosen sample's info page, click on the `Edit` button
+
+image::5-2-Edit.png[]
+
+[start=5]
+. Activate the `Collecting Event` component by clicking on the button corresponding to it.
+
+image::5-2-Activate.png[]
+
+[start=6]
+. The user can now choose to create a new `Collecting Event` or attach the sample to an already existing event.
+
+image::5-2-Event.png[]
+
+[start=7]
+. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Collecting Event` and will be reflected in the sample's and the event's read-only pages.
+
+image::5-2-Save.png[]

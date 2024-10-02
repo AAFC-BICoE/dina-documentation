@@ -1,0 +1,5 @@
+[id=login]
+== Logging In
+Once the user has been grated access to the website, use your GC credentials to log in. Otherwise, use the credentials given to the user.
+
+image::1-SignIn.png[]
