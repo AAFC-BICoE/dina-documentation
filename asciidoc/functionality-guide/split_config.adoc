@@ -28,7 +28,7 @@ WARNING: When creating Split Configurations, remember to choose options for the 
 //image::6-1-Required.png[]
 
 [start=4]
-. Once the user has set the conditions and name and sample generation configurations, click the `Save` button on the top right corner of the page. This will make the configuration accessible when doing a Material Sample Split. +
+. Once the user has set the configuration's name, material sample type, and sample generation configurations, click the `Save` button on the top right corner of the page. This will make the configuration accessible when doing a Material Sample Split. +
  +
 Also note that the configuration can be edited at any time.
 

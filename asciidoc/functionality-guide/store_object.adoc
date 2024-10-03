@@ -1,5 +1,7 @@
 [id=storeObj]
 == Storing an Object
+In DINA, users will be able to upload files which can be linked to samples and collections. This can be done through the Object Store. +
+ +
 There are 2 pathways to store an object to DINA and link it to a Material Sample. We will go over both ways in this guide.
 
 [id=uploadFirst]
@@ -55,7 +57,7 @@ image::7-1-Attachments.png[]
 image::7-LastSave.png[]
 
 [id=uploadDirect]
-=== Upload on Material Sample or Collection Event Directly
+=== Upload on Material Sample or Collecting Event Directly
 . In the DINA Homepage, click on `Material Samples` under the Collection submenu.
 
 image::5-Homepage.png[]

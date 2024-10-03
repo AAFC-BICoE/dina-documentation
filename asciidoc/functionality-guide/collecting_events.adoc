@@ -11,6 +11,7 @@ image::5-Homepage.png[]
 
 [start=2]
 . In the Material Samples page, click on the `Create new` button. +
+ +
 If you wish to input more than one sample, click on the `Create Multiple New` button.
 
 TIP: If the user has more than sample to input from a single collection, it is recommended to create multiple samples at once.

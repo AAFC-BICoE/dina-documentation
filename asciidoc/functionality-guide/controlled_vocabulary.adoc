@@ -24,7 +24,7 @@ Examples: `Freeze-Dry` (from https://abcd.tdwg.org/terms/[ABCD 3.0])
 Predefined written procedural method in the design and implementation of experiments in natural sciences. (from https://www.wikidata.org/wiki/Q367158[Wikidata])
 
 [id=createVocab]
-=== Creating Collection Methods, Preparation Methods, Preparation Types, and/or Protocols
+=== Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols
 . In the DINA Homepage, you can find links for `Collection Methods`, `Preparation Methods`, `Preparation Types`, and `Protocols` under the Controlled Vocabulary submenu. Click on which option you would like to create.
 
 image::3-Homepage.png[]
