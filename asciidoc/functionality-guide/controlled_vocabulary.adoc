@@ -1,0 +1,57 @@
+[id=controlledVocab]
+== Controlled Vocabulary
+
+[id=collectionMethods]
+=== Collection Methods
+Method used during an Collecting Event. +
+ +
+Examples: `UV light trap`, `bottom trawl` (from https://aafc-bicoe.github.io/dina-documentation/[AAFC-BICoE DINA User Guide])
+
+[id=prepMethods]
+=== Preparation Methods
+A noun representing the process used (the how) in preparing the material sample. +
+ +
+Examples: `culture`, `mechanical inoculation`, `dissection` (from https://aafc-bicoe.github.io/dina-documentation/[AAFC-BICoE DINA User Guide])
+
+[id=prepTypes]
+=== Preparation Types
+Description of the preservation type of the material sample. +
+ +
+Examples: `Freeze-Dry` (from https://abcd.tdwg.org/terms/[ABCD 3.0])
+
+[id=protocol]
+=== Protocol
+Predefined written procedural method in the design and implementation of experiments in natural sciences. (from https://www.wikidata.org/wiki/Q367158[Wikidata])
+
+[id=createVocab]
+=== Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols
+. In the DINA Homepage, you can find links for `Collection Methods`, `Preparation Methods`, `Preparation Types`, and `Protocols` under the Controlled Vocabulary submenu. Click on which option you would like to create.
+
+image::3-Homepage.png[]
+
+[start=2]
+. After choosing, click on the `Create New` button on the top right corner of the page.
+
+image::3-CreateNew.png[]
+
+[start=3]
+. Fill in the `Name` and `Description` (in English and/or French) of the method/type/protocol to be added.
+
+WARNING: It is mandatory to name the object.
+
+//image::3-AddObject.png[]
+
+Also note that in creating a new Protocol, the user can also add the `Protocol Type`, `Protocol Data`, and add `Protocol Attachments` which are not fields in the other Controlled Vocabulary objects.
+
+image::3-AddProtocol.png[]
+
+[start=4]
+. Check that the information is correct. Note that this can be edited at any time. +
+If you wish to edit, see the changes, or delete the created object, you can do so through the buttons on the top right corner of the page.
+
+image::2-InfoPage.png[]
+
+[start=5]
+. The created object can now be accessed in the list page.
+
+image::3-ListPage.png[]
