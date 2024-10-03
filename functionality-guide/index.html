@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<title>DINA Developer Guide</title>
+<title>DINA Basic Functionalities</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -437,68 +437,49 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>DINA Developer Guide</h1>
+<h1>DINA Basic Functionalities</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_api_specifications">1. API Specifications</a></li>
-<li><a href="#_high_level_architecture">2. High Level Architecture</a></li>
-<li><a href="#_high_level_design">3. High Level Design</a></li>
-<li><a href="#_ide_setup">4. IDE Setup</a></li>
-<li><a href="#_keycloak">5. Keycloak</a>
+<li><a href="#login">1. Logging In</a></li>
+<li><a href="#collection">2. Collection</a>
 <ul class="sectlevel2">
-<li><a href="#_groups">5.1. Groups</a></li>
-<li><a href="#_roles_per_group">5.2. Roles per group</a></li>
-<li><a href="#_user_attributes">5.3. User Attributes</a></li>
-<li><a href="#_group_attributes">5.4. Group Attributes</a></li>
+<li><a href="#createCollection">2.1. Creating a Collection</a></li>
 </ul>
 </li>
-<li><a href="#_dina_apis">6. DINA APIs</a>
+<li><a href="#controlledVocab">3. Controlled Vocabulary</a>
 <ul class="sectlevel2">
-<li><a href="#_sparse_field_selection">6.1. Sparse field selection</a></li>
-<li><a href="#_filtering">6.2. Filtering</a>
-<ul class="sectlevel3">
-<li><a href="#_simple_filters">6.2.1. Simple Filters</a></li>
-<li><a href="#_rsql">6.2.2. RSQL</a></li>
+<li><a href="#collectionMethods">3.1. Collection Methods</a></li>
+<li><a href="#prepMethods">3.2. Preparation Methods</a></li>
+<li><a href="#prepTypes">3.3. Preparation Types</a></li>
+<li><a href="#protocol">3.4. Protocol</a></li>
+<li><a href="#createVocab">3.5. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</a></li>
 </ul>
 </li>
-<li><a href="#_pagination">6.3. Pagination</a></li>
-<li><a href="#_sorting">6.4. Sorting</a></li>
-<li><a href="#_creating_a_resource">6.5. Creating a resource</a></li>
-<li><a href="#_bulk_operations">6.6. Bulk operations</a></li>
-</ul>
-</li>
-<li><a href="#_controlled_vocabulary">7. Controlled Vocabulary</a>
+<li><a href="#managedAttr">4. Managed Attributes</a>
 <ul class="sectlevel2">
-<li><a href="#_vocabulary">7.1. Vocabulary</a></li>
-<li><a href="#_managed_attribute">7.2. Managed Attribute</a></li>
-<li><a href="#_field_extension">7.3. Field Extension</a></li>
+<li><a href="#createAttr">4.1. Creating Managed Attributes</a></li>
 </ul>
 </li>
-<li><a href="#_liquibase">8. Liquibase</a>
+<li><a href="#collectingEvents">5. Collecting Events</a>
 <ul class="sectlevel2">
-<li><a href="#_liquibase_contexts">8.1. Liquibase Contexts</a></li>
-<li><a href="#_liquibase_migration_file_convention">8.2. Liquibase migration file convention</a></li>
-<li><a href="#_run_liquibase_from_maven">8.3. Run Liquibase from Maven</a></li>
+<li><a href="#createSample">5.1. Creating Material Sample(s)</a></li>
+<li><a href="#linkSampleToEvent">5.2. Linking a Material Sample to a Collecting Event</a></li>
 </ul>
 </li>
-<li><a href="#_releasing_a_dina_module">9. Releasing a DINA module</a></li>
-<li><a href="#_postgresql">10. PostgreSQL</a>
+<li><a href="#splitConfig">6. Split Configuration</a>
 <ul class="sectlevel2">
-<li><a href="#useful_queries">10.1. Useful Queries</a>
-<ul class="sectlevel3">
-<li><a href="#_rename_key_in_jsonb_array">10.1.1. Rename key in jsonb array</a></li>
+<li><a href="#createSplitConfig">6.1. Creating a Split Configuration</a></li>
+<li><a href="#useSplitConfig">6.2. Using Split Configuration for a Material Sample</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#_elasticsearch">11. Elasticsearch</a>
+<li><a href="#storeObj">7. Storing an Object</a>
 <ul class="sectlevel2">
-<li><a href="#_update_mapping">11.1. Update Mapping</a></li>
+<li><a href="#uploadFirst">7.1. Upload through the DINA Homepage</a></li>
+<li><a href="#uploadDirect">7.2. Upload on Material Sample or Collecting Event Directly</a></li>
 </ul>
 </li>
 </ul>
@@ -507,773 +488,893 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>This guide includes general developer documentation for DINA modules. Topics that are more related to the DINA system as a whole are covered in local-deployment <a href="https://aafc-bicoe.github.io/dina-local-deployment/">documentation</a>. Documentation about modules implementation is in <a href="https://aafc-bicoe.github.io/dina-base-api/">dina-base-api</a></p>
-</div>
-<div class="paragraph">
-<p>UI development documentation (including the UI design guidelines) is covered in the dina-ui <a href="https://aafc-bicoe.github.io/dina-ui/">documentation</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_api_specifications">1. API Specifications</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://dina-web.github.io/collection-specs/">collection-api</a></p>
-</li>
-<li>
-<p><a href="https://dina-web.github.io/object-store-specs/">object-store-api</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/AAFC-BICoE/object-store-api/blob/master/docs/file_upload_download.adoc">File Upload</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="https://dina-web.github.io/agent-specs/">agent-api</a></p>
-</li>
-<li>
-<p><a href="https://dina-web.github.io/sequence-specs/">sequence-api</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_high_level_architecture">2. High Level Architecture</h2>
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="images/DINA-AAFC_High_Level_Architecture.drawio.png" alt="DINA AAFC High Level Architecture.drawio">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_high_level_design">3. High Level Design</h2>
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="images/dina_data_model.drawio.png" alt="dina data model.drawio">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_ide_setup">4. IDE Setup</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>DINA Java-based projects are using <a href="https://projectlombok.org/">Lombok</a>, which may require additional setup in your IDE: <a href="https://projectlombok.org/setup/overview">IDE setup guides</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_keycloak">5. Keycloak</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_groups">5.1. Groups</h3>
-<div class="paragraph">
-<p>Groups are used to represent ownership access. A user can be in groups like <code>group-1</code>, <code>group-2</code>, etc, which would let them access certain collections and data sets but not others.
-This could be done by checking the metadata of the particular item the user is trying to access against their group membership. New groups could be added without having to recompile or edit the configuration
-of the deployment.</p>
-</div>
-<div class="admonitionblock important">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-important" title="Important"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If you are planning to use the object-store, make sure the group names are following <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html">s3 bucket naming rules</a>
+To search the User Guide, press Ctrl+F and enter a keyword.
 </td>
 </tr>
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_roles_per_group">5.2. Roles per group</h3>
-<div class="paragraph">
-<p>Roles per group are not directly supported by Keycloak. Groups are mostly used to assign a set of Roles to users inside a group. For example, a user with the role "Super User" could be in 2 groups <code>group-1</code> and <code>group-2</code>
-but we would have no way to restrict to role to a certain group so the user would be a "Super User" in both groups. Creating very specific roles like “Group 1 Super User” is not really an option since it
-would make the implementation quite complex in all the modules.</p>
-</div>
-<div class="paragraph">
-<p>Since Keycloak supports subgroups, we can have subgroups like <code>/group-1/super-user</code> (subgroup of <code>group-1</code>) and use that to determine access in group-specific situations. It breaks away somewhat from the conceptual
-separation of using roles for functional access and groups for ownership, but it still represents a functional solution that mixes both concepts.
-Groups, including subgroups, can also have role mappings, which assign a specified role to all members of a group. As an example, a group-admin role which would be role-mapped to each of the &#8230;&#8203;/admins groups.
-That would let us use the native role-based features of Spring Security as an initial check, then verify in code that the user belongs to the correct admin subgroup for whatever they&#8217;re trying to do.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_user_attributes">5.3. User Attributes</h3>
-<div class="paragraph">
-<p>User attributes can be set using the Keycloak console. They will be returned in the Keycloak token so the services and user interface can use it.</p>
-</div>
-<div class="paragraph">
-<p><code>agentId</code>: UUID of the person in the agent module to allow all the modules to be aware of the agent identifier that represents the authenticated users.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_group_attributes">5.4. Group Attributes</h3>
-<div class="paragraph">
-<p>Group attributes can be set using the Keycloak console. They will be returned by the user module.</p>
-</div>
-<div class="paragraph">
-<p><code>groupLabel-en</code>: label to display the group label by language (specified in the suffix with 2 letters ISO code)</p>
-</div>
-</div>
-</div>
 </div>
 <div class="sect1">
-<h2 id="_dina_apis">6. DINA APIs</h2>
+<h2 id="login">1. Logging In</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>DINA modules provide a REST API that conforms to the <a href="https://jsonapi.org/">JSON:API</a> specification. DINA <a href="https://github.com/DINA-Web/guidelines/blob/master/DINA-Web-API-Guidelines.md">Web API Guidelines</a> provides a more specific context and includes some design decisions.</p>
+<p>Once the user has been grated access to the website, use your GC credentials to log in. Otherwise, use the credentials given to the user.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/jsonapi.drawio.png" alt="jsonapi.drawio">
-</div>
-<div class="title">Figure 1. JSON:API Concept</div>
-</div>
-<div class="sect2">
-<h3 id="_sparse_field_selection">6.1. Sparse field selection</h3>
-<div class="paragraph">
-<p>You can limit which fields are included in a response using the fields.</p>
-</div>
-<div class="paragraph">
-<p>Listing regions with "name" and "description" as the only included fields:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/api/region?fields[region]=name,description</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_filtering">6.2. Filtering</h3>
-<div class="sect3">
-<h4 id="_simple_filters">6.2.1. Simple Filters</h4>
-<div class="paragraph">
-<p>While JSON:API does not suggest a formal resource filtering mechanism, DINA is using a simple form of filtering based on filter, operator and value.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>GET /person?filter[firstName][EQ]=John&amp;filter[lastName][EQ]=Doe</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Get the persons where the firstName is John OR Jane</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>GET /person?filter[firstName][EQ]=John,Jane</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Get the persons where the lastName is null</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>GET /person?filter[lastName][EQ]=null</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Example of returning all derivitives of the metadata with UUID 44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>GET /metadata?filter[acDerivedFrom.id][EQ]=44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Supported operators:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>EQ</p>
-</li>
-<li>
-<p>NEQ</p>
-</li>
-<li>
-<p>GT (for numbers and dates)</p>
-</li>
-<li>
-<p>GE (for numbers and dates)</p>
-</li>
-<li>
-<p>LT (for numbers and dates)</p>
-</li>
-<li>
-<p>LE (for numbers and dates)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Implementation details can be found on <a href="https://aafc-bicoe.github.io/dina-base-api/#_filtering">dina-base documentation</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_rsql">6.2.2. RSQL</h4>
-<div class="paragraph">
-<p>DINA supports <a href="https://github.com/jirutka/rsql-parser">RSQL (REST query language)</a> for more complex filter queries.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>localhost:8080/api/region?filter[rsql]=( name=='12S' or name=='142' )</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>returns</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>{
-    "data": [
-        {
-            "id": "142",
-            "type": "region",
-            "attributes": {
-                "symbol": "142",
-                "name": "142",
-                "description": ""
-            }
-        },
-        {
-            "id": "284",
-            "type": "region",
-            "attributes": {
-                "symbol": "12S",
-                "name": "12S",
-                "description": "mitochondrial"
-            }
-        },
-        {
-            "id": "366",
-            "type": "region",
-            "attributes": {
-                "symbol": "12S",
-                "name": "12S",
-                "description": null
-            }
-        }
-    ]
-}</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_pagination">6.3. Pagination</h3>
-<div class="paragraph">
-<p>You can paginate list data using "page[limit]" and "page[offset]" parameters.</p>
-</div>
-<div class="paragraph">
-<p>The first page of regions with a page size of 100:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/api/region?page[limit]=100</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The second page:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/api/region?page[limit]=100&amp;page[offset]=100</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_sorting">6.4. Sorting</h3>
-<div class="paragraph">
-<p>You can sort listed data in ascending or descending order, and specify multiple sort fields.</p>
-</div>
-<div class="paragraph">
-<p>Sorting regions by name (ascending):</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/api/region?sort=name</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Sorting regions by name (descending):</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/api/region?sort=-name</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Sorting regions by name (ascending) and description (descending when multiple regions have the same name):</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/api/region?sort=name,-description</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_creating_a_resource">6.5. Creating a resource</h3>
-<div class="paragraph">
-<p>Creating a new Region:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">curl -XPOST -H "Content-Type: application/vnd.api+json" \
---data '{"data":{"type": "region", "attributes": {"name":"My Region", "description":"My Description", "symbol":"My Symbol"}}}' \
-http://localhost:8080/api/region</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_bulk_operations">6.6. Bulk operations</h3>
-<div class="paragraph">
-<p>Bulk operations are supported using the unofficial
-<a href="https://github.com/json-api/json-api/blob/9c7a03dbc37f80f6ca81b16d444c960e96dd7a57/extensions/jsonpatch/index.md">jsonpatch</a>
-extension to JSON:API implemented by the Crnk Operations Module.</p>
-</div>
-<div class="paragraph">
-<p>Example request:</p>
-</div>
-<div class="paragraph">
-<p>HTTP Method: PATCH</p>
-</div>
-<div class="paragraph">
-<p>URL: (API path prefix)/operations</p>
-</div>
-<div class="paragraph">
-<p>Headers:
-  - Content-Type: application/json-patch+json
-  - Accept: application/json-patch+json</p>
-</div>
-<div class="paragraph">
-<p>Body:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[{
-	"op": "POST",
-	"path": "region",
-	"value": {
-		"id": 1000,
-		"type": "region",
-		"attributes": {
-			"name": "region-1",
-			"description": "desc",
-			"symbol": "symbol"
-		}
-	}
-}, {
-	"op": "POST",
-	"path": "region",
-	"value": {
-		"id": 2000,
-		"type": "region",
-		"attributes": {
-			"name": "region-2",
-			"description": "desc",
-			"symbol": "symbol"
-		}
-	}
-}]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Reponse:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
-    {
-        "data": {
-            "id": "4",
-            "type": "region",
-            "attributes": {
-                "symbol": "symbol",
-                "name": "region-1",
-                "description": "desc"
-            }
-        },
-        "status": 201
-    },
-    {
-        "data": {
-            "id": "5",
-            "type": "region",
-            "attributes": {
-                "symbol": "symbol",
-                "name": "region-2",
-                "description": "desc"
-            }
-        },
-        "status": 201
-    }
-]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Note: The "id" field in a POST request to create a resource will not become the persisted
-resource&#8217;s ID, but it is mandatory for the request. In the future this value could be used to
-submit multiple resources linking to each other.</p>
+<img src="images/1-SignIn.png" alt="1 SignIn">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_controlled_vocabulary">7. Controlled Vocabulary</h2>
+<h2 id="collection">2. Collection</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>A Collection represents the top entity that can contain material-sample. Top collections (or parent collections) generally represent a natural history collection or a laboratory. A collection can contain multiple sub-collection(s). (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
+</div>
+<div class="sect2">
+<h3 id="createCollection">2.1. Creating a Collection</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>On the left side of the DINA Homepage, click the <code>Collection</code> option under the Collection submenu</p>
+</li>
+</ol>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="images/Controlled_Vocabulary_Diagram.drawio.png" alt="Controlled Vocabulary Diagram.drawio">
+<img src="images/2-Homepage.png" alt="2 Homepage">
 </div>
 </div>
-<div class="sect2">
-<h3 id="_vocabulary">7.1. Vocabulary</h3>
-<div class="paragraph">
-<p>A Vocabulary represents a single thing/concept. An entry is composed of a <code>name</code>, a <code>term</code> and a <code>multilingualTitle</code> (<code>VocabularyElement</code> interface). They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.</p>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Collection page, click the <code>Create New</code> button.</p>
+</li>
+</ol>
 </div>
-<div class="paragraph">
-<p>Examples of vocabulary are : spatial reference system (SRS), type status, coordinate system &#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_managed_attribute">7.2. Managed Attribute</h3>
-<div class="paragraph">
-<p>A managed attribute also represents a single thing/concept. As opposed to vocabulary, they are user defined and values are loaded from the database.</p>
-</div>
-<div class="paragraph">
-<p>Manage attribute extends vocabulary and adds the attributes <code>key</code>, <code>vocabularyElementType</code>, <code>acceptedValues</code>, and <code>multilingualDescription</code> through the <code>TypedVocabularyElement</code> interface.</p>
-</div>
-<div class="paragraph">
-<p>They are used as semi-structured data where the <code>key</code> is stored with a value on the DINA models that support them.</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/2-CreateNew.png" alt="2 CreateNew">
 </div>
 </div>
-<div class="sect2">
-<h3 id="_field_extension">7.3. Field Extension</h3>
-<div class="paragraph">
-<p>Field extension represents a set a terms/concepts that are logicialy grouped. They usualy comes from a standard defined by an external body. The <code>fields</code> of a specific field extension are also implementing the <code>TypedVocabularyElement</code> interface. Field extensions are platform defined and loaded from configuration files.</p>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the Add Collection page, add any relevant information about your Collection. After doing so, click the <code>Save</code> button on the top right corner of the page.</p>
+</li>
+</ol>
 </div>
-<div class="paragraph">
-<p>They are used as semi-structured data where the extension, the version and the <code>key</code> are stored with a value on the DINA models that support them.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+It is mandatory to name your Collection.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Check that the information is correct. Note that this can be edited at any time.<br>
+If you wish to edit, see the changes, or delete the collection, you can do so through the buttons on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2-InfoPage.png" alt="2 InfoPage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>The created Collection can now be accessed through the Collection page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2-ListPage.png" alt="2 ListPage">
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_liquibase">8. Liquibase</h2>
+<h2 id="controlledVocab">3. Controlled Vocabulary</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><a href="http://www.liquibase.org/index.html">Liquibase</a> is used to generate the database and migrate to new versions of the database schema. Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed. When the application starts, any changelogs that have not been executed are executed.</p>
-</div>
-<div class="paragraph">
-<p>Additional information:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://www.liquibase.org/bestpractices.html">Liquibase Best Practices</a></p>
-</li>
-<li>
-<p><a href="https://www.liquibase.org/documentation/changes/add_column.html">Change example: addColumn</a></p>
-</li>
-<li>
-<p><a href="https://www.liquibase.org/documentation/generating_changelogs.html">Adding Liquibase support to an existing database</a></p>
-</li>
-</ul>
-</div>
 <div class="sect2">
-<h3 id="_liquibase_contexts">8.1. Liquibase Contexts</h3>
+<h3 id="collectionMethods">3.1. Collection Methods</h3>
 <div class="paragraph">
-<p>When developing for Dina modules certain data is needed for the application to run properly and to make testing easier. Which is why we separate our database migrations into categories known as contexts. The two main contexts are as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>schema-change</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Changes to the schema such as adding new columns, renaming tables, adding new tables.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>sample-data</p>
-<div class="ulist">
-<ul>
-<li>
-<p>sample data for developers, this should not be ran on PROD/UAT since it&#8217;s used for inserting sample data for developers and the data is already in PROD/UAT databases.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For PROD/UAT purposes, the context can be changed by editing the application.yml file which has all of the liquibase configurations. The contexts are a comma separated list of all of the contexts to be performed.</p>
+<p>Method used during an Collecting Event.<br>
+<br>
+Examples: <code>UV light trap</code>, <code>bottom trawl</code> (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_liquibase_migration_file_convention">8.2. Liquibase migration file convention</h3>
+<h3 id="prepMethods">3.2. Preparation Methods</h3>
 <div class="paragraph">
-<p>The following convention should be followed by all Liquibase database migration files:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Migration scripts live in <code>src/main/resources/db/changelog</code></p>
-</li>
-<li>
-<p>Filename should follow the convention <code>&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;.xml</code> (e.g. <code>2-new_specimen_field_PHAC_containment_level.xml</code>)</p>
-</li>
-<li>
-<p>A new migration file&#8217;s path should be added in an "include" tag of <code>src/main/resources/db/changelog/db.changelog-master.xml</code></p>
-</li>
-<li>
-<p>The context of a <code>changeSet</code> in the migration xml file should always be set (e.g. <code>context="schema-change"</code>)</p>
-</li>
-<li>
-<p>The <code>&lt;id&gt;</code> should use the filename convention without the file extension <code>&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;</code> if the file only includes 1 changeset, otherwise the following convention should be used: <code>&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;-&lt;WHAT_THE_CHANGESET_DOES&gt;</code> (ex: <code>id="11-Implement_new_workflow_entitie-Create_enum_types"</code>)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When merging code to dev, we need to make sure the incremental number is always unique. If we have a duplicate, we should be reassigned a new identifier and update the <code>db.changelog-master.xml</code>.</p>
+<p>A noun representing the process used (the how) in preparing the material sample.<br>
+<br>
+Examples: <code>culture</code>, <code>mechanical inoculation</code>, <code>dissection</code> (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_run_liquibase_from_maven">8.3. Run Liquibase from Maven</h3>
+<h3 id="prepTypes">3.3. Preparation Types</h3>
 <div class="paragraph">
-<p>It may be useful to run Liquibase without running the application. The Liquibase website has an <a href="https://docs.liquibase.com/tools-integrations/maven/workflows/creating-liquibase-projects-with-maven-postgresql.html">example</a> and <a href="https://github.com/AAFC-BICoE/seqdb-api">seqdb-api</a> contains the plugin defition and an example <code>liquibase.properties</code> file.</p>
+<p>Description of the preservation type of the material sample.<br>
+<br>
+Examples: <code>Freeze-Dry</code> (from <a href="https://abcd.tdwg.org/terms/">ABCD 3.0</a>)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="protocol">3.4. Protocol</h3>
+<div class="paragraph">
+<p>Predefined written procedural method in the design and implementation of experiments in natural sciences. (from <a href="https://www.wikidata.org/wiki/Q367158">Wikidata</a>)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="createVocab">3.5. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, you can find links for <code>Collection Methods</code>, <code>Preparation Methods</code>, <code>Preparation Types</code>, and <code>Protocols</code> under the Controlled Vocabulary submenu. Click on which option you would like to create.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3-Homepage.png" alt="3 Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>After choosing, click on the <code>Create New</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3-CreateNew.png" alt="3 CreateNew">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Fill in the <code>Name</code> and <code>Description</code> (in English and/or French) of the method/type/protocol to be added.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+It is mandatory to name the object.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Also note that in creating a new Protocol, the user can also add the <code>Protocol Type</code>, <code>Protocol Data</code>, and add <code>Protocol Attachments</code> which are not fields in the other Controlled Vocabulary objects.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3-AddProtocol.png" alt="3 AddProtocol">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Check that the information is correct. Note that this can be edited at any time.<br>
+If you wish to edit, see the changes, or delete the created object, you can do so through the buttons on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2-InfoPage.png" alt="2 InfoPage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>The created object can now be accessed in the list page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3-ListPage.png" alt="3 ListPage">
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_releasing_a_dina_module">9. Releasing a DINA module</h2>
+<h2 id="managedAttr">4. Managed Attributes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The process of releasing a dina module is the same for all modules. The CI will automatically build and release a new Docker image to Docker Hub when something is merged
-in the master/main branch.</p>
+<p>Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type <code>integer</code>, <code>string</code>, <code>date</code> or <code>boolean</code>. (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
+</div>
+<div class="sect2">
+<h3 id="createAttr">4.1. Creating Managed Attributes</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, under the Controlled Vocabulary submenu, click on the <code>Managed Attributes</code> option.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4-Homepage.png" alt="4 Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Managed Atributes page, choose what object you would like to make an attribute for (<code>Collection</code>, <code>Object Store</code>, or <code>Transactions</code>).</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4-COsT.png" alt="4 COsT">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the same page, click on the <code>Create New</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4-CreateNew.png" alt="4 CreateNew">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>In the Add New Managed Attribute page, fill out relevant data about the new attribute to be added. After doing so, click the <code>Save</code> button on the top right corner of the screen.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The <code>Name</code>, <code>Target Data Component Type</code>, and <code>Vocabulary Element Type</code> fields are mandatory.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Check that the information is correct. Note that this can be edited at any time (except for the <code>Name</code> field).<br>
+If you wish to edit or delete the created attribute, you can do so through the buttons on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4-InfoPage.png" alt="4 InfoPage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>The created attribute can now be accessed in the list page of the object type it was created for (<code>Collection</code>, <code>Object Store</code>, or <code>Transactions</code>).</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4-ListPage.png" alt="4 ListPage">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="collectingEvents">5. Collecting Events</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Darwin Core defines "event" as : An action that occurs at some location during some time. (from <a href="https://dwc.tdwg.org/terms/#event">DarwinCore</a>). In a Collecting Event, the action is the extraction from nature. (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
+</div>
+<div class="sect2">
+<h3 id="createSample">5.1. Creating Material Sample(s)</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, under the Collection submenu, click on the <code>Material Samples</code> option.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-Homepage.png" alt="5 Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Material Samples page, click on the <code>Create new</code> button.<br>
+<br>
+If you wish to input more than one sample, click on the <code>Create Multiple New</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If the user has more than sample to input from a single collection, it is recommended to create multiple samples at once.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-1-Create.png" alt="5 1 Create">
+</div>
 </div>
 <div class="paragraph">
-<p>BICoE Docker Hub: <a href="https://hub.docker.com/u/aafcbicoe" class="bare">https://hub.docker.com/u/aafcbicoe</a></p>
+<p>If the user elects to create multiples samples at once, they will be taken to the following page where they will be asked how many samples will be created.They can then link the samples to a Collection and configure the naming scheme for each sample:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-1-CreateMultiple.png" alt="5 1 CreateMultiple">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the next step, the user can fill in specific information about the/each sample. For more information about each data component and field, please see the <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>Java-based API:</p>
+<p>Note that none of these fields are required to be filled in and they can be edited at any time.</p>
+</div>
+<div class="paragraph">
+<p>The user can also add (or remove) which data components they want to in the left hand side of the page by clicking on the button beside each component.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Clicking on an active data component on the left takes the user directly to the component&#8217;s data fields.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-1-DataFields.png" alt="5 1 DataFields">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Once all relevant information has been filled out click the <code>Save</code> or <code>Save All</code> button at the right hand side of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-1-Save.png" alt="5 1 Save">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>All created samples will now be accessible through the list page and can be edited.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-1-ListPage.png" alt="5 1 ListPage">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="linkSampleToEvent">5.2. Linking a Material Sample to a Collecting Event</h3>
+<div class="paragraph">
+<p>If the user has not linked a sample to a Collecting Event when creating it, they can go back to the created sample and link the event by editing it.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>From dev branch</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Change the version by running <code>mvn versions:set -DnewVersion=X.X</code> from the root where <code>X.X</code> is the current version minus the <code>-SNAPSHOT</code></p>
-</li>
-<li>
-<p>Add and Push to dev with message like "Prepare version x.x release"</p>
-</li>
-<li>
-<p>Wait for CI to complete</p>
+<p>To access the sample from the DINA Homepage, click on <code>Material Samples</code> from the Collection submenu</p>
 </li>
 </ol>
 </div>
-</li>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-Homepage.png" alt="5 Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
 <li>
-<p>From master/main</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Merge dev into master (do NOT use Pull Request)</p>
-</li>
-<li>
-<p>Push to master (it will trigger the deployment Docker Hub)</p>
+<p>If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.</p>
 </li>
 </ol>
 </div>
-</li>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-2-Search.png" alt="5 2 Search">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
 <li>
-<p>Create a new GitHub release</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>The tag should be the version prefixed with v (e.g. v0.19)</p>
-</li>
-<li>
-<p>The title should be the version (e.g. 0.19)</p>
-</li>
-<li>
-<p>Add a Summary of the changes (looks at the previous versions for an example)</p>
-</li>
-<li>
-<p>Publish the Release</p>
+<p>The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.</p>
 </li>
 </ol>
 </div>
-</li>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-2-SearchResult.png" alt="5 2 SearchResult">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
 <li>
-<p>From dev branch</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Change the version by running <code>mvn versions:set -DnewVersion=X.X-SNAPSHOT</code> from the root where X.X is the next increment in the version number</p>
-</li>
-<li>
-<p>Add and Push to dev with message like "Prepare next development version"</p>
+<p>In the chosen sample&#8217;s read-only page, click on the <code>Edit</code> button.</p>
 </li>
 </ol>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-2-Edit.png" alt="5 2 Edit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Activate the <code>Collecting Event</code> component by clicking on the button corresponding to it.</p>
 </li>
 </ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-2-Activate.png" alt="5 2 Activate">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>The user can now choose to create a new <code>Collecting Event</code> or attach the sample to an already existing event.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-2-Event.png" alt="5 2 Event">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>Once done, click on the <code>Save</code> button on the right hand corner of the page. This will successfully link a <code>Material Sample</code> to the intended <code>Collecting Event</code> and will be reflected in the sample&#8217;s and the event&#8217;s read-only pages.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-2-Save.png" alt="5 2 Save">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="splitConfig">6. Split Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Split Configurations enable you to configure how Material Sample Splits are automatically named and under what conditions they can be used. (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
 </div>
 <div class="paragraph">
-<p>DINA-UI:</p>
+<p>For more information about Split Confiigurations, please refer to <a href="https://aafc-bicoe.github.io/dina-documentation/#split-configuration">AAFC-BICoE DINA User Guide - Split Configuration</a></p>
+</div>
+<div class="sect2">
+<h3 id="createSplitConfig">6.1. Creating a Split Configuration</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, click on <code>Split Configurations</code> under the Configuration submenu.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/6-1-Homepage.png" alt="6 1 Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Split Configurations page, click on the <code>Create new</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/6-1-CreateNew.png" alt="6 1 CreateNew">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the Add Split Configuration page, enter all configurations the user wants to in regards to splitting the material samples.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+When creating Split Configurations, remember to choose options for the following required fields:<br>
+• <code>Split Configuration Name</code><br>
+• <code>Material Sample Type</code><br>
+• <code>Strategy</code><br>
+• <code>Generation Options</code>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Once the user has set the configuration&#8217;s name, material sample type, and sample generation configurations, click the <code>Save</code> button on the top right corner of the page. This will make the configuration accessible when doing a Material Sample Split.<br>
+<br>
+Also note that the configuration can be edited at any time.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/6-1-Save.png" alt="6 1 Save">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="useSplitConfig">6.2. Using Split Configuration for a Material Sample</h3>
+<div class="paragraph">
+<p>To use a Split Configuration, the user must access the material sample they wish to split.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>From dev branch</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<p>From the DINA Homepage, click on the <code>Material Samples</code> option under the Collection submenu.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-Homepage.png" alt="5 Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
 <li>
-<p>Edit the the file <code>packages/dina-ui/package.json</code> and set the <code>version</code> value</p>
+<p>Search for and click on the material sample the user wants to use the Split Configuration on. If the sample has not been created yet, please refer to the <a href="#createSample">Creating Material Sample(s) Section</a> of the guide.</p>
 </li>
 </ol>
 </div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Once the user is in the sample&#8217;s read-only page, click on the <code>Split▾</code> drop-down button and select which Split Configuration the user wants to use. After doing so, click on <code>Split</code> button below it.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>Same as the Java-based API except the second <code>From dev branch</code> can be skipped since the ui is not using development version.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_postgresql">10. PostgreSQL</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="useful_queries">10.1. Useful Queries</h3>
-<div class="sect3">
-<h4 id="_rename_key_in_jsonb_array">10.1.1. Rename key in jsonb array</h4>
-<div class="paragraph">
-<p>The example is not aiming at perfomance.</p>
-</div>
-<div class="paragraph">
-<p>Considering the following table :</p>
-</div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE TABLE organism (id integer, determinations jsonb);</code></pre>
+<img src="images/6-2-Split.png" alt="6 2 Split">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Check that all information is to the user&#8217;s desired split. Once the user has done so, click on the <code>Split</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/6-2-FinalSplit.png" alt="6 2 FinalSplit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Now all that&#8217;s left to do is edit the Material Samples generated through the split. This step is similar to the creation of material samples as in the <a href="#createSample">Creating Material Sample(s) Section</a> - Step 3 and onwards.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Once everything has been done, click on the <code>Save All</code> button at the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/6-2-SaveAll.png" alt="6 2 SaveAll">
 </div>
 </div>
 <div class="paragraph">
-<p>With jsonb array in the <code>determinations</code> column:</p>
+<p>This process makes child samples with the intended sample type configured by the user. This process can be repeated for the child samples resulting to their own child samples as long as there is a Split Configuration with the appropriate Material Sample Type.</p>
 </div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">INSERT INTO organism VALUES (1, '[
-{
-  "scientificNameSource": "GNA",
-  "isPrimary": true,
-  "isFileAs": true
-},
-{
-  "scientificNameSource": "GNA",
-  "isPrimary": false,
-  "isFileAs": false
-}
-]');</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>We want to rename the key <code>isFileAs</code> to <code>isFiledAs</code>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">-- unwrap the array and extract the value
-WITH subquery AS (
-  SELECT id, item, item -&gt; 'isFileAs' as att_value
-  FROM organism, jsonb_array_elements(determinations) as item
-),
--- remove the old attribute and create the new one with the value
--- reconstruct the array by grouping by id
-subquery2 AS (
-  select id, json_agg(jsonb_set(item-'isFileAs', '{isFiledAs}', att_value)) as updated_jsonb from subquery
-  GROUP BY id
-)
-
-UPDATE organism
-  SET determinations = updated_jsonb
-  FROM subquery2
-  WHERE organism.id = subquery2.id;</code></pre>
-</div>
+<img src="images/6-2-Result.png" alt="6 2 Result">
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_elasticsearch">11. Elasticsearch</h2>
+<h2 id="storeObj">7. Storing an Object</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>In DINA, users will be able to upload files which can be linked to samples and collections. This can be done through the Object Store.<br>
+<br>
+There are 2 pathways to store an object to DINA and link it to a Material Sample. We will go over both ways in this guide.</p>
+</div>
 <div class="sect2">
-<h3 id="_update_mapping">11.1. Update Mapping</h3>
-<div class="paragraph">
-<p>When a new mapping or new mapping property must be added to a live index the
-<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html">Update mapping API</a> can be used.</p>
+<h3 id="uploadFirst">7.1. Upload through the DINA Homepage</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, click on <code>Upload Files</code> under the Object Store submenu</p>
+</li>
+</ol>
 </div>
-<div class="paragraph">
-<p>If the new mapping requires new Analyzer, an <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-update-settings.html">update settings analysis</a> is required first.</p>
-</div>
-<div class="paragraph">
-<p>Example:</p>
-</div>
-<div class="paragraph">
-<p>Assuming <code>keyword_lowercase_analyzer</code> is already declared, add it to the multi-field <code>data.attributes.originalFilename</code>:</p>
-</div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>curl -X PUT "localhost:9200/dina_object_store_index/_mapping?pretty" -H 'Content-Type: application/json' -d'
-{
-  "properties": {
-    "data.attributes.originalFilename": {
-      "type": "text",
-      "fields": {
-        "prefix": {
-          "type": "text",
-          "analyzer": "keyword_lowercase_analyzer",
-          "index_prefixes": {
-            "min_chars" : 1,
-            "max_chars" : 10
-          }
-        },
-        "keyword": {
-          "type": "keyword",
-          "ignore_above": 256
-        }
-      }
-    }
-  }
-}
-'</pre>
+<img src="images/7-1-Homepage.png" alt="7 1 Homepage">
 </div>
 </div>
-<div class="paragraph">
-<p>Refesh the index:</p>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Upload Files page, "drag and drop" the object from your Desktop to the designated area or click the area to search for the object through a dialog box.</p>
+</li>
+</ol>
 </div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>curl -X POST "localhost:9200/dina_object_store_index/_update_by_query?refresh"</pre>
+<img src="images/7-1-Upload.png" alt="7 1 Upload">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Once the object has been chosen, click the <code>Save</code> button that will appear on the bottom right corner of the designated area.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-1-Save.png" alt="7 1 Save">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>The user will now be able to input data regarding the file in the Add Metadata page. Once done, click the <code>Save</code> button at the top right corner of the page. The user should now be able to access the uploaded file.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Head back to the DINA Homepage and click on <code>Material Samples</code> under the Collection submenu.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-Homepage.png" alt="5 Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>In the Material Samples List page, search for and click the sample the user would like to link the object to.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-1-ListPage.png" alt="7 1 ListPage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>In the sample&#8217;s read-only page, click on the <code>Edit</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-1-Edit.png" alt="7 1 Edit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="8">
+<li>
+<p>Scroll to the Material Sample Attachments at the very bottom of the sample&#8217;s Edit Page or click on the <code>Material Sample Attachments</code> link on the left side of the page. Once there, click on the <code>Add Attachments</code> button in the Material Sample Attachments section.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-AddAttachments.png" alt="7 AddAttachments">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="9">
+<li>
+<p>In the Attachments page, click on the <code>Attach Existing Objects</code> option and choose the object(s) the user would like to link to the sample and click the <code>Attach Selected</code> button on the right hand side of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-1-Attachments.png" alt="7 1 Attachments">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="10">
+<li>
+<p>The attachment(s) should now be seen in the Material Sample Attachments section of the sample&#8217;s Edit Page. Once the user has confirmed that everything is correct, click the <code>Save</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-LastSave.png" alt="7 LastSave">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="uploadDirect">7.2. Upload on Material Sample or Collecting Event Directly</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, click on <code>Material Samples</code> under the Collection submenu.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/5-Homepage.png" alt="5 Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Material Samples List Page, click on the sample the user would like to link an object to.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-2-ListPage.png" alt="7 2 ListPage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Once in the sample&#8217;s read-only page, click on the <code>Edit</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-2-ROPage.png" alt="7 2 ROPage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Scroll to the Material Sample Attachments at the very bottom of the sample&#8217;s Edit Page or click on the <code>Material Sample Attachments</code> link on the left side of the page. Once there, click on the <code>Add Attachments</code> button in the Material Sample Attachments section.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-AddAttachments.png" alt="7 AddAttachments">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The Steps 5-7 will be very similar to uploading an object as in <a href="#uploadFirst">Upload through the DINA Homepage Section - Steps 2-4</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>In the Attachments page, either click on the designated area to search for the object using a dialog box or "drag and drop" a file from your Desktop to the designated area. The user can add however many files they wish.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Once you have added all the files to be linked, click on the <code>Save</code> button that will appear on the bottom right corner of the designatede area.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-2-SaveUpload.png" alt="7 2 SaveUpload">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>Fill the relevant data for the uploaded file(s) and click the <code>Save All</code> button on top of the page.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="8">
+<li>
+<p>The attachment(s) should now be seen in the Material Sample Attachments section of the sample&#8217;s Edit Page. Once the user has confirmed that everything is correct, click the <code>Save</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/7-LastSave.png" alt="7 LastSave">
 </div>
 </div>
 </div>
@@ -1285,12 +1386,5 @@ UPDATE organism
 Last updated 2024-10-03 13:59:33 UTC
 </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
-<script>
-if (!hljs.initHighlighting.called) {
-  hljs.initHighlighting.called = true
-  ;[].slice.call(document.querySelectorAll('pre.highlight > code')).forEach(function (el) { hljs.highlightBlock(el) })
-}
-</script>
 </body>
 </html>
