@@ -3,7 +3,7 @@
 
 == PCR Primer
 
-Information about Primers used for gene amplification of a targeted organism.
+Information about Primers used for amplification of a region on a targeted organism.
 
 == Thermocycler Profile
 
@@ -14,3 +14,7 @@ Used to track different amplification cycles and melting temperature programmed 
 Details of the PCR Master Mix used for gene amplification. PCRBatch will connect to Gene Region, PCR Primers and Thermocycler Profiles.
 
 == PcrReaction
+
+== NGS Index
+
+Used to distinguish between different samples in a single sequencing run of Next-Generation Sequencing (NGS).
