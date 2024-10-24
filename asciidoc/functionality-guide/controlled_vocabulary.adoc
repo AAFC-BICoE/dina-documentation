@@ -1,5 +1,8 @@
 [id=controlledVocab]
 == Controlled Vocabulary
+In DINA, some users with appropriate permissions will be able to create Controlled Vocabulary objects referring to terminology or processes that are commonly used in their practice.
+
+Here are some examples of Controlled Vocabulary objects that can be created:
 
 [id=collectionMethods]
 === Collection Methods
