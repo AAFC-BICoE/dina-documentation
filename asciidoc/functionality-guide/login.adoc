@@ -1,5 +1,7 @@
 [id=login]
 == Logging In
-Once the user has been grated access to the website, use your GC credentials to log in. Otherwise, use the credentials given to the user.
+Once the user has been granted access to the website, use the credentials given to the user by your manager or administrator.
+
+Depending on your organization, you may be redirected to an External Identity Provider (e.g. ESAS) which you will be asked to link your account to.
 
 image::1-SignIn.png[]
