@@ -8,23 +8,23 @@ Here are some examples of Controlled Vocabulary objects that can be created:
 === Collection Methods
 Method used during an Collecting Event. +
  +
-Examples: `UV light trap`, `bottom trawl` (from https://aafc-bicoe.github.io/dina-documentation/[AAFC-BICoE DINA User Guide])
+Examples: `UV light trap`, `bottom trawl` (from https://aafc-bicoe.github.io/dina-documentation/#collection-method[AAFC-BICoE DINA User Guide - Collection Method])
 
 [id=prepMethods]
 === Preparation Methods
 A noun representing the process used (the how) in preparing the material sample. +
  +
-Examples: `culture`, `mechanical inoculation`, `dissection` (from https://aafc-bicoe.github.io/dina-documentation/[AAFC-BICoE DINA User Guide])
+Examples: `culture`, `mechanical inoculation`, `dissection` (from https://aafc-bicoe.github.io/dina-documentation/#preparation-method[AAFC-BICoE DINA User Guide - Preparation Method])
 
 [id=prepTypes]
 === Preparation Types
 Description of the preservation type of the material sample. +
  +
-Examples: `Freeze-Dry` (from https://abcd.tdwg.org/terms/[ABCD 3.0])
+Examples: `Freeze-Dry` (from https://abcd.tdwg.org/terms/[ABCD 3.0 - Terms])
 
 [id=protocol]
 === Protocol
-Predefined written procedural method in the design and implementation of experiments in natural sciences. (from https://www.wikidata.org/wiki/Q367158[Wikidata])
+Predefined written procedural method in the design and implementation of experiments in natural sciences. (from https://www.wikidata.org/wiki/Q367158[Wikidata - protocol])
 
 [id=createVocab]
 === Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols

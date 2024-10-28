@@ -1,6 +1,6 @@
 [id=managedAttr]
 == Managed Attributes
-Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type `integer`, `string`, `date` or `boolean`. (from https://aafc-bicoe.github.io/dina-documentation/[AAFC-BICoE DINA User Guide])
+Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type `integer`, `string`, `date` or `boolean`. (from https://aafc-bicoe.github.io/dina-documentation/#managed_attributes[AAFC-BICoE DINA User Guide])
 
 Managed Attributes can be created for these entities in DINA:
 
