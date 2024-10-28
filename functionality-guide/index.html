@@ -452,11 +452,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#controlledVocab">3. Controlled Vocabulary</a>
 <ul class="sectlevel2">
-<li><a href="#collectionMethods">3.1. Collection Methods</a></li>
-<li><a href="#prepMethods">3.2. Preparation Methods</a></li>
-<li><a href="#prepTypes">3.3. Preparation Types</a></li>
-<li><a href="#protocol">3.4. Protocol</a></li>
-<li><a href="#createVocab">3.5. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</a></li>
+<li><a href="#createVocab">3.1. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</a></li>
 </ul>
 </li>
 <li><a href="#managedAttr">4. Managed Attributes</a>
@@ -522,7 +518,7 @@ To search the User Guide, press Ctrl+F and enter a keyword.
 <h2 id="collection">2. Collection</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A Collection represents the top entity that can contain material-sample. Top collections (or parent collections) generally represent a natural history collection or a laboratory. A collection can contain multiple sub-collection(s). (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
+<p>A Collection represents the top entity that can contain material-sample. For more information about Collections, please refer to <a href="https://aafc-bicoe.github.io/dina-documentation/#collection">AAFC-BICoE DINA User Guide - Collection</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="createCollection">2.1. Creating a Collection</h3>
@@ -606,38 +602,28 @@ If you wish to edit, see the changes, or delete the collection, you can do so th
 <div class="paragraph">
 <p>Here are some examples of Controlled Vocabulary objects that can be created:</p>
 </div>
-<div class="sect2">
-<h3 id="collectionMethods">3.1. Collection Methods</h3>
-<div class="paragraph">
-<p>Method used during an Collecting Event.<br>
-<br>
-Examples: <code>UV light trap</code>, <code>bottom trawl</code> (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="prepMethods">3.2. Preparation Methods</h3>
-<div class="paragraph">
-<p>A noun representing the process used (the how) in preparing the material sample.<br>
-<br>
-Examples: <code>culture</code>, <code>mechanical inoculation</code>, <code>dissection</code> (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="prepTypes">3.3. Preparation Types</h3>
-<div class="paragraph">
-<p>Description of the preservation type of the material sample.<br>
-<br>
-Examples: <code>Freeze-Dry</code> (from <a href="https://abcd.tdwg.org/terms/">ABCD 3.0</a>)</p>
-</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Collection Methods</dt>
+<dd>
+<p>Method used during a Collecting Event. (from <a href="https://aafc-bicoe.github.io/dina-documentation/#collection-method">AAFC-BICoE DINA User Guide - Collection Method</a>)</p>
+</dd>
+<dt class="hdlist1">Preparation Methods</dt>
+<dd>
+<p>A noun representing the process used in preparing the material sample. (from <a href="https://aafc-bicoe.github.io/dina-documentation/#preparation-method">AAFC-BICoE DINA User Guide - Preparation Method</a>)</p>
+</dd>
+<dt class="hdlist1">Preparation Types</dt>
+<dd>
+<p>Description of the preservation type of the material sample. (from <a href="https://aafc-bicoe.github.io/dina-documentation/#preparation-type">AAFC-BICoE DINA User Guide - Preparation Type</a>)</p>
+</dd>
+<dt class="hdlist1">Protocol</dt>
+<dd>
+<p>Predefined written procedural method in the design and implementation of experiments. (from <a href="https://aafc-bicoe.github.io/dina-documentation/#_protocol">AAFC-BICoE DINA User Guide - Protocol</a>)</p>
+</dd>
+</dl>
 </div>
 <div class="sect2">
-<h3 id="protocol">3.4. Protocol</h3>
-<div class="paragraph">
-<p>Predefined written procedural method in the design and implementation of experiments in natural sciences. (from <a href="https://www.wikidata.org/wiki/Q367158">Wikidata</a>)</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="createVocab">3.5. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</h3>
+<h3 id="createVocab">3.1. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -721,7 +707,7 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 <h2 id="managedAttr">4. Managed Attributes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type <code>integer</code>, <code>string</code>, <code>date</code> or <code>boolean</code>. (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
+<p>Managed attributes are attributes that can be created and used by the users on-demand to be used used to track data that is not common enough to be captured in a regular field. (from <a href="https://aafc-bicoe.github.io/dina-documentation/#managed_attributes">AAFC-BICoE DINA User Guide - Managed Attributes</a>)</p>
 </div>
 <div class="paragraph">
 <p>Managed Attributes can be created for these entities in DINA:</p>
@@ -734,11 +720,11 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 </dd>
 <dt class="hdlist1">Object Store</dt>
 <dd>
-<p>Files that are uploaded to DINA as an attachment.</p>
+<p>Files uploaded to DINA that can be used as an attachment related to Samples or Collections.</p>
 </dd>
 <dt class="hdlist1">Transactions</dt>
 <dd>
-<p>Transactions made related to Material Samples that are tracked in DINA</p>
+<p>Transactions made related to Material Samples that are tracked in DINA.</p>
 </dd>
 </dl>
 </div>
@@ -831,7 +817,7 @@ If you wish to edit or delete the created attribute, you can do so through the b
 <h2 id="collectingEvents">5. Collecting Events</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Darwin Core defines "event" as : An action that occurs at some location during some time. (from <a href="https://dwc.tdwg.org/terms/#event">DarwinCore</a>). In a Collecting Event, the action is the extraction from nature. (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
+<p>A Collecting Event is the act of extraction from nature at some location at a certain point in time. For more information regarding Collecting Events, please refer to <a href="https://aafc-bicoe.github.io/dina-documentation/#collecting-event">AAFC-BICoE DINA User Guide - Collecting Event</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="createSample">5.1. Creating Material Sample(s)</h3>
@@ -884,7 +870,7 @@ If the user has more than sample to input from a single collection, it is recomm
 <div class="olist arabic">
 <ol class="arabic" start="3">
 <li>
-<p>In the next step, the user can fill in specific information about the/each sample. For more information about each data component and field, please see the <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>.</p>
+<p>In the next step, the user can fill in specific information about the/each sample. For more information about each data component and field, please see the <a href="https://aafc-bicoe.github.io/dina-documentation/#collecting-event">AAFC-BICoE DINA User Guide - Collecting Event</a>.</p>
 </li>
 </ol>
 </div>
@@ -1032,10 +1018,7 @@ Clicking on an active data component on the left takes the user directly to the 
 <h2 id="splitConfig">6. Split Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Split Configurations enable you to configure how Material Sample Splits are automatically named and under what conditions they can be used. (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
-</div>
-<div class="paragraph">
-<p>For more information about Split Confiigurations, please refer to <a href="https://aafc-bicoe.github.io/dina-documentation/#split-configuration">AAFC-BICoE DINA User Guide - Split Configuration</a></p>
+<p>Split Configurations enable you to configure how Material Sample Splits are automatically named and under what conditions they can be used. For more information about Split Confiigurations, please refer to <a href="https://aafc-bicoe.github.io/dina-documentation/#split-configuration">AAFC-BICoE DINA User Guide - Split Configuration</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="createSplitConfig">6.1. Creating a Split Configuration</h3>
@@ -1412,7 +1395,7 @@ The Steps 5-7 will be very similar to uploading an object as in <a href="#upload
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-28 12:12:33 UTC
+Last updated 2024-10-28 19:13:21 UTC
 </div>
 </div>
 </body>
