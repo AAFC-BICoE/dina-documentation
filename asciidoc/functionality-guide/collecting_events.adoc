@@ -1,6 +1,6 @@
 [id=collectingEvents]
 == Collecting Events
-Darwin Core defines "event" as : An action that occurs at some location during some time. (from https://dwc.tdwg.org/terms/#event[DarwinCore]). In a Collecting Event, the action is the extraction from nature. (from https://aafc-bicoe.github.io/dina-documentation/[AAFC-BICoE DINA User Guide])
+Darwin Core defines "event" as : An action that occurs at some location during some time. (from https://dwc.tdwg.org/terms/#event[DarwinCore - Event]). In a Collecting Event, the action is the extraction from nature. (from https://aafc-bicoe.github.io/dina-documentation/#collecting-event[AAFC-BICoE DINA User Guide - Collecting Event])
 
 [id=createSample]
 === Creating Material Sample(s)
@@ -23,7 +23,7 @@ If the user elects to create multiples samples at once, they will be taken to th
 image::5-1-CreateMultiple.png[]
 
 [start=3]
-. In the next step, the user can fill in specific information about the/each sample. For more information about each data component and field, please see the https://aafc-bicoe.github.io/dina-documentation/[AAFC-BICoE DINA User Guide].
+. In the next step, the user can fill in specific information about the/each sample. For more information about each data component and field, please see the https://aafc-bicoe.github.io/dina-documentation/#collecting-event[AAFC-BICoE DINA User Guide - Collecting Event].
 
 Note that none of these fields are required to be filled in and they can be edited at any time.
 
