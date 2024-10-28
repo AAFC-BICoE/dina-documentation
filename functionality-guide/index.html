@@ -506,7 +506,10 @@ To search the User Guide, press Ctrl+F and enter a keyword.
 <h2 id="login">1. Logging In</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Once the user has been grated access to the website, use your GC credentials to log in. Otherwise, use the credentials given to the user.</p>
+<p>Once the user has been granted access to the website, use the credentials given to the user by your manager or administrator.</p>
+</div>
+<div class="paragraph">
+<p>Depending on your organization, you may be redirected to an External Identity Provider (e.g. ESAS) which you will be asked to link your account to.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -597,6 +600,12 @@ If you wish to edit, see the changes, or delete the collection, you can do so th
 <div class="sect1">
 <h2 id="controlledVocab">3. Controlled Vocabulary</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>In DINA, some users with appropriate permissions will be able to create Controlled Vocabulary objects referring to terminology or processes that are commonly used in their practice.</p>
+</div>
+<div class="paragraph">
+<p>Here are some examples of Controlled Vocabulary objects that can be created:</p>
+</div>
 <div class="sect2">
 <h3 id="collectionMethods">3.1. Collection Methods</h3>
 <div class="paragraph">
@@ -713,6 +722,25 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 <div class="sectionbody">
 <div class="paragraph">
 <p>Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type <code>integer</code>, <code>string</code>, <code>date</code> or <code>boolean</code>. (from <a href="https://aafc-bicoe.github.io/dina-documentation/">AAFC-BICoE DINA User Guide</a>)</p>
+</div>
+<div class="paragraph">
+<p>Managed Attributes can be created for these entities in DINA:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Collection</dt>
+<dd>
+<p>Top level entity in DINA that can contain a Material Sample.</p>
+</dd>
+<dt class="hdlist1">Object Store</dt>
+<dd>
+<p>Files that are uploaded to DINA as an attachment.</p>
+</dd>
+<dt class="hdlist1">Transactions</dt>
+<dd>
+<p>Transactions made related to Material Samples that are tracked in DINA</p>
+</dd>
+</dl>
 </div>
 <div class="sect2">
 <h3 id="createAttr">4.1. Creating Managed Attributes</h3>
@@ -1155,9 +1183,10 @@ Also note that the configuration can be edited at any time.</p>
 <h2 id="storeObj">7. Storing an Object</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In DINA, users will be able to upload files which can be linked to samples and collections. This can be done through the Object Store.<br>
-<br>
-There are 2 pathways to store an object to DINA and link it to a Material Sample. We will go over both ways in this guide.</p>
+<p>In DINA, users will be able to upload files which can be linked to samples and collections. This can be done through the Object Store. Examples of files that may be uploaded are <code>pictures</code> related to samples, <code>sequencing files</code>, <code>.txt files</code>, <code>word documents</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>There are 2 pathways to store an object to DINA and link it to a Material Sample. We will go over both ways in this guide.</p>
 </div>
 <div class="sect2">
 <h3 id="uploadFirst">7.1. Upload through the DINA Homepage</h3>
@@ -1383,7 +1412,7 @@ The Steps 5-7 will be very similar to uploading an object as in <a href="#upload
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-11 18:13:19 UTC
+Last updated 2024-10-28 12:12:33 UTC
 </div>
 </div>
 </body>
