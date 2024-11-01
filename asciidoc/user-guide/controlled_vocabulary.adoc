@@ -4,10 +4,10 @@ In DINA, some users with appropriate permissions will be able to create Controll
 
 Here are some examples of Controlled Vocabulary objects that can be created:
 
-Collection Methods:: Method used during a Collecting Event. (from https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#collection-method[DINA Glossary - Collection Method])
-Preparation Methods:: A noun representing the process used in preparing the material sample. (from https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#preparation-method[DINA Glossary - Preparation Method])
-Preparation Types:: Description of the preservation type of the material sample. (from https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#preparation-type[DINA Glossary - Preparation Type])
-Protocol:: Predefined written procedural method in the design and implementation of experiments. (from https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#_protocol[DINA Glossary - Protocol])
+Collection Methods:: Method used during a Collecting Event. (see https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#collection-method[DINA Glossary - Collection Method])
+Preparation Methods:: A noun representing the process used in preparing the material sample. (see https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#preparation-method[DINA Glossary - Preparation Method])
+Preparation Types:: Description of the preservation type of the material sample. (see https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#preparation-type[DINA Glossary - Preparation Type])
+Protocol:: Predefined written procedural method in the design and implementation of experiments. (see https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#_protocol[DINA Glossary - Protocol])
 
 [id=createVocab]
 === Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols

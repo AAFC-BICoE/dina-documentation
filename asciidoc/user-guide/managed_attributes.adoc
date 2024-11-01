@@ -1,11 +1,11 @@
 [id=managedAttr]
 == Managed Attributes
-Managed attributes are attributes that can be created and used by the users on-demand to be used used to track data that is not common enough to be captured in a regular field. (from https://aafc-bicoe.github.io/dina-documentation/#managed_attributes[AAFC-BICoE DINA User Guide - Managed Attributes])
+Managed attributes are attributes that can be created and used by the users on-demand to be used used to track data that is not common enough to be captured in a regular field. (see https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#managed_attributes[DINA Glossary - Managed Attributes])
 
-Managed Attributes can be created for these entities in DINA:
+Managed Attributes can be created for the following components in DINA:
 
-Collection:: Top level entity in DINA that can contain a Material Sample.
-Object Store:: Files uploaded to DINA that can be used as an attachment related to Samples or Collections.
+Collection:: Main component in DINA that can be used for MaterialSample, CollectingEvent, Preparation, etc.
+Object Store:: Files uploaded to DINA that can be used as an attachment.
 Transactions:: Transactions made related to Material Samples that are tracked in DINA.
 
 [id=createAttr]

@@ -1,6 +1,6 @@
 [id=splitConfig]
 == Split Configuration
-Split Configurations enable you to configure how Material Sample Splits are automatically named and under what conditions they can be used. For more information about Split Confiigurations, please refer to https://aafc-bicoe.github.io/dina-documentation/#split-configuration[AAFC-BICoE DINA User Guide - Split Configuration].
+Split Configurations enable you to configure how Material Sample Splits are automatically named and under what conditions they can be used. For more information about Split Confiigurations, please refer to https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#split-configuration[DINA Concepts and Glossary - Split Configuration].
 
 [id=createSplitConfig]
 === Creating a Split Configuration

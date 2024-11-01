@@ -1,8 +1,8 @@
 [id=storeObj]
 == Storing an Object
-In DINA, users will be able to upload files which can be linked to samples and collections. This can be done through the Object Store. Examples of files that may be uploaded are `pictures` related to samples, `sequencing files`, `.txt files`, `word documents`, etc.
+In DINA, users are able to upload files which can be linked to samples and collections. This can be done through the Object Store. Examples of files that may be uploaded are `pictures` related to samples, `sequencing files`, `.txt files`, `word documents`, etc.
 
-There are 2 pathways to store an object to DINA and link it to a Material Sample. We will go over both ways in this guide.
+There are 2 pathways to store an object to DINA and link it to a Material Sample.
 
 [id=uploadFirst]
 === Upload through the DINA Homepage
