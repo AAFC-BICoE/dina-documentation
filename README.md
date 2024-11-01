@@ -1,5 +1,7 @@
 # AAFC-DINA Documentation
 
+DINA [Concepts and Glossary](https://aafc-bicoe.github.io/dina-documentation/concept-guide)
+
 DINA [User Guide](https://aafc-bicoe.github.io/dina-documentation/)
 
 DINA [Developer Guide](https://aafc-bicoe.github.io/dina-documentation/developer/)
