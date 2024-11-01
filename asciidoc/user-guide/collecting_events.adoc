@@ -1,6 +1,6 @@
 [id=collectingEvents]
 == Collecting Events
-A Collecting Event is the act of extraction from nature at some location at a certain point in time. For more information regarding Collecting Events, please refer to https://aafc-bicoe.github.io/dina-documentation/#collecting-event[AAFC-BICoE DINA User Guide - Collecting Event].
+A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#collecting-event[Collecting Event] is the act of extraction from nature at some location at a certain point in time.
 
 [id=createSample]
 === Creating Material Sample(s)
@@ -23,7 +23,7 @@ If the user elects to create multiples samples at once, they will be taken to th
 image::5-1-CreateMultiple.png[]
 
 [start=3]
-. In the next step, the user can fill in specific information about the/each sample. For more information about each data component and field, please see the https://aafc-bicoe.github.io/dina-documentation/#collecting-event[AAFC-BICoE DINA User Guide - Collecting Event].
+. In the next step, the user can fill in specific information about the/each sample.
 
 Note that none of these fields are required to be filled in and they can be edited at any time.
 

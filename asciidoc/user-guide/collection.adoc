@@ -1,6 +1,6 @@
 [id=collection]
 == Collection
-A Collection represents the top entity that can contain material-sample. For more information about Collections, please refer to https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#collection[Collection].
+A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#collection[Collection] represents the top entity that can contain material-sample.
 
 [id=createCollection]
 === Creating a Collection
