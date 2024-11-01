@@ -14,7 +14,7 @@ jobs:
       - name: Run generate documentation for User Guide
         run: asciidoctor -a toc=left -D generated-docs asciidoc/user-guide/index.adoc
       - name: Run generate documentation for Basic Functionalities Guide
-        run: asciidoctor -a toc=left -D generated-docs/concept-guide asciidoc/concept-guide/index.adoc
+        run: asciidoctor -a toc=left -D generated-docs/concepts-glossary asciidoc/concepts-glossary/index.adoc
       - name: Run generate documentation for Developer Guide
         run: asciidoctor -a toc=left -b html5 -D generated-docs/developer asciidoc/developer-guide/index.adoc
       - name: Copy images for Developer Guide
@@ -23,7 +23,7 @@ jobs:
           mkdir generated-docs/images
           cp -r asciidoc/developer-guide/images/. generated-docs/developer/images
           cp -r asciidoc/user-guide/images/. generated-docs/images
-          cp -r asciidoc/concept-guide/images/. generated-docs/concept-guide/images
+          cp -r asciidoc/concepts-glossary/images/. generated-docs/concepts-glossary/images
 
       - name: Deploy GitHub Pages (only on master branch)
         if: ${{ github.ref == 'refs/heads/main' }}
