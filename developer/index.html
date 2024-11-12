@@ -499,6 +499,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_elasticsearch">11. Elasticsearch</a>
 <ul class="sectlevel2">
 <li><a href="#_update_mapping">11.1. Update Mapping</a></li>
+<li><a href="#_delete_included_field_with_update_by_query">11.2. Delete Included Field with Update By Query</a></li>
 </ul>
 </li>
 </ul>
@@ -1277,12 +1278,66 @@ UPDATE organism
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_delete_included_field_with_update_by_query">11.2. Delete Included Field with Update By Query</h3>
+<div class="paragraph">
+<p>To remove a specific field from a nested object within your Elasticsearch documents, you can use an <code>update_by_query</code> request:</p>
+</div>
+<div class="paragraph">
+<p><strong>POST 127.0.0.1:9200/dina_material_sample_index/_update_by_query</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "script": "for (int i = 0; i &lt; ctx._source.included.length; ++i) { ctx._source.included[i].attributes.remove(\"ATTRIBUTE_NAME\") }",
+  "query": {
+    "nested": {
+      "path": "included",
+      "query": {
+        "bool": {
+          "must": [
+            {
+              "exists": {
+                "field": "included.attributes.ATTRIBUTE_NAME"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Replace <code>ATTRIBUTE_NAME</code> with the field you wish to remove. And also change the index in the URL if needed. Then you can re-run the elastic-configurator.</p>
+</div>
+<div class="paragraph">
+<p>In the elastic-configurator, you should see the following for the index you have updated if it worked correctly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Running update script for optional mapping
+The update request was successful
+Re-indexing documents.
+Source index is: dina_material_sample_index_20241112154013 and destination index is: dina_material_sample_index_20241112193452
+Response is: 200
+Old index doc count: 2
+New index doc count: 2
+Document counts match. Proceeding with deletion of old index and setting alias...
+Updating index dina_material_sample_index_20241112193452 with alias dina_material_sample_index</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, re-index the affected documents so the data is restored in the new format based on the migration.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-11-01 19:06:33 UTC
+Last updated 2024-11-12 20:10:55 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
