@@ -14,7 +14,7 @@ image::5-Homepage.png[]
  +
 If you wish to input more than one sample, click on the `Create Multiple New` button.
 
-TIP: If the user has more than sample to input from a single collection, it is recommended to create multiple samples at once.
+TIP: If the user has more than one sample to input from a single collection, it is recommended to create multiple samples at once.
 
 image::5-1-Create.png[]
 

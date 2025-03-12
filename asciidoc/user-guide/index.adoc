@@ -20,3 +20,5 @@ include::collecting_events.adoc[]
 include::split_config.adoc[]
 
 include::store_object.adoc[]
+
+include::projects.adoc[]

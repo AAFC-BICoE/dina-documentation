@@ -1,0 +1,31 @@
+[id=projects]
+== Projects
+A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#project[Project] usually links to the organizational definition of a project where an objective, scope, resources, and deliverables are defined.
+
+[id=createProject]
+=== Creating a Project
+
+. In the DINA Homepage, under the Collection submenu, click on the `Projects` option.
+
+image::8-Homepage.png[]
+
+[start=2]
+. In the Projects page, click on the `Create new` button.
+
+image::8-CreateNew.png[]
+
+[start=3]
+. In the next step, the user can fill in specific information about the Project. After doing so, click the `Save` button at the right hand side of the page.
+
+WARNING: It is mandatory to name your Collection.
+
+[start=4]
+. Check that the information is correct. Note that this can be edited at any time. +
+If you wish to edit, see the changes, or delete the collection, you can do so through the buttons on the top right corner of the page.
+
+image::8-InfoPage.png[]
+
+[start=5]
+. The created Project can now be accessed through the Projects page.
+
+image::2-ListPage.png[]
