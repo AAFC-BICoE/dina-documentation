@@ -22,3 +22,5 @@ include::split_config.adoc[]
 include::store_object.adoc[]
 
 include::projects.adoc[]
+
+include::persons.adoc[]

@@ -1,0 +1,30 @@
+[id=persons]
+== Persons
+A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#person[Person] is a definitive and canonical representation of a human in DINA. In this context, we will be linking `Material Samples` to `Persons` as `Collectors`.
+
+[id=inputPerson]
+=== Inputting a Person
+. In the DINA Homepage, under the Agents submenu, click on the `Persons` option.
+
+image::9-1-Homepage.png[]
+
+[start=2]
+. In the Persons page, click on the `Create New` button.
+
+image::9-1-CreateNew.png[]
+
+[start=3]
+. In the Add Person page, add any relevant information about your Collection. After doing so, click the `Save` button on the top right corner of the page.
+
+WARNING: It is mandatory to put a Display Name.
+
+[start=4]
+. Check that the information is correct. Note that this can be edited at any time. +
+If you wish to edit, see the changes, or delete the collection, you can do so through the buttons on the top right corner of the page.
+
+image::9-1-InfoPage.png[]
+
+[start=5]
+. The created Person can now be seen through the Persons page.
+
+image::9-1-ListPage.png[]
