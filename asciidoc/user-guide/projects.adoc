@@ -12,7 +12,7 @@ image::8-Homepage.png[]
 [start=2]
 . In the Projects page, click on the `Create new` button.
 
-image::8-CreateNew.png[]
+image::8-1-CreateNew.png[]
 
 [start=3]
 . In the next step, the user can fill in specific information about the Project. After doing so, click the `Save` button at the right hand side of the page.
@@ -23,9 +23,40 @@ WARNING: It is mandatory to name your Collection.
 . Check that the information is correct. Note that this can be edited at any time. +
 If you wish to edit, see the changes, or delete the collection, you can do so through the buttons on the top right corner of the page.
 
-image::8-InfoPage.png[]
+image::8-1-InfoPage.png[]
 
 [start=5]
 . The created Project can now be accessed through the Projects page.
 
-image::2-ListPage.png[]
+image::8-1-ListPage.png[]
+
+[id=linkSampleToProject]
+=== Linking a Material Sample to a Project
+If the user has not linked a sample to a Project when creating it, they can go back to the created sample and link the Project by editing it.
+
+. To access the sample from the DINA Homepage, click on `Material Samples` from the Collection submenu
+
+image::5-Homepage.png[]
+
+[start=2]
+. If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.
+
+image::5-2-Search.png[]
+
+[start=3]
+. The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.
+
+image::5-2-SearchResult.png[]
+
+[start=4]
+. In the chosen sample's read-only page, click on the `Edit` button.
+
+image::5-2-Edit.png[]
+
+[start=5]
+. In the Edit page, select the correct Project in the `Project` field/dropdown.
+
+image::8-2-Select.png[]
+
+[start=6]
+. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Project` and will be reflected in the sample's and the project's read-only pages.
