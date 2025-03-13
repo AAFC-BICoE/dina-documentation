@@ -25,6 +25,6 @@ If you wish to edit, see the changes, or delete the collection, you can do so th
 image::EditRevDelete.png[]
 
 [start=5]
-. The created Collection can now be accessed through the Collection page.
+. The created Collection can now be accessed through the list page.
 
 image::2-ListPage.png[]

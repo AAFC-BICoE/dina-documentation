@@ -1,0 +1,50 @@
+[id=storageUnits]
+== Storage Unit Types and Storage Units
+A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#storage-unit-type[Storage Unit Type] is a generic classification for a storage object. https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#storage-unit[Storage Units] can be of different types, such as a freezer, a shelf, or a room. Each storage unit can contain other storage units, forming a tree-like hierarchy.
+
+[id=createStorageUnitType]
+=== Creating a Storage Unit Type
+. To create a unit Storage Unit, we first need to make sure that we have the appropriate Storage Unit Type. To do this, click on the `Storage Unit Types` option under the Controlled Vocabulary submenu on the DINA Homepage.
+
+image::10-1-Homepage.png[]
+
+[start=2]
+. In the Storage Unit Types page, click on the `Create New` button.
+
+image::10-1-CreateNew.png[]
+
+[start=3]
+. In the Add Storage Unit Type page, add any relevant information including enabling grids if appropriate. After doing so, click the `Save` button on the top right corner of the page.
+
+WARNING: It is mandatory to name your Storage Unit Type.
+
+image::10-1-Fields.png[]
+
+[id=createStorageUnit]
+=== Creating a Storage Unit
+Once the appropriate Storage Unit Type is created, we can now create a Storage Unit.
+
+. To do this, click on the `Storage Units` option under the Collection submenu on the DINA Homepage.
+
+image::10-2-Homepage.png[]
+
+[start=2]
+. In the Storage Units page, click on the `Create New` button.
+
+image::10-2-CreateNew.png[]
+
+[start=3]
+. In the Add Storage Unit page, add any relevant information about your Storage Unit. After doing so, click the `Save` button on the top right corner of the page.
+
+NOTE: You can also choose a parent Storage Unit in the Parent subsection. This will create a tree-like hierarchy of Storage Units. See the example given below.
+
+image::10-2-InfoPage.png[]
+
+[start=4]
+. Check that the information is correct. Note that this can be edited at any time. +
+If you wish to edit, see the changes, or delete the storage, you can do so through the buttons on the top right corner of the page as long as the Storage Unit has no child in the hierarchy.
+
+image::EditRevDelete.png[]
+
+[start=5]
+. The created Storage Unit can now be accessed through the list page.
