@@ -20,9 +20,9 @@ WARNING: It is mandatory to put a Display Name.
 
 [start=4]
 . Check that the information is correct. Note that this can be edited at any time. +
-If you wish to edit, see the changes, or delete the collection, you can do so through the buttons on the top right corner of the page.
+If you wish to edit or delete the person, you can do so through the buttons on the top right corner of the page.
 
-image::9-1-InfoPage.png[]
+image::EditDelete.png[]
 
 [start=5]
 . The created Person can now be seen through the Persons page.

@@ -22,7 +22,7 @@ WARNING: It is mandatory to name your Collection.
 . Check that the information is correct. Note that this can be edited at any time. +
 If you wish to edit, see the changes, or delete the collection, you can do so through the buttons on the top right corner of the page.
 
-image::2-InfoPage.png[]
+image::EditRevDelete.png[]
 
 [start=5]
 . The created Collection can now be accessed through the Collection page.

@@ -24,3 +24,5 @@ include::store_object.adoc[]
 include::projects.adoc[]
 
 include::persons.adoc[]
+
+include::storage_units.adoc[]
