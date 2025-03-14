@@ -833,6 +833,23 @@ http://localhost:8080/api/region</code></pre>
 </div>
 <div class="sect2">
 <h3 id="_bulk_operations">6.6. Bulk operations</h3>
+<div class="paragraph">
+<p>Since bulk operations are not officially in JSON:API the Content-Type <code>application/vnd.api+json; ext=bulk</code> is used.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>POST</code> and <code>PATCH</code> accept a list of <a href="https://jsonapi.org/format/#document-resource-objects">resource objects</a> under the attribute <code>data</code>.</p>
+</li>
+<li>
+<p><code>DELETE</code> accepts a list of <a href="https://jsonapi.org/format/#document-resource-identifier-objects">resource identifier</a> objects under the attribute <code>data</code>.</p>
+</li>
+<li>
+<p><code>GET</code> is a special case due to the fact that it can&#8217;t officially have a body. We are then using <code>POST</code> on <code>/bulk-load</code> endpoints that are configured on
+each supported resources. They accept a list of <a href="https://jsonapi.org/format/#document-resource-identifier-objects">resource identifier</a> objects under the attribute <code>data</code>.</p>
+</li>
+</ul>
+</div>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -840,7 +857,7 @@ http://localhost:8080/api/region</code></pre>
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Deprecated: <code>operations</code> endpoint will be removed from all modules and be replaced by <code>bulk</code> endpoints.
+<strong>Deprecated</strong>: <code>operations</code> endpoint will be removed from all modules and be replaced by <code>bulk</code> endpoints.
 </td>
 </tr>
 </table>
@@ -1345,7 +1362,7 @@ Updating index dina_material_sample_index_20241112193452 with alias dina_materia
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-14 17:19:13 UTC
+Last updated 2025-03-14 17:33:27 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
