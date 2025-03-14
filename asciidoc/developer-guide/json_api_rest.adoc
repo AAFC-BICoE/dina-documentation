@@ -147,6 +147,8 @@ http://localhost:8080/api/region
 
 == Bulk operations
 
+WARNING: Deprecated: `operations` endpoint will be removed from all modules and be replaced by `bulk` endpoints.
+
 Bulk operations are supported using the unofficial
 https://github.com/json-api/json-api/blob/9c7a03dbc37f80f6ca81b16d444c960e96dd7a57/extensions/jsonpatch/index.md[jsonpatch]
 extension to JSON:API implemented by the Crnk Operations Module.
