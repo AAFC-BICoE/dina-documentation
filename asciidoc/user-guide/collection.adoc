@@ -6,12 +6,12 @@ A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#collection[
 === Creating a Collection
 . On the left side of the DINA Homepage, click the `Collection` option under the Collection submenu
 
-image::2-Homepage.png[]
+image::collection/Homepage.png[]
 
 [start=2]
 . In the Collection page, click the `Create New` button.
 
-image::2-CreateNew.png[]
+image::collection/CreateNew.png[]
 
 [start=3]
 . In the Add Collection page, add any relevant information about your Collection. After doing so, click the `Save` button on the top right corner of the page.
@@ -27,4 +27,4 @@ image::EditRevDelete.png[]
 [start=5]
 . The created Collection can now be accessed through the list page.
 
-image::2-ListPage.png[]
+image::collection/ListPage.png[]
