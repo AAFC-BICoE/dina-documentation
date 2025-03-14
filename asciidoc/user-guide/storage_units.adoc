@@ -48,3 +48,41 @@ image::EditRevDelete.png[]
 
 [start=5]
 . The created Storage Unit can now be accessed through the list page.
+
+[id=linkSampleToUnit]
+=== Linking a Material Sample to a Storage Unit
+If the user has not linked a sample to a Storage Unit when creating it, they can go back to the created sample and link the Storage Unit by editing it.
+
+. To access the sample from the DINA Homepage, click on `Material Samples` from the Collection submenu
+
+image::5-Homepage.png[]
+
+[start=2]
+. If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.
+
+image::5-2-Search.png[]
+
+[start=3]
+. The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.
+
+image::5-2-SearchResult.png[]
+
+[start=4]
+. In the chosen sample's read-only page, click on the `Edit` button.
+
+image::5-2-Edit.png[]
+
+[start=5]
+. Activate the `Storage` component by clicking on the button corresponding to it.
+
+image::10-2-Activate.png[]
+
+[start=6]
+. The user can now choose to create a new `Storage Unit` or attach the sample to an already existing one.
+
+image::10-2-Storage.png[]
+
+[start=7]
+. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Storage Unit` and will be reflected in the sample's and the storage's read-only pages.
+
+image::5-2-Save.png[]

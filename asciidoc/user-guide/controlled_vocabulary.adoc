@@ -25,8 +25,6 @@ image::3-CreateNew.png[]
 
 WARNING: It is mandatory to name the object.
 
-//image::3-AddObject.png[]
-
 Also note that in creating a new Protocol, the user can also add the `Protocol Type`, `Protocol Data`, and add `Protocol Attachments` which are not fields in the other Controlled Vocabulary objects.
 
 image::3-AddProtocol.png[]
@@ -35,7 +33,7 @@ image::3-AddProtocol.png[]
 . Check that the information is correct. Note that this can be edited at any time. +
 If you wish to edit, see the changes, or delete the created object, you can do so through the buttons on the top right corner of the page.
 
-image::2-InfoPage.png[]
+image::EditRevDelete.png[]
 
 [start=5]
 . The created object can now be accessed in the list page.
