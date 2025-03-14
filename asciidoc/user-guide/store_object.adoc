@@ -37,7 +37,7 @@ image::5-Homepage.png[]
 image::7-1-ListPage.png[]
 
 [start=7]
-. In the sample's read-only page, click on the `Edit` button.
+. In the sample's view page, click on the `Edit` button.
 
 image::7-1-Edit.png[]
 
@@ -68,7 +68,7 @@ image::5-Homepage.png[]
 image::7-2-ListPage.png[]
 
 [start=3]
-. Once in the sample's read-only page, click on the `Edit` button on the top right corner of the page.
+. Once in the sample's view page, click on the `Edit` button on the top right corner of the page.
 
 image::7-2-ROPage.png[]
 

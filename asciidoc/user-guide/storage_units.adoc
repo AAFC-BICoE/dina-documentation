@@ -38,6 +38,8 @@ image::10-2-CreateNew.png[]
 
 NOTE: You can also choose a parent Storage Unit in the Parent subsection. This will create a tree-like hierarchy of Storage Units. See the example given below.
 
+WARNING: Due to the heterogenous nature of the storage in different contexts, there is no validation based on type. For example you can have a shelf in a cabinet and a cabinet on a shelf.
+
 image::10-2-InfoPage.png[]
 
 [start=4]
@@ -68,7 +70,7 @@ image::5-2-Search.png[]
 image::5-2-SearchResult.png[]
 
 [start=4]
-. In the chosen sample's read-only page, click on the `Edit` button.
+. In the chosen sample's view page, click on the `Edit` button.
 
 image::5-2-Edit.png[]
 
@@ -83,6 +85,6 @@ image::10-2-Activate.png[]
 image::10-2-Storage.png[]
 
 [start=7]
-. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Storage Unit` and will be reflected in the sample's and the storage's read-only pages.
+. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Storage Unit` and will be reflected in the sample's and the storage's view pages.
 
 image::5-2-Save.png[]

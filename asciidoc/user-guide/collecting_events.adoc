@@ -61,7 +61,7 @@ image::5-2-Search.png[]
 image::5-2-SearchResult.png[]
 
 [start=4]
-. In the chosen sample's read-only page, click on the `Edit` button.
+. In the chosen sample's view page, click on the `Edit` button.
 
 image::5-2-Edit.png[]
 
@@ -76,6 +76,6 @@ image::5-2-Activate.png[]
 image::5-2-Event.png[]
 
 [start=7]
-. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Collecting Event` and will be reflected in the sample's and the event's read-only pages.
+. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Collecting Event` and will be reflected in the sample's and the event's view pages.
 
 image::5-2-Save.png[]

@@ -17,7 +17,7 @@ image::8-1-CreateNew.png[]
 [start=3]
 . In the next step, the user can fill in specific information about the Project. After doing so, click the `Save` button at the right hand side of the page.
 
-WARNING: It is mandatory to name your Collection.
+WARNING: It is mandatory to name your Project.
 
 [start=4]
 . Check that the information is correct. Note that this can be edited at any time. +
@@ -49,7 +49,7 @@ image::5-2-Search.png[]
 image::5-2-SearchResult.png[]
 
 [start=4]
-. In the chosen sample's read-only page, click on the `Edit` button.
+. In the chosen sample's view page, click on the `Edit` button.
 
 image::5-2-Edit.png[]
 
@@ -59,4 +59,4 @@ image::5-2-Edit.png[]
 image::8-2-Select.png[]
 
 [start=6]
-. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Project` and will be reflected in the sample's and the project's read-only pages.
+. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Project` and will be reflected in the sample's and the project's view pages.

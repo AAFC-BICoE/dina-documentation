@@ -46,7 +46,7 @@ image::5-Homepage.png[]
 //image::6-2-Samples.png[]
 
 [start=3]
-. Once the user is in the sample's read-only page, click on the `Split▾` drop-down button and select which Split Configuration the user wants to use. After doing so, click on `Split` button below it.
+. Once the user is in the sample's view page, click on the `Split▾` drop-down button and select which Split Configuration the user wants to use. After doing so, click on `Split` button below it.
 
 image::6-2-Split.png[]
 

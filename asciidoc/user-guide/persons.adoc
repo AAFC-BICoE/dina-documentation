@@ -48,7 +48,7 @@ image::5-2-Search.png[]
 image::5-2-SearchResult.png[]
 
 [start=4]
-. In the chosen sample's read-only page, click on the `Edit` button.
+. In the chosen sample's view page, click on the `Edit` button.
 
 image::5-2-Edit.png[]
 
@@ -60,9 +60,9 @@ image::5-2-Activate.png[]
 [start=6]
 . In the `Collecting Event` component, the user can find the `Collecting Agents` subsection where they can link the sample to a Collector by selecting them in the dropdown menu of the appropriate field.
 
-NOTE: If the Collector is not found or not yet inputted into DINA, the user can fill in the `Verbatim Collectors` field with the Collector's name. In this step, the user can also create a new Collector/Person by clicking on the `Add New Person` option in the `Collectors` dropdown.
+NOTE: If the Collector is not found or not yet inputted into DINA, the user can also create a new Collector/Person by clicking on the `Add New Person` option in the `Collectors` dropdown.
 
 image::9-2-Collectors.png[]
 
 [start=7]
-. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Collector` and will be reflected in the sample's and the collecting event's read-only pages.
+. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Collector` and will be reflected in the sample's and the collecting event's view pages.
