@@ -151,7 +151,7 @@ Since bulk operations are not officially in JSON:API the Content-Type `applicati
 
 === Create and Update Bulk Operations
 
-`POST` and `PATCH` accept a list of https://jsonapi.org/format/#document-resource-objects[resource objects] under the attribute `data`. It is done on the '(RESOURCE_ENDPOINT)/bulk' endpoint.
+`POST` and `PATCH` accept a list of https://jsonapi.org/format/#document-resource-objects[resource objects] under the attribute `data`. It is done on the `(resource-endpoint)/bulk` endpoint.
 
 Example request:
 
@@ -195,9 +195,9 @@ Body:
 }
 ----
 
-=== Delete Bulk Operation'
+=== Delete Bulk Operation
 
-`DELETE` accepts a list of https://jsonapi.org/format/#document-resource-identifier-objects[resource identifier] objects under the attribute `data`. It is done on the '(RESOURCE_ENDPOINT)/bulk' endpoint.
+`DELETE` accepts a list of https://jsonapi.org/format/#document-resource-identifier-objects[resource identifier] objects under the attribute `data`. It is done on the `(resource-endpoint)/bulk` endpoint.
 
 Example request:
 
@@ -229,8 +229,10 @@ Body:
 
 === GET Bulk Operation
 
-`GET` is a special case due to the fact that it can't officially have a body. We are then using `POST` on `(RESOURCE_ENDPOINT)/bulk-load` endpoints that are configured on 
-each supported resources. They accept a list of https://jsonapi.org/format/#document-resource-identifier-objects[resource identifier] objects under the attribute `data`.
+`GET` is a special case due to the fact that it can't officially have a body. We are then using `POST` on `(resource-endpoint)/bulk-load` endpoints that are configured on 
+each supported resources. They accept a list of https://jsonapi.org/format/#document-resource-identifier-objects[resource identifier] objects under the attribute `data`. 
+
+An optional url param called `include` can be used to retrieve relationships within the same API module. To use it, a comma separated list can be provided with the relationship names to include.
 
 Example request:
 
