@@ -9,17 +9,17 @@ There are 2 pathways to store an object to DINA and link it to a Material Sample
 
 . In the DINA Homepage, click on `Upload Files` under the Object Store submenu
 
-image::7-1-Homepage.png[]
+image::object-store/Homepage.png[]
 
 [start=2]
 . In the Upload Files page, "drag and drop" the object from your Desktop to the designated area or click the area to search for the object through a dialog box.
 
-image::7-1-Upload.png[]
+image::object-store/Upload.png[]
 
 [start=3]
 . Once the object has been chosen, click the `Save` button that will appear on the bottom right corner of the designated area.
 
-image::7-1-Save.png[]
+image::object-store/Save.png[]
 
 [start=4]
 . The user will now be able to input data regarding the file in the Add Metadata page. Once done, click the `Save` button at the top right corner of the page. The user should now be able to access the uploaded file.
@@ -32,27 +32,27 @@ image::material-sample/Homepage.png[]
 [start=6]
 . In the Material Samples List page, search for and click the sample the user would like to link the object to.
 
-image::7-1-ListPage.png[]
+image::object-store/1-ListPage.png[]
 
 [start=7]
 . In the sample's view page, click on the `Edit` button.
 
-image::7-1-Edit.png[]
+image::object-store/Edit.png[]
 
 [start=8]
 . Scroll to the Material Sample Attachments at the very bottom of the sample's Edit Page or click on the `Material Sample Attachments` link on the left side of the page. Once there, click on the `Add Attachments` button in the Material Sample Attachments section.
 
-image::7-AddAttachments.png[]
+image::object-store/AddAttachments.png[]
 
 [start=9]
 . In the Attachments page, click on the `Attach Existing Objects` option and choose the object(s) the user would like to link to the sample and click the `Attach Selected` button on the right hand side of the page.
 
-image::7-1-Attachments.png[]
+image::object-store/Attachments.png[]
 
 [start=10]
 . The attachment(s) should now be seen in the Material Sample Attachments section of the sample's Edit Page. Once the user has confirmed that everything is correct, click the `Save` button on the top right corner of the page.
 
-image::7-LastSave.png[]
+image::object-store/LastSave.png[]
 
 [id=uploadDirect]
 === Upload on Material Sample or Collecting Event Directly
@@ -63,17 +63,17 @@ image::material-sample/Homepage.png[]
 [start=2]
 . In the Material Samples List Page, click on the sample the user would like to link an object to.
 
-image::7-2-ListPage.png[]
+image::object-store/2-ListPage.png[]
 
 [start=3]
 . Once in the sample's view page, click on the `Edit` button on the top right corner of the page.
 
-image::7-2-ROPage.png[]
+image::object-store/ROPage.png[]
 
 [start=4]
 . Scroll to the Material Sample Attachments at the very bottom of the sample's Edit Page or click on the `Material Sample Attachments` link on the left side of the page. Once there, click on the `Add Attachments` button in the Material Sample Attachments section.
 
-image::7-AddAttachments.png[]
+image::object-store/AddAttachments.png[]
 
 TIP: The Steps 5-7 will be very similar to uploading an object as in link:#uploadFirst[Upload through the DINA Homepage Section - Steps 2-4]
 
@@ -83,7 +83,7 @@ TIP: The Steps 5-7 will be very similar to uploading an object as in link:#uploa
 [start=6]
 . Once you have added all the files to be linked, click on the `Save` button that will appear on the bottom right corner of the designatede area.
 
-image::7-2-SaveUpload.png[]
+image::object-store/SaveUpload.png[]
 
 [start=7]
 . Fill the relevant data for the uploaded file(s) and click the `Save All` button on top of the page.
@@ -91,4 +91,4 @@ image::7-2-SaveUpload.png[]
 [start=8]
 . The attachment(s) should now be seen in the Material Sample Attachments section of the sample's Edit Page. Once the user has confirmed that everything is correct, click the `Save` button on the top right corner of the page.
 
-image::7-LastSave.png[]
+image::object-store/LastSave.png[]

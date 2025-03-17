@@ -17,7 +17,7 @@ NOTE: To search the User Guide, press Ctrl+F and enter a keyword.
 
 // include::collecting_events.adoc[]
 
-include::split_config.adoc[]
+// include::split_config.adoc[]
 
 include::object_store.adoc[]
 
