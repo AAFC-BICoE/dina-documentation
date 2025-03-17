@@ -19,7 +19,7 @@ NOTE: To search the User Guide, press Ctrl+F and enter a keyword.
 
 // include::split_config.adoc[]
 
-include::object_store.adoc[]
+// include::object_store.adoc[]
 
 include::projects.adoc[]
 

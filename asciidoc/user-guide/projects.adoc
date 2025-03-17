@@ -7,12 +7,12 @@ A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#project[Pro
 
 . In the DINA Homepage, under the Collection submenu, click on the `Projects` option.
 
-image::8-Homepage.png[]
+image::projects/Homepage.png[]
 
 [start=2]
 . In the Projects page, click on the `Create new` button.
 
-image::8-1-CreateNew.png[]
+image::projects/CreateNew.png[]
 
 [start=3]
 . In the next step, the user can fill in specific information about the Project. After doing so, click the `Save` button at the right hand side of the page.
@@ -28,7 +28,7 @@ image::EditRevDelete.png[]
 [start=5]
 . The created Project can now be accessed through the Projects page.
 
-image::8-1-ListPage.png[]
+image::projects/ListPage.png[]
 
 [id=linkSampleToProject]
 === Linking a Material Sample to a Project
@@ -56,7 +56,7 @@ image::material-sample/Edit.png[]
 [start=5]
 . In the Edit page, select the correct Project in the `Project` field/dropdown.
 
-image::8-2-Select.png[]
+image::projects/Select.png[]
 
 [start=6]
 . Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Project` and will be reflected in the sample's and the project's view pages.
