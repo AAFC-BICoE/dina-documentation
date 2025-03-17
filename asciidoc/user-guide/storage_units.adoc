@@ -87,4 +87,4 @@ image::10-2-Storage.png[]
 [start=7]
 . Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Storage Unit` and will be reflected in the sample's and the storage's view pages.
 
-image::5-2-Save.png[]
+image::material-sample/Save.png[]

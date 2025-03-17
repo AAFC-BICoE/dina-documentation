@@ -13,17 +13,17 @@ Transactions:: Transactions made related to Material Samples that are tracked in
 
 . In the DINA Homepage, under the Controlled Vocabulary submenu, click on the `Managed Attributes` option.
 
-image::4-Homepage.png[]
+image::managed-attributes/Homepage.png[]
 
 [start=2]
 . In the Managed Atributes page, choose what object you would like to make an attribute for (`Collection`, `Object Store`, or `Transactions`).
 
-image::4-COsT.png[]
+image::managed-attributes/COsT.png[]
 
 [start=3]
 . In the same page, click on the `Create New` button.
 
-image::4-CreateNew.png[]
+image::managed-attributes/CreateNew.png[]
 
 [start=4]
 . In the Add New Managed Attribute page, fill out relevant data about the new attribute to be added. After doing so, click the `Save` button on the top right corner of the screen.
@@ -39,4 +39,4 @@ image::EditDelete.png[]
 [start=6]
 . The created attribute can now be accessed in the list page of the object type it was created for (`Collection`, `Object Store`, or `Transactions`).
 
-image::4-ListPage.png[]
+image::managed-attributes/ListPage.png[]
