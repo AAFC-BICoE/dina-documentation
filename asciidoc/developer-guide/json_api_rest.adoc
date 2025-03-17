@@ -149,10 +149,122 @@ http://localhost:8080/api/region
 
 Since bulk operations are not officially in JSON:API the Content-Type `application/vnd.api+json; ext=bulk` is used.
 
-* `POST` and `PATCH` accept a list of https://jsonapi.org/format/#document-resource-objects[resource objects] under the attribute `data`.
-* `DELETE` accepts a list of https://jsonapi.org/format/#document-resource-identifier-objects[resource identifier] objects under the attribute `data`.
-* `GET` is a special case due to the fact that it can't officially have a body. We are then using `POST` on `/bulk-load` endpoints that are configured on 
+=== Create and Update Bulk Operations
+
+`POST` and `PATCH` accept a list of https://jsonapi.org/format/#document-resource-objects[resource objects] under the attribute `data`. It is done on the '(RESOURCE_ENDPOINT)/bulk' endpoint.
+
+Example request:
+
+HTTP Method: `POST` (or `PATCH`)
+
+URL: `agent-api/person/bulk`
+
+Headers:
+
+* Content-Type: `application/json-patch+json; ext=bulk`
+* Accept: `application/json-patch+json`
+
+Body:
+[source,json]
+----
+{
+  "data": [
+    {
+      "type": "person",
+      "attributes": {
+        "displayName": "John Doe"
+      },
+      "relationships": {
+        "organizations": {
+          "data": [
+            {
+              "id": "711e5e9c-18c5-4994-92db-8723535b9f1f",
+              "type": "organization"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "person",
+      "attributes": {
+        "displayName": "Jane Doe"
+      }
+    }
+  ]
+}
+----
+
+=== Delete Bulk Operation'
+
+`DELETE` accepts a list of https://jsonapi.org/format/#document-resource-identifier-objects[resource identifier] objects under the attribute `data`. It is done on the '(RESOURCE_ENDPOINT)/bulk' endpoint.
+
+Example request:
+
+HTTP Method: `DELETE`
+
+URL: `agent-api/person/bulk`
+
+Headers:
+
+* Content-Type: `application/json-patch+json; ext=bulk`
+* Accept: `application/json-patch+json`
+
+Body:
+[source,json]
+----
+{
+  "data": [
+    {
+      "type": "person",
+      "id": "fd9e3638-c017-4643-8769-6ef6d0f9234f"
+    },
+    {
+      "type": "person",
+      "id": "64827579-6063-4204-9fdf-ce1edbc8c627"
+    }
+  ]
+}
+----
+
+=== GET Bulk Operation
+
+`GET` is a special case due to the fact that it can't officially have a body. We are then using `POST` on `(RESOURCE_ENDPOINT)/bulk-load` endpoints that are configured on 
 each supported resources. They accept a list of https://jsonapi.org/format/#document-resource-identifier-objects[resource identifier] objects under the attribute `data`.
+
+Example request:
+
+HTTP Method: `POST`
+
+URL: `agent-api/person/bulk-load`
+
+URL Params:
+
+* include: `identifiers,organizations` (optional), relationship names to be included with the query.
+
+Headers:
+
+* Content-Type: `application/json-patch+json; ext=bulk`
+* Accept: `application/json-patch+json`
+
+Body:
+[source,json]
+----
+{
+  "data": [
+    {
+      "type": "person",
+      "id": "fd9e3638-c017-4643-8769-6ef6d0f9234f"
+    },
+    {
+      "type": "person",
+      "id": "64827579-6063-4204-9fdf-ce1edbc8c627"
+    }
+  ]
+}
+----
+
+=== Crnk Based Operations (Deprecated)
 
 WARNING: *Deprecated*: `operations` endpoint will be removed from all modules and be replaced by `bulk` endpoints.
 
