@@ -6,12 +6,12 @@ A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#person[Pers
 === Inputting a Person
 . In the DINA Homepage, under the Agents submenu, click on the `Persons` option.
 
-image::9-1-Homepage.png[]
+image::persons/Homepage.png[]
 
 [start=2]
 . In the Persons page, click on the `Create New` button.
 
-image::9-1-CreateNew.png[]
+image::persons/CreateNew.png[]
 
 [start=3]
 . In the Add Person page, add any relevant information about your Collection. After doing so, click the `Save` button on the top right corner of the page.
@@ -27,7 +27,7 @@ image::EditDelete.png[]
 [start=5]
 . The created Person can now be seen through the Persons page.
 
-image::9-1-ListPage.png[]
+image::persons/ListPage.png[]
 
 [id=linkSampletoCollector]
 === Linking a Material Sample to a Collector
@@ -62,7 +62,7 @@ image::collecting-events/Activate.png[]
 
 NOTE: If the Collector is not found or not yet inputted into DINA, the user can also create a new Collector/Person by clicking on the `Add New Person` option in the `Collectors` dropdown.
 
-image::9-2-Collectors.png[]
+image::persons/Collectors.png[]
 
 [start=7]
 . Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Collector` and will be reflected in the sample's and the collecting event's view pages.

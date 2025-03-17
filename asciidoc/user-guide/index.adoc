@@ -21,7 +21,7 @@ NOTE: To search the User Guide, press Ctrl+F and enter a keyword.
 
 // include::object_store.adoc[]
 
-include::projects.adoc[]
+// include::projects.adoc[]
 
 include::persons.adoc[]
 
