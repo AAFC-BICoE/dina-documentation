@@ -23,6 +23,6 @@ NOTE: To search the User Guide, press Ctrl+F and enter a keyword.
 
 // include::projects.adoc[]
 
-include::persons.adoc[]
+// include::persons.adoc[]
 
 include::storage_units.adoc[]
