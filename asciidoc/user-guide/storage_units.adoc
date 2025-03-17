@@ -57,22 +57,22 @@ If the user has not linked a sample to a Storage Unit when creating it, they can
 
 . To access the sample from the DINA Homepage, click on `Material Samples` from the Collection submenu
 
-image::5-Homepage.png[]
+image::material-sample/Homepage.png[]
 
 [start=2]
 . If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.
 
-image::5-2-Search.png[]
+image::material-sample/Search.png[]
 
 [start=3]
 . The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.
 
-image::5-2-SearchResult.png[]
+image::material-sample/SearchResult.png[]
 
 [start=4]
 . In the chosen sample's view page, click on the `Edit` button.
 
-image::5-2-Edit.png[]
+image::material-sample/Edit.png[]
 
 [start=5]
 . Activate the `Storage` component by clicking on the button corresponding to it.
