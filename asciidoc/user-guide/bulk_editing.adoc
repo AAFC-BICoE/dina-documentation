@@ -2,7 +2,7 @@
 == Bulk Editing
 Bulk editing allows you to edit multiple samples at once. This can be useful when you need to update a field for multiple records. For example, you can update the collection linked to multiple material samples at once.
 
-=== How to Edit Multiple Samples at Once
+=== Edit Multiple Samples at Once
 . On the left side of the DINA Homepage, click the `Material Samples` option under the Collection submenu
 
 image::material-sample/Homepage.png[]

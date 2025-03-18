@@ -1,0 +1,45 @@
+[id=bulkLinking]
+== Bulk Linking Stored Objects to a Sample
+Bulk linking is a feature that allows users to link multiple stored objects to a sample in a single action. This feature is useful when you have multiple stored objects that need to be linked to a sample.
+
+=== Link Multiple Stored Objects to a Sample
+. On the left side of the DINA Homepage, click the `Material Samples` option under the Collection submenu
+
+image::material-sample/Homepage.png[]
+
+[start=2]
+. If not immediately seen in the list page, the user can search for the sample to be linked using queries in the Material Samples page.
+
+image::material-sample/Search.png[]
+
+[start=3]
+. The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.
+
+image::material-sample/SearchResult.png[]
+
+[start=4]
+. In the chosen sample's view page, click on the `Edit` button.
+
+image::material-sample/Edit.png[]
+
+[start=5]
+. In the Edit page, scroll down to the `Material Sample Attachments` section. Alternatively, the user can also click on the `Material Sample Attachments` tab under the Data Components section as shown below.
+
+image::bulk-linking/DataComponents.png[]
+
+[start=6]
+. In the Material Sample Attachments section, click the `Add Attachments` button.
+
+image::bulk-linking/AddAttachments.png[]
+
+[start=7]
+. Once in the Attachments page, the user can search for the stored objects they wish to link to the sample or upload new ones. +
+ +
+For our puposes, we will select multiple stored objects already uploaded to link to the sample as shown below. Once selected, click the `Attach Selected` button on the right hand side.
+
+image::bulk-linking/AttachSelected.png[]
+
+[start=8]
+. The selected stored objects will now be seen in the Material Sample Attachments section of the sample's Edit Page. Once the user has confirmed that everything is correct, click the `Save` button on the top right corner of the page.
+
+image::bulk-linking/Save.png[]
