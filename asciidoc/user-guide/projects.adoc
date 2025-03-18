@@ -1,0 +1,62 @@
+[id=projects]
+== Projects
+A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#project[Project] usually links to the organizational definition of a project where an objective, scope, resources, and deliverables are defined.
+
+[id=createProject]
+=== Creating a Project
+
+. In the DINA Homepage, under the Collection submenu, click on the `Projects` option.
+
+image::projects/Homepage.png[align="center"]
+
+[start=2]
+. In the Projects page, click on the `Create new` button.
+
+image::projects/CreateNew.png[align="center"]
+
+[start=3]
+. In the next step, the user can fill in specific information about the Project. After doing so, click the `Save` button at the right hand side of the page.
+
+WARNING: It is mandatory to name your Project.
+
+[start=4]
+. Check that the information is correct. Note that this can be edited at any time. +
+If you wish to edit, see the changes, or delete the project, you can do so through the buttons on the top right corner of the page.
+
+image::EditRevDelete.png[align="center"]
+
+[start=5]
+. The created Project can now be accessed through the Projects page.
+
+image::projects/ListPage.png[align="center"]
+
+[id=linkSampleToProject]
+=== Linking a Material Sample to a Project
+If the user has not linked a sample to a Project when creating it, they can go back to the created sample and link the Project by editing it.
+
+. To access the sample from the DINA Homepage, click on `Material Samples` from the Collection submenu
+
+image::material-sample/Homepage.png[align="center"]
+
+[start=2]
+. If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.
+
+image::material-sample/Search.png[align="center"]
+
+[start=3]
+. The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.
+
+image::material-sample/SearchResult.png[align="center"]
+
+[start=4]
+. In the chosen sample's view page, click on the `Edit` button.
+
+image::material-sample/Edit.png[align="center"]
+
+[start=5]
+. In the Edit page, select the correct Project in the `Project` field/dropdown.
+
+image::projects/Select.png[align="center"]
+
+[start=6]
+. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Project` and will be reflected in the sample's and the project's view pages.

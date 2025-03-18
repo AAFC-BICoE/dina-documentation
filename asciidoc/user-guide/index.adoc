@@ -11,12 +11,26 @@ include::login.adoc[]
 
 include::collection.adoc[]
 
+include::collecting_events.adoc[]
+
+include::projects.adoc[]
+
+include::storage_units.adoc[]
+
+include::bulk_editing.adoc[]
+
+include::workbook_upload.adoc[]
+
+include::persons.adoc[]
+
+include::transactions.adoc[]
+
+include::object_store.adoc[]
+
+include::bulk_linking.adoc[]
+
 include::controlled_vocabulary.adoc[]
 
 include::managed_attributes.adoc[]
 
-include::collecting_events.adoc[]
-
 include::split_config.adoc[]
-
-include::store_object.adoc[]
