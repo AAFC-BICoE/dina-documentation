@@ -7,22 +7,24 @@
 
 NOTE: To search the User Guide, press Ctrl+F and enter a keyword.
 
-// include::login.adoc[]
+include::login.adoc[]
 
-// include::collection.adoc[]
+include::collection.adoc[]
 
-// include::controlled_vocabulary.adoc[]
+include::controlled_vocabulary.adoc[]
 
-// include::managed_attributes.adoc[]
+include::managed_attributes.adoc[]
 
-// include::collecting_events.adoc[]
+include::collecting_events.adoc[]
 
-// include::split_config.adoc[]
+include::split_config.adoc[]
 
-// include::object_store.adoc[]
+include::object_store.adoc[]
 
-// include::projects.adoc[]
+include::projects.adoc[]
 
-// include::persons.adoc[]
+include::persons.adoc[]
 
 include::storage_units.adoc[]
+
+include::transactions.adoc[]
