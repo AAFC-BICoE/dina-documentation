@@ -19,6 +19,8 @@ include::storage_units.adoc[]
 
 include::bulk_editing.adoc[]
 
+include::workbook_upload.adoc[]
+
 include::persons.adoc[]
 
 include::transactions.adoc[]

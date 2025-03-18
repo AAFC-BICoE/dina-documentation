@@ -1,0 +1,60 @@
+[id=workbookUpload]
+== Workbook Uploader
+The Workbook Uploader feature in DINA allows users to upload sample data in bulk through an Excel sheet to the system. This feature is especially useful when users have a large amount of data to upload, as it saves time and effort compared to manual data entry.
+
+[id=fileFormats]
+=== Supported File Formats
+Before using the Workbook Uploader make sure that the file to be uploaded has one of the following file formats:
+
+* Excel Sheet (.xlsx)
+* Comma Separated Values (.csv)
+
+[id=uploadingData]
+=== Uploading Data
+. In the DINA Homepage, click on the `Upload Workbook` option under the Collection submenu.
+
+image::workbook-upload/Homepage.png[align="center"]
+
+[start=2]
+. In the Upload Workbook page, the user can either drag and drop the Excel file (.xlsx or .csv) to be uploaded or click on the designated space to select the file from the system through a dialog box.
+
+Drag and Drop:
+
+image::workbook-upload/DragDrop.png[align="center"]
+
+Dialog Box:
+
+image::workbook-upload/DialogBox.png[align="center"]
+
+[start=3]
+. After selecting the file, the user can click on the `Submit` button on the right hand side of the screen.
+
+image::workbook-upload/Submit.png[align="center"]
+
+[start=4]
+. In the next screen, the user is given a preview of the Sheet to be uploaded. On the top section of the page, the user is able to select the Sheet to be uploaded from the Excel file and the group the samples would belong to in DINA.
+
+NOTE: The user can also check the `Append Data` checkbox if updating already existing data.
+
+image::workbook-upload/Preview.png[align="center"]
+
+[start=5]
+. By default, the uploader reads the header column of the workbook as the fields for each sample in DINA. The user can map the fields from the Excel sheet to the fields in DINA by selecting the appropriate field from the dropdown list.
+
+NOTE: Some of the fields may be already automarically mapped by DINA. The user may also click the checkbox on the right hand side for each mapping to skip specific columns.
+
+image::workbook-upload/Mapping.png[align="center"]
+
+[start=6]
+. Once the mapping is done, click the `Save` button at the top right corner of the page to begin the upload process. +
+This may take some time depending on how many samples are being uploaded.
+
+[start=7]
+. After the upload is complete, the user will be notified and will be given an option to upload a new workbook or view the uploaded samples.
+
+image::workbook-upload/Complete.png[align="center"]
+
+[start=8]
+. At this stage, the user will be able to view all uploaded samples in the Material Samples list page.
+
+image::workbook-upload/ListPage.png[align="center"]
