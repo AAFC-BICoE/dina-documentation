@@ -3,6 +3,8 @@
 Bulk linking is a feature that allows users to link multiple stored objects to a sample in a single action. This feature is useful when you have multiple stored objects that need to be linked to a sample.
 
 === Link Multiple Stored Objects to a Sample
+NOTE: This guide assumes that the user has already uploaded the stored objects to DINA. If not, please refer to the link:#uploadFirst[Object Store] guide on how to upload files to DINA.
+
 . On the left side of the DINA Homepage, click the `Material Samples` option under the Collection submenu
 
 image::material-sample/Homepage.png[]
