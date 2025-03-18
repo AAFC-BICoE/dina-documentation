@@ -6,19 +6,19 @@ A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#storage-uni
 === Creating a Storage Unit Type
 . To create a unit Storage Unit, we first need to make sure that we have the appropriate Storage Unit Type. To do this, click on the `Storage Unit Types` option under the Controlled Vocabulary submenu on the DINA Homepage.
 
-image::storage-units/1-Homepage.png[]
+image::storage-units/1-Homepage.png[align="center"]
 
 [start=2]
 . In the Storage Unit Types page, click on the `Create New` button.
 
-image::storage-units/1-CreateNew.png[]
+image::storage-units/1-CreateNew.png[align="center"]
 
 [start=3]
 . In the Add Storage Unit Type page, add any relevant information including enabling grids if appropriate. After doing so, click the `Save` button on the top right corner of the page.
 
 WARNING: It is mandatory to name your Storage Unit Type.
 
-image::storage-units/Fields.png[]
+image::storage-units/Fields.png[align="center"]
 
 [id=createStorageUnit]
 === Creating a Storage Unit
@@ -26,12 +26,12 @@ Once the appropriate Storage Unit Type is created, we can now create a Storage U
 
 . To do this, click on the `Storage Units` option under the Collection submenu on the DINA Homepage.
 
-image::storage-units/2-Homepage.png[]
+image::storage-units/2-Homepage.png[align="center"]
 
 [start=2]
 . In the Storage Units page, click on the `Create New` button.
 
-image::storage-units/2-CreateNew.png[]
+image::storage-units/2-CreateNew.png[align="center"]
 
 [start=3]
 . In the Add Storage Unit page, add any relevant information about your Storage Unit. After doing so, click the `Save` button on the top right corner of the page.
@@ -40,13 +40,13 @@ NOTE: You can also choose a parent Storage Unit in the Parent subsection. This w
 
 WARNING: Due to the heterogenous nature of the storage in different contexts, there is no validation based on type. For example you can have a shelf in a cabinet and a cabinet on a shelf.
 
-image::storage-units/InfoPage.png[]
+image::storage-units/InfoPage.png[align="center"]
 
 [start=4]
 . Check that the information is correct. Note that this can be edited at any time. +
 If you wish to edit, see the changes, or delete the storage, you can do so through the buttons on the top right corner of the page as long as the Storage Unit has no child in the hierarchy.
 
-image::EditRevDelete.png[]
+image::EditRevDelete.png[align="center"]
 
 [start=5]
 . The created Storage Unit can now be accessed through the list page.
@@ -57,34 +57,34 @@ If the user has not linked a sample to a Storage Unit when creating it, they can
 
 . To access the sample from the DINA Homepage, click on `Material Samples` from the Collection submenu
 
-image::material-sample/Homepage.png[]
+image::material-sample/Homepage.png[align="center"]
 
 [start=2]
 . If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.
 
-image::material-sample/Search.png[]
+image::material-sample/Search.png[align="center"]
 
 [start=3]
 . The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.
 
-image::material-sample/SearchResult.png[]
+image::material-sample/SearchResult.png[align="center"]
 
 [start=4]
 . In the chosen sample's view page, click on the `Edit` button.
 
-image::material-sample/Edit.png[]
+image::material-sample/Edit.png[align="center"]
 
 [start=5]
 . Activate the `Storage` component by clicking on the button corresponding to it.
 
-image::storage-units/Activate.png[]
+image::storage-units/Activate.png[align="center"]
 
 [start=6]
 . The user can now choose to create a new `Storage Unit` or attach the sample to an already existing one.
 
-image::storage-units/Storage.png[]
+image::storage-units/Storage.png[align="center"]
 
 [start=7]
 . Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Storage Unit` and will be reflected in the sample's and the storage's view pages.
 
-image::material-sample/Save.png[]
+image::material-sample/Save.png[align="center"]

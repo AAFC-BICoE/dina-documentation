@@ -7,7 +7,7 @@ A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#collecting-e
 
 . In the DINA Homepage, under the Collection submenu, click on the `Material Samples` option.
 
-image::material-sample/Homepage.png[]
+image::material-sample/Homepage.png[align="center"]
 
 [start=2]
 . In the Material Samples page, click on the `Create new` button. +
@@ -16,11 +16,11 @@ If you wish to input more than one sample, click on the `Create Multiple New` bu
 
 TIP: If the user has more than one sample to input from a single collection, it is recommended to create multiple samples at once.
 
-image::material-sample/Create.png[]
+image::material-sample/Create.png[align="center"]
 
 If the user elects to create multiples samples at once, they will be taken to the following page where they will be asked how many samples will be created.They can then link the samples to a Collection and configure the naming scheme for each sample:
 
-image::material-sample/CreateMultiple.png[]
+image::material-sample/CreateMultiple.png[align="center"]
 
 [start=3]
 . In the next step, the user can fill in specific information about the/each sample.
@@ -31,16 +31,16 @@ The user can also add (or remove) which data components they want to in the left
 
 TIP: Clicking on an active data component on the left takes the user directly to the component's data fields.
 
-image::material-sample/DataFields.png[]
+image::material-sample/DataFields.png[align="center"]
 
 [start=4]
 . Once all relevant information has been filled out click the `Save` or `Save All` button at the right hand side of the page.
 
-image::material-sample/SaveAll.png[]
+image::material-sample/SaveAll.png[align="center"]
 [start=5]
 . All created samples will now be accessible through the list page and can be edited.
 
-image::material-sample/ListPage.png[]
+image::material-sample/ListPage.png[align="center"]
 
 [id=linkSampleToEvent]
 === Linking a Material Sample to a Collecting Event
@@ -48,34 +48,34 @@ If the user has not linked a sample to a Collecting Event when creating it, they
 
 . To access the sample from the DINA Homepage, click on `Material Samples` from the Collection submenu
 
-image::material-sample/Homepage.png[]
+image::material-sample/Homepage.png[align="center"]
 
 [start=2]
 . If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.
 
-image::material-sample/Search.png[]
+image::material-sample/Search.png[align="center"]
 
 [start=3]
 . The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.
 
-image::material-sample/SearchResult.png[]
+image::material-sample/SearchResult.png[align="center"]
 
 [start=4]
 . In the chosen sample's view page, click on the `Edit` button.
 
-image::material-sample/Edit.png[]
+image::material-sample/Edit.png[align="center"]
 
 [start=5]
 . Activate the `Collecting Event` component by clicking on the button corresponding to it.
 
-image::collecting-events/Activate.png[]
+image::collecting-events/Activate.png[align="center"]
 
 [start=6]
 . The user can now choose to create a new `Collecting Event` or attach the sample to an already existing event.
 
-image::collecting-events/Event.png[]
+image::collecting-events/Event.png[align="center"]
 
 [start=7]
 . Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Collecting Event` and will be reflected in the sample's and the event's view pages.
 
-image::material-sample/Save.png[]
+image::material-sample/Save.png[align="center"]

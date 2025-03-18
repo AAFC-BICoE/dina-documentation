@@ -7,12 +7,12 @@ Split Configurations enable you to configure how Material Sample Splits are auto
 
 . In the DINA Homepage, click on `Split Configurations` under the Configuration submenu.
 
-image::split-config/Homepage.png[]
+image::split-config/Homepage.png[align="center"]
 
 [start=2]
 . In the Split Configurations page, click on the `Create new` button on the top right corner of the page.
 
-image::split-config/CreateNew.png[]
+image::split-config/CreateNew.png[align="center"]
 
 [start=3]
 . In the Add Split Configuration page, enter all configurations the user wants to in regards to splitting the material samples.
@@ -28,7 +28,7 @@ WARNING: When creating Split Configurations, remember to choose options for the 
  +
 Also note that the configuration can be edited at any time.
 
-image::split-config/Save.png[]
+image::split-config/Save.png[align="center"]
 
 [id=useSplitConfig]
 === Using Split Configuration for a Material Sample
@@ -36,7 +36,7 @@ To use a Split Configuration, the user must access the material sample they wish
 
 . From the DINA Homepage, click on the `Material Samples` option under the Collection submenu.
 
-image::material-sample/Homepage.png[]
+image::material-sample/Homepage.png[align="center"]
 
 [start=2]
 . Search for and click on the material sample the user wants to use the Split Configuration on. If the sample has not been created yet, please refer to the link:#createSample[Creating Material Sample(s) Section] of the guide.
@@ -44,12 +44,12 @@ image::material-sample/Homepage.png[]
 [start=3]
 . Once the user is in the sample's view page, click on the `Split▾` drop-down button and select which Split Configuration the user wants to use. After doing so, click on `Split` button below it.
 
-image::split-config/Split.png[]
+image::split-config/Split.png[align="center"]
 
 [start=4]
 . Check that all information is to the user's desired split. Once the user has done so, click on the `Split` button on the top right corner of the page.
 
-image::split-config/FinalSplit.png[]
+image::split-config/FinalSplit.png[align="center"]
 
 [start=5]
 . Now all that's left to do is edit the Material Samples generated through the split. This step is similar to the creation of material samples as in the link:#createSample[Creating Material Sample(s) Section] - Step 3 and onwards.
@@ -57,8 +57,8 @@ image::split-config/FinalSplit.png[]
 [start=6]
 . Once everything has been done, click on the `Save All` button at the top right corner of the page.
 
-image::split-config/SaveAll.png[]
+image::split-config/SaveAll.png[align="center"]
 
 This process makes child samples with the intended sample type configured by the user. This process can be repeated for the child samples resulting to their own child samples as long as there is a Split Configuration with the appropriate Material Sample Type.
 
-image::split-config/Result.png[]
+image::split-config/Result.png[align="center"]

@@ -6,12 +6,12 @@ A Transaction is an entity containing details about the exchange or transport of
 === Creating a Transaction
 . In the DINA Homepage, click on `Transactions` under the Transactions submenu
 
-image::transactions/Homepage.png[]
+image::transactions/Homepage.png[align="center"]
 
 [start=2]
 . In the Transactions page, click the `Create new` button
 
-image::transactions/CreateNew.png[]
+image::transactions/CreateNew.png[align="center"]
 
 [start=3]
 . In the Create Transaction page, add any relevant information about the Transaction. After doing so, click the `Save` button on the top right corner of the page. +
@@ -21,15 +21,15 @@ NOTE: There are no required fields when creating a Transaction
 In this step, you can also link the material samples that were exchanged through the transaction. See the example given below. +
 However, if this step is skipped, the transaction can still be created without any linked material samples and the samples can be linked at any time in the future.
 
-image::transactions/Link.png[]
+image::transactions/Link.png[align="center"]
 
 [start=4]
 . Check that the information is correct. Note that this can be edited at any time. +
 If you wish to edit, see the changes, or delete the transaction, you can do so through the buttons on the top right corner of the page.
 
-image::EditRevDelete.png[]
+image::EditRevDelete.png[align="center"]
 
 [start=5]
 . The created Transaction can now be accessed through the list page.
 
-image::transactions/ListPage.png[]
+image::transactions/ListPage.png[align="center"]
