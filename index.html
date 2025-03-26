@@ -446,32 +446,72 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#createCollection">2.1. Creating a Collection</a></li>
 </ul>
 </li>
-<li><a href="#controlledVocab">3. Controlled Vocabulary</a>
+<li><a href="#collectingEvents">3. Collecting Events</a>
 <ul class="sectlevel2">
-<li><a href="#createVocab">3.1. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</a></li>
+<li><a href="#createSample">3.1. Creating Material Sample(s)</a></li>
+<li><a href="#linkSampleToEvent">3.2. Linking a Material Sample to a Collecting Event</a></li>
 </ul>
 </li>
-<li><a href="#managedAttr">4. Managed Attributes</a>
+<li><a href="#projects">4. Projects</a>
 <ul class="sectlevel2">
-<li><a href="#createAttr">4.1. Creating Managed Attributes</a></li>
+<li><a href="#createProject">4.1. Creating a Project</a></li>
+<li><a href="#linkSampleToProject">4.2. Linking a Material Sample to a Project</a></li>
 </ul>
 </li>
-<li><a href="#collectingEvents">5. Collecting Events</a>
+<li><a href="#storageUnits">5. Storage Unit Types and Storage Units</a>
 <ul class="sectlevel2">
-<li><a href="#createSample">5.1. Creating Material Sample(s)</a></li>
-<li><a href="#linkSampleToEvent">5.2. Linking a Material Sample to a Collecting Event</a></li>
+<li><a href="#createStorageUnitType">5.1. Creating a Storage Unit Type</a></li>
+<li><a href="#createStorageUnit">5.2. Creating a Storage Unit</a></li>
+<li><a href="#linkSampleToUnit">5.3. Linking a Material Sample to a Storage Unit</a></li>
 </ul>
 </li>
-<li><a href="#splitConfig">6. Split Configuration</a>
+<li><a href="#bulkEditing">6. Bulk Editing</a>
 <ul class="sectlevel2">
-<li><a href="#createSplitConfig">6.1. Creating a Split Configuration</a></li>
-<li><a href="#useSplitConfig">6.2. Using Split Configuration for a Material Sample</a></li>
+<li><a href="#_edit_multiple_samples_at_once">6.1. Edit Multiple Samples at Once</a></li>
 </ul>
 </li>
-<li><a href="#storeObj">7. Storing an Object</a>
+<li><a href="#workbookUpload">7. Workbook Uploader</a>
 <ul class="sectlevel2">
-<li><a href="#uploadFirst">7.1. Upload through the DINA Homepage</a></li>
-<li><a href="#uploadDirect">7.2. Upload on Material Sample or Collecting Event Directly</a></li>
+<li><a href="#fileFormats">7.1. Supported File Formats</a></li>
+<li><a href="#uploadingData">7.2. Uploading Data</a></li>
+</ul>
+</li>
+<li><a href="#persons">8. Persons</a>
+<ul class="sectlevel2">
+<li><a href="#inputPerson">8.1. Inputting a Person</a></li>
+<li><a href="#linkSampletoCollector">8.2. Linking a Material Sample to a Collector</a></li>
+</ul>
+</li>
+<li><a href="#transactions">9. Transactions</a>
+<ul class="sectlevel2">
+<li><a href="#createTransaction">9.1. Creating a Transaction</a></li>
+</ul>
+</li>
+<li><a href="#storeObj">10. Storing an Object</a>
+<ul class="sectlevel2">
+<li><a href="#uploadFirst">10.1. Upload through the DINA Homepage</a></li>
+<li><a href="#uploadDirect">10.2. Upload on Material Sample or Collecting Event Directly</a></li>
+</ul>
+</li>
+<li><a href="#bulkLinking">11. Bulk Linking Stored Objects to a Sample</a>
+<ul class="sectlevel2">
+<li><a href="#_link_multiple_stored_objects_to_a_sample">11.1. Link Multiple Stored Objects to a Sample</a></li>
+</ul>
+</li>
+<li><a href="#controlledVocab">12. Controlled Vocabulary</a>
+<ul class="sectlevel2">
+<li><a href="#createVocab">12.1. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</a></li>
+</ul>
+</li>
+<li><a href="#managedAttr">13. Managed Attributes</a>
+<ul class="sectlevel2">
+<li><a href="#createAttr">13.1. Creating Managed Attributes</a></li>
+</ul>
+</li>
+<li><a href="#splitConfig">14. Split Configuration</a>
+<ul class="sectlevel2">
+<li><a href="#createSplitConfig">14.1. Creating a Split Configuration</a></li>
+<li><a href="#useSplitConfig">14.2. Using Split Configuration for a Material Sample</a></li>
 </ul>
 </li>
 </ul>
@@ -503,9 +543,9 @@ To search the User Guide, press Ctrl+F and enter a keyword.
 <div class="paragraph">
 <p>Depending on your organization, you may be redirected to an External Identity Provider (e.g. ESAS) which you will be asked to link your account to.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/1-SignIn.png" alt="1 SignIn">
+<img src="images/SignIn.png" alt="SignIn">
 </div>
 </div>
 </div>
@@ -525,21 +565,21 @@ To search the User Guide, press Ctrl+F and enter a keyword.
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/2-Homepage.png" alt="2 Homepage">
+<img src="images/collection/Homepage.png" alt="Homepage">
 </div>
 </div>
 <div class="olist arabic">
 <ol class="arabic" start="2">
 <li>
-<p>In the Collection page, click the <code>Create New</code> button.</p>
+<p>In the Collection page, click the <code>Create new</code> button.</p>
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/2-CreateNew.png" alt="2 CreateNew">
+<img src="images/collection/CreateNew.png" alt="CreateNew">
 </div>
 </div>
 <div class="olist arabic">
@@ -569,28 +609,1450 @@ If you wish to edit, see the changes, or delete the collection, you can do so th
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/2-InfoPage.png" alt="2 InfoPage">
+<img src="images/EditRevDelete.png" alt="EditRevDelete">
 </div>
 </div>
 <div class="olist arabic">
 <ol class="arabic" start="5">
 <li>
-<p>The created Collection can now be accessed through the Collection page.</p>
+<p>The created Collection can now be accessed through the list page.</p>
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/2-ListPage.png" alt="2 ListPage">
+<img src="images/collection/ListPage.png" alt="ListPage">
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="controlledVocab">3. Controlled Vocabulary</h2>
+<h2 id="collectingEvents">3. Collecting Events</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#collecting-event">Collecting Event</a> is the act of extraction from nature at some location at a certain point in time.</p>
+</div>
+<div class="sect2">
+<h3 id="createSample">3.1. Creating Material Sample(s)</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, under the Collection submenu, click on the <code>Material Samples</code> option.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Material Samples page, click on the <code>Create new</code> button.<br>
+<br>
+If you wish to input more than one sample, click on the <code>Create Multiple New</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If the user has more than one sample to input from a single collection, it is recommended to create multiple samples at once.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Create.png" alt="Create">
+</div>
+</div>
+<div class="paragraph">
+<p>If the user elects to create multiples samples at once, they will be taken to the following page where they will be asked how many samples will be created.They can then link the samples to a Collection and configure the naming scheme for each sample:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/CreateMultiple.png" alt="CreateMultiple">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the next step, the user can fill in specific information about the/each sample.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Note that none of these fields are required to be filled in and they can be edited at any time.</p>
+</div>
+<div class="paragraph">
+<p>The user can also add (or remove) which data components they want to in the left hand side of the page by clicking on the button beside each component.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Clicking on an active data component on the left takes the user directly to the component&#8217;s data fields.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/DataFields.png" alt="DataFields">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Once all relevant information has been filled out click the <code>Save</code> or <code>Save All</code> button at the right hand side of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/SaveAll.png" alt="SaveAll">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>All created samples will now be accessible through the list page and can be edited.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/ListPage.png" alt="ListPage">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="linkSampleToEvent">3.2. Linking a Material Sample to a Collecting Event</h3>
+<div class="paragraph">
+<p>If the user has not linked a sample to a Collecting Event when creating it, they can go back to the created sample and link the event by editing it.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To access the sample from the DINA Homepage, click on <code>Material Samples</code> from the Collection submenu</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Search.png" alt="Search">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/SearchResult.png" alt="SearchResult">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>In the chosen sample&#8217;s view page, click on the <code>Edit</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Edit.png" alt="Edit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Activate the <code>Collecting Event</code> component by clicking on the button corresponding to it.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/collecting-events/Activate.png" alt="Activate">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>The user can now choose to create a new <code>Collecting Event</code> or attach the sample to an already existing event.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/collecting-events/Event.png" alt="Event">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>Once done, click on the <code>Save</code> button on the right hand corner of the page. This will successfully link a <code>Material Sample</code> to the intended <code>Collecting Event</code> and will be reflected in the sample&#8217;s and the event&#8217;s view pages.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Save.png" alt="Save">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="projects">4. Projects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#project">Project</a> usually links to the organizational definition of a project where an objective, scope, resources, and deliverables are defined.</p>
+</div>
+<div class="sect2">
+<h3 id="createProject">4.1. Creating a Project</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, under the Collection submenu, click on the <code>Projects</code> option.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/projects/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Projects page, click on the <code>Create new</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/projects/CreateNew.png" alt="CreateNew">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the next step, the user can fill in specific information about the Project. After doing so, click the <code>Save</code> button at the right hand side of the page.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+It is mandatory to name your Project.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Check that the information is correct. Note that this can be edited at any time.<br>
+If you wish to edit, see the changes, or delete the project, you can do so through the buttons on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/EditRevDelete.png" alt="EditRevDelete">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>The created Project can now be accessed through the Projects page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/projects/ListPage.png" alt="ListPage">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="linkSampleToProject">4.2. Linking a Material Sample to a Project</h3>
+<div class="paragraph">
+<p>If the user has not linked a sample to a Project when creating it, they can go back to the created sample and link the Project by editing it.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To access the sample from the DINA Homepage, click on <code>Material Samples</code> from the Collection submenu</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Search.png" alt="Search">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/SearchResult.png" alt="SearchResult">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>In the chosen sample&#8217;s view page, click on the <code>Edit</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Edit.png" alt="Edit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>In the Edit page, select the correct Project in the <code>Project</code> field/dropdown.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/projects/Select.png" alt="Select">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Once done, click on the <code>Save</code> button on the right hand corner of the page. This will successfully link a <code>Material Sample</code> to the intended <code>Project</code> and will be reflected in the sample&#8217;s and the project&#8217;s view pages.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="storageUnits">5. Storage Unit Types and Storage Units</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#storage-unit-type">Storage Unit Type</a> is a generic classification for a storage object. <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#storage-unit">Storage Units</a> can be of different types, such as a freezer, a shelf, or a room. Each storage unit can contain other storage units, forming a tree-like hierarchy.</p>
+</div>
+<div class="sect2">
+<h3 id="createStorageUnitType">5.1. Creating a Storage Unit Type</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To create a unit Storage Unit, we first need to make sure that we have the appropriate Storage Unit Type. To do this, click on the <code>Storage Unit Types</code> option under the Controlled Vocabulary submenu on the DINA Homepage.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/storage-units/1-Homepage.png" alt="1 Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Storage Unit Types page, click on the <code>Create New</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/storage-units/1-CreateNew.png" alt="1 CreateNew">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the Add Storage Unit Type page, add any relevant information including enabling grids if appropriate. After doing so, click the <code>Save</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+It is mandatory to name your Storage Unit Type.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/storage-units/Fields.png" alt="Fields">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="createStorageUnit">5.2. Creating a Storage Unit</h3>
+<div class="paragraph">
+<p>Once the appropriate Storage Unit Type is created, we can now create a Storage Unit.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To do this, click on the <code>Storage Units</code> option under the Collection submenu on the DINA Homepage.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/storage-units/2-Homepage.png" alt="2 Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Storage Units page, click on the <code>Create New</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/storage-units/2-CreateNew.png" alt="2 CreateNew">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the Add Storage Unit page, add any relevant information about your Storage Unit. After doing so, click the <code>Save</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can also choose a parent Storage Unit in the Parent subsection. This will create a tree-like hierarchy of Storage Units. See the example given below.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Due to the heterogenous nature of the storage in different contexts, there is no validation based on type. For example you can have a shelf in a cabinet and a cabinet on a shelf.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/storage-units/InfoPage.png" alt="InfoPage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Check that the information is correct. Note that this can be edited at any time.<br>
+If you wish to edit, see the changes, or delete the storage, you can do so through the buttons on the top right corner of the page as long as the Storage Unit has no child in the hierarchy.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/EditRevDelete.png" alt="EditRevDelete">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>The created Storage Unit can now be accessed through the list page.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="linkSampleToUnit">5.3. Linking a Material Sample to a Storage Unit</h3>
+<div class="paragraph">
+<p>If the user has not linked a sample to a Storage Unit when creating it, they can go back to the created sample and link the Storage Unit by editing it.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To access the sample from the DINA Homepage, click on <code>Material Samples</code> from the Collection submenu</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Search.png" alt="Search">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/SearchResult.png" alt="SearchResult">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>In the chosen sample&#8217;s view page, click on the <code>Edit</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Edit.png" alt="Edit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Activate the <code>Storage</code> component by clicking on the button corresponding to it.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/storage-units/Activate.png" alt="Activate">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>The user can now choose to create a new <code>Storage Unit</code> or attach the sample to an already existing one.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/storage-units/Storage.png" alt="Storage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>Once done, click on the <code>Save</code> button on the right hand corner of the page. This will successfully link a <code>Material Sample</code> to the intended <code>Storage Unit</code> and will be reflected in the sample&#8217;s and the storage&#8217;s view pages.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Save.png" alt="Save">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="bulkEditing">6. Bulk Editing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bulk editing allows you to edit multiple samples at once. This can be useful when you need to update a field for multiple records. For example, you can update the collection linked to multiple material samples at once.</p>
+</div>
+<div class="sect2">
+<h3 id="_edit_multiple_samples_at_once">6.1. Edit Multiple Samples at Once</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>On the left side of the DINA Homepage, click the <code>Material Samples</code> option under the Collection submenu</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Material Samples page, choose the samples you want to edit by clicking the checkbox next to each sample. You can also select all samples currently shown by clicking the checkbox at the top of the list.<br>
+After selecting the samples, click the <code>Edit Selected</code> button just above the table on the right hand side of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/bulk-edit/Select.png" alt="Select">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the Bulk Edit page, you can edit the fields you want to change. After making your changes, click the <code>Save All</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The user can also edit the fields of each sample individually by clicking the Sample ID of the sample they want to edit. This can be seen in 2 different views depending on the number of samples selected. See the examples below.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/bulk-edit/1-BulkEdit.png" alt="1 BulkEdit">
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/bulk-edit/2-BulkEdit.png" alt="2 BulkEdit">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="workbookUpload">7. Workbook Uploader</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Workbook Uploader feature in DINA allows users to upload sample data in bulk through an Excel sheet to the system. This feature is especially useful when users have a large amount of data to upload, as it saves time and effort compared to manual data entry.</p>
+</div>
+<div class="sect2">
+<h3 id="fileFormats">7.1. Supported File Formats</h3>
+<div class="paragraph">
+<p>Before using the Workbook Uploader make sure that the file to be uploaded has one of the following file formats:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Excel Sheet (.xlsx)</p>
+</li>
+<li>
+<p>Comma Separated Values (.csv)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="uploadingData">7.2. Uploading Data</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, click on the <code>Upload Workbook</code> option under the Collection submenu.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/workbook-upload/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Upload Workbook page, the user can either drag and drop the Excel file (.xlsx or .csv) to be uploaded or click on the designated space to select the file from the system through a dialog box.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Drag and Drop:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/workbook-upload/DragDrop.png" alt="DragDrop">
+</div>
+</div>
+<div class="paragraph">
+<p>Dialog Box:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/workbook-upload/DialogBox.png" alt="DialogBox">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>After selecting the file, the user can click on the <code>Submit</code> button on the right hand side of the screen.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/workbook-upload/Submit.png" alt="Submit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>In the next screen, the user is given a preview of the Sheet to be uploaded. On the top section of the page, the user is able to select the Sheet to be uploaded from the Excel file and the group the samples would belong to in DINA.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The user can also check the <code>Append Data</code> checkbox if updating already existing data.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/workbook-upload/Preview.png" alt="Preview">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>By default, the uploader reads the header column of the workbook as the fields for each sample in DINA. The user can map the fields from the Excel sheet to the fields in DINA by selecting the appropriate field from the dropdown list.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Some of the fields may be already automarically mapped by DINA. The user may also click the checkbox on the right hand side for each mapping to skip specific columns.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/workbook-upload/Mapping.png" alt="Mapping">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Once the mapping is done, click the <code>Save</code> button at the top right corner of the page to begin the upload process.<br>
+This may take some time depending on how many samples are being uploaded.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>After the upload is complete, the user will be notified and will be given an option to upload a new workbook or view the uploaded samples.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/workbook-upload/Complete.png" alt="Complete">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="8">
+<li>
+<p>At this stage, the user will be able to view all uploaded samples in the Material Samples list page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/workbook-upload/ListPage.png" alt="ListPage">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="persons">8. Persons</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#person">Person</a> is a definitive and canonical representation of a human in DINA. In this context, we will be linking <code>Material Samples</code> to <code>Persons</code> as <code>Collectors</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="inputPerson">8.1. Inputting a Person</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, under the Agents submenu, click on the <code>Persons</code> option.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/persons/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Persons page, click on the <code>Create New</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/persons/CreateNew.png" alt="CreateNew">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the Add Person page, add any relevant information about your Collection. After doing so, click the <code>Save</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+It is mandatory to put a Display Name.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Check that the information is correct. Note that this can be edited at any time.<br>
+If you wish to edit or delete the person, you can do so through the buttons on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/EditDelete.png" alt="EditDelete">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>The created Person can now be seen through the Persons page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/persons/ListPage.png" alt="ListPage">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="linkSampletoCollector">8.2. Linking a Material Sample to a Collector</h3>
+<div class="paragraph">
+<p>If the user has not linked a sample to a Collector when creating it, they can go back to the created sample and link the Collector by editing it.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To access the sample from the DINA Homepage, click on <code>Material Samples</code> from the Collection submenu</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Search.png" alt="Search">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/SearchResult.png" alt="SearchResult">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>In the chosen sample&#8217;s view page, click on the <code>Edit</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Edit.png" alt="Edit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Activate the <code>Collecting Event</code> component by clicking on the button corresponding to it.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/collecting-events/Activate.png" alt="Activate">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>In the <code>Collecting Event</code> component, the user can find the <code>Collecting Agents</code> subsection where they can link the sample to a Collector by selecting them in the dropdown menu of the appropriate field.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the Collector is not found or not yet inputted into DINA, the user can also create a new Collector/Person by clicking on the <code>Add New Person</code> option in the <code>Collectors</code> dropdown.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/persons/Collectors.png" alt="Collectors">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>Once done, click on the <code>Save</code> button on the right hand corner of the page. This will successfully link a <code>Material Sample</code> to the intended <code>Collector</code> and will be reflected in the sample&#8217;s and the collecting event&#8217;s view pages.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="transactions">9. Transactions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A Transaction is an entity containing details about the exchange or transport of Material Samples from one lab/person to another.</p>
+</div>
+<div class="sect2">
+<h3 id="createTransaction">9.1. Creating a Transaction</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, click on <code>Transactions</code> under the Transactions submenu</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/transactions/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Transactions page, click the <code>Create new</code> button</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/transactions/CreateNew.png" alt="CreateNew">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the Create Transaction page, add any relevant information about the Transaction. After doing so, click the <code>Save</code> button on the top right corner of the page.<br></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+There are no required fields when creating a Transaction
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In this step, you can also link the material samples that were exchanged through the transaction. See the example given below.<br>
+However, if this step is skipped, the transaction can still be created without any linked material samples and the samples can be linked at any time in the future.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/transactions/Link.png" alt="Link">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Check that the information is correct. Note that this can be edited at any time.<br>
+If you wish to edit, see the changes, or delete the transaction, you can do so through the buttons on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/EditRevDelete.png" alt="EditRevDelete">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>The created Transaction can now be accessed through the list page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/transactions/ListPage.png" alt="ListPage">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="storeObj">10. Storing an Object</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In DINA, users are able to upload files which can be linked to samples and collections. This can be done through the Object Store. Examples of files that may be uploaded are <code>pictures</code> related to samples, <code>sequencing files</code>, <code>.txt files</code>, <code>word documents</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>There are 2 pathways to store an object to DINA and link it to a Material Sample.</p>
+</div>
+<div class="sect2">
+<h3 id="uploadFirst">10.1. Upload through the DINA Homepage</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, click on <code>Upload Files</code> under the Object Store submenu</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Upload Files page, "drag and drop" the object from your Desktop to the designated area or click the area to search for the object through a dialog box.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/Upload.png" alt="Upload">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Once the object has been chosen, click the <code>Save</code> button that will appear on the bottom right corner of the designated area.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/Save.png" alt="Save">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>The user will now be able to input data regarding the file in the Add Metadata page. Once done, click the <code>Save</code> button at the top right corner of the page. The user should now be able to access the uploaded file.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Head back to the DINA Homepage and click on <code>Material Samples</code> under the Collection submenu.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>In the Material Samples List page, search for and click the sample the user would like to link the object to.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/1-ListPage.png" alt="1 ListPage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>In the sample&#8217;s view page, click on the <code>Edit</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/Edit.png" alt="Edit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="8">
+<li>
+<p>Scroll to the Material Sample Attachments at the very bottom of the sample&#8217;s Edit Page or click on the <code>Material Sample Attachments</code> link on the left side of the page. Once there, click on the <code>Add Attachments</code> button in the Material Sample Attachments section.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/AddAttachments.png" alt="AddAttachments">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="9">
+<li>
+<p>In the Attachments page, click on the <code>Attach Existing Objects</code> option and choose the object(s) the user would like to link to the sample and click the <code>Attach Selected</code> button on the right hand side of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/Attachments.png" alt="Attachments">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="10">
+<li>
+<p>The attachment(s) should now be seen in the Material Sample Attachments section of the sample&#8217;s Edit Page. Once the user has confirmed that everything is correct, click the <code>Save</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/LastSave.png" alt="LastSave">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="uploadDirect">10.2. Upload on Material Sample or Collecting Event Directly</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, click on <code>Material Samples</code> under the Collection submenu.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Material Samples List Page, click on the sample the user would like to link an object to.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/2-ListPage.png" alt="2 ListPage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Once in the sample&#8217;s view page, click on the <code>Edit</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/ROPage.png" alt="ROPage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Scroll to the Material Sample Attachments at the very bottom of the sample&#8217;s Edit Page or click on the <code>Material Sample Attachments</code> link on the left side of the page. Once there, click on the <code>Add Attachments</code> button in the Material Sample Attachments section.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/AddAttachments.png" alt="AddAttachments">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The Steps 5-7 will be very similar to uploading an object as in <a href="#uploadFirst">Upload through the DINA Homepage Section - Steps 2-4</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>In the Attachments page, either click on the designated area to search for the object using a dialog box or "drag and drop" a file from your Desktop to the designated area. The user can add however many files they wish.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Once you have added all the files to be linked, click on the <code>Save</code> button that will appear on the bottom right corner of the designatede area.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/SaveUpload.png" alt="SaveUpload">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>Fill the relevant data for the uploaded file(s) and click the <code>Save All</code> button on top of the page.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="8">
+<li>
+<p>The attachment(s) should now be seen in the Material Sample Attachments section of the sample&#8217;s Edit Page. Once the user has confirmed that everything is correct, click the <code>Save</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/object-store/LastSave.png" alt="LastSave">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="bulkLinking">11. Bulk Linking Stored Objects to a Sample</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bulk linking is a feature that allows users to link multiple stored objects to a sample in a single action. This feature is useful when you have multiple stored objects that need to be linked to a sample.</p>
+</div>
+<div class="sect2">
+<h3 id="_link_multiple_stored_objects_to_a_sample">11.1. Link Multiple Stored Objects to a Sample</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This guide assumes that the user has already uploaded the stored objects to DINA. If not, please refer to the <a href="#uploadFirst">Object Store</a> guide on how to upload files to DINA.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>On the left side of the DINA Homepage, click the <code>Material Samples</code> option under the Collection submenu</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>If not immediately seen in the list page, the user can search for the sample to be linked using queries in the Material Samples page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Search.png" alt="Search">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/SearchResult.png" alt="SearchResult">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>In the chosen sample&#8217;s view page, click on the <code>Edit</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Edit.png" alt="Edit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>In the Edit page, scroll down to the <code>Material Sample Attachments</code> section. Alternatively, the user can also click on the <code>Material Sample Attachments</code> tab under the Data Components section as shown below.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/bulk-linking/DataComponents.png" alt="DataComponents">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>In the Material Sample Attachments section, click the <code>Add Attachments</code> button.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/bulk-linking/AddAttachments.png" alt="AddAttachments">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p>Once in the Attachments page, the user can search for the stored objects they wish to link to the sample or upload new ones.<br>
+<br>
+For our puposes, we will select multiple stored objects already uploaded to link to the sample as shown below. Once selected, click the <code>Attach Selected</code> button on the right hand side.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/bulk-linking/AttachSelected.png" alt="AttachSelected">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="8">
+<li>
+<p>The selected stored objects will now be seen in the Material Sample Attachments section of the sample&#8217;s Edit Page. Once the user has confirmed that everything is correct, click the <code>Save</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/bulk-linking/Save.png" alt="Save">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="controlledVocab">12. Controlled Vocabulary</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In DINA, some users with appropriate permissions will be able to create Controlled Vocabulary objects referring to terminology or processes that are commonly used in their practice.</p>
@@ -619,7 +2081,7 @@ If you wish to edit, see the changes, or delete the collection, you can do so th
 </dl>
 </div>
 <div class="sect2">
-<h3 id="createVocab">3.1. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</h3>
+<h3 id="createVocab">12.1. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -627,9 +2089,9 @@ If you wish to edit, see the changes, or delete the collection, you can do so th
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/3-Homepage.png" alt="3 Homepage">
+<img src="images/controlled-vocabulary/Homepage.png" alt="Homepage">
 </div>
 </div>
 <div class="olist arabic">
@@ -639,9 +2101,9 @@ If you wish to edit, see the changes, or delete the collection, you can do so th
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/3-CreateNew.png" alt="3 CreateNew">
+<img src="images/controlled-vocabulary/CreateNew.png" alt="CreateNew">
 </div>
 </div>
 <div class="olist arabic">
@@ -666,9 +2128,9 @@ It is mandatory to name the object.
 <div class="paragraph">
 <p>Also note that in creating a new Protocol, the user can also add the <code>Protocol Type</code>, <code>Protocol Data</code>, and add <code>Protocol Attachments</code> which are not fields in the other Controlled Vocabulary objects.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/3-AddProtocol.png" alt="3 AddProtocol">
+<img src="images/controlled-vocabulary/AddProtocol.png" alt="AddProtocol">
 </div>
 </div>
 <div class="olist arabic">
@@ -679,9 +2141,9 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/2-InfoPage.png" alt="2 InfoPage">
+<img src="images/EditRevDelete.png" alt="EditRevDelete">
 </div>
 </div>
 <div class="olist arabic">
@@ -691,16 +2153,16 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/3-ListPage.png" alt="3 ListPage">
+<img src="images/controlled-vocabulary/ListPage.png" alt="ListPage">
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="managedAttr">4. Managed Attributes</h2>
+<h2 id="managedAttr">13. Managed Attributes</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Managed attributes are attributes that can be created and used by the users on-demand to be used used to track data that is not common enough to be captured in a regular field. (see <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#managed_attributes">DINA Glossary - Managed Attributes</a>)</p>
@@ -725,7 +2187,7 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 </dl>
 </div>
 <div class="sect2">
-<h3 id="createAttr">4.1. Creating Managed Attributes</h3>
+<h3 id="createAttr">13.1. Creating Managed Attributes</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -733,9 +2195,9 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/4-Homepage.png" alt="4 Homepage">
+<img src="images/managed-attributes/Homepage.png" alt="Homepage">
 </div>
 </div>
 <div class="olist arabic">
@@ -745,9 +2207,9 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/4-COsT.png" alt="4 COsT">
+<img src="images/managed-attributes/COsT.png" alt="COsT">
 </div>
 </div>
 <div class="olist arabic">
@@ -757,9 +2219,9 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/4-CreateNew.png" alt="4 CreateNew">
+<img src="images/managed-attributes/CreateNew.png" alt="CreateNew">
 </div>
 </div>
 <div class="olist arabic">
@@ -789,9 +2251,9 @@ If you wish to edit or delete the created attribute, you can do so through the b
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/4-InfoPage.png" alt="4 InfoPage">
+<img src="images/EditDelete.png" alt="EditDelete">
 </div>
 </div>
 <div class="olist arabic">
@@ -801,223 +2263,22 @@ If you wish to edit or delete the created attribute, you can do so through the b
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/4-ListPage.png" alt="4 ListPage">
+<img src="images/managed-attributes/ListPage.png" alt="ListPage">
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="collectingEvents">5. Collecting Events</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#collecting-event">Collecting Event</a> is the act of extraction from nature at some location at a certain point in time.</p>
-</div>
-<div class="sect2">
-<h3 id="createSample">5.1. Creating Material Sample(s)</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>In the DINA Homepage, under the Collection submenu, click on the <code>Material Samples</code> option.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-Homepage.png" alt="5 Homepage">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
-<li>
-<p>In the Material Samples page, click on the <code>Create new</code> button.<br>
-<br>
-If you wish to input more than one sample, click on the <code>Create Multiple New</code> button.</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-If the user has more than sample to input from a single collection, it is recommended to create multiple samples at once.
-</td>
-</tr>
-</table>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-1-Create.png" alt="5 1 Create">
-</div>
-</div>
-<div class="paragraph">
-<p>If the user elects to create multiples samples at once, they will be taken to the following page where they will be asked how many samples will be created.They can then link the samples to a Collection and configure the naming scheme for each sample:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-1-CreateMultiple.png" alt="5 1 CreateMultiple">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="3">
-<li>
-<p>In the next step, the user can fill in specific information about the/each sample.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Note that none of these fields are required to be filled in and they can be edited at any time.</p>
-</div>
-<div class="paragraph">
-<p>The user can also add (or remove) which data components they want to in the left hand side of the page by clicking on the button beside each component.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Clicking on an active data component on the left takes the user directly to the component&#8217;s data fields.
-</td>
-</tr>
-</table>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-1-DataFields.png" alt="5 1 DataFields">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="4">
-<li>
-<p>Once all relevant information has been filled out click the <code>Save</code> or <code>Save All</code> button at the right hand side of the page.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-1-Save.png" alt="5 1 Save">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="5">
-<li>
-<p>All created samples will now be accessible through the list page and can be edited.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-1-ListPage.png" alt="5 1 ListPage">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="linkSampleToEvent">5.2. Linking a Material Sample to a Collecting Event</h3>
-<div class="paragraph">
-<p>If the user has not linked a sample to a Collecting Event when creating it, they can go back to the created sample and link the event by editing it.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>To access the sample from the DINA Homepage, click on <code>Material Samples</code> from the Collection submenu</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-Homepage.png" alt="5 Homepage">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
-<li>
-<p>If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-2-Search.png" alt="5 2 Search">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="3">
-<li>
-<p>The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-2-SearchResult.png" alt="5 2 SearchResult">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="4">
-<li>
-<p>In the chosen sample&#8217;s read-only page, click on the <code>Edit</code> button.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-2-Edit.png" alt="5 2 Edit">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="5">
-<li>
-<p>Activate the <code>Collecting Event</code> component by clicking on the button corresponding to it.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-2-Activate.png" alt="5 2 Activate">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="6">
-<li>
-<p>The user can now choose to create a new <code>Collecting Event</code> or attach the sample to an already existing event.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-2-Event.png" alt="5 2 Event">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="7">
-<li>
-<p>Once done, click on the <code>Save</code> button on the right hand corner of the page. This will successfully link a <code>Material Sample</code> to the intended <code>Collecting Event</code> and will be reflected in the sample&#8217;s and the event&#8217;s read-only pages.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-2-Save.png" alt="5 2 Save">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="splitConfig">6. Split Configuration</h2>
+<h2 id="splitConfig">14. Split Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Split Configurations enable you to configure how Material Sample Splits are automatically named and under what conditions they can be used. For more information about Split Confiigurations, please refer to <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#split-configuration">DINA Concepts and Glossary - Split Configuration</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="createSplitConfig">6.1. Creating a Split Configuration</h3>
+<h3 id="createSplitConfig">14.1. Creating a Split Configuration</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1025,9 +2286,9 @@ Clicking on an active data component on the left takes the user directly to the 
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/6-1-Homepage.png" alt="6 1 Homepage">
+<img src="images/split-config/Homepage.png" alt="Homepage">
 </div>
 </div>
 <div class="olist arabic">
@@ -1037,9 +2298,9 @@ Clicking on an active data component on the left takes the user directly to the 
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/6-1-CreateNew.png" alt="6 1 CreateNew">
+<img src="images/split-config/CreateNew.png" alt="CreateNew">
 </div>
 </div>
 <div class="olist arabic">
@@ -1074,14 +2335,14 @@ Also note that the configuration can be edited at any time.</p>
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/6-1-Save.png" alt="6 1 Save">
+<img src="images/split-config/Save.png" alt="Save">
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="useSplitConfig">6.2. Using Split Configuration for a Material Sample</h3>
+<h3 id="useSplitConfig">14.2. Using Split Configuration for a Material Sample</h3>
 <div class="paragraph">
 <p>To use a Split Configuration, the user must access the material sample they wish to split.</p>
 </div>
@@ -1092,9 +2353,9 @@ Also note that the configuration can be edited at any time.</p>
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/5-Homepage.png" alt="5 Homepage">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
 </div>
 </div>
 <div class="olist arabic">
@@ -1107,13 +2368,13 @@ Also note that the configuration can be edited at any time.</p>
 <div class="olist arabic">
 <ol class="arabic" start="3">
 <li>
-<p>Once the user is in the sample&#8217;s read-only page, click on the <code>Split▾</code> drop-down button and select which Split Configuration the user wants to use. After doing so, click on <code>Split</code> button below it.</p>
+<p>Once the user is in the sample&#8217;s view page, click on the <code>Split▾</code> drop-down button and select which Split Configuration the user wants to use. After doing so, click on <code>Split</code> button below it.</p>
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/6-2-Split.png" alt="6 2 Split">
+<img src="images/split-config/Split.png" alt="Split">
 </div>
 </div>
 <div class="olist arabic">
@@ -1123,9 +2384,9 @@ Also note that the configuration can be edited at any time.</p>
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/6-2-FinalSplit.png" alt="6 2 FinalSplit">
+<img src="images/split-config/FinalSplit.png" alt="FinalSplit">
 </div>
 </div>
 <div class="olist arabic">
@@ -1142,247 +2403,17 @@ Also note that the configuration can be edited at any time.</p>
 </li>
 </ol>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/6-2-SaveAll.png" alt="6 2 SaveAll">
+<img src="images/split-config/SaveAll.png" alt="SaveAll">
 </div>
 </div>
 <div class="paragraph">
 <p>This process makes child samples with the intended sample type configured by the user. This process can be repeated for the child samples resulting to their own child samples as long as there is a Split Configuration with the appropriate Material Sample Type.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock text-center">
 <div class="content">
-<img src="images/6-2-Result.png" alt="6 2 Result">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="storeObj">7. Storing an Object</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In DINA, users are able to upload files which can be linked to samples and collections. This can be done through the Object Store. Examples of files that may be uploaded are <code>pictures</code> related to samples, <code>sequencing files</code>, <code>.txt files</code>, <code>word documents</code>, etc.</p>
-</div>
-<div class="paragraph">
-<p>There are 2 pathways to store an object to DINA and link it to a Material Sample.</p>
-</div>
-<div class="sect2">
-<h3 id="uploadFirst">7.1. Upload through the DINA Homepage</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>In the DINA Homepage, click on <code>Upload Files</code> under the Object Store submenu</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-1-Homepage.png" alt="7 1 Homepage">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
-<li>
-<p>In the Upload Files page, "drag and drop" the object from your Desktop to the designated area or click the area to search for the object through a dialog box.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-1-Upload.png" alt="7 1 Upload">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="3">
-<li>
-<p>Once the object has been chosen, click the <code>Save</code> button that will appear on the bottom right corner of the designated area.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-1-Save.png" alt="7 1 Save">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="4">
-<li>
-<p>The user will now be able to input data regarding the file in the Add Metadata page. Once done, click the <code>Save</code> button at the top right corner of the page. The user should now be able to access the uploaded file.</p>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="5">
-<li>
-<p>Head back to the DINA Homepage and click on <code>Material Samples</code> under the Collection submenu.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-Homepage.png" alt="5 Homepage">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="6">
-<li>
-<p>In the Material Samples List page, search for and click the sample the user would like to link the object to.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-1-ListPage.png" alt="7 1 ListPage">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="7">
-<li>
-<p>In the sample&#8217;s read-only page, click on the <code>Edit</code> button.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-1-Edit.png" alt="7 1 Edit">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="8">
-<li>
-<p>Scroll to the Material Sample Attachments at the very bottom of the sample&#8217;s Edit Page or click on the <code>Material Sample Attachments</code> link on the left side of the page. Once there, click on the <code>Add Attachments</code> button in the Material Sample Attachments section.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-AddAttachments.png" alt="7 AddAttachments">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="9">
-<li>
-<p>In the Attachments page, click on the <code>Attach Existing Objects</code> option and choose the object(s) the user would like to link to the sample and click the <code>Attach Selected</code> button on the right hand side of the page.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-1-Attachments.png" alt="7 1 Attachments">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="10">
-<li>
-<p>The attachment(s) should now be seen in the Material Sample Attachments section of the sample&#8217;s Edit Page. Once the user has confirmed that everything is correct, click the <code>Save</code> button on the top right corner of the page.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-LastSave.png" alt="7 LastSave">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="uploadDirect">7.2. Upload on Material Sample or Collecting Event Directly</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>In the DINA Homepage, click on <code>Material Samples</code> under the Collection submenu.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/5-Homepage.png" alt="5 Homepage">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
-<li>
-<p>In the Material Samples List Page, click on the sample the user would like to link an object to.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-2-ListPage.png" alt="7 2 ListPage">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="3">
-<li>
-<p>Once in the sample&#8217;s read-only page, click on the <code>Edit</code> button on the top right corner of the page.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-2-ROPage.png" alt="7 2 ROPage">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="4">
-<li>
-<p>Scroll to the Material Sample Attachments at the very bottom of the sample&#8217;s Edit Page or click on the <code>Material Sample Attachments</code> link on the left side of the page. Once there, click on the <code>Add Attachments</code> button in the Material Sample Attachments section.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-AddAttachments.png" alt="7 AddAttachments">
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-The Steps 5-7 will be very similar to uploading an object as in <a href="#uploadFirst">Upload through the DINA Homepage Section - Steps 2-4</a>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="5">
-<li>
-<p>In the Attachments page, either click on the designated area to search for the object using a dialog box or "drag and drop" a file from your Desktop to the designated area. The user can add however many files they wish.</p>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="6">
-<li>
-<p>Once you have added all the files to be linked, click on the <code>Save</code> button that will appear on the bottom right corner of the designatede area.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-2-SaveUpload.png" alt="7 2 SaveUpload">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="7">
-<li>
-<p>Fill the relevant data for the uploaded file(s) and click the <code>Save All</code> button on top of the page.</p>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="8">
-<li>
-<p>The attachment(s) should now be seen in the Material Sample Attachments section of the sample&#8217;s Edit Page. Once the user has confirmed that everything is correct, click the <code>Save</code> button on the top right corner of the page.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/7-LastSave.png" alt="7 LastSave">
+<img src="images/split-config/Result.png" alt="Result">
 </div>
 </div>
 </div>
@@ -1391,7 +2422,7 @@ The Steps 5-7 will be very similar to uploading an object as in <a href="#upload
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-17 15:06:50 UTC
+Last updated 2025-03-26 20:03:08 UTC
 </div>
 </div>
 </body>
