@@ -30,6 +30,22 @@ Also note that the configuration can be edited at any time.
 
 image::split-config/Save.png[align="center"]
 
+[id=splitConfigExamples]
+=== Split Configuration Examples
+In the images below, the user can see Split Configurations that have been created. Each example would show a configuration for different use cases. Note that the user is not limited to only these configurations and can create their own.
+
+- Example 1: A Split Configuration that generates samples from a Whole Organism parent to Organism Part child samples/subsamples.The configuration also has a `Split Configuration Name` that is set to `Normal Split`.
+
+image::split-config/NormalSplit.png[align="center"]
+
+- Example 2: A Split Configuration that generates samples from an Organism Part parent sample to Molecular child samples/subsamples. The configuration also has a `Split Configuration Name` that is set to `Molecular Split`.
+
+image::split-config/MolecularSplit.png[align="center"]
+
+- Example 3: A Split Configuration that generates samples from an Organism Part to another or other Organism Part(s). The configuration also has a `Split Configuration Name` that is set to `Part to Part`.
+
+image::split-config/PartSplit.png[align="center"]
+
 [id=useSplitConfig]
 === Using Split Configuration for a Material Sample
 To use a Split Configuration, the user must access the material sample they wish to split.
