@@ -452,66 +452,67 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#linkSampleToEvent">3.2. Linking a Material Sample to a Collecting Event</a></li>
 </ul>
 </li>
-<li><a href="#projects">4. Projects</a>
+<li><a href="#splitConfig">4. Split Configuration</a>
 <ul class="sectlevel2">
-<li><a href="#createProject">4.1. Creating a Project</a></li>
-<li><a href="#linkSampleToProject">4.2. Linking a Material Sample to a Project</a></li>
+<li><a href="#createSplitConfig">4.1. Creating a Split Configuration</a></li>
+<li><a href="#splitConfigExamples">4.2. Split Configuration Examples</a></li>
+<li><a href="#useSplitConfig">4.3. Using Split Configuration for a Material Sample</a></li>
 </ul>
 </li>
-<li><a href="#storageUnits">5. Storage Unit Types and Storage Units</a>
+<li><a href="#projects">5. Projects</a>
 <ul class="sectlevel2">
-<li><a href="#createStorageUnitType">5.1. Creating a Storage Unit Type</a></li>
-<li><a href="#createStorageUnit">5.2. Creating a Storage Unit</a></li>
-<li><a href="#linkSampleToUnit">5.3. Linking a Material Sample to a Storage Unit</a></li>
+<li><a href="#createProject">5.1. Creating a Project</a></li>
+<li><a href="#linkSampleToProject">5.2. Linking a Material Sample to a Project</a></li>
 </ul>
 </li>
-<li><a href="#bulkEditing">6. Bulk Editing</a>
+<li><a href="#storageUnits">6. Storage Unit Types and Storage Units</a>
 <ul class="sectlevel2">
-<li><a href="#_edit_multiple_samples_at_once">6.1. Edit Multiple Samples at Once</a></li>
+<li><a href="#createStorageUnitType">6.1. Creating a Storage Unit Type</a></li>
+<li><a href="#createStorageUnit">6.2. Creating a Storage Unit</a></li>
+<li><a href="#linkSampleToUnit">6.3. Linking a Material Sample to a Storage Unit</a></li>
 </ul>
 </li>
-<li><a href="#workbookUpload">7. Workbook Uploader</a>
+<li><a href="#bulkEditing">7. Bulk Editing</a>
 <ul class="sectlevel2">
-<li><a href="#fileFormats">7.1. Supported File Formats</a></li>
-<li><a href="#uploadingData">7.2. Uploading Data</a></li>
+<li><a href="#_edit_multiple_samples_at_once">7.1. Edit Multiple Samples at Once</a></li>
 </ul>
 </li>
-<li><a href="#persons">8. Persons</a>
+<li><a href="#workbookUpload">8. Workbook Uploader</a>
 <ul class="sectlevel2">
-<li><a href="#inputPerson">8.1. Inputting a Person</a></li>
-<li><a href="#linkSampletoCollector">8.2. Linking a Material Sample to a Collector</a></li>
+<li><a href="#fileFormats">8.1. Supported File Formats</a></li>
+<li><a href="#uploadingData">8.2. Uploading Data</a></li>
 </ul>
 </li>
-<li><a href="#transactions">9. Transactions</a>
+<li><a href="#persons">9. Persons</a>
 <ul class="sectlevel2">
-<li><a href="#createTransaction">9.1. Creating a Transaction</a></li>
+<li><a href="#inputPerson">9.1. Inputting a Person</a></li>
+<li><a href="#linkSampletoCollector">9.2. Linking a Material Sample to a Collector</a></li>
 </ul>
 </li>
-<li><a href="#storeObj">10. Storing an Object</a>
+<li><a href="#transactions">10. Transactions</a>
 <ul class="sectlevel2">
-<li><a href="#uploadFirst">10.1. Upload through the DINA Homepage</a></li>
-<li><a href="#uploadDirect">10.2. Upload on Material Sample or Collecting Event Directly</a></li>
+<li><a href="#createTransaction">10.1. Creating a Transaction</a></li>
 </ul>
 </li>
-<li><a href="#bulkLinking">11. Bulk Linking Stored Objects to a Sample</a>
+<li><a href="#storeObj">11. Storing an Object</a>
 <ul class="sectlevel2">
-<li><a href="#_link_multiple_stored_objects_to_a_sample">11.1. Link Multiple Stored Objects to a Sample</a></li>
+<li><a href="#uploadFirst">11.1. Upload through the DINA Homepage</a></li>
+<li><a href="#uploadDirect">11.2. Upload on Material Sample or Collecting Event Directly</a></li>
 </ul>
 </li>
-<li><a href="#controlledVocab">12. Controlled Vocabulary</a>
+<li><a href="#bulkLinking">12. Bulk Linking Stored Objects to a Sample</a>
 <ul class="sectlevel2">
-<li><a href="#createVocab">12.1. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</a></li>
+<li><a href="#_link_multiple_stored_objects_to_a_sample">12.1. Link Multiple Stored Objects to a Sample</a></li>
 </ul>
 </li>
-<li><a href="#managedAttr">13. Managed Attributes</a>
+<li><a href="#controlledVocab">13. Controlled Vocabulary</a>
 <ul class="sectlevel2">
-<li><a href="#createAttr">13.1. Creating Managed Attributes</a></li>
+<li><a href="#createVocab">13.1. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</a></li>
 </ul>
 </li>
-<li><a href="#splitConfig">14. Split Configuration</a>
+<li><a href="#managedAttr">14. Managed Attributes</a>
 <ul class="sectlevel2">
-<li><a href="#createSplitConfig">14.1. Creating a Split Configuration</a></li>
-<li><a href="#useSplitConfig">14.2. Using Split Configuration for a Material Sample</a></li>
+<li><a href="#createAttr">14.1. Creating Managed Attributes</a></li>
 </ul>
 </li>
 </ul>
@@ -831,13 +832,203 @@ Clicking on an active data component on the left takes the user directly to the 
 </div>
 </div>
 <div class="sect1">
-<h2 id="projects">4. Projects</h2>
+<h2 id="splitConfig">4. Split Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Split Configurations enable you to configure how Material Sample Splits are automatically named and under what conditions they can be used. For more information about Split Confiigurations, please refer to <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#split-configuration">DINA Concepts and Glossary - Split Configuration</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="createSplitConfig">4.1. Creating a Split Configuration</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the DINA Homepage, click on <code>Split Configurations</code> under the Configuration submenu.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/split-config/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>In the Split Configurations page, click on the <code>Create new</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/split-config/CreateNew.png" alt="CreateNew">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>In the Add Split Configuration page, enter all configurations the user wants to in regards to splitting the material samples.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+When creating Split Configurations, remember to choose options for the following required fields:<br>
+• <code>Split Configuration Name</code><br>
+• <code>Material Sample Type</code><br>
+• <code>Strategy</code><br>
+• <code>Generation Options</code>
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Once the user has set the configuration&#8217;s name, material sample type, and sample generation configurations, click the <code>Save</code> button on the top right corner of the page. This will make the configuration accessible when doing a Material Sample Split.<br>
+<br>
+Also note that the configuration can be edited at any time.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/split-config/Save.png" alt="Save">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="splitConfigExamples">4.2. Split Configuration Examples</h3>
+<div class="paragraph">
+<p>In the images below, the user can see Split Configurations that have been created. Each example would show a configuration for different use cases. Note that the user is not limited to only these configurations and can create their own.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Example 1: A Split Configuration that generates samples from a Whole Organism parent to Organism Part child samples/subsamples.The configuration also has a <code>Split Configuration Name</code> that is set to <code>Normal Split</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/split-config/NormalSplit.png" alt="NormalSplit">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Example 2: A Split Configuration that generates samples from an Organism Part parent sample to Molecular child samples/subsamples. The configuration also has a <code>Split Configuration Name</code> that is set to <code>Molecular Split</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/split-config/MolecularSplit.png" alt="MolecularSplit">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Example 3: A Split Configuration that generates samples from an Organism Part to another or other Organism Part(s). The configuration also has a <code>Split Configuration Name</code> that is set to <code>Part to Part</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/split-config/PartSplit.png" alt="PartSplit">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="useSplitConfig">4.3. Using Split Configuration for a Material Sample</h3>
+<div class="paragraph">
+<p>To use a Split Configuration, the user must access the material sample they wish to split.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the DINA Homepage, click on the <code>Material Samples</code> option under the Collection submenu.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/material-sample/Homepage.png" alt="Homepage">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Search for and click on the material sample the user wants to use the Split Configuration on. If the sample has not been created yet, please refer to the <a href="#createSample">Creating Material Sample(s) Section</a> of the guide.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Once the user is in the sample&#8217;s view page, click on the <code>Split▾</code> drop-down button and select which Split Configuration the user wants to use. After doing so, click on <code>Split</code> button below it.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/split-config/Split.png" alt="Split">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Check that all information is to the user&#8217;s desired split. Once the user has done so, click on the <code>Split</code> button on the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/split-config/FinalSplit.png" alt="FinalSplit">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Now all that&#8217;s left to do is edit the Material Samples generated through the split. This step is similar to the creation of material samples as in the <a href="#createSample">Creating Material Sample(s) Section</a> - Step 3 and onwards.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="6">
+<li>
+<p>Once everything has been done, click on the <code>Save All</code> button at the top right corner of the page.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/split-config/SaveAll.png" alt="SaveAll">
+</div>
+</div>
+<div class="paragraph">
+<p>This process makes child samples with the intended sample type configured by the user. This process can be repeated for the child samples resulting to their own child samples as long as there is a Split Configuration with the appropriate Material Sample Type.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/split-config/Result.png" alt="Result">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="projects">5. Projects</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#project">Project</a> usually links to the organizational definition of a project where an objective, scope, resources, and deliverables are defined.</p>
 </div>
 <div class="sect2">
-<h3 id="createProject">4.1. Creating a Project</h3>
+<h3 id="createProject">5.1. Creating a Project</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -908,7 +1099,7 @@ If you wish to edit, see the changes, or delete the project, you can do so throu
 </div>
 </div>
 <div class="sect2">
-<h3 id="linkSampleToProject">4.2. Linking a Material Sample to a Project</h3>
+<h3 id="linkSampleToProject">5.2. Linking a Material Sample to a Project</h3>
 <div class="paragraph">
 <p>If the user has not linked a sample to a Project when creating it, they can go back to the created sample and link the Project by editing it.</p>
 </div>
@@ -983,13 +1174,13 @@ If you wish to edit, see the changes, or delete the project, you can do so throu
 </div>
 </div>
 <div class="sect1">
-<h2 id="storageUnits">5. Storage Unit Types and Storage Units</h2>
+<h2 id="storageUnits">6. Storage Unit Types and Storage Units</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#storage-unit-type">Storage Unit Type</a> is a generic classification for a storage object. <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#storage-unit">Storage Units</a> can be of different types, such as a freezer, a shelf, or a room. Each storage unit can contain other storage units, forming a tree-like hierarchy.</p>
 </div>
 <div class="sect2">
-<h3 id="createStorageUnitType">5.1. Creating a Storage Unit Type</h3>
+<h3 id="createStorageUnitType">6.1. Creating a Storage Unit Type</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1040,7 +1231,7 @@ It is mandatory to name your Storage Unit Type.
 </div>
 </div>
 <div class="sect2">
-<h3 id="createStorageUnit">5.2. Creating a Storage Unit</h3>
+<h3 id="createStorageUnit">6.2. Creating a Storage Unit</h3>
 <div class="paragraph">
 <p>Once the appropriate Storage Unit Type is created, we can now create a Storage Unit.</p>
 </div>
@@ -1126,7 +1317,7 @@ If you wish to edit, see the changes, or delete the storage, you can do so throu
 </div>
 </div>
 <div class="sect2">
-<h3 id="linkSampleToUnit">5.3. Linking a Material Sample to a Storage Unit</h3>
+<h3 id="linkSampleToUnit">6.3. Linking a Material Sample to a Storage Unit</h3>
 <div class="paragraph">
 <p>If the user has not linked a sample to a Storage Unit when creating it, they can go back to the created sample and link the Storage Unit by editing it.</p>
 </div>
@@ -1218,13 +1409,13 @@ If you wish to edit, see the changes, or delete the storage, you can do so throu
 </div>
 </div>
 <div class="sect1">
-<h2 id="bulkEditing">6. Bulk Editing</h2>
+<h2 id="bulkEditing">7. Bulk Editing</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Bulk editing allows you to edit multiple samples at once. This can be useful when you need to update a field for multiple records. For example, you can update the collection linked to multiple material samples at once.</p>
 </div>
 <div class="sect2">
-<h3 id="_edit_multiple_samples_at_once">6.1. Edit Multiple Samples at Once</h3>
+<h3 id="_edit_multiple_samples_at_once">7.1. Edit Multiple Samples at Once</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1283,13 +1474,13 @@ The user can also edit the fields of each sample individually by clicking the Sa
 </div>
 </div>
 <div class="sect1">
-<h2 id="workbookUpload">7. Workbook Uploader</h2>
+<h2 id="workbookUpload">8. Workbook Uploader</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Workbook Uploader feature in DINA allows users to upload sample data in bulk through an Excel sheet to the system. This feature is especially useful when users have a large amount of data to upload, as it saves time and effort compared to manual data entry.</p>
 </div>
 <div class="sect2">
-<h3 id="fileFormats">7.1. Supported File Formats</h3>
+<h3 id="fileFormats">8.1. Supported File Formats</h3>
 <div class="paragraph">
 <p>Before using the Workbook Uploader make sure that the file to be uploaded has one of the following file formats:</p>
 </div>
@@ -1305,7 +1496,7 @@ The user can also edit the fields of each sample individually by clicking the Sa
 </div>
 </div>
 <div class="sect2">
-<h3 id="uploadingData">7.2. Uploading Data</h3>
+<h3 id="uploadingData">8.2. Uploading Data</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1437,13 +1628,13 @@ This may take some time depending on how many samples are being uploaded.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="persons">8. Persons</h2>
+<h2 id="persons">9. Persons</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#person">Person</a> is a definitive and canonical representation of a human in DINA. In this context, we will be linking <code>Material Samples</code> to <code>Persons</code> as <code>Collectors</code>.</p>
 </div>
 <div class="sect2">
-<h3 id="inputPerson">8.1. Inputting a Person</h3>
+<h3 id="inputPerson">9.1. Inputting a Person</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1514,7 +1705,7 @@ If you wish to edit or delete the person, you can do so through the buttons on t
 </div>
 </div>
 <div class="sect2">
-<h3 id="linkSampletoCollector">8.2. Linking a Material Sample to a Collector</h3>
+<h3 id="linkSampletoCollector">9.2. Linking a Material Sample to a Collector</h3>
 <div class="paragraph">
 <p>If the user has not linked a sample to a Collector when creating it, they can go back to the created sample and link the Collector by editing it.</p>
 </div>
@@ -1613,13 +1804,13 @@ If the Collector is not found or not yet inputted into DINA, the user can also c
 </div>
 </div>
 <div class="sect1">
-<h2 id="transactions">9. Transactions</h2>
+<h2 id="transactions">10. Transactions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A Transaction is an entity containing details about the exchange or transport of Material Samples from one lab/person to another.</p>
 </div>
 <div class="sect2">
-<h3 id="createTransaction">9.1. Creating a Transaction</h3>
+<h3 id="createTransaction">10.1. Creating a Transaction</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1701,7 +1892,7 @@ If you wish to edit, see the changes, or delete the transaction, you can do so t
 </div>
 </div>
 <div class="sect1">
-<h2 id="storeObj">10. Storing an Object</h2>
+<h2 id="storeObj">11. Storing an Object</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In DINA, users are able to upload files which can be linked to samples and collections. This can be done through the Object Store. Examples of files that may be uploaded are <code>pictures</code> related to samples, <code>sequencing files</code>, <code>.txt files</code>, <code>word documents</code>, etc.</p>
@@ -1710,7 +1901,7 @@ If you wish to edit, see the changes, or delete the transaction, you can do so t
 <p>There are 2 pathways to store an object to DINA and link it to a Material Sample.</p>
 </div>
 <div class="sect2">
-<h3 id="uploadFirst">10.1. Upload through the DINA Homepage</h3>
+<h3 id="uploadFirst">11.1. Upload through the DINA Homepage</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1828,7 +2019,7 @@ If you wish to edit, see the changes, or delete the transaction, you can do so t
 </div>
 </div>
 <div class="sect2">
-<h3 id="uploadDirect">10.2. Upload on Material Sample or Collecting Event Directly</h3>
+<h3 id="uploadDirect">11.2. Upload on Material Sample or Collecting Event Directly</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1931,13 +2122,13 @@ The Steps 5-7 will be very similar to uploading an object as in <a href="#upload
 </div>
 </div>
 <div class="sect1">
-<h2 id="bulkLinking">11. Bulk Linking Stored Objects to a Sample</h2>
+<h2 id="bulkLinking">12. Bulk Linking Stored Objects to a Sample</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Bulk linking is a feature that allows users to link multiple stored objects to a sample in a single action. This feature is useful when you have multiple stored objects that need to be linked to a sample.</p>
 </div>
 <div class="sect2">
-<h3 id="_link_multiple_stored_objects_to_a_sample">11.1. Link Multiple Stored Objects to a Sample</h3>
+<h3 id="_link_multiple_stored_objects_to_a_sample">12.1. Link Multiple Stored Objects to a Sample</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2052,7 +2243,7 @@ For our puposes, we will select multiple stored objects already uploaded to link
 </div>
 </div>
 <div class="sect1">
-<h2 id="controlledVocab">12. Controlled Vocabulary</h2>
+<h2 id="controlledVocab">13. Controlled Vocabulary</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In DINA, some users with appropriate permissions will be able to create Controlled Vocabulary objects referring to terminology or processes that are commonly used in their practice.</p>
@@ -2081,7 +2272,7 @@ For our puposes, we will select multiple stored objects already uploaded to link
 </dl>
 </div>
 <div class="sect2">
-<h3 id="createVocab">12.1. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</h3>
+<h3 id="createVocab">13.1. Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2162,7 +2353,7 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 </div>
 </div>
 <div class="sect1">
-<h2 id="managedAttr">13. Managed Attributes</h2>
+<h2 id="managedAttr">14. Managed Attributes</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Managed attributes are attributes that can be created and used by the users on-demand to be used used to track data that is not common enough to be captured in a regular field. (see <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#managed_attributes">DINA Glossary - Managed Attributes</a>)</p>
@@ -2187,7 +2378,7 @@ If you wish to edit, see the changes, or delete the created object, you can do s
 </dl>
 </div>
 <div class="sect2">
-<h3 id="createAttr">13.1. Creating Managed Attributes</h3>
+<h3 id="createAttr">14.1. Creating Managed Attributes</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2271,158 +2462,10 @@ If you wish to edit or delete the created attribute, you can do so through the b
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="splitConfig">14. Split Configuration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Split Configurations enable you to configure how Material Sample Splits are automatically named and under what conditions they can be used. For more information about Split Confiigurations, please refer to <a href="https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#split-configuration">DINA Concepts and Glossary - Split Configuration</a>.</p>
-</div>
-<div class="sect2">
-<h3 id="createSplitConfig">14.1. Creating a Split Configuration</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>In the DINA Homepage, click on <code>Split Configurations</code> under the Configuration submenu.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="images/split-config/Homepage.png" alt="Homepage">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
-<li>
-<p>In the Split Configurations page, click on the <code>Create new</code> button on the top right corner of the page.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="images/split-config/CreateNew.png" alt="CreateNew">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="3">
-<li>
-<p>In the Add Split Configuration page, enter all configurations the user wants to in regards to splitting the material samples.</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-When creating Split Configurations, remember to choose options for the following required fields:<br>
-• <code>Split Configuration Name</code><br>
-• <code>Material Sample Type</code><br>
-• <code>Strategy</code><br>
-• <code>Generation Options</code>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="4">
-<li>
-<p>Once the user has set the configuration&#8217;s name, material sample type, and sample generation configurations, click the <code>Save</code> button on the top right corner of the page. This will make the configuration accessible when doing a Material Sample Split.<br>
-<br>
-Also note that the configuration can be edited at any time.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="images/split-config/Save.png" alt="Save">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="useSplitConfig">14.2. Using Split Configuration for a Material Sample</h3>
-<div class="paragraph">
-<p>To use a Split Configuration, the user must access the material sample they wish to split.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>From the DINA Homepage, click on the <code>Material Samples</code> option under the Collection submenu.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="images/material-sample/Homepage.png" alt="Homepage">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
-<li>
-<p>Search for and click on the material sample the user wants to use the Split Configuration on. If the sample has not been created yet, please refer to the <a href="#createSample">Creating Material Sample(s) Section</a> of the guide.</p>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="3">
-<li>
-<p>Once the user is in the sample&#8217;s view page, click on the <code>Split▾</code> drop-down button and select which Split Configuration the user wants to use. After doing so, click on <code>Split</code> button below it.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="images/split-config/Split.png" alt="Split">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="4">
-<li>
-<p>Check that all information is to the user&#8217;s desired split. Once the user has done so, click on the <code>Split</code> button on the top right corner of the page.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="images/split-config/FinalSplit.png" alt="FinalSplit">
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="5">
-<li>
-<p>Now all that&#8217;s left to do is edit the Material Samples generated through the split. This step is similar to the creation of material samples as in the <a href="#createSample">Creating Material Sample(s) Section</a> - Step 3 and onwards.</p>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="6">
-<li>
-<p>Once everything has been done, click on the <code>Save All</code> button at the top right corner of the page.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="images/split-config/SaveAll.png" alt="SaveAll">
-</div>
-</div>
-<div class="paragraph">
-<p>This process makes child samples with the intended sample type configured by the user. This process can be repeated for the child samples resulting to their own child samples as long as there is a Split Configuration with the appropriate Material Sample Type.</p>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="images/split-config/Result.png" alt="Result">
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-26 20:03:08 UTC
+Last updated 2025-04-22 17:44:06 UTC
 </div>
 </div>
 </body>
