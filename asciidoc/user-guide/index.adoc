@@ -13,6 +13,8 @@ include::collection.adoc[]
 
 include::collecting_events.adoc[]
 
+include::split_config.adoc[]
+
 include::projects.adoc[]
 
 include::storage_units.adoc[]
@@ -32,5 +34,3 @@ include::bulk_linking.adoc[]
 include::controlled_vocabulary.adoc[]
 
 include::managed_attributes.adoc[]
-
-include::split_config.adoc[]
