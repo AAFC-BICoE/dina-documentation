@@ -1,0 +1,41 @@
+[id=controlledVocab]
+== Controlled Vocabulary
+In DINA, some users with appropriate permissions will be able to create Controlled Vocabulary objects referring to terminology or processes that are commonly used in their practice.
+
+Here are some examples of Controlled Vocabulary objects that can be created:
+
+Collection Methods:: Method used during a Collecting Event. (see https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#collection-method[DINA Glossary - Collection Method])
+Preparation Methods:: A noun representing the process used in preparing the material sample. (see https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#preparation-method[DINA Glossary - Preparation Method])
+Preparation Types:: Description of the preservation type of the material sample. (see https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#preparation-type[DINA Glossary - Preparation Type])
+Protocol:: Predefined written procedural method in the design and implementation of experiments. (see https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#_protocol[DINA Glossary - Protocol])
+
+[id=createVocab]
+=== Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols
+. In the DINA Homepage, you can find links for `Collection Methods`, `Preparation Methods`, `Preparation Types`, and `Protocols` under the Controlled Vocabulary submenu. Click on which option you would like to create.
+
+image::controlled-vocabulary/Homepage.png[align="center"]
+
+[start=2]
+. After choosing, click on the `Create New` button on the top right corner of the page.
+
+image::controlled-vocabulary/CreateNew.png[align="center"]
+
+[start=3]
+. Fill in the `Name` and `Description` (in English and/or French) of the method/type/protocol to be added.
+
+WARNING: It is mandatory to name the object.
+
+Also note that in creating a new Protocol, the user can also add the `Protocol Type`, `Protocol Data`, and add `Protocol Attachments` which are not fields in the other Controlled Vocabulary objects.
+
+image::controlled-vocabulary/AddProtocol.png[align="center"]
+
+[start=4]
+. Check that the information is correct. Note that this can be edited at any time. +
+If you wish to edit, see the changes, or delete the created object, you can do so through the buttons on the top right corner of the page.
+
+image::EditRevDelete.png[align="center"]
+
+[start=5]
+. The created object can now be accessed in the list page.
+
+image::controlled-vocabulary/ListPage.png[align="center"]

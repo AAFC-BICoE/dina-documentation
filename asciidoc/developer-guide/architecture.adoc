@@ -1,3 +1,7 @@
 = High Level Architecture
 
 image::DINA-AAFC_High_Level_Architecture.drawio.png[]
+
+= High Level Design
+
+image::dina_data_model.drawio.png[]

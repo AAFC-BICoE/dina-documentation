@@ -1,0 +1,26 @@
+:sectnums:
+:imagesdir: images
+
+= DINA Concepts & Glossary
+:toclevels: 3
+:leveloffset: 1
+:icons: font
+
+NOTE: To search the User Guide, press Ctrl+f and enter a keyword.
+
+include::glossary.adoc[Glossary]
+
+include::general_concepts.adoc[]
+
+include::collection_component.adoc[]
+
+include::storage_component.adoc[]
+
+include::object_store_component.adoc[]
+
+include::sequence_component.adoc[]
+
+include::workbook_upload.adoc[]
+
+include::search.adoc[]
+

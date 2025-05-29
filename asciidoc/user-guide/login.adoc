@@ -1,0 +1,7 @@
+[id=login]
+== Logging In
+Once the user has been granted access to the website, use the credentials given to the user by your manager or administrator.
+
+Depending on your organization, you may be redirected to an External Identity Provider (e.g. ESAS) which you will be asked to link your account to.
+
+image::SignIn.png[align="center"]

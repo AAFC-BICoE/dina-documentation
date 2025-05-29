@@ -1,20 +1,36 @@
 :sectnums:
-
-= DINA User Guide
-:toclevels: 3
-:leveloffset: 1
+:imagesdir: images
+:toc: left
 :icons: font
 
-NOTE: To search the User Guide, press Ctrl+f and enter a keyword.
+= DINA User Guide
 
-include::glossary.adoc[Glossary]
+NOTE: To search the User Guide, press Ctrl+F and enter a keyword.
 
-include::general_concepts.adoc[]
+include::login.adoc[]
 
-include::collection_component.adoc[]
+include::collection.adoc[]
 
-include::storage_component.adoc[]
+include::collecting_events.adoc[]
 
-include::object_store_component.adoc[]
+include::split_config.adoc[]
 
-include::sequence_component.adoc[]
+include::projects.adoc[]
+
+include::storage_units.adoc[]
+
+include::bulk_editing.adoc[]
+
+include::workbook_upload.adoc[]
+
+include::persons.adoc[]
+
+include::transactions.adoc[]
+
+include::object_store.adoc[]
+
+include::bulk_linking.adoc[]
+
+include::controlled_vocabulary.adoc[]
+
+include::managed_attributes.adoc[]

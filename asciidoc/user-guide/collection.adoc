@@ -1,0 +1,30 @@
+[id=collection]
+== Collection
+A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#collection[Collection] represents the top entity that can contain material-sample.
+
+[id=createCollection]
+=== Creating a Collection
+. On the left side of the DINA Homepage, click the `Collection` option under the Collection submenu
+
+image::collection/Homepage.png[align="center"]
+
+[start=2]
+. In the Collection page, click the `Create new` button.
+
+image::collection/CreateNew.png[align="center"]
+
+[start=3]
+. In the Add Collection page, add any relevant information about your Collection. After doing so, click the `Save` button on the top right corner of the page.
+
+WARNING: It is mandatory to name your Collection.
+
+[start=4]
+. Check that the information is correct. Note that this can be edited at any time. +
+If you wish to edit, see the changes, or delete the collection, you can do so through the buttons on the top right corner of the page.
+
+image::EditRevDelete.png[align="center"]
+
+[start=5]
+. The created Collection can now be accessed through the list page.
+
+image::collection/ListPage.png[align="center"]

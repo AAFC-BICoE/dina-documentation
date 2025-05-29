@@ -59,20 +59,24 @@ DINA has some fields that are prefixed with the word "verbatim". Verbatim is def
 
 All object in DINA are identified with UUID (universally unique identifier). While this type of identifier is not considered human-readable (123e4567-e89b-12d3-a456-426614174000) it has the property to be virtually universally unique (chances of duplicates are close enough to zero to be considered negligible). Objects can be uniquely identifed even outside the DINA system.
 
-[[primary_id]]
-== Primary ID
-
-Preferably unique identifier set by user. Non-unique identifiers are allowed and will require user to override duplication alert "Allowing Duplicate". This should *only* be done for historical bookkeeping purposes.
-
-[[next_identifier]]
-=== Next Available Identifier
-
-Unique Primary ID creation by system for a material by concatenating the associated Collection string with the lowest unused integer. Ticking off the box will block manual <<primary_id>> entry.
-
 [[barcode]]
 == Barcode
 
 Machine readable code output that would be obtained from a scanning gun. Can be used as another means of searching the database.
+
+[[date-time]]
+== Date/Time
+
+In the context of DINA, date/time can organized in 4 categories:
+
+LocalDate::
+  Local date represents a date, without time, that is local (no timezone information). Example: Date of employement
+LocalDateTime::
+  Local date/time represents a date, with time, that is local (no timezone information). Example: Physical store inauguration date/time
+DateTime::
+  Date/time that includes timezone information. Example: Exact date/time a record was created.
+DateTimeOptionalTz::
+  Date/time that may or may not include timezone information.
 
 [[form_template]]
 == Form Template

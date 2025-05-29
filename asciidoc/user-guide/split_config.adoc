@@ -1,0 +1,80 @@
+[id=splitConfig]
+== Split Configuration
+Split Configurations enable you to configure how Material Sample Splits are automatically named and under what conditions they can be used. For more information about Split Confiigurations, please refer to https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#split-configuration[DINA Concepts and Glossary - Split Configuration].
+
+[id=createSplitConfig]
+=== Creating a Split Configuration
+
+. In the DINA Homepage, click on `Split Configurations` under the Configuration submenu.
+
+image::split-config/Homepage.png[align="center"]
+
+[start=2]
+. In the Split Configurations page, click on the `Create new` button on the top right corner of the page.
+
+image::split-config/CreateNew.png[align="center"]
+
+[start=3]
+. In the Add Split Configuration page, enter all configurations the user wants to in regards to splitting the material samples.
+
+WARNING: When creating Split Configurations, remember to choose options for the following required fields: + 
+• `Split Configuration Name` +
+• `Material Sample Type` +
+• `Strategy` +
+• `Generation Options`
+
+[start=4]
+. Once the user has set the configuration's name, material sample type, and sample generation configurations, click the `Save` button on the top right corner of the page. This will make the configuration accessible when doing a Material Sample Split. +
+ +
+Also note that the configuration can be edited at any time.
+
+image::split-config/Save.png[align="center"]
+
+[id=splitConfigExamples]
+=== Split Configuration Examples
+In the images below, the user can see Split Configurations that have been created. Each example would show a configuration for different use cases. Note that the user is not limited to only these configurations and can create their own.
+
+- Example 1: A Split Configuration that generates samples from a Whole Organism parent to Organism Part child samples/subsamples.The configuration also has a `Split Configuration Name` that is set to `Normal Split`.
+
+image::split-config/NormalSplit.png[align="center"]
+
+- Example 2: A Split Configuration that generates samples from an Organism Part parent sample to Molecular child samples/subsamples. The configuration also has a `Split Configuration Name` that is set to `Molecular Split`.
+
+image::split-config/MolecularSplit.png[align="center"]
+
+- Example 3: A Split Configuration that generates samples from an Organism Part to another or other Organism Part(s). The configuration also has a `Split Configuration Name` that is set to `Part to Part`.
+
+image::split-config/PartSplit.png[align="center"]
+
+[id=useSplitConfig]
+=== Using Split Configuration for a Material Sample
+To use a Split Configuration, the user must access the material sample they wish to split.
+
+. From the DINA Homepage, click on the `Material Samples` option under the Collection submenu.
+
+image::material-sample/Homepage.png[align="center"]
+
+[start=2]
+. Search for and click on the material sample the user wants to use the Split Configuration on. If the sample has not been created yet, please refer to the link:#createSample[Creating Material Sample(s) Section] of the guide.
+
+[start=3]
+. Once the user is in the sample's view page, click on the `Split▾` drop-down button and select which Split Configuration the user wants to use. After doing so, click on `Split` button below it.
+
+image::split-config/Split.png[align="center"]
+
+[start=4]
+. Check that all information is to the user's desired split. Once the user has done so, click on the `Split` button on the top right corner of the page.
+
+image::split-config/FinalSplit.png[align="center"]
+
+[start=5]
+. Now all that's left to do is edit the Material Samples generated through the split. This step is similar to the creation of material samples as in the link:#createSample[Creating Material Sample(s) Section] - Step 3 and onwards.
+
+[start=6]
+. Once everything has been done, click on the `Save All` button at the top right corner of the page.
+
+image::split-config/SaveAll.png[align="center"]
+
+This process makes child samples with the intended sample type configured by the user. This process can be repeated for the child samples resulting to their own child samples as long as there is a Split Configuration with the appropriate Material Sample Type.
+
+image::split-config/Result.png[align="center"]

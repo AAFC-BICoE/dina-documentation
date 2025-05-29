@@ -1,0 +1,68 @@
+[id=persons]
+== Persons
+A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#person[Person] is a definitive and canonical representation of a human in DINA. In this context, we will be linking `Material Samples` to `Persons` as `Collectors`.
+
+[id=inputPerson]
+=== Inputting a Person
+. In the DINA Homepage, under the Agents submenu, click on the `Persons` option.
+
+image::persons/Homepage.png[align="center"]
+
+[start=2]
+. In the Persons page, click on the `Create New` button.
+
+image::persons/CreateNew.png[align="center"]
+
+[start=3]
+. In the Add Person page, add any relevant information about your Collection. After doing so, click the `Save` button on the top right corner of the page.
+
+WARNING: It is mandatory to put a Display Name.
+
+[start=4]
+. Check that the information is correct. Note that this can be edited at any time. +
+If you wish to edit or delete the person, you can do so through the buttons on the top right corner of the page.
+
+image::EditDelete.png[align="center"]
+
+[start=5]
+. The created Person can now be seen through the Persons page.
+
+image::persons/ListPage.png[align="center"]
+
+[id=linkSampletoCollector]
+=== Linking a Material Sample to a Collector
+If the user has not linked a sample to a Collector when creating it, they can go back to the created sample and link the Collector by editing it.
+
+. To access the sample from the DINA Homepage, click on `Material Samples` from the Collection submenu
+
+image::material-sample/Homepage.png[align="center"]
+
+[start=2]
+. If not immediately seen in the list page, the user can search for the sample using queries in the Material Samples page.
+
+image::material-sample/Search.png[align="center"]
+
+[start=3]
+. The user will then be given results based on the search parameters they have given. Click on the sample you wish to link to an event.
+
+image::material-sample/SearchResult.png[align="center"]
+
+[start=4]
+. In the chosen sample's view page, click on the `Edit` button.
+
+image::material-sample/Edit.png[align="center"]
+
+[start=5]
+. Activate the `Collecting Event` component by clicking on the button corresponding to it.
+
+image::collecting-events/Activate.png[align="center"]
+
+[start=6]
+. In the `Collecting Event` component, the user can find the `Collecting Agents` subsection where they can link the sample to a Collector by selecting them in the dropdown menu of the appropriate field.
+
+NOTE: If the Collector is not found or not yet inputted into DINA, the user can also create a new Collector/Person by clicking on the `Add New Person` option in the `Collectors` dropdown.
+
+image::persons/Collectors.png[align="center"]
+
+[start=7]
+. Once done, click on the `Save` button on the right hand corner of the page. This will successfully link a `Material Sample` to the intended `Collector` and will be reflected in the sample's and the collecting event's view pages.

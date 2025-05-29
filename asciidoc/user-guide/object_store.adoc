@@ -1,0 +1,94 @@
+[id=storeObj]
+== Storing an Object
+In DINA, users are able to upload files which can be linked to samples and collections. This can be done through the Object Store. Examples of files that may be uploaded are `pictures` related to samples, `sequencing files`, `.txt files`, `word documents`, etc.
+
+There are 2 pathways to store an object to DINA and link it to a Material Sample.
+
+[id=uploadFirst]
+=== Upload through the DINA Homepage
+
+. In the DINA Homepage, click on `Upload Files` under the Object Store submenu
+
+image::object-store/Homepage.png[align="center"]
+
+[start=2]
+. In the Upload Files page, "drag and drop" the object from your Desktop to the designated area or click the area to search for the object through a dialog box.
+
+image::object-store/Upload.png[align="center"]
+
+[start=3]
+. Once the object has been chosen, click the `Save` button that will appear on the bottom right corner of the designated area.
+
+image::object-store/Save.png[align="center"]
+
+[start=4]
+. The user will now be able to input data regarding the file in the Add Metadata page. Once done, click the `Save` button at the top right corner of the page. The user should now be able to access the uploaded file.
+
+[start=5]
+. Head back to the DINA Homepage and click on `Material Samples` under the Collection submenu.
+
+image::material-sample/Homepage.png[align="center"]
+
+[start=6]
+. In the Material Samples List page, search for and click the sample the user would like to link the object to.
+
+image::object-store/1-ListPage.png[align="center"]
+
+[start=7]
+. In the sample's view page, click on the `Edit` button.
+
+image::object-store/Edit.png[align="center"]
+
+[start=8]
+. Scroll to the Material Sample Attachments at the very bottom of the sample's Edit Page or click on the `Material Sample Attachments` link on the left side of the page. Once there, click on the `Add Attachments` button in the Material Sample Attachments section.
+
+image::object-store/AddAttachments.png[align="center"]
+
+[start=9]
+. In the Attachments page, click on the `Attach Existing Objects` option and choose the object(s) the user would like to link to the sample and click the `Attach Selected` button on the right hand side of the page.
+
+image::object-store/Attachments.png[align="center"]
+
+[start=10]
+. The attachment(s) should now be seen in the Material Sample Attachments section of the sample's Edit Page. Once the user has confirmed that everything is correct, click the `Save` button on the top right corner of the page.
+
+image::object-store/LastSave.png[align="center"]
+
+[id=uploadDirect]
+=== Upload on Material Sample or Collecting Event Directly
+. In the DINA Homepage, click on `Material Samples` under the Collection submenu.
+
+image::material-sample/Homepage.png[align="center"]
+
+[start=2]
+. In the Material Samples List Page, click on the sample the user would like to link an object to.
+
+image::object-store/2-ListPage.png[align="center"]
+
+[start=3]
+. Once in the sample's view page, click on the `Edit` button on the top right corner of the page.
+
+image::object-store/ROPage.png[align="center"]
+
+[start=4]
+. Scroll to the Material Sample Attachments at the very bottom of the sample's Edit Page or click on the `Material Sample Attachments` link on the left side of the page. Once there, click on the `Add Attachments` button in the Material Sample Attachments section.
+
+image::object-store/AddAttachments.png[align="center"]
+
+TIP: The Steps 5-7 will be very similar to uploading an object as in link:#uploadFirst[Upload through the DINA Homepage Section - Steps 2-4]
+
+[start=5]
+. In the Attachments page, either click on the designated area to search for the object using a dialog box or "drag and drop" a file from your Desktop to the designated area. The user can add however many files they wish.
+
+[start=6]
+. Once you have added all the files to be linked, click on the `Save` button that will appear on the bottom right corner of the designatede area.
+
+image::object-store/SaveUpload.png[align="center"]
+
+[start=7]
+. Fill the relevant data for the uploaded file(s) and click the `Save All` button on top of the page.
+
+[start=8]
+. The attachment(s) should now be seen in the Material Sample Attachments section of the sample's Edit Page. Once the user has confirmed that everything is correct, click the `Save` button on the top right corner of the page.
+
+image::object-store/LastSave.png[align="center"]
