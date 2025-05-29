@@ -467,7 +467,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#field_extensions">2.10. Field extensions</a></li>
 <li><a href="#managed_attributes">2.11. Managed Attributes</a></li>
-<li><a href="#material_sample_attachement">2.12. Material Sample Attachements</a></li>
+<li><a href="#material_sample_attachment">2.12. Material Sample Attachments</a></li>
+<li><a href="#date_search">2.13. Date Search</a></li>
 </ul>
 </li>
 <li><a href="#collection-component">3. Collection Component</a>
@@ -833,9 +834,31 @@ Objects can only have 1 owner.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="material_sample_attachement">2.12. Material Sample Attachements</h3>
+<h3 id="material_sample_attachment">2.12. Material Sample Attachments</h3>
 <div class="paragraph">
 <p>Attachments refer to <a href="#object-store-component">Object Store Component</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="date_search">2.13. Date Search</h3>
+<div class="paragraph">
+<p>Resources may contain fields of the date type in the format YYYY-MM-DD. These date fields can be used to search for resources with a few different parameters including equals to, before, or after the input date. Some date fields such as Collecting Event Start Event Date Time support partial dates</p>
+</div>
+<div class="paragraph">
+<p>For example, we have 2 material samples as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Material Sample 1 with a Collecting Event with the Start Event Date Time equals 2023-05.</p>
+</li>
+<li>
+<p>Material Sample 2 with a Collecting Event with Start Event Date time equals 2023-05-16.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Then, searching by Collecting Event Start Event Date Time with the parameter Equals and an input value 2023-05 will filter for only Material Sample 1. Searching for 2023-05-16 will only filter for Material Sample 2.</p>
 </div>
 </div>
 </div>
@@ -1508,7 +1531,7 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-04-22 17:44:06 UTC
+Last updated 2025-05-29 16:57:21 UTC
 </div>
 </div>
 </body>
