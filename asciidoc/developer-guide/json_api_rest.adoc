@@ -45,6 +45,7 @@ Supported operators:
 
 * EQ
 * NEQ
+* IN (comma-separated list of values, if the value has a comma, the value can be quoted)
 * GT (for numbers and dates)
 * GE (for numbers and dates)
 * LT (for numbers and dates)
