@@ -56,7 +56,7 @@ Implementation details can be found on https://aafc-bicoe.github.io/dina-base-ap
 
 === RSQL
 
-WARNING: *Deprecated*: Planned for removal
+WARNING: Not Supported on all endpoints
 
 DINA supports https://github.com/jirutka/rsql-parser[RSQL (REST query language)] for more complex filter queries.
 
