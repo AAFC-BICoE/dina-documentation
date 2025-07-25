@@ -46,6 +46,7 @@ Supported operators:
 * EQ
 * NEQ
 * IN (comma-separated list of values, if the value has a comma, the value can be quoted)
+* LIKE ('%' as a wildcard for zero or more characters)
 * GT (for numbers and dates)
 * GE (for numbers and dates)
 * LT (for numbers and dates)
@@ -54,6 +55,8 @@ Supported operators:
 Implementation details can be found on https://aafc-bicoe.github.io/dina-base-api/#_filtering[dina-base documentation].
 
 === RSQL
+
+WARNING: *Deprecated*: Planned for removal
 
 DINA supports https://github.com/jirutka/rsql-parser[RSQL (REST query language)] for more complex filter queries.
 
