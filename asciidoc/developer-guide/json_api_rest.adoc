@@ -54,9 +54,18 @@ Supported operators:
 
 Implementation details can be found on https://aafc-bicoe.github.io/dina-base-api/#_filtering[dina-base documentation].
 
+=== FIQL
+
+The https://datatracker.ietf.org/doc/html/draft-nottingham-atompub-fiql-00[Feed Item Query Language] is a simple but flexible, URI-friendly syntax for expressing filters across the entries in a Web feed. 
+Examples and details can be found on  Apache CXF https://cxf.apache.org/docs/jax-rs-search.html#JAXRSSearch-FeedItemQueryLanguage[JAX-RS Search].
+
+----
+localhost:8080/api/region?fiql=name=='12S',name=='142'
+----
+
 === RSQL
 
-WARNING: Not Supported on all endpoints
+WARNING: Deprecated. Replaced by FIQL.
 
 DINA supports https://github.com/jirutka/rsql-parser[RSQL (REST query language)] for more complex filter queries.
 
