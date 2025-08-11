@@ -60,7 +60,7 @@ The https://datatracker.ietf.org/doc/html/draft-nottingham-atompub-fiql-00[Feed 
 Examples and details can be found on  Apache CXF https://cxf.apache.org/docs/jax-rs-search.html#JAXRSSearch-FeedItemQueryLanguage[JAX-RS Search].
 
 ----
-localhost:8080/api/region?fiql=name=='12S',name=='142'
+localhost:8080/api/region?fiql=name==12S,name==142
 ----
 
 === RSQL
