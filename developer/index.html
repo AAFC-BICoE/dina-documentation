@@ -459,7 +459,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_filtering">6.2. Filtering</a>
 <ul class="sectlevel3">
 <li><a href="#_simple_filters">6.2.1. Simple Filters</a></li>
-<li><a href="#_rsql">6.2.2. RSQL</a></li>
+<li><a href="#_fiql">6.2.2. FIQL</a></li>
+<li><a href="#_rsql">6.2.3. RSQL</a></li>
 </ul>
 </li>
 <li><a href="#_pagination">6.3. Pagination</a></li>
@@ -730,7 +731,19 @@ That would let us use the native role-based features of Spring Security as an in
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rsql">6.2.2. RSQL</h4>
+<h4 id="_fiql">6.2.2. FIQL</h4>
+<div class="paragraph">
+<p>The <a href="https://datatracker.ietf.org/doc/html/draft-nottingham-atompub-fiql-00">Feed Item Query Language</a> is a simple but flexible, URI-friendly syntax for expressing filters across the entries in a Web feed.
+Examples and details can be found on  Apache CXF <a href="https://cxf.apache.org/docs/jax-rs-search.html#JAXRSSearch-FeedItemQueryLanguage">JAX-RS Search</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>localhost:8080/api/region?fiql=name=='12S',name=='142'</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_rsql">6.2.3. RSQL</h4>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -738,7 +751,7 @@ That would let us use the native role-based features of Spring Security as an in
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Not Supported on all endpoints
+Deprecated. Replaced by FIQL.
 </td>
 </tr>
 </table>
@@ -1545,7 +1558,7 @@ Updating index dina_material_sample_index_20241112193452 with alias dina_materia
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-07-25 13:12:19 UTC
+Last updated 2025-08-11 19:33:51 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
