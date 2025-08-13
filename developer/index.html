@@ -474,8 +474,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_crnk_based_operations_deprecated">6.6.4. Crnk Based Operations (Deprecated)</a></li>
 </ul>
 </li>
-<li><a href="#_logging">6.7. Logging</a></li>
-<li><a href="#_dina">6.8. DINA</a></li>
+</ul>
+</li>
+<li><a href="#_logging">7. Logging</a></li>
+<li><a href="#_controlled_vocabulary">8. Controlled Vocabulary</a>
+<ul class="sectlevel2">
+<li><a href="#_vocabulary">8.1. Vocabulary</a></li>
+<li><a href="#_managed_attribute">8.2. Managed Attribute</a></li>
+<li><a href="#_field_extension">8.3. Field Extension</a></li>
+</ul>
+</li>
+<li><a href="#_liquibase">9. Liquibase</a>
+<ul class="sectlevel2">
+<li><a href="#_liquibase_contexts">9.1. Liquibase Contexts</a></li>
+<li><a href="#_liquibase_migration_file_convention">9.2. Liquibase migration file convention</a></li>
+<li><a href="#_run_liquibase_from_maven">9.3. Run Liquibase from Maven</a></li>
+</ul>
+</li>
+<li><a href="#_releasing_a_dina_module">10. Releasing a DINA module</a></li>
+<li><a href="#_postgresql">11. PostgreSQL</a>
+<ul class="sectlevel2">
+<li><a href="#useful_queries">11.1. Useful Queries</a>
+<ul class="sectlevel3">
+<li><a href="#_rename_key_in_jsonb_array">11.1.1. Rename key in jsonb array</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_elasticsearch">12. Elasticsearch</a>
+<ul class="sectlevel2">
+<li><a href="#_update_mapping">12.1. Update Mapping</a></li>
+<li><a href="#_delete_included_field_with_update_by_query">12.2. Delete Included Field with Update By Query</a></li>
 </ul>
 </li>
 </ul>
@@ -1120,144 +1149,285 @@ submit multiple resources linking to each other.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_logging">6.7. Logging</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_logging">7. Logging</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Hibernate</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>logging.level.org.hibernate.SQL: DEBUG
-logging.level.org.hibernate.type.descriptor.sql.BasicBinder: TRACE</pre>
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">logging.level.org.hibernate.SQL: DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder: TRACE</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>DINA</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">logging.level.ca.gc.aafc.dina: DEBUG</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_controlled_vocabulary">8. Controlled Vocabulary</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/Controlled_Vocabulary_Diagram.drawio.png" alt="Controlled Vocabulary Diagram.drawio">
 </div>
 </div>
 <div class="sect2">
-<h3 id="_dina">6.8. DINA</h3>
+<h3 id="_vocabulary">8.1. Vocabulary</h3>
 <div class="paragraph">
-<p>logging.level.ca.gc.aafc.dina: DEBUG</p>
+<p>A Vocabulary represents a single thing/concept. An entry is composed of a <code>name</code>, a <code>term</code> and a <code>multilingualTitle</code> (<code>VocabularyElement</code> interface). They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.</p>
+</div>
+<div class="paragraph">
+<p>Examples of vocabulary are : spatial reference system (SRS), type status, coordinate system &#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_managed_attribute">8.2. Managed Attribute</h3>
+<div class="paragraph">
+<p>A managed attribute also represents a single thing/concept. As opposed to vocabulary, they are user defined and values are loaded from the database.</p>
+</div>
+<div class="paragraph">
+<p>Manage attribute extends vocabulary and adds the attributes <code>key</code>, <code>vocabularyElementType</code>, <code>acceptedValues</code>, and <code>multilingualDescription</code> through the <code>TypedVocabularyElement</code> interface.</p>
+</div>
+<div class="paragraph">
+<p>They are used as semi-structured data where the <code>key</code> is stored with a value on the DINA models that support them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_field_extension">8.3. Field Extension</h3>
+<div class="paragraph">
+<p>Field extension represents a set a terms/concepts that are logicialy grouped. They usualy comes from a standard defined by an external body. The <code>fields</code> of a specific field extension are also implementing the <code>TypedVocabularyElement</code> interface. Field extensions are platform defined and loaded from configuration files.</p>
+</div>
+<div class="paragraph">
+<p>They are used as semi-structured data where the extension, the version and the <code>key</code> are stored with a value on the DINA models that support them.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_liquibase">9. Liquibase</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="http://www.liquibase.org/index.html">Liquibase</a> is used to generate the database and migrate to new versions of the database schema. Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed. When the application starts, any changelogs that have not been executed are executed.</p>
+</div>
+<div class="paragraph">
+<p>Additional information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.liquibase.org/bestpractices.html">Liquibase Best Practices</a></p>
+</li>
+<li>
+<p><a href="https://www.liquibase.org/documentation/changes/add_column.html">Change example: addColumn</a></p>
+</li>
+<li>
+<p><a href="https://www.liquibase.org/documentation/generating_changelogs.html">Adding Liquibase support to an existing database</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_liquibase_contexts">9.1. Liquibase Contexts</h3>
+<div class="paragraph">
+<p>When developing for Dina modules certain data is needed for the application to run properly and to make testing easier. Which is why we separate our database migrations into categories known as contexts. The two main contexts are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>schema-change</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Changes to the schema such as adding new columns, renaming tables, adding new tables.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>sample-data</p>
+<div class="ulist">
+<ul>
+<li>
+<p>sample data for developers, this should not be ran on PROD/UAT since it&#8217;s used for inserting sample data for developers and the data is already in PROD/UAT databases.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For PROD/UAT purposes, the context can be changed by editing the application.yml file which has all of the liquibase configurations. The contexts are a comma separated list of all of the contexts to be performed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_liquibase_migration_file_convention">9.2. Liquibase migration file convention</h3>
+<div class="paragraph">
+<p>The following convention should be followed by all Liquibase database migration files:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Migration scripts live in <code>src/main/resources/db/changelog</code></p>
+</li>
+<li>
+<p>Filename should follow the convention <code>&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;.xml</code> (e.g. <code>2-new_specimen_field_PHAC_containment_level.xml</code>)</p>
+</li>
+<li>
+<p>A new migration file&#8217;s path should be added in an "include" tag of <code>src/main/resources/db/changelog/db.changelog-master.xml</code></p>
+</li>
+<li>
+<p>The context of a <code>changeSet</code> in the migration xml file should always be set (e.g. <code>context="schema-change"</code>)</p>
+</li>
+<li>
+<p>The <code>&lt;id&gt;</code> should use the filename convention without the file extension <code>&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;</code> if the file only includes 1 changeset, otherwise the following convention should be used: <code>&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;-&lt;WHAT_THE_CHANGESET_DOES&gt;</code> (ex: <code>id="11-Implement_new_workflow_entitie-Create_enum_types"</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When merging code to dev, we need to make sure the incremental number is always unique. If we have a duplicate, we should be reassigned a new identifier and update the <code>db.changelog-master.xml</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_run_liquibase_from_maven">9.3. Run Liquibase from Maven</h3>
+<div class="paragraph">
+<p>It may be useful to run Liquibase without running the application. The Liquibase website has an <a href="https://docs.liquibase.com/tools-integrations/maven/workflows/creating-liquibase-projects-with-maven-postgresql.html">example</a> and <a href="https://github.com/AAFC-BICoE/seqdb-api">seqdb-api</a> contains the plugin defition and an example <code>liquibase.properties</code> file.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_releasing_a_dina_module">10. Releasing a DINA module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The process of releasing a dina module is the same for all modules. The CI will automatically build and release a new Docker image to Docker Hub when something is merged
+in the master/main branch.</p>
+</div>
+<div class="paragraph">
+<p>BICoE Docker Hub: <a href="https://hub.docker.com/u/aafcbicoe" class="bare">https://hub.docker.com/u/aafcbicoe</a></p>
+</div>
+<div class="paragraph">
+<p>Java-based API:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From dev branch</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Change the version by running <code>mvn versions:set -DnewVersion=X.X</code> from the root where <code>X.X</code> is the current version minus the <code>-SNAPSHOT</code></p>
+</li>
+<li>
+<p>Add and Push to dev with message like "Prepare version x.x release"</p>
+</li>
+<li>
+<p>Wait for CI to complete</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>From master/main</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Merge dev into master (do NOT use Pull Request)</p>
+</li>
+<li>
+<p>Push to master (it will trigger the deployment Docker Hub)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create a new GitHub release</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The tag should be the version prefixed with v (e.g. v0.19)</p>
+</li>
+<li>
+<p>The title should be the version (e.g. 0.19)</p>
+</li>
+<li>
+<p>Add a Summary of the changes (looks at the previous versions for an example)</p>
+</li>
+<li>
+<p>Publish the Release</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>From dev branch</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Change the version by running <code>mvn versions:set -DnewVersion=X.X-SNAPSHOT</code> from the root where X.X is the next increment in the version number</p>
+</li>
+<li>
+<p>Add and Push to dev with message like "Prepare next development version"</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>DINA-UI:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From dev branch</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Edit the the file <code>packages/dina-ui/package.json</code> and set the <code>version</code> value</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Same as the Java-based API except the second <code>From dev branch</code> can be skipped since the ui is not using development version.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_postgresql">11. PostgreSQL</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="useful_queries">11.1. Useful Queries</h3>
+<div class="sect3">
+<h4 id="_rename_key_in_jsonb_array">11.1.1. Rename key in jsonb array</h4>
+<div class="paragraph">
+<p>The example is not aiming at perfomance.</p>
+</div>
+<div class="paragraph">
+<p>Considering the following table :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>= Controlled Vocabulary
-
-image::Controlled_Vocabulary_Diagram.drawio.png[]
-
-
-
-== Vocabulary
-
-A Vocabulary represents a single thing/concept. An entry is composed of a `name`, a `term` and a `multilingualTitle` (`VocabularyElement` interface). They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.
-
-Examples of vocabulary are : spatial reference system (SRS), type status, coordinate system ...
-
-== Managed Attribute
-
-A managed attribute also represents a single thing/concept. As opposed to vocabulary, they are user defined and values are loaded from the database.
-
-Manage attribute extends vocabulary and adds the attributes `key`, `vocabularyElementType`, `acceptedValues`, and `multilingualDescription` through the `TypedVocabularyElement` interface.
-
-They are used as semi-structured data where the `key` is stored with a value on the DINA models that support them.
-
-== Field Extension
-
-Field extension represents a set a terms/concepts that are logicialy grouped. They usualy comes from a standard defined by an external body. The `fields` of a specific field extension are also implementing the `TypedVocabularyElement` interface. Field extensions are platform defined and loaded from configuration files.
-
-They are used as semi-structured data where the extension, the version and the `key` are stored with a value on the DINA models that support them.
-
-= Liquibase
-
-http://www.liquibase.org/index.html[Liquibase] is used to generate the database and migrate to new versions of the database schema. Changelogs are source xml files that describe schema changes to the database. Liquibase maintains a "DATABASECHANGELOG" table in the same database to keep track of which changelogs have been executed. When the application starts, any changelogs that have not been executed are executed.
-
-Additional information:
-
-* http://www.liquibase.org/bestpractices.html[Liquibase Best Practices]
-* https://www.liquibase.org/documentation/changes/add_column.html[Change example: addColumn]
-* https://www.liquibase.org/documentation/generating_changelogs.html[Adding Liquibase support to an existing database]
-
-== Liquibase Contexts
-
-When developing for Dina modules certain data is needed for the application to run properly and to make testing easier. Which is why we separate our database migrations into categories known as contexts. The two main contexts are as follows:
-
-* schema-change
-** Changes to the schema such as adding new columns, renaming tables, adding new tables.
-* sample-data
-** sample data for developers, this should not be ran on PROD/UAT since it's used for inserting sample data for developers and the data is already in PROD/UAT databases.
-
-For PROD/UAT purposes, the context can be changed by editing the application.yml file which has all of the liquibase configurations. The contexts are a comma separated list of all of the contexts to be performed.
-
-== Liquibase migration file convention
-
-The following convention should be followed by all Liquibase database migration files:
-
-* Migration scripts live in `src/main/resources/db/changelog`
-* Filename should follow the convention `&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;.xml` (e.g. `2-new_specimen_field_PHAC_containment_level.xml`)
-* A new migration file's path should be added in an "include" tag of `src/main/resources/db/changelog/db.changelog-master.xml`
-* The context of a `changeSet` in the migration xml file should always be set (e.g. `context="schema-change"`)
-* The `&lt;id&gt;` should use the filename convention without the file extension `&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;` if the file only includes 1 changeset, otherwise the following convention should be used: `&lt;UNIQUE_INCREMENTAL_ID&gt;-&lt;ISSUE_TITLE&gt;-&lt;WHAT_THE_CHANGESET_DOES&gt;` (ex: `id="11-Implement_new_workflow_entitie-Create_enum_types"`)
-
-When merging code to dev, we need to make sure the incremental number is always unique. If we have a duplicate, we should be reassigned a new identifier and update the `db.changelog-master.xml`.
-
-== Run Liquibase from Maven
-
-It may be useful to run Liquibase without running the application. The Liquibase website has an https://docs.liquibase.com/tools-integrations/maven/workflows/creating-liquibase-projects-with-maven-postgresql.html[example] and https://github.com/AAFC-BICoE/seqdb-api[seqdb-api] contains the plugin defition and an example `liquibase.properties` file.
-
-= Releasing a DINA module
-
-The process of releasing a dina module is the same for all modules. The CI will automatically build and release a new Docker image to Docker Hub when something is merged
-in the master/main branch.
-
-BICoE Docker Hub: https://hub.docker.com/u/aafcbicoe
-
-Java-based API:
-
-. From dev branch
-.. Change the version by running `mvn versions:set -DnewVersion=X.X` from the root where `X.X` is the current version minus the `-SNAPSHOT`
-.. Add and Push to dev with message like "Prepare version x.x release"
-.. Wait for CI to complete
-. From master/main
-.. Merge dev into master (do NOT use Pull Request)
-.. Push to master (it will trigger the deployment Docker Hub)
-. Create a new GitHub release
-.. The tag should be the version prefixed with v (e.g. v0.19)
-.. The title should be the version (e.g. 0.19)
-.. Add a Summary of the changes (looks at the previous versions for an example)
-.. Publish the Release
-. From dev branch
-.. Change the version by running `mvn versions:set -DnewVersion=X.X-SNAPSHOT` from the root where X.X is the next increment in the version number
-.. Add and Push to dev with message like "Prepare next development version"
-
-DINA-UI:
-
-. From dev branch
-.. Edit the the file `packages/dina-ui/package.json` and set the `version` value
-
-Same as the Java-based API except the second `From dev branch` can be skipped since the ui is not using development version.
-
-
-= PostgreSQL
-
-[[useful_queries]]
-== Useful Queries
-
-=== Rename key in jsonb array
-The example is not aiming at perfomance.
-
-Considering the following table :
-[source,sql]</pre>
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE TABLE organism (id integer, determinations jsonb);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>CREATE TABLE organism (id integer, determinations jsonb);</p>
+<p>With jsonb array in the <code>determinations</code> column:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>With jsonb array in the `determinations` column:
-[source,sql]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>INSERT INTO organism VALUES (1, '[
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">INSERT INTO organism VALUES (1, '[
 {
   "scientificNameSource": "GNA",
   "isPrimary": true,
@@ -1268,49 +1438,57 @@ Considering the following table :
   "isPrimary": false,
   "isFileAs": false
 }
-]');</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>We want to rename the key `isFileAs` to `isFiledAs`:
-[source,sql]</pre>
+]');</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>&#8201;&#8212;&#8201;unwrap the array and extract the value
+<p>We want to rename the key <code>isFileAs</code> to <code>isFiledAs</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">-- unwrap the array and extract the value
 WITH subquery AS (
-  SELECT id, item, item &#8594; 'isFileAs' as att_value
+  SELECT id, item, item -&gt; 'isFileAs' as att_value
   FROM organism, jsonb_array_elements(determinations) as item
-),&#8201;&#8212;&#8201;remove the old attribute and create the new one with the value&#8201;&#8212;&#8201;reconstruct the array by grouping by id
+),
+-- remove the old attribute and create the new one with the value
+-- reconstruct the array by grouping by id
 subquery2 AS (
   select id, json_agg(jsonb_set(item-'isFileAs', '{isFiledAs}', att_value)) as updated_jsonb from subquery
   GROUP BY id
-)</p>
-</div>
-<div class="paragraph">
-<p>UPDATE organism
+)
+
+UPDATE organism
   SET determinations = updated_jsonb
   FROM subquery2
-  WHERE organism.id = subquery2.id;</p>
+  WHERE organism.id = subquery2.id;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_elasticsearch">12. Elasticsearch</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_update_mapping">12.1. Update Mapping</h3>
+<div class="paragraph">
+<p>When a new mapping or new mapping property must be added to a live index the
+<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html">Update mapping API</a> can be used.</p>
+</div>
+<div class="paragraph">
+<p>If the new mapping requires new Analyzer, an <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-update-settings.html">update settings analysis</a> is required first.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p>Assuming <code>keyword_lowercase_analyzer</code> is already declared, add it to the multi-field <code>data.attributes.originalFilename</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>= Elasticsearch
-
-== Update Mapping
-
-When a new mapping or new mapping property must be added to a live index the
-https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html[Update mapping API] can be used.
-
-If the new mapping requires new Analyzer, an https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-update-settings.html[update settings analysis] is required first.
-
-Example:
-
-Assuming `keyword_lowercase_analyzer` is already declared, add it to the multi-field `data.attributes.originalFilename`:</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>curl -X PUT "localhost:9200/dina_object_store_index/_mapping?pretty" -H 'Content-Type: application/json' -d'
+<pre>curl -X PUT "localhost:9200/dina_object_store_index/_mapping?pretty" -H 'Content-Type: application/json' -d'
 {
   "properties": {
     "data.attributes.originalFilename": {
@@ -1332,27 +1510,29 @@ Assuming `keyword_lowercase_analyzer` is already declared, add it to the multi-f
     }
   }
 }
-'</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Refesh the index:</pre>
+'</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>curl -X POST "localhost:9200/dina_object_store_index/_update_by_query?refresh"</p>
+<p>Refesh the index:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>== Delete Included Field with Update By Query
-
-To remove a specific field from a nested object within your Elasticsearch documents, you can use an `update_by_query` request:
-
-*POST 127.0.0.1:9200/dina_material_sample_index/_update_by_query*</pre>
+<pre>curl -X POST "localhost:9200/dina_object_store_index/_update_by_query?refresh"</pre>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delete_included_field_with_update_by_query">12.2. Delete Included Field with Update By Query</h3>
+<div class="paragraph">
+<p>To remove a specific field from a nested object within your Elasticsearch documents, you can use an <code>update_by_query</code> request:</p>
 </div>
 <div class="paragraph">
-<p>{
+<p><strong>POST 127.0.0.1:9200/dina_material_sample_index/_update_by_query</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
   "script": "for (int i = 0; i &lt; ctx._source.included.length; ++i) { ctx._source.included[i].attributes.remove(\"ATTRIBUTE_NAME\") }",
   "query": {
     "nested": {
@@ -1370,30 +1550,30 @@ To remove a specific field from a nested object within your Elasticsearch docume
       }
     }
   }
-}</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Replace `ATTRIBUTE_NAME` with the field you wish to remove. And also change the index in the URL if needed. Then you can re-run the elastic-configurator.
-
-In the elastic-configurator, you should see the following for the index you have updated if it worked correctly:</pre>
+}</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Running update script for optional mapping
+<p>Replace <code>ATTRIBUTE_NAME</code> with the field you wish to remove. And also change the index in the URL if needed. Then you can re-run the elastic-configurator.</p>
+</div>
+<div class="paragraph">
+<p>In the elastic-configurator, you should see the following for the index you have updated if it worked correctly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Running update script for optional mapping
 The update request was successful
 Re-indexing documents.
 Source index is: dina_material_sample_index_20241112154013 and destination index is: dina_material_sample_index_20241112193452
 Response is: 200
 Old index doc count: 2
 New index doc count: 2
-Document counts match. Proceeding with deletion of old index and setting alias&#8230;&#8203;
-Updating index dina_material_sample_index_20241112193452 with alias dina_material_sample_index</p>
+Document counts match. Proceeding with deletion of old index and setting alias...
+Updating index dina_material_sample_index_20241112193452 with alias dina_material_sample_index</pre>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>Then, re-index the affected documents so the data is restored in the new format based on the migration.</pre>
 </div>
+<div class="paragraph">
+<p>Then, re-index the affected documents so the data is restored in the new format based on the migration.</p>
 </div>
 </div>
 </div>
@@ -1401,7 +1581,7 @@ Updating index dina_material_sample_index_20241112193452 with alias dina_materia
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-08-13 17:46:42 UTC
+Last updated 2025-08-13 17:51:40 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
