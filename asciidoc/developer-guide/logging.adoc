@@ -1,12 +1,12 @@
 == Logging
 
-Hibernate:
+Hibernate
 ----
 logging.level.org.hibernate.SQL: DEBUG
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 ----
 
-DINA:
+DINA
 ----
 logging.level.ca.gc.aafc.dina: DEBUG
 ----
