@@ -15,6 +15,15 @@ Listing regions with "name" and "description" as the only included fields:
 /api/region?fields[region]=name,description
 ----
 
+== Optional field inclusion
+
+Some endpoints can have fields that are expensive to compute/query that are not included by default. Since they are not relationships they can't be included using the `include` parameters.
+The `optfields[type]` parameter can be used.
+
+----
+GET /api/region?optfields[region]=hierarchy
+----
+
 == Filtering
 
 === Simple Filters
