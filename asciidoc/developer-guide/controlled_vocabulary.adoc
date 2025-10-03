@@ -3,23 +3,26 @@
 image::Controlled_Vocabulary_Diagram.drawio.png[]
 
 
+== Controlled Term
 
-== Vocabulary
+Represents a single thing/concept with no separate literal value. Used to either suggest or restrict values for some fields defined in the DINA models.
 
-A Vocabulary represents a single thing/concept. An entry is composed of a `name`, a `term` and a `multilingualTitle` (`VocabularyElement` interface). They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.
+Examples: spatial reference system (SRS), type status, coordinate system ...
 
-Examples of vocabulary are : spatial reference system (SRS), type status, coordinate system ...
+== Qualified Value
+
+Represents a single thing/concept with a typed literal. Used to store additional information that is not structly defined in the DINA models.
+
+Examples: pH: 7.2, grainSize: 2.7 mm
 
 == Managed Attribute
 
-A managed attribute also represents a single thing/concept. As opposed to vocabulary, they are user defined and values are loaded from the database.
+A managed attribute is a predefined instance of `Qualified Value` where the user can add new entries.
 
-Manage attribute extends vocabulary and adds the attributes `key`, `vocabularyElementType`, `acceptedValues`, and `multilingualDescription` through the `TypedVocabularyElement` interface.
-
-They are used as semi-structured data where the `key` is stored with a value on the DINA models that support them.
+Used as semi-structured data where the `key` is stored with a value on the DINA models that support them.
 
 == Field Extension
 
-Field extension represents a set a terms/concepts that are logicialy grouped. They usualy comes from a standard defined by an external body. The `fields` of a specific field extension are also implementing the `TypedVocabularyElement` interface. Field extensions are platform defined and loaded from configuration files. 
+Field extension represents a set a terms/concepts that are logicialy grouped. They usualy comes from a standard defined by an external body.
 
 They are used as semi-structured data where the extension, the version and the `key` are stored with a value on the DINA models that support them.
