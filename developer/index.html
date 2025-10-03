@@ -480,9 +480,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_logging">7. Logging</a></li>
 <li><a href="#_controlled_vocabulary">8. Controlled Vocabulary</a>
 <ul class="sectlevel2">
-<li><a href="#_vocabulary">8.1. Vocabulary</a></li>
-<li><a href="#_managed_attribute">8.2. Managed Attribute</a></li>
-<li><a href="#_field_extension">8.3. Field Extension</a></li>
+<li><a href="#_controlled_term">8.1. Controlled Term</a></li>
+<li><a href="#_qualified_value">8.2. Qualified Value</a></li>
+<li><a href="#_managed_attribute">8.3. Managed Attribute</a></li>
+<li><a href="#_field_extension">8.4. Field Extension</a></li>
 </ul>
 </li>
 <li><a href="#_liquibase">9. Liquibase</a>
@@ -1195,30 +1196,36 @@ logging.level.org.hibernate.type.descriptor.sql.BasicBinder: TRACE</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vocabulary">8.1. Vocabulary</h3>
+<h3 id="_controlled_term">8.1. Controlled Term</h3>
 <div class="paragraph">
-<p>A Vocabulary represents a single thing/concept. An entry is composed of a <code>name</code>, a <code>term</code> and a <code>multilingualTitle</code> (<code>VocabularyElement</code> interface). They are platform defined and values are loaded from configuration files. They are usualy used to either suggest or restrict values for some fields defined in the DINA models.</p>
+<p>Represents a single thing/concept with no separate literal value. Used to either suggest or restrict values for some fields defined in the DINA models.</p>
 </div>
 <div class="paragraph">
-<p>Examples of vocabulary are : spatial reference system (SRS), type status, coordinate system &#8230;&#8203;</p>
+<p>Examples: spatial reference system (SRS), type status, coordinate system &#8230;&#8203;</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_managed_attribute">8.2. Managed Attribute</h3>
+<h3 id="_qualified_value">8.2. Qualified Value</h3>
 <div class="paragraph">
-<p>A managed attribute also represents a single thing/concept. As opposed to vocabulary, they are user defined and values are loaded from the database.</p>
+<p>Represents a single thing/concept with a typed literal. Used to store additional information that is not structly defined in the DINA models.</p>
 </div>
 <div class="paragraph">
-<p>Manage attribute extends vocabulary and adds the attributes <code>key</code>, <code>vocabularyElementType</code>, <code>acceptedValues</code>, and <code>multilingualDescription</code> through the <code>TypedVocabularyElement</code> interface.</p>
-</div>
-<div class="paragraph">
-<p>They are used as semi-structured data where the <code>key</code> is stored with a value on the DINA models that support them.</p>
+<p>Examples: pH: 7.2, grainSize: 2.7 mm</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_field_extension">8.3. Field Extension</h3>
+<h3 id="_managed_attribute">8.3. Managed Attribute</h3>
 <div class="paragraph">
-<p>Field extension represents a set a terms/concepts that are logicialy grouped. They usualy comes from a standard defined by an external body. The <code>fields</code> of a specific field extension are also implementing the <code>TypedVocabularyElement</code> interface. Field extensions are platform defined and loaded from configuration files.</p>
+<p>A managed attribute is a predefined instance of <code>Qualified Value</code> where the user can add new entries.</p>
+</div>
+<div class="paragraph">
+<p>Used as semi-structured data where the <code>key</code> is stored with a value on the DINA models that support them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_field_extension">8.4. Field Extension</h3>
+<div class="paragraph">
+<p>Field extension represents a set a terms/concepts that are logicialy grouped. They usualy comes from a standard defined by an external body.</p>
 </div>
 <div class="paragraph">
 <p>They are used as semi-structured data where the extension, the version and the <code>key</code> are stored with a value on the DINA models that support them.</p>
@@ -1594,7 +1601,7 @@ Updating index dina_material_sample_index_20241112193452 with alias dina_materia
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-10-03 12:31:47 UTC
+Last updated 2025-10-03 12:42:29 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
