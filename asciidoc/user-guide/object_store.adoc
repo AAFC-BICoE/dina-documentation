@@ -1,6 +1,8 @@
 [id=storeObj]
 == Storing an Object
-In DINA, users are able to upload files which can be linked to samples and collections. This can be done through the Object Store. Examples of files that may be uploaded are `pictures` related to samples, `sequencing files`, `.txt files`, `word documents`, etc.
+
+Files such as images and documents can be attached to your records to provide supporting information and context. A wide variety of files can be uploaded and linked directly to your link:https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#mat-sample[samples] or other resources 
+like link:https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#collecting-event[collecting event], https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#collection[collection], https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#project[project]. Examples include specimen images, sequencing files, protocol documents, and more.
 
 There are 2 pathways to store an object to DINA and link it to a Material Sample.
 
@@ -92,3 +94,4 @@ image::object-store/SaveUpload.png[align="center"]
 . The attachment(s) should now be seen in the Material Sample Attachments section of the sample's Edit Page. Once the user has confirmed that everything is correct, click the `Save` button on the top right corner of the page.
 
 image::object-store/LastSave.png[align="center"]
+
