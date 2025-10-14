@@ -469,103 +469,118 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#managed_attributes">2.11. Managed Attributes</a></li>
 <li><a href="#material_sample_attachment">2.12. Material Sample Attachments</a></li>
 <li><a href="#date_search">2.13. Date Search</a></li>
+<li><a href="#_partial_dates_with_precision_awareness">2.14. Partial Dates with Precision Awareness</a></li>
 </ul>
 </li>
-<li><a href="#collection-component">3. Collection Component</a>
+<li><a href="#_iso_datetime_filtering_with_precision_awareness">3. ISO DateTime Filtering with Precision Awareness</a>
 <ul class="sectlevel2">
-<li><a href="#assemblage">3.1. Assemblage</a></li>
-<li><a href="#association">3.2. Association</a>
+<li><a href="#_overview">3.1. Overview</a></li>
+<li><a href="#_how_it_works">3.2. How It Works</a></li>
+<li><a href="#_filter_operations">3.3. Filter Operations</a>
 <ul class="sectlevel3">
-<li><a href="#_host_organism">3.2.1. Host Organism</a></li>
+<li><a href="#_equality">3.3.1. Equality (<code>=</code>)</a></li>
+<li><a href="#_less_than_less_or_equal_lt_loe">3.3.2. Less Than / Less or Equal (<code>[LT]</code>, <code>[LOE]</code>)</a></li>
+<li><a href="#_greater_than_greater_or_equal_gt_goe">3.3.3. Greater Than / Greater or Equal (<code>[GT]</code>, <code>[GOE]</code>)</a></li>
 </ul>
 </li>
-<li><a href="#collection">3.3. Collection</a></li>
-<li><a href="#collecting-event">3.4. Collecting Event</a>
-<ul class="sectlevel3">
-<li><a href="#_collection_number">3.4.1. Collection Number</a></li>
-<li><a href="#_collectors_number">3.4.2. Collector&#8217;s Number</a></li>
-<li><a href="#collection-method">3.4.3. Collection Method</a></li>
-<li><a href="#_coordinate_uncertainty_in_meters">3.4.4. Coordinate Uncertainty In Meters</a></li>
-<li><a href="#_habitat">3.4.5. Habitat</a></li>
-<li><a href="#ce-host">3.4.6. Host</a></li>
-<li><a href="#_substrate">3.4.7. Substrate</a></li>
+<li><a href="#_why_precision_matters">3.4. Why Precision Matters</a></li>
 </ul>
 </li>
-<li><a href="#determination">3.5. Determination</a>
-<ul class="sectlevel3">
-<li><a href="#_effective_determinations">3.5.1. Effective Determination(s)</a></li>
-<li><a href="#_target_organism_primary_scientific_name">3.5.2. Target Organism Primary Scientific Name</a></li>
-</ul>
-</li>
-<li><a href="#mat-sample">3.6. Material Sample</a>
-<ul class="sectlevel3">
-<li><a href="#mat-samp-type">3.6.1. Material Sample Type</a></li>
-<li><a href="#primary_id">3.6.2. Primary ID</a></li>
-<li><a href="#next_identifier">3.6.3. Next Available Identifier</a></li>
-<li><a href="#mat-samp-state">3.6.4. Material Sample State</a></li>
-</ul>
-</li>
-<li><a href="#preparation">3.7. Preparation</a>
-<ul class="sectlevel3">
-<li><a href="#preparation-type">3.7.1. Preparation Type</a></li>
-<li><a href="#preparation-method">3.7.2. Preparation Method</a></li>
-<li><a href="#preservation-type">3.7.3. Preservation Type</a></li>
-<li><a href="#preparation-fixative">3.7.4. Preparation Fixative</a></li>
-<li><a href="#preparation-materials">3.7.5. Preparation Materials</a></li>
-<li><a href="#preparation-substrate">3.7.6. Preparation Substrate</a></li>
-</ul>
-</li>
-<li><a href="#organism">3.8. Organism</a></li>
-<li><a href="#project">3.9. Project</a></li>
-<li><a href="#_protocol">3.10. Protocol</a></li>
-<li><a href="#split">3.11. Split</a>
-<ul class="sectlevel3">
-<li><a href="#direct-parent-strategy">3.11.1. Direct Parent Naming Strategy</a></li>
-<li><a href="#material-sample-type-strategy">3.11.2. Material Sample Type Naming Strategy</a></li>
-</ul>
-</li>
-<li><a href="#restrictions">3.12. Restrictions</a></li>
-<li><a href="#scheduled_actions">3.13. Scheduled Actions</a></li>
-</ul>
-</li>
-<li><a href="#storage-component">4. Storage Component</a>
+<li><a href="#collection-component">4. Collection Component</a>
 <ul class="sectlevel2">
-<li><a href="#storage-unit-type">4.1. Storage Unit Type</a></li>
-<li><a href="#storage-unit">4.2. Storage Unit</a></li>
-</ul>
-</li>
-<li><a href="#object-store-component">5. Object Store Component</a>
-<ul class="sectlevel2">
-<li><a href="#Metadata">5.1. Metadata</a></li>
-<li><a href="#_derivative">5.2. Derivative</a></li>
-<li><a href="#_file_upload">5.3. File Upload</a></li>
-<li><a href="#_external_resource">5.4. External Resource</a></li>
-</ul>
-</li>
-<li><a href="#sequence-component">6. Sequence Component</a>
-<ul class="sectlevel2">
-<li><a href="#_pcr_primer">6.1. PCR Primer</a></li>
-<li><a href="#_thermocycler_profile">6.2. Thermocycler Profile</a></li>
-<li><a href="#_pcrbatch">6.3. PcrBatch</a></li>
-<li><a href="#_pcrreaction">6.4. PcrReaction</a></li>
-<li><a href="#_ngs_index">6.5. NGS Index</a></li>
-</ul>
-</li>
-<li><a href="#_workbook_upload">7. Workbook Upload</a>
-<ul class="sectlevel2">
-<li><a href="#_limitations">7.1. Limitations</a></li>
-<li><a href="#_relationships">7.2. Relationships</a>
+<li><a href="#assemblage">4.1. Assemblage</a></li>
+<li><a href="#association">4.2. Association</a>
 <ul class="sectlevel3">
-<li><a href="#_text_vs_concept">7.2.1. Text vs Concept</a></li>
+<li><a href="#_host_organism">4.2.1. Host Organism</a></li>
 </ul>
 </li>
+<li><a href="#collection">4.3. Collection</a></li>
+<li><a href="#collecting-event">4.4. Collecting Event</a>
+<ul class="sectlevel3">
+<li><a href="#_collection_number">4.4.1. Collection Number</a></li>
+<li><a href="#_collectors_number">4.4.2. Collector&#8217;s Number</a></li>
+<li><a href="#collection-method">4.4.3. Collection Method</a></li>
+<li><a href="#_coordinate_uncertainty_in_meters">4.4.4. Coordinate Uncertainty In Meters</a></li>
+<li><a href="#_habitat">4.4.5. Habitat</a></li>
+<li><a href="#ce-host">4.4.6. Host</a></li>
+<li><a href="#_substrate">4.4.7. Substrate</a></li>
 </ul>
 </li>
-<li><a href="#_search">8. Search</a>
+<li><a href="#determination">4.5. Determination</a>
+<ul class="sectlevel3">
+<li><a href="#_effective_determinations">4.5.1. Effective Determination(s)</a></li>
+<li><a href="#_target_organism_primary_scientific_name">4.5.2. Target Organism Primary Scientific Name</a></li>
+</ul>
+</li>
+<li><a href="#mat-sample">4.6. Material Sample</a>
+<ul class="sectlevel3">
+<li><a href="#mat-samp-type">4.6.1. Material Sample Type</a></li>
+<li><a href="#primary_id">4.6.2. Primary ID</a></li>
+<li><a href="#next_identifier">4.6.3. Next Available Identifier</a></li>
+<li><a href="#mat-samp-state">4.6.4. Material Sample State</a></li>
+</ul>
+</li>
+<li><a href="#preparation">4.7. Preparation</a>
+<ul class="sectlevel3">
+<li><a href="#preparation-type">4.7.1. Preparation Type</a></li>
+<li><a href="#preparation-method">4.7.2. Preparation Method</a></li>
+<li><a href="#preservation-type">4.7.3. Preservation Type</a></li>
+<li><a href="#preparation-fixative">4.7.4. Preparation Fixative</a></li>
+<li><a href="#preparation-materials">4.7.5. Preparation Materials</a></li>
+<li><a href="#preparation-substrate">4.7.6. Preparation Substrate</a></li>
+</ul>
+</li>
+<li><a href="#organism">4.8. Organism</a></li>
+<li><a href="#project">4.9. Project</a></li>
+<li><a href="#_protocol">4.10. Protocol</a></li>
+<li><a href="#split">4.11. Split</a>
+<ul class="sectlevel3">
+<li><a href="#direct-parent-strategy">4.11.1. Direct Parent Naming Strategy</a></li>
+<li><a href="#material-sample-type-strategy">4.11.2. Material Sample Type Naming Strategy</a></li>
+</ul>
+</li>
+<li><a href="#restrictions">4.12. Restrictions</a></li>
+<li><a href="#scheduled_actions">4.13. Scheduled Actions</a></li>
+</ul>
+</li>
+<li><a href="#storage-component">5. Storage Component</a>
 <ul class="sectlevel2">
-<li><a href="#_in_operator">8.1. IN Operator</a></li>
-<li><a href="#_between_operator">8.2. BETWEEN Operator</a></li>
-<li><a href="#global_search_syntax">8.3. Global Search Syntax</a></li>
+<li><a href="#storage-unit-type">5.1. Storage Unit Type</a></li>
+<li><a href="#storage-unit">5.2. Storage Unit</a></li>
+</ul>
+</li>
+<li><a href="#object-store-component">6. Object Store Component</a>
+<ul class="sectlevel2">
+<li><a href="#Metadata">6.1. Metadata</a></li>
+<li><a href="#_derivative">6.2. Derivative</a></li>
+<li><a href="#_file_upload">6.3. File Upload</a></li>
+<li><a href="#_external_resource">6.4. External Resource</a></li>
+</ul>
+</li>
+<li><a href="#sequence-component">7. Sequence Component</a>
+<ul class="sectlevel2">
+<li><a href="#_pcr_primer">7.1. PCR Primer</a></li>
+<li><a href="#_thermocycler_profile">7.2. Thermocycler Profile</a></li>
+<li><a href="#_pcrbatch">7.3. PcrBatch</a></li>
+<li><a href="#_pcrreaction">7.4. PcrReaction</a></li>
+<li><a href="#_ngs_index">7.5. NGS Index</a></li>
+</ul>
+</li>
+<li><a href="#_workbook_upload">8. Workbook Upload</a>
+<ul class="sectlevel2">
+<li><a href="#_limitations">8.1. Limitations</a></li>
+<li><a href="#_relationships">8.2. Relationships</a>
+<ul class="sectlevel3">
+<li><a href="#_text_vs_concept">8.2.1. Text vs Concept</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_search">9. Search</a>
+<ul class="sectlevel2">
+<li><a href="#_in_operator">9.1. IN Operator</a></li>
+<li><a href="#_between_operator">9.2. BETWEEN Operator</a></li>
+<li><a href="#global_search_syntax">9.3. Global Search Syntax</a></li>
 </ul>
 </li>
 </ul>
@@ -844,6 +859,236 @@ Objects can only have 1 owner.</p>
 <div class="paragraph">
 <p>Resources may contain fields of the date type in the format YYYY-MM-DD. These date fields can be used to search for resources with a few different parameters including equals to, before, or after the input date. Some date fields such as Collecting Event Start Event Date Time support partial dates</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_partial_dates_with_precision_awareness">2.14. Partial Dates with Precision Awareness</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_iso_datetime_filtering_with_precision_awareness">3. ISO DateTime Filtering with Precision Awareness</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_overview">3.1. Overview</h3>
+<div class="paragraph">
+<p>The ISO DateTime filter allows you to query date-time fields while respecting the precision of both the stored data and the filter criteria. This prevents false matches when comparing dates with different levels of precision.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_it_works">3.2. How It Works</h3>
+<div class="paragraph">
+<p>When filtering ISO 8601 date-times, the system considers <strong>precision levels</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>YYYY</code> (year only) - lowest precision</p>
+</li>
+<li>
+<p><code>YYYY-MM</code> (year-month)</p>
+</li>
+<li>
+<p><code>YYYY-MM-DD</code> (year-month-day)</p>
+</li>
+<li>
+<p><code>YYYY-MM-DDTHH:MM</code> (with time)</p>
+</li>
+<li>
+<p><code>YYYY-MM-DDTHH:MM:SS</code> (with seconds) - highest precision</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A match only occurs when both the value AND precision are compatible.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_filter_operations">3.3. Filter Operations</h3>
+<div class="sect3">
+<h4 id="_equality">3.3.1. Equality (<code>=</code>)</h4>
+<div class="paragraph">
+<p>Matches only when <strong>both</strong> the date-time value and precision level are identical.</p>
+</div>
+<div class="listingblock">
+<div class="title">Examples</div>
+<div class="content">
+<pre class="highlight"><code>filter[startEventDateTime]=1999          // Matches records with exactly "1999" (year precision)
+filter[startEventDateTime]=1999-03-03    // Matches records with exactly "1999-03-03" (day precision)</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>1999</code> (year) ≠ <code>1999-01</code> (month)</p>
+</li>
+<li>
+<p><code>1999-03-03</code> (day) ≠ <code>1999-03-03T03:00</code> (minute)</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_less_than_less_or_equal_lt_loe">3.3.2. Less Than / Less or Equal (<code>[LT]</code>, <code>[LOE]</code>)</h4>
+<div class="paragraph">
+<p>Matches records where:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The date-time value satisfies the comparison, AND</p>
+</li>
+<li>
+<p>The stored precision is <strong>greater than or equal</strong> to the filter precision</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Examples</div>
+<div class="content">
+<pre class="highlight"><code>filter[startEventDateTime][LOE]=1999-01</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>✓ Matches: <code>1999-01</code> (same precision, value matches)</p>
+</li>
+<li>
+<p>✗ Does NOT match: <code>1999</code> (lower precision - too vague to compare accurately)</p>
+</li>
+<li>
+<p>✗ Does NOT match: <code>1999-02</code> (same precision, but value is greater)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>filter[startEventDateTime][LT]=2000</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>✓ Matches: <code>1999</code> (same precision, value is less)</p>
+</li>
+<li>
+<p>✗ Does NOT match: <code>1999-01</code> (higher precision than filter - prevents false positives)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_greater_than_greater_or_equal_gt_goe">3.3.3. Greater Than / Greater or Equal (<code>[GT]</code>, <code>[GOE]</code>)</h4>
+<div class="paragraph">
+<p>Matches records where:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The date-time value satisfies the comparison, AND</p>
+</li>
+<li>
+<p>The stored precision is <strong>greater than or equal</strong> to the filter precision</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Examples</div>
+<div class="content">
+<pre class="highlight"><code>filter[startEventDateTime][GOE]=2010-01</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>✓ Matches: <code>2010-01</code> (same precision, value matches)</p>
+</li>
+<li>
+<p>✗ Does NOT match: <code>2010</code> (lower precision - too vague to compare accurately)</p>
+</li>
+<li>
+<p>✗ Does NOT match: <code>2009-12</code> (same precision, but value is less)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>filter[startEventDateTime][GT]=2009</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>✓ Matches: <code>2010</code> (same precision, value is greater)</p>
+</li>
+<li>
+<p>✗ Does NOT match: <code>2010-01</code> (higher precision than filter - prevents false positives)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_why_precision_matters">3.4. Why Precision Matters</h3>
+<div class="paragraph">
+<p>Without precision awareness, you might get incorrect results:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Problem Example</div>
+<div class="content">
+<div class="paragraph">
+<p>If you store <code>1999</code> (year only) and filter with <code>[LT]=1999-06</code>, should it match?</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The year 1999 could represent any date from Jan 1 to Dec 31, 1999</p>
+</li>
+<li>
+<p>Some of those dates are before June 1999, some are after</p>
+</li>
+<li>
+<p><strong>Result: Ambiguous - system correctly excludes this match</strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Solution</div>
+<div class="content">
+<div class="paragraph">
+<p>The filter only matches when precision levels are compatible, ensuring accurate comparisons.</p>
+</div>
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Supported Operators:</strong> <code>=</code>, <code>[LT]</code>, <code>[LOE]</code>, <code>[GT]</code>, <code>[GOE]</code></p>
+</div>
 <div class="paragraph">
 <p>For example, we have 2 material samples as follows:</p>
 </div>
@@ -864,37 +1109,37 @@ Objects can only have 1 owner.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="collection-component">3. Collection Component</h2>
+<h2 id="collection-component">4. Collection Component</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="assemblage">3.1. Assemblage</h3>
+<h3 id="assemblage">4.1. Assemblage</h3>
 <div class="paragraph">
 <p>Mechanism used to group material samples according to a generic, administrative theme. Should not be confused with <a href="#project">Project</a>. Examples might include specimen books or exsiccatae in herbaria where there is a title and a description and possibly enhanced with <a href="#managed_attributes">Managed Attributes</a> for additional metadata that depicts the group&#8217;s identity.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="association">3.2. Association</h3>
+<h3 id="association">4.2. Association</h3>
 <div class="sect3">
-<h4 id="_host_organism">3.2.1. Host Organism</h4>
+<h4 id="_host_organism">4.2.1. Host Organism</h4>
 <div class="paragraph">
 <p>Organism that is the host of the material-sample. Usualy mean that we have the host (collected/cultivated). Not to be confused with <a href="#ce-host">Host</a> of the collecting-event where the host was observed but not collected.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="collection">3.3. Collection</h3>
+<h3 id="collection">4.3. Collection</h3>
 <div class="paragraph">
 <p>A Collection represents the top entity that can contain material-sample. Top collections (or parent collections) generally represent a natural history collection or a laboratory. A collection can contain multiple sub-collection(s).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="collecting-event">3.4. Collecting Event</h3>
+<h3 id="collecting-event">4.4. Collecting Event</h3>
 <div class="paragraph">
 <p>Darwin Core defines "event" as : An action that occurs at some location during some time. (from <a href="https://dwc.tdwg.org/terms/#event">DarwinCore</a>).
 In a Collection Event, the action is the extraction from nature.</p>
 </div>
 <div class="sect3">
-<h4 id="_collection_number">3.4.1. Collection Number</h4>
+<h4 id="_collection_number">4.4.1. Collection Number</h4>
 <div class="paragraph">
 <p>An identifier given to the event in the field at the time of collecting one or more samples. Often serves as a link between field notes and the Event.</p>
 </div>
@@ -903,7 +1148,7 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_collectors_number">3.4.2. Collector&#8217;s Number</h4>
+<h4 id="_collectors_number">4.4.2. Collector&#8217;s Number</h4>
 <div class="paragraph">
 <p>An identifier given to the Occurrence, by the collector, at the time it was recorded. Often serves as a link between field notes and an Occurrence record, such as a specimen collector&#8217;s number.</p>
 </div>
@@ -912,7 +1157,7 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="collection-method">3.4.3. Collection Method</h4>
+<h4 id="collection-method">4.4.3. Collection Method</h4>
 <div class="paragraph">
 <p>Method used during an Collecting Event. Examples: UV light trap, bottom traw</p>
 </div>
@@ -921,26 +1166,26 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_coordinate_uncertainty_in_meters">3.4.4. Coordinate Uncertainty In Meters</h4>
+<h4 id="_coordinate_uncertainty_in_meters">4.4.4. Coordinate Uncertainty In Meters</h4>
 <div class="paragraph">
 <p>The horizontal distance in meters from the given decimalLatitude and decimalLongitude describing the smallest circle containing the whole of the Location.
 (from <a href="https://dwc.tdwg.org/terms/#dwc:coordinateUncertaintyInMeters">Darwin Core</a>)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_habitat">3.4.5. Habitat</h4>
+<h4 id="_habitat">4.4.5. Habitat</h4>
 <div class="paragraph">
 <p>An environmental system which can sustain and allow the growth of an ecological population. (from <a href="https://ontobee.org/ontology/ENVO?iri=http://purl.obolibrary.org/obo/ENVO_01000739">Ontobee</a>)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="ce-host">3.4.6. Host</h4>
+<h4 id="ce-host">4.4.6. Host</h4>
 <div class="paragraph">
 <p>Observed host of the material-sample at the time of the collecting-event.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_substrate">3.4.7. Substrate</h4>
+<h4 id="_substrate">4.4.7. Substrate</h4>
 <div class="paragraph">
 <p>Observed surface on which an organism was collected and understood to have lived.</p>
 </div>
@@ -950,25 +1195,25 @@ In a Collection Event, the action is the extraction from nature.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="determination">3.5. Determination</h3>
+<h3 id="determination">4.5. Determination</h3>
 <div class="paragraph">
 <p>Determinations are attached to an <a href="#organism">Organism</a>. There is always a primary determination defined. Determination history is preserved.</p>
 </div>
 <div class="sect3">
-<h4 id="_effective_determinations">3.5.1. Effective Determination(s)</h4>
+<h4 id="_effective_determinations">4.5.1. Effective Determination(s)</h4>
 <div class="paragraph">
 <p>The effective determination refers to the first primary determination that can be found in the material-sample lineage. If a target <a href="#organism">Organism</a> is defined, the effective determination will be restricted to it otherwise all the organism will be grouped to return the effective determinations.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_target_organism_primary_scientific_name">3.5.2. Target Organism Primary Scientific Name</h4>
+<h4 id="_target_organism_primary_scientific_name">4.5.2. Target Organism Primary Scientific Name</h4>
 <div class="paragraph">
 <p>The scientific name (verbatim scientific name if absent) of the primary <a href="#determination">Determination</a> of the target <a href="#organism">Organism</a>. If there is no target organism, all scientifc names will be concatenated (pipe | separated).</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mat-sample">3.6. Material Sample</h3>
+<h3 id="mat-sample">4.6. Material Sample</h3>
 <div class="paragraph">
 <p>Material Sample represents the main unit of work in DINA. It can be described as: A physical result of a sampling(or subsampling) event.</p>
 </div>
@@ -979,14 +1224,14 @@ In a Collection Event, the action is the extraction from nature.</p>
 <p>The concept encompasses the terms <a href="https://dwc.tdwg.org/terms/#materialsample">materialSample</a> and <a href="https://dwc.tdwg.org/terms/#materialentity">materialSampleEntity</a> from DarwinCore.</p>
 </div>
 <div class="sect3">
-<h4 id="mat-samp-type">3.6.1. Material Sample Type</h4>
+<h4 id="mat-samp-type">4.6.1. Material Sample Type</h4>
 <div class="paragraph">
 <p>A Material Sample Type is a system-defined term that prescribes the downstream expectations and logic in how derivative (or child) Material Samples are to be interpreted and digitally managed.
 Fixed values include: <code>Whole Organism</code>, <code>Culture Strain</code>, <code>Molecular Sample</code>, <code>Organism Part</code> or <code>Mixed Organisms</code>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="primary_id">3.6.2. Primary ID</h4>
+<h4 id="primary_id">4.6.2. Primary ID</h4>
 <div class="paragraph">
 <p>Primary, preferably unique and human readable, identifier for the material-sample.</p>
 </div>
@@ -1007,25 +1252,25 @@ Non-unique identifiers are allowed but will require user to explicitly allow it.
 </div>
 </div>
 <div class="sect3">
-<h4 id="next_identifier">3.6.3. Next Available Identifier</h4>
+<h4 id="next_identifier">4.6.3. Next Available Identifier</h4>
 <div class="paragraph">
 <p>Unique Primary ID creation by system for a material by concatenating the associated Collection string with the lowest unused integer. Ticking off the box will block manual <a href="#primary_id">Primary ID</a> entry.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="mat-samp-state">3.6.4. Material Sample State</h4>
+<h4 id="mat-samp-state">4.6.4. Material Sample State</h4>
 <div class="paragraph">
 <p>Represents the state of a material sample when its condition is negatively impacted. Fixed values include: destroyed, damaged, lost or decommissioned</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="preparation">3.7. Preparation</h3>
+<h3 id="preparation">4.7. Preparation</h3>
 <div class="paragraph">
 <p>Preparation can either be for preservation or propagation purpose.</p>
 </div>
 <div class="sect3">
-<h4 id="preparation-type">3.7.1. Preparation Type</h4>
+<h4 id="preparation-type">4.7.1. Preparation Type</h4>
 <div class="paragraph">
 <p>A noun representing what is getting prepared.</p>
 </div>
@@ -1037,7 +1282,7 @@ Non-unique identifiers are allowed but will require user to explicitly allow it.
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-method">3.7.2. Preparation Method</h4>
+<h4 id="preparation-method">4.7.2. Preparation Method</h4>
 <div class="paragraph">
 <p>A noun representing the process used (the how) in preparing the material sample.</p>
 </div>
@@ -1049,7 +1294,7 @@ Non-unique identifiers are allowed but will require user to explicitly allow it.
 </div>
 </div>
 <div class="sect3">
-<h4 id="preservation-type">3.7.3. Preservation Type</h4>
+<h4 id="preservation-type">4.7.3. Preservation Type</h4>
 <div class="paragraph">
 <p>Description of the preservation type of the material sample.</p>
 </div>
@@ -1059,14 +1304,14 @@ Non-unique identifiers are allowed but will require user to explicitly allow it.
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-fixative">3.7.4. Preparation Fixative</h4>
+<h4 id="preparation-fixative">4.7.4. Preparation Fixative</h4>
 <div class="paragraph">
 <p>Solution that was applied to or in which the material sample is preserved.
 Examples: <code>EtOH 95%</code>, <code>EtOH 75%</code>, <code>EtOH 70%</code>, <code>saline</code>, <code>glue</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-materials">3.7.5. Preparation Materials</h4>
+<h4 id="preparation-materials">4.7.5. Preparation Materials</h4>
 <div class="paragraph">
 <p>Additional, typically inert physical environments or objects in which or on which the organism in a material sample is stored. It does not express the state of the organism nor the fixatives used but rather the materials that allow the organism to be presented.</p>
 </div>
@@ -1075,7 +1320,7 @@ Examples: <code>EtOH 95%</code>, <code>EtOH 75%</code>, <code>EtOH 70%</code>, <
 </div>
 </div>
 <div class="sect3">
-<h4 id="preparation-substrate">3.7.6. Preparation Substrate</h4>
+<h4 id="preparation-substrate">4.7.6. Preparation Substrate</h4>
 <div class="paragraph">
 <p>Material on which the organism in the material sample is presented or grows.
 Examples: rock, log, agar</p>
@@ -1083,28 +1328,28 @@ Examples: rock, log, agar</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="organism">3.8. Organism</h3>
+<h3 id="organism">4.8. Organism</h3>
 <div class="paragraph">
 <p>A particular organism or defined group of organisms considered to be taxonomically homogeneous. (from <a href="https://dwc.tdwg.org/terms/#organism">DarwinCore</a>).
 Optionally, it is possible to define a target organism within a material sample.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="project">3.9. Project</h3>
+<h3 id="project">4.9. Project</h3>
 <div class="paragraph">
 <p>Project has a start and an end date. It usually links to the organizational definition of project where an objective, a scope, resources and deliverable are defined.
 A material sample can be linked to multiple projects.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_protocol">3.10. Protocol</h3>
+<h3 id="_protocol">4.10. Protocol</h3>
 <div class="paragraph">
 <p>Predefined written procedural method in the design and implementation of experiments in natural sciences.
 (from <a href="http://www.wikidata.org/entity/Q367158">Wikidata</a>)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="split">3.11. Split</h3>
+<h3 id="split">4.11. Split</h3>
 <div class="paragraph">
 <p>The concept of a split represents the action of creating new material sample(s) from an existing material sample. The provenance of the new material sample(s) is preserved. For example, the action can be a dissection or fungal/bacterial propagation.</p>
 </div>
@@ -1115,7 +1360,7 @@ A material sample can be linked to multiple projects.</p>
 <p>Limitation: The result of a split (called children) cannot have their own collecting event. Since the extraction from nature happened on the first material sample, children will inherit the one from the first parent.</p>
 </div>
 <div class="sect3">
-<h4 id="direct-parent-strategy">3.11.1. Direct Parent Naming Strategy</h4>
+<h4 id="direct-parent-strategy">4.11.1. Direct Parent Naming Strategy</h4>
 <div class="paragraph">
 <p>Using that strategy, the generated children will get the next name available among the list of children of the direct parent.</p>
 </div>
@@ -1161,7 +1406,7 @@ A material sample can be linked to multiple projects.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="material-sample-type-strategy">3.11.2. Material Sample Type Naming Strategy</h4>
+<h4 id="material-sample-type-strategy">4.11.2. Material Sample Type Naming Strategy</h4>
 <div class="paragraph">
 <p>Using that strategy, the generated children will get the next name available among the complete set of material sample of the same <a href="#mat-samp-type">Material Sample Type</a> in the entire lineage.</p>
 </div>
@@ -1213,7 +1458,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="restrictions">3.12. Restrictions</h3>
+<h3 id="restrictions">4.12. Restrictions</h3>
 <div class="paragraph">
 <p>Restriction levels are regulations set by the Public Health Agency of Canada (PHAC) and the Canadian Food Inspection Agency (CFIA). Levels set, or restrictions remarks made will tag the material sample with the appropriate level or note. The “Restricted” button toggle is decoupled from the tags.</p>
 </div>
@@ -1225,7 +1470,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="scheduled_actions">3.13. Scheduled Actions</h3>
+<h3 id="scheduled_actions">4.13. Scheduled Actions</h3>
 <div class="paragraph">
 <p>Only for reporting and record keeping purposes. No alerts will be triggered automatically on assigned date. Multiple actions can exist.</p>
 </div>
@@ -1233,7 +1478,7 @@ A material sample can be linked to multiple projects.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="storage-component">4. Storage Component</h2>
+<h2 id="storage-component">5. Storage Component</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Storage components follow a tree-like hierarchy, with each subsequent child storage unit created having the parent as its location.</p>
@@ -1248,13 +1493,13 @@ A material sample can be linked to multiple projects.</p>
 <p>Components that are created can be assigned as a child of another Storage Unit using the <code>Add Existing Storage Unit</code> button.</p>
 </div>
 <div class="sect2">
-<h3 id="storage-unit-type">4.1. Storage Unit Type</h3>
+<h3 id="storage-unit-type">5.1. Storage Unit Type</h3>
 <div class="paragraph">
 <p>Generic classification description for a storage object that is created. Used as a means of categorizing. A storage unit type can have the <code>grid</code> option meaning that it can store content using coordinates.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="storage-unit">4.2. Storage Unit</h3>
+<h3 id="storage-unit">5.2. Storage Unit</h3>
 <div class="paragraph">
 <p>Individual instance of a <a href="#storage-unit-type">Storage Unit Type</a>. For example, "Room 101" is a storage unit that has a storage unit type of <code>Room</code>.</p>
 </div>
@@ -1262,29 +1507,29 @@ A material sample can be linked to multiple projects.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="object-store-component">5. Object Store Component</h2>
+<h2 id="object-store-component">6. Object Store Component</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="Metadata">5.1. Metadata</h3>
+<h3 id="Metadata">6.1. Metadata</h3>
 <div class="paragraph">
 <p>Data about an object stored or represented in the object-store.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_derivative">5.2. Derivative</h3>
+<h3 id="_derivative">6.2. Derivative</h3>
 <div class="paragraph">
 <p>Represents a derivative from a metadata object. Its lifecycle is directly attached to the metadata object meaning that if the metadata object is deleted the derivative will automatically be deleted.
 Derivatives are usualy a visual representation of the main object when the main object can&#8217;t be easily represented like raw formats. They are also used to store thumbnails.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_file_upload">5.3. File Upload</h3>
+<h3 id="_file_upload">6.3. File Upload</h3>
 <div class="paragraph">
 <p>Represents a file uploaded to the object-store-api. The files are uniquely identified and available to attach metadata or derivative.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_external_resource">5.4. External Resource</h3>
+<h3 id="_external_resource">6.4. External Resource</h3>
 <div class="paragraph">
 <p>External resources are represented in the object-store by a URL. No copy or storage of the file is available in the object-store but instead a link to the resource. This is mostly used to allow the object-store to point to a resource that could not be represented as a file (e.g. <a href="https://www.protocols.io/">protocols.io</a>) or that the level of protection required is higher than what the object-store can support.</p>
 </div>
@@ -1292,32 +1537,32 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 </div>
 <div class="sect1">
-<h2 id="sequence-component">6. Sequence Component</h2>
+<h2 id="sequence-component">7. Sequence Component</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_pcr_primer">6.1. PCR Primer</h3>
+<h3 id="_pcr_primer">7.1. PCR Primer</h3>
 <div class="paragraph">
 <p>Information about Primers used for amplification of a region on a targeted organism.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_thermocycler_profile">6.2. Thermocycler Profile</h3>
+<h3 id="_thermocycler_profile">7.2. Thermocycler Profile</h3>
 <div class="paragraph">
 <p>Used to track different amplification cycles and melting temperature programmed for each gene region and its associated primer pairs.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pcrbatch">6.3. PcrBatch</h3>
+<h3 id="_pcrbatch">7.3. PcrBatch</h3>
 <div class="paragraph">
 <p>Details of the PCR Master Mix used for gene amplification. PCRBatch will connect to Gene Region, PCR Primers and Thermocycler Profiles.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_pcrreaction">6.4. PcrReaction</h3>
+<h3 id="_pcrreaction">7.4. PcrReaction</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_ngs_index">6.5. NGS Index</h3>
+<h3 id="_ngs_index">7.5. NGS Index</h3>
 <div class="paragraph">
 <p>Used to distinguish between different samples in a single sequencing run of Next-Generation Sequencing (NGS).</p>
 </div>
@@ -1325,13 +1570,13 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_workbook_upload">7. Workbook Upload</h2>
+<h2 id="_workbook_upload">8. Workbook Upload</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Workbook Upload functionality can be used to quickly add some records to DINA. It should be used to add a small number of new records but it is not a mechanism designed to perform a data migration from another source. Migration should be done at the API level since a lot of coordination, validation and checks are necessary.</p>
 </div>
 <div class="sect2">
-<h3 id="_limitations">7.1. Limitations</h3>
+<h3 id="_limitations">8.1. Limitations</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1357,12 +1602,12 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_relationships">7.2. Relationships</h3>
+<h3 id="_relationships">8.2. Relationships</h3>
 <div class="paragraph">
 <p>Relationships in Workbooks are expressed as textual representation unless a UUID (Universal Unique Identifier) is provided. The Workbook Upload will need to map the textual representation to existing concepts in the DINA system. With the exception of collecting-event, all records where the relationships are pointing must already exist before the import.</p>
 </div>
 <div class="sect3">
-<h4 id="_text_vs_concept">7.2.1. Text vs Concept</h4>
+<h4 id="_text_vs_concept">8.2.1. Text vs Concept</h4>
 <div class="paragraph">
 <p>In a Workbook, textual representation are used to express concepts. For example, the text "Michael Jordan" could mean <a href="https://en.wikipedia.org/wiki/Michael_Jordan">Michael Jordan</a> or <a href="https://en.wikipedia.org/wiki/Michael_Jordan_(mycologist)">Michael Jordan</a> or one of <a href="https://en.wikipedia.org/wiki/Michael_Jordan_(disambiguation)">multiple people</a>. There is no way to automatically pick the right person without having more information. A globally unique and persistent identifier exists and can be used to clearly identified a concept. For researchers <a href="https://orcid.org/">ORCID</a> can be used to identify researchers without any ambiguity. DINA generates <a href="#identifiers">DINA Identifiers</a> for all of the data that it stores.</p>
 </div>
@@ -1371,10 +1616,10 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_search">8. Search</h2>
+<h2 id="_search">9. Search</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_in_operator">8.1. IN Operator</h3>
+<h3 id="_in_operator">9.1. IN Operator</h3>
 <div class="paragraph">
 <p>The <code>IN</code> operator can be used to run a query that would return all the elements from a comma separated list.</p>
 </div>
@@ -1389,7 +1634,7 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_between_operator">8.2. BETWEEN Operator</h3>
+<h3 id="_between_operator">9.2. BETWEEN Operator</h3>
 <div class="paragraph">
 <p>The <code>BETWEEN</code> operator can be used to run a query that would return all the elements that are within the upper and lower bound.</p>
 </div>
@@ -1407,7 +1652,7 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 </div>
 <div class="sect2">
-<h3 id="global_search_syntax">8.3. Global Search Syntax</h3>
+<h3 id="global_search_syntax">9.3. Global Search Syntax</h3>
 <div class="paragraph">
 <p>This section explains the special characters you can use to refine your searches within the Global Search feature. These options allow you to construct more precise and targeted global searches, helping you find the information you need more effectively.</p>
 </div>
@@ -1531,7 +1776,7 @@ Derivatives are usualy a visual representation of the main object when the main 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-10-14 19:42:07 UTC
+Last updated 2025-10-14 19:49:53 UTC
 </div>
 </div>
 </body>
