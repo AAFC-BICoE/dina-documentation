@@ -131,13 +131,7 @@ Resources may contain fields of the date type in the format YYYY-MM-DD. These da
 
 == Partial Dates with Precision Awareness
 
-= ISO DateTime Filtering with Precision Awareness
-
-== Overview
-
-The ISO DateTime filter allows you to query date-time fields while respecting the precision of both the stored data and the filter criteria. This prevents false matches when comparing dates with different levels of precision.
-
-== How It Works
+=== How It Works
 
 When filtering ISO 8601 date-times, the system considers *precision levels*:
 
@@ -152,9 +146,9 @@ When filtering ISO 8601 date-times, the system considers *precision levels*:
 A match only occurs when both the value AND precision are compatible.
 ====
 
-== Filter Operations
+=== Filter Operations
 
-=== Equality (`=`)
+==== Equality (`=`)
 
 Matches only when *both* the date-time value and precision level are identical.
 
@@ -171,7 +165,7 @@ filter[startEventDateTime]=1999-03-03    // Matches records with exactly "1999-0
 * `1999-03-03` (day) ≠ `1999-03-03T03:00` (minute)
 ====
 
-=== Less Than / Less or Equal (`[LT]`, `[LOE]`)
+==== Less Than / Less or Equal (`[LT]`, `[LOE]`)
 
 Matches records where:
 
@@ -196,7 +190,7 @@ filter[startEventDateTime][LT]=2000
 * ✓ Matches: `1999` (same precision, value is less)
 * ✗ Does NOT match: `1999-01` (higher precision than filter - prevents false positives)
 
-=== Greater Than / Greater or Equal (`[GT]`, `[GOE]`)
+==== Greater Than / Greater or Equal (`[GT]`, `[GOE]`)
 
 Matches records where:
 
@@ -221,7 +215,7 @@ filter[startEventDateTime][GT]=2009
 * ✓ Matches: `2010` (same precision, value is greater)
 * ✗ Does NOT match: `2010-01` (higher precision than filter - prevents false positives)
 
-== Why Precision Matters
+=== Why Precision Matters
 
 Without precision awareness, you might get incorrect results:
 
