@@ -9,6 +9,8 @@ Before using the Workbook Uploader make sure that the file to be uploaded has on
 * Excel Sheet (.xlsx)
 * Comma Separated Values (.csv)
 
+For columns that support multiple values (ex. listing multiple collectors per collecting event), separate the values using a semicolon.
+
 [id=uploadingData]
 === Uploading Data
 . In the DINA Homepage, click on the `Upload Workbook` option under the Collection submenu.
