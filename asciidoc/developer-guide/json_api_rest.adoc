@@ -57,9 +57,9 @@ Supported operators:
 * IN (comma-separated list of values, if the value has a comma, the value can be quoted)
 * LIKE ('%' as a wildcard for zero or more characters)
 * GT (for numbers and dates)
-* GE (for numbers and dates)
+* GOE (for numbers and dates)
 * LT (for numbers and dates)
-* LE (for numbers and dates)
+* LOE (for numbers and dates)
 
 Implementation details can be found on https://aafc-bicoe.github.io/dina-base-api/#_filtering[dina-base documentation].
 
