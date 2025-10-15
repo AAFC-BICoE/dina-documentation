@@ -141,6 +141,12 @@ When filtering ISO 8601 date-times, the system considers *precision levels*:
 * `YYYY-MM-DDTHH:MM` (with time)
 * `YYYY-MM-DDTHH:MM:SS` (with seconds) - highest precision
 
+Each partial date represents an *ambiguous range* with a start and end:
+
+* `2009` represents `2009-01-01T00:00:00.000` to `2009-12-31T23:59:59.999`
+* `2009-06` represents `2009-06-01T00:00:00.000` to `2009-06-30T23:59:59.999`
+* `2009-06-15` represents `2009-06-15T00:00:00.000` to `2009-06-15T23:59:59.999`
+
 === Why Precision Matters
 
 Without precision awareness, you might get incorrect results:
@@ -152,91 +158,71 @@ If you store `1999` (year only) and filter with `[LT]=1999-06`, should it match?
 * Some of those dates are before June 1999, some are after
 ====
 
-[IMPORTANT]
-====
-A match only occurs when both the value AND precision are compatible.
-====
-
-=== Filter Operations
+=== Simple Filter Operations
 
 ==== Equality (`=`)
 
-Matches only when *both* the date-time value and precision level are identical.
-
-.Examples
-[source]
-----
-filter[startEventDateTime]=1999          // Matches records with exactly "1999" (year precision)
-filter[startEventDateTime]=1999-03-03    // Matches records with exactly "1999-03-03" (day precision)
-----
-
-[NOTE]
-====
-* `1999` (year) ≠ `1999-01` (month)
-* `1999-03-03` (day) ≠ `1999-03-03T03:00` (minute)
-====
-
-==== Less Than / Less or Equal (`[LT]`, `[LOE]`)
-
-Matches records where:
-
-. The date-time value satisfies the comparison, AND
-. The stored precision is *greater than or equal* to the filter precision
-
-.Examples
-[source]
-----
-filter[startEventDateTime][LOE]=1999-01
-----
-
-* ✓ Matches: `1999-01` (same precision, value matches)
-* ✗ Does NOT match: `1999` (lower precision - too vague to compare accurately)
-* ✗ Does NOT match: `1999-02` (same precision, but value is greater)
+Matches when start date AND precision are identical.
 
 [source]
 ----
-filter[startEventDateTime][LT]=2000
+filter[startEventDateTime]=2009
+
+✓ 2009 (same start, same precision)
+✗ 2009-06 (same start, different precision)
 ----
 
-* ✓ Matches: `1999` (same precision, value is less)
-* ✗ Does NOT match: `1999-01` (higher precision than filter - prevents false positives)
+==== Greater Than (`[GT]`)
 
-==== Greater Than / Greater or Equal (`[GT]`, `[GOE]`)
-
-Matches records where:
-
-. The date-time value satisfies the comparison, AND
-. The stored precision is *greater than or equal* to the filter precision
-
-.Examples
-[source]
-----
-filter[startEventDateTime][GOE]=2010-01
-----
-
-* ✓ Matches: `2010-01` (same precision, value matches)
-* ✗ Does NOT match: `2010` (lower precision - too vague to compare accurately)
-* ✗ Does NOT match: `2009-12` (same precision, but value is less)
+Matches when stored date starts after the query range ends.
 
 [source]
 ----
 filter[startEventDateTime][GT]=2009
+
+✓ 2010 (after range)
+✗ 2009 (equal, not greater)
+✗ 2009-06-15 (within range)
 ----
 
-* ✓ Matches: `2010` (same precision, value is greater)
-* ✗ Does NOT match: `2010-01` (higher precision than filter - prevents false positives)
+==== Greater or Equal (`[GOE]`)
 
+Matches when stored date starts at/after query range ends OR is exactly equal.
 
+[source]
+----
+filter[startEventDateTime][GOE]=2009
 
-.Solution
-====
-The filter only matches when precision levels are compatible, ensuring accurate comparisons.
-====
+✓ 2010 (after range)
+✓ 2009 (exact equality)
+✗ 2009-06-15 (within, not equal)
+----
 
-'''
+==== Less Than (`[LT]`)
 
-*Supported Operators:* `=`, `[LT]`, `[LOE]`, `[GT]`, `[GOE]`
+Matches when stored date ends before the query range starts.
 
+[source]
+----
+filter[startEventDateTime][LT]=2009
+
+✓ 2008 (before range)
+✗ 2009 (equal, not less)
+✗ 2009-06-15 (within range)
+----
+
+==== Less or Equal (`[LOE]`)
+
+Matches when stored date ends at/before query range ends OR is exactly equal.
+
+[source]
+----
+filter[startEventDateTime][LOE]=2009
+
+✓ 2008 (before range)
+✓ 2009 (exact equality)
+✗ 2009-06-15 (within, not equal)
+----
 
 For example, we have 2 material samples as follows:
 
