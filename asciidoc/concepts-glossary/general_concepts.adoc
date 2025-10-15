@@ -141,6 +141,17 @@ When filtering ISO 8601 date-times, the system considers *precision levels*:
 * `YYYY-MM-DDTHH:MM` (with time)
 * `YYYY-MM-DDTHH:MM:SS` (with seconds) - highest precision
 
+=== Why Precision Matters
+
+Without precision awareness, you might get incorrect results:
+
+====
+If you store `1999` (year only) and filter with `[LT]=1999-06`, should it match?
+
+* The year 1999 could represent any date from Jan 1 to Dec 31, 1999
+* Some of those dates are before June 1999, some are after
+====
+
 [IMPORTANT]
 ====
 A match only occurs when both the value AND precision are compatible.
@@ -215,18 +226,7 @@ filter[startEventDateTime][GT]=2009
 * ✓ Matches: `2010` (same precision, value is greater)
 * ✗ Does NOT match: `2010-01` (higher precision than filter - prevents false positives)
 
-=== Why Precision Matters
 
-Without precision awareness, you might get incorrect results:
-
-.Problem Example
-====
-If you store `1999` (year only) and filter with `[LT]=1999-06`, should it match?
-
-* The year 1999 could represent any date from Jan 1 to Dec 31, 1999
-* Some of those dates are before June 1999, some are after
-* *Result: Ambiguous - system correctly excludes this match*
-====
 
 .Solution
 ====
