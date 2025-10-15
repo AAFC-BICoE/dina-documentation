@@ -181,6 +181,7 @@ Matches when stored date starts after the query range ends.
 filter[startEventDateTime][GT]=2009
 
 ✓ 2010 (after range)
+✓ 2011-03-17 (after range)
 ✗ 2009 (equal, not greater)
 ✗ 2009-06-15 (within range)
 ----
@@ -194,6 +195,7 @@ Matches when stored date starts at/after query range ends OR is exactly equal.
 filter[startEventDateTime][GOE]=2009
 
 ✓ 2010 (after range)
+✓ 2011-03-17 (after range)
 ✓ 2009 (exact equality)
 ✗ 2009-06-15 (within, not equal)
 ----
@@ -207,6 +209,7 @@ Matches when stored date ends before the query range starts.
 filter[startEventDateTime][LT]=2009
 
 ✓ 2008 (before range)
+✓ 2007-11-22 (before range)
 ✗ 2009 (equal, not less)
 ✗ 2009-06-15 (within range)
 ----
@@ -220,6 +223,7 @@ Matches when stored date ends at/before query range ends OR is exactly equal.
 filter[startEventDateTime][LOE]=2009
 
 ✓ 2008 (before range)
+✓ 2007-11-22 (before range)
 ✓ 2009 (exact equality)
 ✗ 2009-06-15 (within, not equal)
 ----
