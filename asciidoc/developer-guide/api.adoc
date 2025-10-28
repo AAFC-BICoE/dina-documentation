@@ -1,7 +1,22 @@
 = API Specifications
 
-* https://dina-web.github.io/collection-specs/[collection-api]
-* https://dina-web.github.io/object-store-specs/[object-store-api]
-** https://github.com/AAFC-BICoE/object-store-api/blob/master/docs/file_upload_download.adoc[File Upload]
-* https://dina-web.github.io/agent-specs/[agent-api]
-* https://dina-web.github.io/sequence-specs/[sequence-api]
+|===
+| API | Specification | Implementation
+
+| Collection API
+| https://dina-web.github.io/collection-specs/[collection-specs]
+| https://github.com/AAFC-BICoE/collection-api[collection-api]
+
+| Object Store API
+| https://dina-web.github.io/object-store-specs/[object-store-specs]
+| https://github.com/AAFC-BICoE/object-store-api[object-store-api]
+
+| Agent API
+| https://dina-web.github.io/agent-specs/[agent-specs]
+| https://github.com/AAFC-BICoE/agent-api[agent-api]
+
+| Sequence API
+| https://dina-web.github.io/sequence-specs/[sequence-specs]
+| https://github.com/AAFC-BICoE/sequence-api[sequence-api]
+
+|===
