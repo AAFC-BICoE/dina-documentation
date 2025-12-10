@@ -1,0 +1,20 @@
+== Introduction to DINA
+
+DINA (Digital Information System for Natural History Data) is an open-source, standards-based platform designed to manage and share data from samples such as preserved or living specimens (plants, fungi, insects, vertebrates), fossils, geological cores, soil and sediment samples, water samples, DNA extracts, tissue samples, microbial cultures, seeds, herbarium sheets, and observational records. It supports the *FAIR principles* (Findable, Accessible, Interoperable, Reusable) and enables institutions to curate, store, and publish data in a sustainable and interoperable way.
+
+
+=== Why DINA?
+
+DINA is designed to meet the growing need for robust, flexible, and collaborative sample-based data management tools. It offers:
+
+* *Modular Architecture*: Deploy components independently and replace them without disrupting the system, ensuring flexibility.
+* *Open Source & Community Driven*: Developed collaboratively by the DINA Consortium and partners, fostering transparency and innovation.
+* *Data Model Enhancements*: Handle complex relationships between specimens, derivatives, and storage units.
+* *Integration Capabilities*: APIs and specifications enable interoperability with external systems and global biodiversity data networks.
+* *Improved Data Quality and Accessibility*: Ensure accurate, standardized, and easily shareable information.
+* *Collaboration Across Institutions*: Facilitate data sharing and joint projects.
+* *Compliance with Open Science Directives*: Align with FAIR principles for sustainable research practices.
+* *Full Control*: Deploy your own instance of DINA and customize it to fit your needs.
+
+
+

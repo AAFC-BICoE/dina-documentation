@@ -7,6 +7,8 @@
 
 NOTE: To search the User Guide, press Ctrl+F and enter a keyword.
 
+include::introduction.adoc[]
+
 include::login.adoc[]
 
 include::collection.adoc[]
@@ -34,3 +36,4 @@ include::bulk_linking.adoc[]
 include::controlled_vocabulary.adoc[]
 
 include::managed_attributes.adoc[]
+
