@@ -472,7 +472,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_create_and_update_bulk_operations">6.7.1. Create and Update Bulk Operations</a></li>
 <li><a href="#_delete_bulk_operation">6.7.2. Delete Bulk Operation</a></li>
 <li><a href="#_get_bulk_operation">6.7.3. GET Bulk Operation</a></li>
-<li><a href="#_crnk_based_operations_deprecated">6.7.4. Crnk Based Operations (Deprecated)</a></li>
 </ul>
 </li>
 </ul>
@@ -1071,110 +1070,6 @@ each supported resources. They accept a list of <a href="https://jsonapi.org/for
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_crnk_based_operations_deprecated">6.7.4. Crnk Based Operations (Deprecated)</h4>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<strong>Deprecated</strong>: <code>operations</code> endpoint will be removed from all modules and be replaced by <code>bulk</code> endpoints.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Bulk operations are supported using the unofficial
-<a href="https://github.com/json-api/json-api/blob/9c7a03dbc37f80f6ca81b16d444c960e96dd7a57/extensions/jsonpatch/index.md">jsonpatch</a>
-extension to JSON:API implemented by the Crnk Operations Module.</p>
-</div>
-<div class="paragraph">
-<p>Example request:</p>
-</div>
-<div class="paragraph">
-<p>HTTP Method: PATCH</p>
-</div>
-<div class="paragraph">
-<p>URL: (API path prefix)/operations</p>
-</div>
-<div class="paragraph">
-<p>Headers:
-  - Content-Type: application/json-patch+json
-  - Accept: application/json-patch+json</p>
-</div>
-<div class="paragraph">
-<p>Body:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[{
-	"op": "POST",
-	"path": "region",
-	"value": {
-		"id": 1000,
-		"type": "region",
-		"attributes": {
-			"name": "region-1",
-			"description": "desc",
-			"symbol": "symbol"
-		}
-	}
-}, {
-	"op": "POST",
-	"path": "region",
-	"value": {
-		"id": 2000,
-		"type": "region",
-		"attributes": {
-			"name": "region-2",
-			"description": "desc",
-			"symbol": "symbol"
-		}
-	}
-}]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Reponse:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
-    {
-        "data": {
-            "id": "4",
-            "type": "region",
-            "attributes": {
-                "symbol": "symbol",
-                "name": "region-1",
-                "description": "desc"
-            }
-        },
-        "status": 201
-    },
-    {
-        "data": {
-            "id": "5",
-            "type": "region",
-            "attributes": {
-                "symbol": "symbol",
-                "name": "region-2",
-                "description": "desc"
-            }
-        },
-        "status": 201
-    }
-]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Note: The "id" field in a POST request to create a resource will not become the persisted
-resource&#8217;s ID, but it is mandatory for the request. In the future this value could be used to
-submit multiple resources linking to each other.</p>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -1617,7 +1512,7 @@ Updating index dina_material_sample_index_20241112193452 with alias dina_materia
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-01-16 20:49:58 UTC
+Last updated 2026-01-16 20:51:31 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
