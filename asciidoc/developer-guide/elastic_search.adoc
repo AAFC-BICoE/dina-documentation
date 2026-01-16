@@ -1,5 +1,7 @@
 = Elasticsearch
 
+To add a new field to the mapping see DINA https://aafc-bicoe.github.io/dina-local-deployment/#_how_to_update_elasticsearch_mapping[deployment documentation].
+
 == Update Mapping
 
 When a new mapping or new mapping property must be added to a live index the
