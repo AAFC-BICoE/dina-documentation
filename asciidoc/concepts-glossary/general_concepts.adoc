@@ -33,7 +33,7 @@ Permissions in DINA are strictly related to roles per the table below:
 .Minimum role required for operation
 [options="header"]
 |=======================
-|Resource              |Create      |Update      |Delete
+|Resource              |Create      |Edit      |Delete
 |Material Sample       |Guest       |Guest       |User
 |Controlled Vocabulary |Super User  |Super User  |Super User
 |Form Template         |Object Owner|Object Owner|Object Owner
