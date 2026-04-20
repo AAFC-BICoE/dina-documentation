@@ -19,6 +19,10 @@
 | https://dina-web.github.io/sequence-specs/[sequence-specs]
 | https://github.com/AAFC-BICoE/sequence-api[sequence-api]
 
+| Export API
+| 
+| https://github.com/AAFC-BICoE/dina-export-api[export-api]
+
 | Search API
 | 
 | https://github.com/AAFC-BICoE/dina-search-api[search-api]
