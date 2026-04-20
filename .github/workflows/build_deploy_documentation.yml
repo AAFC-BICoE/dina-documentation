@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: Install asciidoctor
         run: |
            sudo apt-get install -y asciidoctor
@@ -24,10 +24,15 @@ jobs:
           cp -r asciidoc/developer-guide/images/. generated-docs/developer/images
           cp -r asciidoc/user-guide/images/. generated-docs/images
           cp -r asciidoc/concepts-glossary/images/. generated-docs/concepts-glossary/images
-
-      - name: Deploy GitHub Pages (only on master branch)
-        if: ${{ github.ref == 'refs/heads/main' }}
-        uses: peaceiris/actions-gh-pages@v3
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: generated-docs
+          path: 'generated-docs'
+         
+      - name: Deploy to GitHub Pages
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
