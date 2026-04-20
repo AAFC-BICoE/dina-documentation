@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment:
-      name: gh-pages
+      name: github-pages
     steps:
       - uses: actions/checkout@v6
       - name: Install asciidoctor
