@@ -26,7 +26,7 @@ GET /api/region?optfields[region]=hierarchy
 
 == Filtering
 
-=== Simple Filters
+=== Filters
 
 While JSON:API does not suggest a formal resource filtering mechanism, DINA is using a simple form of filtering based on filter, operator and value.
 
@@ -34,21 +34,32 @@ While JSON:API does not suggest a formal resource filtering mechanism, DINA is u
 GET /person?filter[firstName][EQ]=John&filter[lastName][EQ]=Doe
 ----
 
-Get the persons where the firstName is John OR Jane
+Get the persons where the firstName is John OR Jane:
 ----
 GET /person?filter[firstName][EQ]=John,Jane
 ----
 
-Get the persons where the lastName is null
+Get the persons where the lastName is null:
 ----
 GET /person?filter[lastName][EQ]=null
 ----
 
-Example of returning all derivitives of the metadata with UUID 44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7:
+Get the persons where either the firstName or the lastName is John:
+----
+GET /person?(filter[firstName][EQ]=John|filter[lastName][EQ]=John)
+----
 
+Example of returning all derivitives of the metadata with UUID 44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7:
 ----
 GET /metadata?filter[acDerivedFrom.id][EQ]=44b62cbc-5e7f-4e68-86d2-2819e3f5e9e7
 ----
+
+Logical filter expressions can be grouped using parentheses and support both OR (`|`) and AND (`&`) operators:
+----
+GET /person?((filter[firstName][EQ]=John|filter[lastName][EQ]=John)&filter[group][EQ]=admin)
+----
+
+NOTE: Multiple top-level filter parameters remain implicitly combined using AND. The `|` operator is primarily useful when grouping filter expressions.
 
 Supported operators:
 
@@ -64,58 +75,13 @@ Supported operators:
 Implementation details can be found on https://aafc-bicoe.github.io/dina-base-api/#_filtering[dina-base documentation].
 
 === FIQL
+WARNING: Deprecated.
 
 The https://datatracker.ietf.org/doc/html/draft-nottingham-atompub-fiql-00[Feed Item Query Language] is a simple but flexible, URI-friendly syntax for expressing filters across the entries in a Web feed. 
 Examples and details can be found on  Apache CXF https://cxf.apache.org/docs/jax-rs-search.html#JAXRSSearch-FeedItemQueryLanguage[JAX-RS Search].
 
 ----
 localhost:8080/api/region?fiql=name==12S,name==142
-----
-
-=== RSQL
-
-WARNING: Deprecated. Replaced by FIQL.
-
-DINA supports https://github.com/jirutka/rsql-parser[RSQL (REST query language)] for more complex filter queries.
-
-----
-localhost:8080/api/region?filter[rsql]=( name=='12S' or name=='142' )
-----
-
-returns
-
-----
-{
-    "data": [
-        {
-            "id": "142",
-            "type": "region",
-            "attributes": {
-                "symbol": "142",
-                "name": "142",
-                "description": ""
-            }
-        },
-        {
-            "id": "284",
-            "type": "region",
-            "attributes": {
-                "symbol": "12S",
-                "name": "12S",
-                "description": "mitochondrial"
-            }
-        },
-        {
-            "id": "366",
-            "type": "region",
-            "attributes": {
-                "symbol": "12S",
-                "name": "12S",
-                "description": null
-            }
-        }
-    ]
-}
 ----
 
 == Pagination
