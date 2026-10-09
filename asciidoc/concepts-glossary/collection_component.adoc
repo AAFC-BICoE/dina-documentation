@@ -72,6 +72,12 @@ The effective determination refers to the first primary determination that can b
 === Target Organism Primary Scientific Name
 The scientific name (verbatim scientific name if absent) of the primary <<determination>> of the target <<organism>>. If there is no target organism, all scientifc names will be concatenated (pipe | separated).
 
+[[dataset]]
+== Dataset
+
+Datasets are used as the basis for publishing data to external systems such as biodiversity data portals and aggregators.
+A Dataset represents the collection of records being published and provides the metadata required to describe, reference, and attribute the published data.
+
 [[mat-sample]]
 == Material Sample
 
