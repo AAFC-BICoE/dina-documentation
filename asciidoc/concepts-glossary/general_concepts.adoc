@@ -4,11 +4,12 @@
 [[group]]
 == Group
 
-Groups are used to define set of users for administration purpose (mostly permissions). They usually align with collections.
-A user can belong to more than 1 group.
+Groups are used to define set of users for administration purpose, primarily access control and permissions. 
+Groups typically align with collections or organizational units.
 
-Groups are also used to defined who owns an object. For example, an object in the object-store always belongs to a group.
-Objects can only have 1 owner.
+A user may belong to more than one group.
+
+Groups are also used to define ownership of resources. For example, every object stored in the Object Store belongs to a single group. A resource can only have one owning group.
 
 == Role
 
@@ -54,7 +55,7 @@ Users (when explicitly allowed) can access the system. What a user can and canno
 
 Not Publicly Releasable is a flag that can be set on certain resources to indicate that the data should not be made publicly available. 
 Once a resource in the object store is marked as Not Publicly Releasable, users who do not have access to the resource's group will not be able to download it.
-When a resource is marked as Not Publicly Releasable a reason can be provided to explain why the resource is restricted. 
+When a resource is marked as Not Publicly Releasable a reason can be provided to explain why the resource is restricted.
 This field can also be used to ensure data is not inadvertently shared when exporting data from DINA with automated tasks.
 
 image::not_publicly_releasable.png[Not Publicly Releasable and Not Publicly Releasable Reason field on a resource form]
@@ -126,10 +127,26 @@ Once you have configured the `Strategy`, you can choose how the sequence should 
 
 Field extensions are fields with specific definitions that are defined by known standards. In order to add a specific field extension, a system administrator needs to provide a configuration file to the application.
 
-[[managed_attributes]]
-== Managed Attributes
+[[controlled_vocabulary]]
+== Controlled Vocabulary
 
-Managed attributes are attributes that can be created and used by the users on-demand. They are usually used to track data that is not common enough to be captured in a regular field. A managed attribute can be of type `integer`, `string`, `date` or `boolean`.
+A Controlled Vocabulary is a predefined list of accepted terms that users can select when entering data. Controlled vocabularies help ensure consistency, reduce spelling variations, and improve data quality across DINA.
+
+Depending on the vocabulary configuration, users may be restricted to selecting existing terms or may be permitted to add new terms.
+
+[[managed_attributes]]
+=== Managed Attributes
+
+Managed Attributes allow users to define additional fields that can be attached to supported DINA resources without requiring changes to the core data model.
+Managed Attributes can be used to capture collection-specific, project-specific, or institution-specific information that is not represented by standard DINA fields.
+
+Supported data types include:
+
+* Text
+* Integer
+* Decimal
+* Boolean
+* Date
 
 [[material_sample_attachment]]
 == Material Sample Attachments
