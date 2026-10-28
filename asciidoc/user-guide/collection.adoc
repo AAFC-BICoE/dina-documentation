@@ -9,7 +9,7 @@ A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#collection[
 image::collection/Homepage.png[align="center"]
 
 [start=2]
-. In the Collection page, click the `Create new` button.
+. In the Collection page, click the `Create New` button.
 
 image::collection/CreateNew.png[align="center"]
 

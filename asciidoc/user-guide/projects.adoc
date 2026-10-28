@@ -10,7 +10,7 @@ A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#project[Pro
 image::projects/Homepage.png[align="center"]
 
 [start=2]
-. In the Projects page, click on the `Create new` button.
+. In the Projects page, click on the `Create New` button.
 
 image::projects/CreateNew.png[align="center"]
 
@@ -54,7 +54,7 @@ image::material-sample/SearchResult.png[align="center"]
 image::material-sample/Edit.png[align="center"]
 
 [start=5]
-. In the Edit page, select the correct Project in the `Project` field/dropdown.
+. In the Edit page, select the correct Project in the `Projects` field/dropdown.
 
 image::projects/Select.png[align="center"]
 

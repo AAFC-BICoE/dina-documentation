@@ -36,7 +36,7 @@ image::storage-units/2-CreateNew.png[align="center"]
 [start=3]
 . In the Add Storage Unit page, add any relevant information about your Storage Unit. After doing so, click the `Save` button on the top right corner of the page.
 
-NOTE: You can also choose a parent Storage Unit in the Parent subsection. This will create a tree-like hierarchy of Storage Units. See the example given below.
+NOTE: You can also choose a parent Storage Unit in the `Location` section. This will create a tree-like hierarchy of Storage Units. See the example given below.
 
 WARNING: Due to the heterogenous nature of the storage in different contexts, there is no validation based on type. For example you can have a shelf in a cabinet and a cabinet on a shelf.
 
@@ -44,9 +44,9 @@ image::storage-units/InfoPage.png[align="center"]
 
 [start=4]
 . Check that the information is correct. Note that this can be edited at any time. +
-If you wish to edit, see the changes, or delete the storage, you can do so through the buttons on the top right corner of the page as long as the Storage Unit has no child in the hierarchy.
+If you wish to edit, see the changes, or delete the storage, you can do so through the buttons on the top right corner of the page. The `Delete` button is only available when the Storage Unit has no child in the hierarchy. Child Storage Units can be added through the `Actions` menu.
 
-image::EditRevDelete.png[align="center"]
+image::storage-units/ViewButtons.png[align="center"]
 
 [start=5]
 . The created Storage Unit can now be accessed through the list page.
@@ -75,12 +75,12 @@ image::material-sample/SearchResult.png[align="center"]
 image::material-sample/Edit.png[align="center"]
 
 [start=5]
-. Activate the `Storage` component by clicking on the button corresponding to it.
+. Activate the `Storage` section by clicking on the toggle beside it in the `Sections` panel.
 
 image::storage-units/Activate.png[align="center"]
 
 [start=6]
-. The user can now choose to create a new `Storage Unit` or attach the sample to an already existing one.
+. The user can now find an existing `Storage Unit` through the `Search Storage` or `Browse Storage Tree` tab, then click its `Select` button to attach the sample to it.
 
 image::storage-units/Storage.png[align="center"]
 

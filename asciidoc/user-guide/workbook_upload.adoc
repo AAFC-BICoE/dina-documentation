@@ -29,7 +29,7 @@ Dialog Box:
 image::workbook-upload/DialogBox.png[align="center"]
 
 [start=3]
-. After selecting the file, the user can click on the `Submit` button on the right hand side of the screen.
+. After selecting the file, the user can click on the `Save` button on the right hand side of the screen.
 
 image::workbook-upload/Submit.png[align="center"]
 
@@ -43,13 +43,16 @@ image::workbook-upload/Preview.png[align="center"]
 [start=5]
 . By default, the uploader reads the header column of the workbook as the fields for each sample in DINA. The user can map the fields from the Excel sheet to the fields in DINA by selecting the appropriate field from the dropdown list.
 
-NOTE: Some of the fields may be already automarically mapped by DINA. The user may also click the checkbox on the right hand side for each mapping to skip specific columns.
+NOTE: Some of the fields may be already automatically mapped by DINA. Every column must either be mapped to a DINA field or skipped by clicking the `Skip` checkbox on the right hand side of its mapping.
 
 image::workbook-upload/Mapping.png[align="center"]
 
 [start=6]
 . Once the mapping is done, click the `Save` button at the top right corner of the page to begin the upload process. +
-This may take some time depending on how many samples are being uploaded.
+This may take some time depending on how many samples are being uploaded. +
+If any columns are skipped, a `Proceed with warnings?` dialog lists them. Click `Import anyway` to continue.
+
+image::workbook-upload/Warning.png[align="center"]
 
 [start=7]
 . After the upload is complete, the user will be notified and will be given an option to upload a new workbook or view the uploaded samples.

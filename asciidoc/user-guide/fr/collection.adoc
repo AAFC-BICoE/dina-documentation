@@ -9,9 +9,9 @@ Une https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#collectio
 image::collection/Homepage.png[align="center"]
 
 [start=2]
-. Dans la page Collections, cliquez sur le bouton `Créer nouveau`.
+. Dans la page Collections, cliquez sur le bouton `Créer`.
 
-image::collection/CreateNew.png[align="center"]
+image::fr/collection/CreateNew.png[align="center"]
 
 [start=3]
 . Dans la page d'ajout de collection, ajoutez toute information pertinente sur votre collection. Ensuite, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page.
