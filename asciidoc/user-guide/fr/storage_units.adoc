@@ -1,0 +1,90 @@
+[id=storageUnits]
+== Types d'unités de stockage et unités de stockage
+Un https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#storage-unit-type[type d'unité de stockage] est une classification générique d'un objet de stockage. Les https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#storage-unit[unités de stockage] peuvent être de différents types, comme un congélateur, une tablette ou une pièce. Chaque unité de stockage peut contenir d'autres unités de stockage, formant ainsi une hiérarchie arborescente.
+
+[id=createStorageUnitType]
+=== Créer un type d'unité de stockage
+. Pour créer une unité de stockage, il faut d'abord s'assurer d'avoir le type d'unité de stockage approprié. Pour ce faire, cliquez sur l'option `Types d’unités de stockage` dans le sous-menu Vocabulaire vérifié de la page d'accueil de DINA.
+
+image::storage-units/1-Homepage.png[align="center"]
+
+[start=2]
+. Dans la page Types d'unités de stockage, cliquez sur le bouton `Créer nouveau`.
+
+image::storage-units/1-CreateNew.png[align="center"]
+
+[start=3]
+. Dans la page d'ajout de type d'unité de stockage, ajoutez toute information pertinente, y compris l'activation des grilles s'il y a lieu. Ensuite, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page.
+
+WARNING: Il est obligatoire de nommer votre type d'unité de stockage.
+
+image::storage-units/Fields.png[align="center"]
+
+[id=createStorageUnit]
+=== Créer une unité de stockage
+Une fois le type d'unité de stockage approprié créé, nous pouvons maintenant créer une unité de stockage.
+
+. Pour ce faire, cliquez sur l'option `Unités de stockage` dans le sous-menu Collections de la page d'accueil de DINA.
+
+image::storage-units/2-Homepage.png[align="center"]
+
+[start=2]
+. Dans la page Unités de stockage, cliquez sur le bouton `Créer nouveau`.
+
+image::storage-units/2-CreateNew.png[align="center"]
+
+[start=3]
+. Dans la page d'ajout d'unité de stockage, ajoutez toute information pertinente sur votre unité de stockage. Ensuite, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page.
+
+NOTE: Vous pouvez aussi choisir une unité de stockage parente dans la sous-section Parent. Cela crée une hiérarchie arborescente d'unités de stockage. Voir l'exemple ci-dessous.
+
+WARNING: En raison de la nature hétérogène du stockage selon les contextes, aucune validation n'est effectuée selon le type. Par exemple, vous pouvez avoir une tablette dans une armoire et une armoire sur une tablette.
+
+image::storage-units/InfoPage.png[align="center"]
+
+[start=4]
+. Vérifiez que l'information est exacte. Notez qu'elle peut être modifiée en tout temps. +
+Si vous souhaitez modifier l'unité de stockage, consulter les modifications ou supprimer l'unité de stockage, vous pouvez le faire à l'aide des boutons dans le coin supérieur droit de la page, à condition que l'unité de stockage n'ait aucun enfant dans la hiérarchie.
+
+image::EditRevDelete.png[align="center"]
+
+[start=5]
+. L'unité de stockage créée est maintenant accessible à partir de la page de liste.
+
+[id=linkSampleToUnit]
+=== Lier un échantillon de matériaux à une unité de stockage
+Si l'utilisateur n'a pas lié un échantillon à une unité de stockage lors de sa création, il peut revenir à l'échantillon créé et lier l'unité de stockage en le modifiant.
+
+. Pour accéder à l'échantillon à partir de la page d'accueil de DINA, cliquez sur `Échantillons de matériaux` dans le sous-menu Collections
+
+image::material-sample/Homepage.png[align="center"]
+
+[start=2]
+. Si l'échantillon n'apparaît pas immédiatement dans la page de liste, l'utilisateur peut le rechercher à l'aide de requêtes dans la page Échantillons de matériaux.
+
+image::material-sample/Search.png[align="center"]
+
+[start=3]
+. L'utilisateur obtiendra alors des résultats selon les paramètres de recherche fournis. Cliquez sur l'échantillon que vous souhaitez lier à une unité de stockage.
+
+image::material-sample/SearchResult.png[align="center"]
+
+[start=4]
+. Dans la page de consultation de l'échantillon choisi, cliquez sur le bouton `Modifier`.
+
+image::material-sample/Edit.png[align="center"]
+
+[start=5]
+. Activez le composant `Stockage` en cliquant sur le bouton correspondant.
+
+image::storage-units/Activate.png[align="center"]
+
+[start=6]
+. L'utilisateur peut maintenant choisir de créer une nouvelle `Unité de stockage` ou de rattacher l'échantillon à une unité existante.
+
+image::storage-units/Storage.png[align="center"]
+
+[start=7]
+. Une fois terminé, cliquez sur le bouton `Enregistrer` dans le coin droit de la page. Le lien entre `Échantillon de matériaux` et `Unité de stockage` sera alors établi et apparaîtra dans les pages de consultation de l'échantillon et de l'unité de stockage.
+
+image::material-sample/Save.png[align="center"]

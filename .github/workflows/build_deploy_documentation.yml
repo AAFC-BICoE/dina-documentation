@@ -18,6 +18,8 @@ jobs:
            sudo apt-get install -y asciidoctor
       - name: Run generate documentation for User Guide
         run: asciidoctor -a toc=left -D generated-docs asciidoc/user-guide/index.adoc
+      - name: Run generate documentation for User Guide (French)
+        run: asciidoctor -a toc=left -D generated-docs/fr asciidoc/user-guide/fr/index.adoc
       - name: Run generate documentation for Basic Functionalities Guide
         run: asciidoctor -a toc=left -D generated-docs/concepts-glossary asciidoc/concepts-glossary/index.adoc
       - name: Run generate documentation for Developer Guide
