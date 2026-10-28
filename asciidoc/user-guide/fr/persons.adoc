@@ -1,0 +1,68 @@
+[id=persons]
+== Personnes
+Une https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#person[personne] est la représentation définitive et canonique d'un être humain dans DINA. Dans ce contexte, nous lierons des `Échantillons de matériaux` à des `Personnes` en tant que `Collecteurs`.
+
+[id=inputPerson]
+=== Saisir une personne
+. Dans la page d'accueil de DINA, sous le sous-menu Agents, cliquez sur l'option `Personnes`.
+
+image::persons/Homepage.png[align="center"]
+
+[start=2]
+. Dans la page Personnes, cliquez sur le bouton `Créer nouveau`.
+
+image::persons/CreateNew.png[align="center"]
+
+[start=3]
+. Dans la page d'ajout de personne, ajoutez toute information pertinente sur la personne. Ensuite, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page.
+
+WARNING: Il est obligatoire d'indiquer un nom d'affichage.
+
+[start=4]
+. Vérifiez que l'information est exacte. Notez qu'elle peut être modifiée en tout temps. +
+Si vous souhaitez modifier ou supprimer la personne, vous pouvez le faire à l'aide des boutons dans le coin supérieur droit de la page.
+
+image::EditDelete.png[align="center"]
+
+[start=5]
+. La personne créée est maintenant visible dans la page Personnes.
+
+image::persons/ListPage.png[align="center"]
+
+[id=linkSampletoCollector]
+=== Lier un échantillon de matériaux à un collecteur
+Si l'utilisateur n'a pas lié un échantillon à un collecteur lors de sa création, il peut revenir à l'échantillon créé et lier le collecteur en le modifiant.
+
+. Pour accéder à l'échantillon à partir de la page d'accueil de DINA, cliquez sur `Échantillons de matériaux` dans le sous-menu Collections
+
+image::material-sample/Homepage.png[align="center"]
+
+[start=2]
+. Si l'échantillon n'apparaît pas immédiatement dans la page de liste, l'utilisateur peut le rechercher à l'aide de requêtes dans la page Échantillons de matériaux.
+
+image::material-sample/Search.png[align="center"]
+
+[start=3]
+. L'utilisateur obtiendra alors des résultats selon les paramètres de recherche fournis. Cliquez sur l'échantillon que vous souhaitez lier à un collecteur.
+
+image::material-sample/SearchResult.png[align="center"]
+
+[start=4]
+. Dans la page de consultation de l'échantillon choisi, cliquez sur le bouton `Modifier`.
+
+image::material-sample/Edit.png[align="center"]
+
+[start=5]
+. Activez le composant `Événement de collecte` en cliquant sur le bouton correspondant.
+
+image::collecting-events/Activate.png[align="center"]
+
+[start=6]
+. Dans le composant `Événement de collecte`, l'utilisateur trouvera la sous-section `Agents de collecte`, où il peut lier l'échantillon à un collecteur en le sélectionnant dans le menu déroulant du champ approprié.
+
+NOTE: Si le collecteur est introuvable ou n'a pas encore été saisi dans DINA, l'utilisateur peut aussi créer un nouveau collecteur ou une nouvelle personne en cliquant sur l'option `Ajouter nouvelle personne` du menu déroulant `Collecteurs`.
+
+image::persons/Collectors.png[align="center"]
+
+[start=7]
+. Une fois terminé, cliquez sur le bouton `Enregistrer` dans le coin droit de la page. Le lien entre `Échantillon de matériaux` et `Collecteurs` sera alors établi et apparaîtra dans les pages de consultation de l'échantillon et de l'événement de collecte.

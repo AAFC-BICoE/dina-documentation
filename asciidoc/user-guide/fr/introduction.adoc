@@ -1,0 +1,20 @@
+== Introduction à DINA
+
+DINA (Digital Information System for Natural History Data, ou système d'information numérique pour les données d'histoire naturelle) est une plateforme à code source ouvert fondée sur des normes, conçue pour gérer et partager les données d'échantillons tels que des spécimens conservés ou vivants (plantes, champignons, insectes, vertébrés), des fossiles, des carottes géologiques, des échantillons de sol et de sédiments, des échantillons d'eau, des extraits d'ADN, des échantillons de tissus, des cultures microbiennes, des semences, des planches d'herbier et des données d'observation. Elle soutient les *principes FAIR* (Faciles à trouver, Accessibles, Interopérables, Réutilisables) et permet aux établissements de conserver, de stocker et de publier des données de façon durable et interopérable.
+
+
+=== Pourquoi DINA?
+
+DINA est conçue pour répondre au besoin croissant d'outils robustes, flexibles et collaboratifs de gestion des données d'échantillons. Elle offre :
+
+* *Architecture modulaire* : déployez les composants de façon indépendante et remplacez-les sans perturber le système, ce qui assure une grande flexibilité.
+* *Code source ouvert et développement communautaire* : développée en collaboration par le Consortium DINA et ses partenaires, elle favorise la transparence et l'innovation.
+* *Améliorations du modèle de données* : gérez les relations complexes entre les spécimens, les dérivés et les unités de stockage.
+* *Capacités d'intégration* : des API et des spécifications assurent l'interopérabilité avec les systèmes externes et les réseaux mondiaux de données sur la biodiversité.
+* *Qualité et accessibilité des données améliorées* : assurez une information exacte, normalisée et facile à partager.
+* *Collaboration entre établissements* : facilitez le partage de données et les projets conjoints.
+* *Conformité aux directives sur la science ouverte* : harmonisez vos pratiques avec les principes FAIR pour une recherche durable.
+* *Contrôle total* : déployez votre propre instance de DINA et adaptez-la à vos besoins.
+
+
+

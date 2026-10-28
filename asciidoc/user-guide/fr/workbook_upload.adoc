@@ -1,0 +1,62 @@
+[id=workbookUpload]
+== Téléversement de tableurs
+La fonction de téléversement de tableurs de DINA permet aux utilisateurs de téléverser en lot des données d'échantillons dans le système à l'aide d'une feuille Excel. Cette fonction est particulièrement utile lorsque les utilisateurs ont une grande quantité de données à téléverser, car elle permet d'économiser du temps et des efforts par rapport à la saisie manuelle.
+
+[id=fileFormats]
+=== Formats de fichiers pris en charge
+Avant d'utiliser le téléversement de tableurs, assurez-vous que le fichier à téléverser est dans l'un des formats suivants :
+
+* Feuille Excel (.xlsx)
+* Valeurs séparées par des virgules (.csv)
+
+Pour les colonnes qui acceptent plusieurs valeurs (p. ex. plusieurs collecteurs par événement de collecte), séparez les valeurs par un point-virgule.
+
+[id=uploadingData]
+=== Téléverser des données
+. Dans la page d'accueil de DINA, cliquez sur l'option `Téléverser le tableur` dans le sous-menu Collections.
+
+image::workbook-upload/Homepage.png[align="center"]
+
+[start=2]
+. Dans la page Téléverser le tableur, l'utilisateur peut soit glisser-déposer le fichier Excel (.xlsx ou .csv) à téléverser, soit cliquer sur l'espace prévu à cet effet pour sélectionner le fichier dans le système au moyen d'une boîte de dialogue.
+
+Glisser-déposer :
+
+image::workbook-upload/DragDrop.png[align="center"]
+
+Boîte de dialogue :
+
+image::workbook-upload/DialogBox.png[align="center"]
+
+[start=3]
+. Après avoir sélectionné le fichier, l'utilisateur peut cliquer sur le bouton `Submit` du côté droit de l'écran.
+
+image::workbook-upload/Submit.png[align="center"]
+
+[start=4]
+. À l'écran suivant, l'utilisateur obtient un aperçu de la feuille à téléverser. Dans la partie supérieure de la page, l'utilisateur peut sélectionner la feuille du fichier Excel à téléverser ainsi que le groupe auquel les échantillons appartiendront dans DINA.
+
+NOTE: L'utilisateur peut aussi cocher la case `Append Data` s'il met à jour des données existantes.
+
+image::workbook-upload/Preview.png[align="center"]
+
+[start=5]
+. Par défaut, le téléverseur lit la ligne d'en-tête du tableur comme les champs de chaque échantillon dans DINA. L'utilisateur peut associer les champs de la feuille Excel aux champs de DINA en sélectionnant le champ approprié dans la liste déroulante.
+
+NOTE: Certains champs peuvent déjà avoir été associés automatiquement par DINA. L'utilisateur peut aussi cocher la case à droite de chaque association pour ignorer des colonnes précises.
+
+image::workbook-upload/Mapping.png[align="center"]
+
+[start=6]
+. Une fois l'association terminée, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page pour lancer le téléversement. +
+Cela peut prendre un certain temps selon le nombre d'échantillons téléversés.
+
+[start=7]
+. Une fois le téléversement terminé, l'utilisateur en sera avisé et aura le choix de téléverser un nouveau tableur ou de consulter les échantillons téléversés.
+
+image::workbook-upload/Complete.png[align="center"]
+
+[start=8]
+. À cette étape, l'utilisateur pourra consulter tous les échantillons téléversés dans la page de liste Échantillons de matériaux.
+
+image::workbook-upload/ListPage.png[align="center"]

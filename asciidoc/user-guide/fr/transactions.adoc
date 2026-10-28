@@ -1,0 +1,35 @@
+[id=transactions]
+== Transactions
+Une transaction est une entité qui contient les détails de l'échange ou du transport d'échantillons de matériaux d'un laboratoire ou d'une personne à un autre.
+
+[id=createTransaction]
+=== Créer une transaction
+. Dans la page d'accueil de DINA, cliquez sur `Transactions` dans le sous-menu Transactions
+
+image::transactions/Homepage.png[align="center"]
+
+[start=2]
+. Dans la page Transactions, cliquez sur le bouton `Créer nouveau`
+
+image::transactions/CreateNew.png[align="center"]
+
+[start=3]
+. Dans la page de création de transaction, ajoutez toute information pertinente sur la transaction. Ensuite, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page. +
+
+NOTE: Aucun champ n'est obligatoire lors de la création d'une transaction
+
+À cette étape, vous pouvez aussi lier les échantillons de matériaux échangés dans le cadre de la transaction. Voir l'exemple ci-dessous. +
+Toutefois, si cette étape est omise, la transaction peut quand même être créée sans échantillon de matériaux lié, et les échantillons peuvent être liés en tout temps par la suite.
+
+image::transactions/Link.png[align="center"]
+
+[start=4]
+. Vérifiez que l'information est exacte. Notez qu'elle peut être modifiée en tout temps. +
+Si vous souhaitez modifier la transaction, consulter les modifications ou supprimer la transaction, vous pouvez le faire à l'aide des boutons dans le coin supérieur droit de la page.
+
+image::EditRevDelete.png[align="center"]
+
+[start=5]
+. La transaction créée est maintenant accessible à partir de la page de liste.
+
+image::transactions/ListPage.png[align="center"]

@@ -5,6 +5,8 @@
 
 = DINA User Guide
 
+link:fr/index.html[Français]
+
 NOTE: To search the User Guide, press Ctrl+F and enter a keyword.
 
 include::introduction.adoc[]

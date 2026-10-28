@@ -1,0 +1,7 @@
+[id=login]
+== Connexion
+Une fois que l'utilisateur a obtenu l'accès au site Web, il doit utiliser les identifiants fournis par son gestionnaire ou son administrateur.
+
+Selon votre organisation, vous pourriez être redirigé vers un fournisseur d'identité externe (p. ex. ESAS) auquel on vous demandera de lier votre compte.
+
+image::SignIn.png[align="center"]
