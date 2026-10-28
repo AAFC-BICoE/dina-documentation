@@ -7,40 +7,40 @@ Un https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#collecting-
 
 . Dans la page d'accueil de DINA, sous le sous-menu Collections, cliquez sur l'option `Échantillons de matériaux`.
 
-image::material-sample/Homepage.png[align="center"]
+image::fr/material-sample/Homepage.png[align="center"]
 
 [start=2]
-. Dans la page Échantillons de matériaux, cliquez sur le bouton `Créer nouveau`. +
+. Dans la page Échantillons de matériaux, cliquez sur le bouton `Créer`. +
  +
 Si vous souhaitez saisir plus d'un échantillon, cliquez sur le bouton `Créer plusieurs nouveaux`.
 
 TIP: Si l'utilisateur a plus d'un échantillon à saisir provenant d'une même collection, il est recommandé de créer plusieurs échantillons à la fois.
 
-image::material-sample/Create.png[align="center"]
+image::fr/material-sample/Create.png[align="center"]
 
-Si l'utilisateur choisit de créer plusieurs échantillons à la fois, il sera dirigé vers la page suivante, où on lui demandera combien d'échantillons seront créés. Il pourra ensuite lier les échantillons à une collection et configurer le mode de nommage de chaque échantillon :
+Si l'utilisateur choisit de créer plusieurs échantillons à la fois, il sera dirigé vers la page suivante, où on lui demandera combien d'échantillons seront créés. Il pourra ensuite lier les échantillons à une collection et configurer le mode de nommage de chaque échantillon, puis cliquer sur le bouton `Suivant` dans le coin supérieur droit de la page :
 
-image::material-sample/CreateMultiple.png[align="center"]
+image::fr/material-sample/CreateMultiple.png[align="center"]
 
 [start=3]
 . À l'étape suivante, l'utilisateur peut remplir les renseignements propres à l'échantillon ou à chacun des échantillons.
 
 Notez qu'aucun de ces champs n'est obligatoire et qu'ils peuvent être modifiés en tout temps.
 
-L'utilisateur peut aussi ajouter (ou retirer) les composants de données de son choix du côté gauche de la page en cliquant sur le bouton à côté de chaque composant.
+L'utilisateur peut aussi ajouter (ou retirer) des sections dans le panneau `Sections` du côté gauche de la page en cliquant sur l'interrupteur à côté de chaque section.
 
-TIP: Cliquer sur un composant de données actif à gauche amène directement l'utilisateur aux champs de données de ce composant.
+TIP: Cliquer sur une section active à gauche amène directement l'utilisateur aux champs de données de cette section.
 
-image::material-sample/DataFields.png[align="center"]
+image::fr/material-sample/DataFields.png[align="center"]
 
 [start=4]
 . Une fois tous les renseignements pertinents remplis, cliquez sur le bouton `Enregistrer` ou `Enregistrer tout` du côté droit de la page.
 
-image::material-sample/SaveAll.png[align="center"]
+image::fr/material-sample/SaveAll.png[align="center"]
 [start=5]
-. Tous les échantillons créés sont maintenant accessibles à partir de la page de liste et peuvent être modifiés.
+. Lors de la création de plusieurs échantillons, une page `Opération groupée terminée` listant les échantillons créés s'affiche après l'enregistrement. Tous les échantillons créés sont maintenant accessibles à partir de la page de liste et peuvent être modifiés.
 
-image::material-sample/ListPage.png[align="center"]
+image::fr/material-sample/ListPage.png[align="center"]
 
 [id=linkSampleToEvent]
 === Lier un échantillon de matériaux à un événement de collecte
@@ -48,34 +48,34 @@ Si l'utilisateur n'a pas lié un échantillon à un événement de collecte lors
 
 . Pour accéder à l'échantillon à partir de la page d'accueil de DINA, cliquez sur `Échantillons de matériaux` dans le sous-menu Collections
 
-image::material-sample/Homepage.png[align="center"]
+image::fr/material-sample/Homepage.png[align="center"]
 
 [start=2]
 . Si l'échantillon n'apparaît pas immédiatement dans la page de liste, l'utilisateur peut le rechercher à l'aide de requêtes dans la page Échantillons de matériaux.
 
-image::material-sample/Search.png[align="center"]
+image::fr/material-sample/Search.png[align="center"]
 
 [start=3]
 . L'utilisateur obtiendra alors des résultats selon les paramètres de recherche fournis. Cliquez sur l'échantillon que vous souhaitez lier à un événement.
 
-image::material-sample/SearchResult.png[align="center"]
+image::fr/material-sample/SearchResult.png[align="center"]
 
 [start=4]
 . Dans la page de consultation de l'échantillon choisi, cliquez sur le bouton `Modifier`.
 
-image::material-sample/Edit.png[align="center"]
+image::fr/material-sample/Edit.png[align="center"]
 
 [start=5]
-. Activez le composant `Événement de collecte` en cliquant sur le bouton correspondant.
+. Activez la section `Événement de collecte` en cliquant sur l'interrupteur à côté de celle-ci dans le panneau `Sections`.
 
-image::collecting-events/Activate.png[align="center"]
+image::fr/collecting-events/Activate.png[align="center"]
 
 [start=6]
-. L'utilisateur peut maintenant choisir de créer un nouvel `Événement de collecte` ou de rattacher l'échantillon à un événement existant.
+. L'utilisateur peut maintenant choisir de créer un nouvel `Événement de collecte` (onglet `Créer`) ou de lier l'échantillon à un événement existant (onglet `Lier l’existant`).
 
-image::collecting-events/Event.png[align="center"]
+image::fr/collecting-events/Event.png[align="center"]
 
 [start=7]
 . Une fois terminé, cliquez sur le bouton `Enregistrer` dans le coin droit de la page. Le lien entre `Échantillon de matériaux` et `Événement de collecte` sera alors établi et apparaîtra dans les pages de consultation de l'échantillon et de l'événement.
 
-image::material-sample/Save.png[align="center"]
+image::fr/material-sample/Save.png[align="center"]
