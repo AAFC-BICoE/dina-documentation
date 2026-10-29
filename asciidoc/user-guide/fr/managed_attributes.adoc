@@ -2,41 +2,44 @@
 == Attributs gérés
 Les attributs gérés sont des attributs que les utilisateurs peuvent créer et utiliser au besoin pour consigner des données qui ne sont pas assez courantes pour être saisies dans un champ ordinaire. (voir https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#managed_attributes[Glossaire de DINA - Attributs gérés])
 
-Des attributs gérés peuvent être créés pour les composants suivants de DINA :
+Les attributs gérés sont regroupés par module. Chaque module a son propre onglet dans la page Vocabulaire vérifié :
 
-Collection:: Composant principal de DINA, qui peut être utilisé pour les échantillons de matériaux (MaterialSample), les événements de collecte (CollectingEvent), les préparations (Preparation), etc.
+Collections:: Composant principal de DINA, qui peut être utilisé pour les échantillons de matériaux (MaterialSample), les événements de collecte (CollectingEvent), les préparations (Preparation), etc.
 Dépôt d'objet:: Fichiers téléversés dans DINA qui peuvent être utilisés comme pièces jointes.
-Transactions:: Transactions liées aux échantillons de matériaux qui sont suivies dans DINA.
+Base de données des séquences (fr):: Données de séquençage suivies dans DINA.
+Agents:: Personnes et organisations consignées dans DINA.
 
 [id=createAttr]
 === Créer des attributs gérés
 
-. Dans la page d'accueil de DINA, sous le sous-menu Vocabulaire vérifié, cliquez sur l'option `Attributs gérés`.
+. Dans la page d'accueil de DINA, sous le sous-menu Vocabulaire vérifié, cliquez sur l'option `Vocabulaire vérifié`.
 
-image::managed-attributes/Homepage.png[align="center"]
+image::fr/managed-attributes/Homepage.png[align="center"]
 
 [start=2]
-. Dans la page Attributs gérés, choisissez l'objet pour lequel vous souhaitez créer un attribut (`Collection`, `Dépôt d’objet` ou `Transactions`).
+. Dans la page Vocabulaire vérifié, choisissez le module pour lequel vous souhaitez créer un attribut (`Collections`, `Dépôt d’objet`, `Base de données des séquences (fr)` ou `Agents`).
 
-image::managed-attributes/COsT.png[align="center"]
+image::fr/managed-attributes/COsT.png[align="center"]
 
 [start=3]
 . Dans la même page, cliquez sur le bouton `Créer nouveau`.
 
-image::managed-attributes/CreateNew.png[align="center"]
+image::fr/managed-attributes/CreateNew.png[align="center"]
 
 [start=4]
-. Dans la page d'ajout d'attribut géré, remplissez les données pertinentes sur le nouvel attribut à ajouter. Ensuite, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de l'écran.
+. Dans la page Add Controlled Vocabulary Item, sélectionnez `Managed Attribute` dans le champ `Controlled Vocabulary` et remplissez les données pertinentes sur le nouvel attribut à ajouter. Ensuite, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de l'écran.
 
-WARNING: Les champs `Nom`, `Type de composant des données cibles` et `Type d'élément de vocabulaire` sont obligatoires.
+WARNING: Les champs `Controlled Vocabulary`, `Type de composant des données cibles`, `Nom` et `Type d'élément de vocabulaire` sont obligatoires.
+
+image::fr/managed-attributes/Fields.png[align="center"]
 
 [start=5]
-. Vérifiez que l'information est exacte. Notez qu'elle peut être modifiée en tout temps (sauf le champ `Nom`). +
+. Vérifiez que l'information est exacte. Notez qu'elle peut être modifiée en tout temps (sauf les champs `Type de composant des données cibles`, `Nom` et `Type d'élément de vocabulaire`). +
 Si vous souhaitez modifier ou supprimer l'attribut créé, vous pouvez le faire à l'aide des boutons dans le coin supérieur droit de la page.
 
-image::EditDelete.png[align="center"]
+image::fr/EditDelete.png[align="center"]
 
 [start=6]
-. L'attribut créé est maintenant accessible dans la page de liste du type d'objet pour lequel il a été créé (`Collection`, `Dépôt d’objet` ou `Transactions`).
+. L'attribut créé est maintenant accessible dans la page Vocabulaire vérifié, sous l'onglet du module pour lequel il a été créé. Les filtres à gauche de la page (`Attributs gérés` et `Filtrer par type`) permettent de restreindre la liste.
 
-image::managed-attributes/ListPage.png[align="center"]
+image::fr/managed-attributes/ListPage.png[align="center"]

@@ -11,7 +11,7 @@ Protocol:: Predefined written procedural method in the design and implementation
 
 [id=createVocab]
 === Creating Collection Methods, Preparation Methods, Preparation Types, or Protocols
-. In the DINA Homepage, you can find links for `Collection Methods`, `Preparation Methods`, `Preparation Types`, and `Protocols` under the Controlled Vocabulary submenu. Click on which option you would like to create.
+. In the DINA Homepage, you can find links for `Collection Method`, `Preparation Method`, `Preparation Type`, and `Protocols` under the Controlled Vocabulary submenu. Click on which option you would like to create.
 
 image::controlled-vocabulary/Homepage.png[align="center"]
 

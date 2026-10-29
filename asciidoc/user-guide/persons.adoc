@@ -14,20 +14,20 @@ image::persons/Homepage.png[align="center"]
 image::persons/CreateNew.png[align="center"]
 
 [start=3]
-. In the Add Person page, add any relevant information about your Collection. After doing so, click the `Save` button on the top right corner of the page.
+. In the Add Person page, add any relevant information about the Person. After doing so, click the `Save` button on the top right corner of the page.
 
 WARNING: It is mandatory to put a Display Name.
 
 [start=4]
-. Check that the information is correct. Note that this can be edited at any time. +
-If you wish to edit or delete the person, you can do so through the buttons on the top right corner of the page.
-
-image::EditDelete.png[align="center"]
-
-[start=5]
-. The created Person can now be seen through the Persons page.
+. After saving, the user is returned to the Persons page, where the created Person can now be seen.
 
 image::persons/ListPage.png[align="center"]
+
+[start=5]
+. Click on the Person's Display Name to open its view page and check that the information is correct. Note that this can be edited at any time. +
+If you wish to edit, see the changes, or delete the person, you can do so through the buttons on the top right corner of the page.
+
+image::EditRevDelete.png[align="center"]
 
 [id=linkSampletoCollector]
 === Linking a Material Sample to a Collector
@@ -53,12 +53,12 @@ image::material-sample/SearchResult.png[align="center"]
 image::material-sample/Edit.png[align="center"]
 
 [start=5]
-. Activate the `Collecting Event` component by clicking on the button corresponding to it.
+. Activate the `Collecting Event` section by clicking on the toggle beside it in the `Sections` panel.
 
 image::collecting-events/Activate.png[align="center"]
 
 [start=6]
-. In the `Collecting Event` component, the user can find the `Collecting Agents` subsection where they can link the sample to a Collector by selecting them in the dropdown menu of the appropriate field.
+. In the `Collecting Event` section, the user can find the `Collection Details` subsection where they can link the sample to a Collector by selecting them in the `Collectors` dropdown menu.
 
 NOTE: If the Collector is not found or not yet inputted into DINA, the user can also create a new Collector/Person by clicking on the `Add New Person` option in the `Collectors` dropdown.
 

@@ -19,7 +19,7 @@ image::object-store/Homepage.png[align="center"]
 image::object-store/Upload.png[align="center"]
 
 [start=3]
-. Once the object has been chosen, click the `Save` button that will appear on the bottom right corner of the designated area.
+. Once the object has been chosen, click the `Continue with Batch Entry Form` button that will appear below the designated area. Alternatively, the `Continue with Workbook` button lets the user enter the file metadata through the link:#workbookUpload[Workbook Uploader].
 
 image::object-store/Save.png[align="center"]
 
@@ -42,7 +42,7 @@ image::object-store/1-ListPage.png[align="center"]
 image::object-store/Edit.png[align="center"]
 
 [start=8]
-. Scroll to the Material Sample Attachments at the very bottom of the sample's Edit Page or click on the `Material Sample Attachments` link on the left side of the page. Once there, click on the `Add Attachments` button in the Material Sample Attachments section.
+. Scroll to the Material Sample Attachments at the very bottom of the sample's Edit Page or click on the `Attachments` link in the `Sections` panel on the left side of the page. Once there, click on the `Add Attachments` button in the Material Sample Attachments section.
 
 image::object-store/AddAttachments.png[align="center"]
 
@@ -73,7 +73,7 @@ image::object-store/2-ListPage.png[align="center"]
 image::object-store/ROPage.png[align="center"]
 
 [start=4]
-. Scroll to the Material Sample Attachments at the very bottom of the sample's Edit Page or click on the `Material Sample Attachments` link on the left side of the page. Once there, click on the `Add Attachments` button in the Material Sample Attachments section.
+. Scroll to the Material Sample Attachments at the very bottom of the sample's Edit Page or click on the `Attachments` link in the `Sections` panel on the left side of the page. Once there, click on the `Add Attachments` button in the Material Sample Attachments section.
 
 image::object-store/AddAttachments.png[align="center"]
 
@@ -83,7 +83,7 @@ TIP: The Steps 5-7 will be very similar to uploading an object as in link:#uploa
 . In the Attachments page, either click on the designated area to search for the object using a dialog box or "drag and drop" a file from your Desktop to the designated area. The user can add however many files they wish.
 
 [start=6]
-. Once you have added all the files to be linked, click on the `Save` button that will appear on the bottom right corner of the designatede area.
+. Once you have added all the files to be linked, click on the `Save` button that will appear on the bottom right corner of the designated area.
 
 image::object-store/SaveUpload.png[align="center"]
 

@@ -10,7 +10,7 @@ Split Configurations enable you to configure how Material Sample Splits are auto
 image::split-config/Homepage.png[align="center"]
 
 [start=2]
-. In the Split Configurations page, click on the `Create new` button on the top right corner of the page.
+. In the Split Configurations page, click on the `Create New` button on the top right corner of the page.
 
 image::split-config/CreateNew.png[align="center"]
 
@@ -21,7 +21,8 @@ WARNING: When creating Split Configurations, remember to choose options for the 
 • `Split Configuration Name` +
 • `Material Sample Type` +
 • `Strategy` +
-• `Generation Options`
+• `Generation Options` +
+• `Separator`
 
 [start=4]
 . Once the user has set the configuration's name, material sample type, and sample generation configurations, click the `Save` button on the top right corner of the page. This will make the configuration accessible when doing a Material Sample Split. +

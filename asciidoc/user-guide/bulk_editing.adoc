@@ -16,7 +16,7 @@ image::bulk-edit/Select.png[align="center"]
 [start=3]
 . In the Bulk Edit page, you can edit the fields you want to change. After making your changes, click the `Save All` button on the top right corner of the page.
 
-NOTE: The user can also edit the fields of each sample individually by clicking the Sample ID of the sample they want to edit. This can be seen in 2 different views depending on the number of samples selected. See the examples below.
+NOTE: The user can also edit the fields of each sample individually by clicking the Sample ID of the sample they want to edit. This can be seen in 2 different views depending on the number of samples selected: when fewer than 10 samples are selected, each sample has its own tab; when 10 or more samples are selected, samples are chosen from the `Navigation` dropdown. See the examples below.
 
 image::bulk-edit/1-BulkEdit.png[align="center"]
 image::bulk-edit/2-BulkEdit.png[align="center"]

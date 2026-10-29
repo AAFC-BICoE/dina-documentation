@@ -10,7 +10,7 @@ A https://aafc-bicoe.github.io/dina-documentation/concepts-glossary#collecting-e
 image::material-sample/Homepage.png[align="center"]
 
 [start=2]
-. In the Material Samples page, click on the `Create new` button. +
+. In the Material Samples page, click on the `Create New` button. +
  +
 If you wish to input more than one sample, click on the `Create Multiple New` button.
 
@@ -18,7 +18,7 @@ TIP: If the user has more than one sample to input from a single collection, it 
 
 image::material-sample/Create.png[align="center"]
 
-If the user elects to create multiples samples at once, they will be taken to the following page where they will be asked how many samples will be created.They can then link the samples to a Collection and configure the naming scheme for each sample:
+If the user elects to create multiples samples at once, they will be taken to the following page where they will be asked how many samples will be created.They can then link the samples to a Collection and configure the naming scheme for each sample, then click the `Next` button on the top right corner of the page:
 
 image::material-sample/CreateMultiple.png[align="center"]
 
@@ -27,9 +27,9 @@ image::material-sample/CreateMultiple.png[align="center"]
 
 Note that none of these fields are required to be filled in and they can be edited at any time.
 
-The user can also add (or remove) which data components they want to in the left hand side of the page by clicking on the button beside each component.
+The user can also add (or remove) sections in the `Sections` panel on the left hand side of the page by clicking on the toggle beside each section.
 
-TIP: Clicking on an active data component on the left takes the user directly to the component's data fields.
+TIP: Clicking on an active section on the left takes the user directly to that section's data fields.
 
 image::material-sample/DataFields.png[align="center"]
 
@@ -38,7 +38,7 @@ image::material-sample/DataFields.png[align="center"]
 
 image::material-sample/SaveAll.png[align="center"]
 [start=5]
-. All created samples will now be accessible through the list page and can be edited.
+. When creating multiple samples, a `Bulk Operation Complete` page listing the created samples is shown after saving. All created samples will now be accessible through the list page and can be edited.
 
 image::material-sample/ListPage.png[align="center"]
 
@@ -66,12 +66,12 @@ image::material-sample/SearchResult.png[align="center"]
 image::material-sample/Edit.png[align="center"]
 
 [start=5]
-. Activate the `Collecting Event` component by clicking on the button corresponding to it.
+. Activate the `Collecting Event` section by clicking on the toggle beside it in the `Sections` panel.
 
 image::collecting-events/Activate.png[align="center"]
 
 [start=6]
-. The user can now choose to create a new `Collecting Event` or attach the sample to an already existing event.
+. The user can now choose to create a new `Collecting Event` (`Create New` tab) or link the sample to an already existing event (`Link Existing` tab).
 
 image::collecting-events/Event.png[align="center"]
 

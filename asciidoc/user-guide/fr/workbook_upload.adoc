@@ -15,41 +15,44 @@ Pour les colonnes qui acceptent plusieurs valeurs (p. ex. plusieurs collecteurs 
 === Téléverser des données
 . Dans la page d'accueil de DINA, cliquez sur l'option `Téléverser le tableur` dans le sous-menu Collections.
 
-image::workbook-upload/Homepage.png[align="center"]
+image::fr/workbook-upload/Homepage.png[align="center"]
 
 [start=2]
 . Dans la page Téléverser le tableur, l'utilisateur peut soit glisser-déposer le fichier Excel (.xlsx ou .csv) à téléverser, soit cliquer sur l'espace prévu à cet effet pour sélectionner le fichier dans le système au moyen d'une boîte de dialogue.
 
 Glisser-déposer :
 
-image::workbook-upload/DragDrop.png[align="center"]
+image::fr/workbook-upload/DragDrop.png[align="center"]
 
 Boîte de dialogue :
 
 image::workbook-upload/DialogBox.png[align="center"]
 
 [start=3]
-. Après avoir sélectionné le fichier, l'utilisateur peut cliquer sur le bouton `Submit` du côté droit de l'écran.
+. Après avoir sélectionné le fichier, l'utilisateur peut cliquer sur le bouton `Enregistrer` du côté droit de l'écran.
 
-image::workbook-upload/Submit.png[align="center"]
+image::fr/workbook-upload/Submit.png[align="center"]
 
 [start=4]
 . À l'écran suivant, l'utilisateur obtient un aperçu de la feuille à téléverser. Dans la partie supérieure de la page, l'utilisateur peut sélectionner la feuille du fichier Excel à téléverser ainsi que le groupe auquel les échantillons appartiendront dans DINA.
 
 NOTE: L'utilisateur peut aussi cocher la case `Append Data` s'il met à jour des données existantes.
 
-image::workbook-upload/Preview.png[align="center"]
+image::fr/workbook-upload/Preview.png[align="center"]
 
 [start=5]
 . Par défaut, le téléverseur lit la ligne d'en-tête du tableur comme les champs de chaque échantillon dans DINA. L'utilisateur peut associer les champs de la feuille Excel aux champs de DINA en sélectionnant le champ approprié dans la liste déroulante.
 
-NOTE: Certains champs peuvent déjà avoir été associés automatiquement par DINA. L'utilisateur peut aussi cocher la case à droite de chaque association pour ignorer des colonnes précises.
+NOTE: Certains champs peuvent déjà avoir été associés automatiquement par DINA. Chaque colonne doit être associée à un champ de DINA ou ignorée en cochant la case `Skip` à droite de son association.
 
-image::workbook-upload/Mapping.png[align="center"]
+image::fr/workbook-upload/Mapping.png[align="center"]
 
 [start=6]
 . Une fois l'association terminée, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page pour lancer le téléversement. +
-Cela peut prendre un certain temps selon le nombre d'échantillons téléversés.
+Cela peut prendre un certain temps selon le nombre d'échantillons téléversés. +
+Si des colonnes sont ignorées, une boîte de dialogue `Proceed with warnings?` les énumère. Cliquez sur `Import anyway` pour continuer.
+
+image::fr/workbook-upload/Warning.png[align="center"]
 
 [start=7]
 . Une fois le téléversement terminé, l'utilisateur en sera avisé et aura le choix de téléverser un nouveau tableur ou de consulter les échantillons téléversés.
@@ -59,4 +62,4 @@ image::workbook-upload/Complete.png[align="center"]
 [start=8]
 . À cette étape, l'utilisateur pourra consulter tous les échantillons téléversés dans la page de liste Échantillons de matériaux.
 
-image::workbook-upload/ListPage.png[align="center"]
+image::fr/workbook-upload/ListPage.png[align="center"]

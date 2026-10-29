@@ -7,28 +7,29 @@ Les configurations de division permettent de configurer la façon dont les divis
 
 . Dans la page d'accueil de DINA, cliquez sur `Split Configurations` dans le sous-menu Configuration.
 
-image::split-config/Homepage.png[align="center"]
+image::fr/split-config/Homepage.png[align="center"]
 
 [start=2]
-. Dans la page Split Configurations, cliquez sur le bouton `Créer nouveau` dans le coin supérieur droit de la page.
+. Dans la page Split Configurations, cliquez sur le bouton `Créer` dans le coin supérieur droit de la page.
 
-image::split-config/CreateNew.png[align="center"]
+image::fr/split-config/CreateNew.png[align="center"]
 
 [start=3]
-. Dans la page d'ajout de configuration de division, entrez tous les paramètres que l'utilisateur souhaite appliquer à la division des échantillons de matériaux.
+. Dans la page Add Split Configuration, entrez tous les paramètres que l'utilisateur souhaite appliquer à la division des échantillons de matériaux.
 
 WARNING: Lors de la création de configurations de division, n'oubliez pas de choisir des options pour les champs obligatoires suivants : +
 • `Split Configuration Name` +
 • `Type d’échantillon de matière` +
 • `Stratégie` +
-• `Options de production`
+• `Options de production` +
+• `Separator`
 
 [start=4]
 . Une fois que l'utilisateur a défini le nom de la configuration, le type d'échantillon de matériaux et les paramètres de production des échantillons, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page. La configuration sera alors accessible lors d'une division d'échantillon de matériaux. +
  +
 Notez également que la configuration peut être modifiée en tout temps.
 
-image::split-config/Save.png[align="center"]
+image::fr/split-config/Save.png[align="center"]
 
 [id=splitConfigExamples]
 === Exemples de configurations de division
@@ -36,15 +37,15 @@ Dans les images ci-dessous, l'utilisateur peut voir des configurations de divisi
 
 - Exemple 1 : Une configuration de division qui produit des échantillons à partir d'un parent de type organisme entier (Whole Organism) vers des échantillons ou sous-échantillons enfants de type partie d'organisme (Organism Part). La configuration a aussi un `Split Configuration Name` défini à `Normal Split`.
 
-image::split-config/NormalSplit.png[align="center"]
+image::fr/split-config/NormalSplit.png[align="center"]
 
 - Exemple 2 : Une configuration de division qui produit des échantillons à partir d'un échantillon parent de type partie d'organisme (Organism Part) vers des échantillons ou sous-échantillons enfants de type moléculaire (Molecular). La configuration a aussi un `Split Configuration Name` défini à `Molecular Split`.
 
-image::split-config/MolecularSplit.png[align="center"]
+image::fr/split-config/MolecularSplit.png[align="center"]
 
 - Exemple 3 : Une configuration de division qui produit des échantillons à partir d'une partie d'organisme (Organism Part) vers une ou plusieurs autres parties d'organisme. La configuration a aussi un `Split Configuration Name` défini à `Part to Part`.
 
-image::split-config/PartSplit.png[align="center"]
+image::fr/split-config/PartSplit.png[align="center"]
 
 [id=useSplitConfig]
 === Utiliser une configuration de division pour un échantillon de matériaux
@@ -52,7 +53,7 @@ Pour utiliser une configuration de division, l'utilisateur doit accéder à l'é
 
 . Dans la page d'accueil de DINA, cliquez sur l'option `Échantillons de matériaux` dans le sous-menu Collections.
 
-image::material-sample/Homepage.png[align="center"]
+image::fr/material-sample/Homepage.png[align="center"]
 
 [start=2]
 . Recherchez l'échantillon de matériaux auquel l'utilisateur souhaite appliquer la configuration de division, puis cliquez dessus. Si l'échantillon n'a pas encore été créé, veuillez consulter la link:#createSample[section Créer un ou plusieurs échantillons de matériaux] du guide.
@@ -60,12 +61,12 @@ image::material-sample/Homepage.png[align="center"]
 [start=3]
 . Une fois dans la page de consultation de l'échantillon, cliquez sur le bouton déroulant `Diviser▾` et sélectionnez la configuration de division que l'utilisateur souhaite utiliser. Ensuite, cliquez sur le bouton `Diviser` situé en dessous.
 
-image::split-config/Split.png[align="center"]
+image::fr/split-config/Split.png[align="center"]
 
 [start=4]
 . Vérifiez que tous les renseignements correspondent à la division souhaitée. Une fois la vérification faite, cliquez sur le bouton `Diviser` dans le coin supérieur droit de la page.
 
-image::split-config/FinalSplit.png[align="center"]
+image::fr/split-config/FinalSplit.png[align="center"]
 
 [start=5]
 . Il ne reste plus qu'à modifier les échantillons de matériaux produits par la division. Cette étape est semblable à la création d'échantillons de matériaux décrite dans la link:#createSample[section Créer un ou plusieurs échantillons de matériaux] - à partir de l'étape 3.
@@ -73,8 +74,8 @@ image::split-config/FinalSplit.png[align="center"]
 [start=6]
 . Une fois tout terminé, cliquez sur le bouton `Enregistrer tout` dans le coin supérieur droit de la page.
 
-image::split-config/SaveAll.png[align="center"]
+image::fr/split-config/SaveAll.png[align="center"]
 
 Ce processus crée des échantillons enfants du type d'échantillon configuré par l'utilisateur. Il peut être répété sur les échantillons enfants pour produire leurs propres échantillons enfants, tant qu'il existe une configuration de division avec le type d'échantillon de matériaux approprié.
 
-image::split-config/Result.png[align="center"]
+image::fr/split-config/Result.png[align="center"]

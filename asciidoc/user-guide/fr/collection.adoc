@@ -6,15 +6,15 @@ Une https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#collectio
 === Créer une collection
 . Du côté gauche de la page d'accueil de DINA, cliquez sur l'option `Collections` dans le sous-menu Collections
 
-image::collection/Homepage.png[align="center"]
+image::fr/collection/Homepage.png[align="center"]
 
 [start=2]
-. Dans la page Collections, cliquez sur le bouton `Créer nouveau`.
+. Dans la page Collections, cliquez sur le bouton `Créer`.
 
-image::collection/CreateNew.png[align="center"]
+image::fr/collection/CreateNew.png[align="center"]
 
 [start=3]
-. Dans la page d'ajout de collection, ajoutez toute information pertinente sur votre collection. Ensuite, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page.
+. Dans la page Ajouter une collection, ajoutez toute information pertinente sur votre collection. Ensuite, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page.
 
 WARNING: Il est obligatoire de nommer votre collection.
 
@@ -22,9 +22,9 @@ WARNING: Il est obligatoire de nommer votre collection.
 . Vérifiez que l'information est exacte. Notez qu'elle peut être modifiée en tout temps. +
 Si vous souhaitez modifier la collection, consulter les modifications ou supprimer la collection, vous pouvez le faire à l'aide des boutons dans le coin supérieur droit de la page.
 
-image::EditRevDelete.png[align="center"]
+image::fr/EditRevDelete.png[align="center"]
 
 [start=5]
 . La collection créée est maintenant accessible à partir de la page de liste.
 
-image::collection/ListPage.png[align="center"]
+image::fr/collection/ListPage.png[align="center"]

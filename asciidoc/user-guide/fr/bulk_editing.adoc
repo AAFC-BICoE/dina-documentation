@@ -5,18 +5,18 @@ La modification en lot permet de modifier plusieurs échantillons à la fois. El
 === Modifier plusieurs échantillons à la fois
 . Du côté gauche de la page d'accueil de DINA, cliquez sur l'option `Échantillons de matériaux` dans le sous-menu Collections
 
-image::material-sample/Homepage.png[align="center"]
+image::fr/material-sample/Homepage.png[align="center"]
 
 [start=2]
 . Dans la page Échantillons de matériaux, choisissez les échantillons à modifier en cochant la case à côté de chacun. Vous pouvez aussi sélectionner tous les échantillons affichés en cochant la case en haut de la liste. +
 Après avoir sélectionné les échantillons, cliquez sur le bouton `Modifier les éléments sélectionnés`, juste au-dessus du tableau, du côté droit de la page.
 
-image::bulk-edit/Select.png[align="center"]
+image::fr/bulk-edit/Select.png[align="center"]
 
 [start=3]
 . Dans la page de modification en lot, vous pouvez modifier les champs souhaités. Après avoir apporté vos modifications, cliquez sur le bouton `Enregistrer tout` dans le coin supérieur droit de la page.
 
-NOTE: L'utilisateur peut aussi modifier les champs de chaque échantillon individuellement en cliquant sur l'identifiant (Sample ID) de l'échantillon à modifier. Deux affichages différents sont possibles selon le nombre d'échantillons sélectionnés. Voir les exemples ci-dessous.
+NOTE: L'utilisateur peut aussi modifier les champs de chaque échantillon individuellement en cliquant sur l'identifiant (Sample ID) de l'échantillon à modifier. Deux affichages différents sont possibles selon le nombre d'échantillons sélectionnés : lorsque moins de 10 échantillons sont sélectionnés, chaque échantillon a son propre onglet; lorsque 10 échantillons ou plus sont sélectionnés, les échantillons se choisissent dans la liste déroulante `Navigation`. Voir les exemples ci-dessous.
 
-image::bulk-edit/1-BulkEdit.png[align="center"]
-image::bulk-edit/2-BulkEdit.png[align="center"]
+image::fr/bulk-edit/1-BulkEdit.png[align="center"]
+image::fr/bulk-edit/2-BulkEdit.png[align="center"]

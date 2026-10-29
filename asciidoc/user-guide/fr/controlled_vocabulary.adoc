@@ -13,12 +13,12 @@ Protocole:: Méthode procédurale écrite et prédéfinie utilisée dans la conc
 === Créer des méthodes de prélèvement, des méthodes de préparation, des types de préparation ou des protocoles
 . Dans la page d'accueil de DINA, vous trouverez les liens `Méthode de prélèvement`, `Méthode de préparation`, `Type de préparation` et `Protocoles` dans le sous-menu Vocabulaire vérifié. Cliquez sur l'option que vous souhaitez créer.
 
-image::controlled-vocabulary/Homepage.png[align="center"]
+image::fr/controlled-vocabulary/Homepage.png[align="center"]
 
 [start=2]
-. Après avoir fait votre choix, cliquez sur le bouton `Créer nouveau` dans le coin supérieur droit de la page.
+. Après avoir fait votre choix, cliquez sur le bouton `Créer` dans le coin supérieur droit de la page.
 
-image::controlled-vocabulary/CreateNew.png[align="center"]
+image::fr/controlled-vocabulary/CreateNew.png[align="center"]
 
 [start=3]
 . Remplissez les champs `Nom` et `Description` (en anglais et/ou en français) de la méthode, du type ou du protocole à ajouter.
@@ -27,15 +27,15 @@ WARNING: Il est obligatoire de nommer l'objet.
 
 Notez également que lors de la création d'un nouveau protocole, l'utilisateur peut aussi ajouter les champs `Protocol Type` et `Données sur le protocole`, ainsi que des `Protocole sur les pièces jointes`, qui ne sont pas des champs des autres objets de vocabulaire contrôlé.
 
-image::controlled-vocabulary/AddProtocol.png[align="center"]
+image::fr/controlled-vocabulary/AddProtocol.png[align="center"]
 
 [start=4]
 . Vérifiez que l'information est exacte. Notez qu'elle peut être modifiée en tout temps. +
 Si vous souhaitez modifier l'objet créé, consulter les modifications ou supprimer l'objet, vous pouvez le faire à l'aide des boutons dans le coin supérieur droit de la page.
 
-image::EditRevDelete.png[align="center"]
+image::fr/EditRevDelete.png[align="center"]
 
 [start=5]
 . L'objet créé est maintenant accessible dans la page de liste.
 
-image::controlled-vocabulary/ListPage.png[align="center"]
+image::fr/controlled-vocabulary/ListPage.png[align="center"]

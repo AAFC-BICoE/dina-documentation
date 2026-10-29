@@ -9,7 +9,7 @@ A Transaction is an entity containing details about the exchange or transport of
 image::transactions/Homepage.png[align="center"]
 
 [start=2]
-. In the Transactions page, click the `Create new` button
+. In the Transactions page, click the `Create New` button
 
 image::transactions/CreateNew.png[align="center"]
 

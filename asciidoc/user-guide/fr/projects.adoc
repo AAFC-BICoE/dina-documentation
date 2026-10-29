@@ -7,12 +7,12 @@ Un https://aafc-bicoe.github.io/dina-documentation/concepts-glossary/#project[pr
 
 . Dans la page d'accueil de DINA, sous le sous-menu Collections, cliquez sur l'option `Projets`.
 
-image::projects/Homepage.png[align="center"]
+image::fr/projects/Homepage.png[align="center"]
 
 [start=2]
-. Dans la page Projets, cliquez sur le bouton `Créer nouveau`.
+. Dans la page Projets, cliquez sur le bouton `Créer`.
 
-image::projects/CreateNew.png[align="center"]
+image::fr/projects/CreateNew.png[align="center"]
 
 [start=3]
 . À l'étape suivante, l'utilisateur peut remplir les renseignements propres au projet. Ensuite, cliquez sur le bouton `Enregistrer` du côté droit de la page.
@@ -23,12 +23,12 @@ WARNING: Il est obligatoire de nommer votre projet.
 . Vérifiez que l'information est exacte. Notez qu'elle peut être modifiée en tout temps. +
 Si vous souhaitez modifier le projet, consulter les modifications ou supprimer le projet, vous pouvez le faire à l'aide des boutons dans le coin supérieur droit de la page.
 
-image::EditRevDelete.png[align="center"]
+image::fr/EditRevDelete.png[align="center"]
 
 [start=5]
 . Le projet créé est maintenant accessible à partir de la page Projets.
 
-image::projects/ListPage.png[align="center"]
+image::fr/projects/ListPage.png[align="center"]
 
 [id=linkSampleToProject]
 === Lier un échantillon de matériaux à un projet
@@ -36,27 +36,27 @@ Si l'utilisateur n'a pas lié un échantillon à un projet lors de sa création,
 
 . Pour accéder à l'échantillon à partir de la page d'accueil de DINA, cliquez sur `Échantillons de matériaux` dans le sous-menu Collections
 
-image::material-sample/Homepage.png[align="center"]
+image::fr/material-sample/Homepage.png[align="center"]
 
 [start=2]
 . Si l'échantillon n'apparaît pas immédiatement dans la page de liste, l'utilisateur peut le rechercher à l'aide de requêtes dans la page Échantillons de matériaux.
 
-image::material-sample/Search.png[align="center"]
+image::fr/material-sample/Search.png[align="center"]
 
 [start=3]
 . L'utilisateur obtiendra alors des résultats selon les paramètres de recherche fournis. Cliquez sur l'échantillon que vous souhaitez lier à un projet.
 
-image::material-sample/SearchResult.png[align="center"]
+image::fr/material-sample/SearchResult.png[align="center"]
 
 [start=4]
 . Dans la page de consultation de l'échantillon choisi, cliquez sur le bouton `Modifier`.
 
-image::material-sample/Edit.png[align="center"]
+image::fr/material-sample/Edit.png[align="center"]
 
 [start=5]
-. Dans la page de modification, sélectionnez le bon projet dans le champ ou la liste déroulante `Projet`.
+. Dans la page de modification, sélectionnez le bon projet dans le champ ou la liste déroulante `Projets`.
 
-image::projects/Select.png[align="center"]
+image::fr/projects/Select.png[align="center"]
 
 [start=6]
 . Une fois terminé, cliquez sur le bouton `Enregistrer` dans le coin droit de la page. Le lien entre `Échantillon de matériaux` et `Projet` sera alors établi et apparaîtra dans les pages de consultation de l'échantillon et du projet.
