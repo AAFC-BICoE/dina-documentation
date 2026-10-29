@@ -9,19 +9,19 @@ Il existe deux façons de stocker un objet dans DINA et de le lier à un échant
 [id=uploadFirst]
 === Téléverser à partir de la page d'accueil de DINA
 
-. Dans la page d'accueil de DINA, cliquez sur `Téléverser les fichiers` dans le sous-menu Dépôt d'objet
+. Dans la page d'accueil de DINA, cliquez sur `Téléverser les fichiers` dans le sous-menu Dépôt d’objet
 
-image::object-store/Homepage.png[align="center"]
+image::fr/object-store/Homepage.png[align="center"]
 
 [start=2]
 . Dans la page Téléverser les fichiers, « glissez-déposez » l'objet de votre bureau vers la zone prévue à cet effet, ou cliquez sur la zone pour rechercher l'objet au moyen d'une boîte de dialogue.
 
-image::object-store/Upload.png[align="center"]
+image::fr/object-store/Upload.png[align="center"]
 
 [start=3]
-. Une fois l'objet choisi, cliquez sur le bouton `Enregistrer` qui apparaîtra dans le coin inférieur droit de la zone prévue.
+. Une fois l'objet choisi, cliquez sur le bouton `Continue with Batch Entry Form` qui apparaîtra sous la zone prévue. Il est aussi possible d'utiliser le bouton `Continue with Workbook`, qui permet de saisir les métadonnées du fichier au moyen du link:#workbookUpload[téléverseur de classeur].
 
-image::object-store/Save.png[align="center"]
+image::fr/object-store/Save.png[align="center"]
 
 [start=4]
 . L'utilisateur peut maintenant saisir les données relatives au fichier dans la page d'ajout de métadonnées. Une fois terminé, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page. L'utilisateur devrait maintenant pouvoir accéder au fichier téléversé.
@@ -29,53 +29,53 @@ image::object-store/Save.png[align="center"]
 [start=5]
 . Retournez à la page d'accueil de DINA et cliquez sur `Échantillons de matériaux` dans le sous-menu Collections.
 
-image::material-sample/Homepage.png[align="center"]
+image::fr/material-sample/Homepage.png[align="center"]
 
 [start=6]
 . Dans la page de liste Échantillons de matériaux, recherchez l'échantillon auquel l'utilisateur souhaite lier l'objet, puis cliquez dessus.
 
-image::object-store/1-ListPage.png[align="center"]
+image::fr/object-store/1-ListPage.png[align="center"]
 
 [start=7]
 . Dans la page de consultation de l'échantillon, cliquez sur le bouton `Modifier`.
 
-image::object-store/Edit.png[align="center"]
+image::fr/object-store/Edit.png[align="center"]
 
 [start=8]
-. Faites défiler la page jusqu'à la section des pièces jointes de l'échantillon, tout en bas de la page de modification, ou cliquez sur le lien `Pièces jointes de l’échantillon de matériaux` du côté gauche de la page. Une fois rendu, cliquez sur le bouton `Ajouter des pièces jointes` dans la section des pièces jointes de l'échantillon.
+. Faites défiler la page jusqu'à la section des pièces jointes de l'échantillon, tout en bas de la page de modification, ou cliquez sur le lien `Pièces jointes` dans le panneau `Sections` du côté gauche de la page. Une fois rendu, cliquez sur le bouton `Ajouter des pièces jointes` dans la section des pièces jointes de l'échantillon.
 
-image::object-store/AddAttachments.png[align="center"]
+image::fr/object-store/AddAttachments.png[align="center"]
 
 [start=9]
 . Dans la page des pièces jointes, cliquez sur l'option `Joindre des objets existants`, choisissez le ou les objets que l'utilisateur souhaite lier à l'échantillon, puis cliquez sur le bouton `Joindre la sélection` du côté droit de la page.
 
-image::object-store/Attachments.png[align="center"]
+image::fr/object-store/Attachments.png[align="center"]
 
 [start=10]
 . La ou les pièces jointes devraient maintenant apparaître dans la section des pièces jointes de l'échantillon, dans la page de modification. Une fois que l'utilisateur a confirmé que tout est exact, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page.
 
-image::object-store/LastSave.png[align="center"]
+image::fr/object-store/LastSave.png[align="center"]
 
 [id=uploadDirect]
 === Téléverser directement dans un échantillon de matériaux ou un événement de collecte
 . Dans la page d'accueil de DINA, cliquez sur `Échantillons de matériaux` dans le sous-menu Collections.
 
-image::material-sample/Homepage.png[align="center"]
+image::fr/material-sample/Homepage.png[align="center"]
 
 [start=2]
 . Dans la page de liste Échantillons de matériaux, cliquez sur l'échantillon auquel l'utilisateur souhaite lier un objet.
 
-image::object-store/2-ListPage.png[align="center"]
+image::fr/object-store/2-ListPage.png[align="center"]
 
 [start=3]
 . Une fois dans la page de consultation de l'échantillon, cliquez sur le bouton `Modifier` dans le coin supérieur droit de la page.
 
-image::object-store/ROPage.png[align="center"]
+image::fr/object-store/ROPage.png[align="center"]
 
 [start=4]
-. Faites défiler la page jusqu'à la section des pièces jointes de l'échantillon, tout en bas de la page de modification, ou cliquez sur le lien `Pièces jointes de l’échantillon de matériaux` du côté gauche de la page. Une fois rendu, cliquez sur le bouton `Ajouter des pièces jointes` dans la section des pièces jointes de l'échantillon.
+. Faites défiler la page jusqu'à la section des pièces jointes de l'échantillon, tout en bas de la page de modification, ou cliquez sur le lien `Pièces jointes` dans le panneau `Sections` du côté gauche de la page. Une fois rendu, cliquez sur le bouton `Ajouter des pièces jointes` dans la section des pièces jointes de l'échantillon.
 
-image::object-store/AddAttachments.png[align="center"]
+image::fr/object-store/AddAttachments.png[align="center"]
 
 TIP: Les étapes 5 à 7 sont très semblables au téléversement d'un objet décrit dans la link:#uploadFirst[section Téléverser à partir de la page d'accueil de DINA - étapes 2 à 4]
 
@@ -85,7 +85,7 @@ TIP: Les étapes 5 à 7 sont très semblables au téléversement d'un objet déc
 [start=6]
 . Une fois tous les fichiers à lier ajoutés, cliquez sur le bouton `Enregistrer` qui apparaîtra dans le coin inférieur droit de la zone prévue.
 
-image::object-store/SaveUpload.png[align="center"]
+image::fr/object-store/SaveUpload.png[align="center"]
 
 [start=7]
 . Remplissez les données pertinentes pour le ou les fichiers téléversés, puis cliquez sur le bouton `Enregistrer tout` en haut de la page.
@@ -93,5 +93,5 @@ image::object-store/SaveUpload.png[align="center"]
 [start=8]
 . La ou les pièces jointes devraient maintenant apparaître dans la section des pièces jointes de l'échantillon, dans la page de modification. Une fois que l'utilisateur a confirmé que tout est exact, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page.
 
-image::object-store/LastSave.png[align="center"]
+image::fr/object-store/LastSave.png[align="center"]
 

@@ -7,41 +7,41 @@ NOTE: Ce guide suppose que l'utilisateur a déjà téléversé les objets stock�
 
 . Du côté gauche de la page d'accueil de DINA, cliquez sur l'option `Échantillons de matériaux` dans le sous-menu Collections
 
-image::material-sample/Homepage.png[align="center"]
+image::fr/material-sample/Homepage.png[align="center"]
 
 [start=2]
 . Si l'échantillon à lier n'apparaît pas immédiatement dans la page de liste, l'utilisateur peut le rechercher à l'aide de requêtes dans la page Échantillons de matériaux.
 
-image::material-sample/Search.png[align="center"]
+image::fr/material-sample/Search.png[align="center"]
 
 [start=3]
 . L'utilisateur obtiendra alors des résultats selon les paramètres de recherche fournis. Cliquez sur l'échantillon auquel vous souhaitez lier des objets.
 
-image::material-sample/SearchResult.png[align="center"]
+image::fr/material-sample/SearchResult.png[align="center"]
 
 [start=4]
 . Dans la page de consultation de l'échantillon choisi, cliquez sur le bouton `Modifier`.
 
-image::material-sample/Edit.png[align="center"]
+image::fr/material-sample/Edit.png[align="center"]
 
 [start=5]
-. Dans la page de modification, faites défiler jusqu'à la section `Pièces jointes de l’échantillon de matériaux`. L'utilisateur peut aussi cliquer sur l'onglet `Pièces jointes de l’échantillon de matériaux` dans la section des composants de données, comme illustré ci-dessous.
+. Dans la page de modification, faites défiler jusqu'à la section `Pièces jointes de l’échantillon de matériaux`. L'utilisateur peut aussi cliquer sur le lien `Pièces jointes` dans le panneau `Sections`, comme illustré ci-dessous.
 
-image::bulk-linking/DataComponents.png[align="center"]
+image::fr/bulk-linking/DataComponents.png[align="center"]
 
 [start=6]
 . Dans la section des pièces jointes de l'échantillon, cliquez sur le bouton `Ajouter des pièces jointes`.
 
-image::bulk-linking/AddAttachments.png[align="center"]
+image::fr/bulk-linking/AddAttachments.png[align="center"]
 
 [start=7]
 . Une fois dans la page des pièces jointes, l'utilisateur peut rechercher les objets stockés qu'il souhaite lier à l'échantillon ou en téléverser de nouveaux. +
  +
 Pour les besoins de cet exemple, nous sélectionnerons plusieurs objets stockés déjà téléversés pour les lier à l'échantillon, comme illustré ci-dessous. Une fois la sélection faite, cliquez sur le bouton `Joindre la sélection` du côté droit.
 
-image::bulk-linking/AttachSelected.png[align="center"]
+image::fr/bulk-linking/AttachSelected.png[align="center"]
 
 [start=8]
 . Les objets stockés sélectionnés apparaîtront maintenant dans la section des pièces jointes de l'échantillon, dans la page de modification. Une fois que l'utilisateur a confirmé que tout est exact, cliquez sur le bouton `Enregistrer` dans le coin supérieur droit de la page.
 
-image::bulk-linking/Save.png[align="center"]
+image::fr/bulk-linking/Save.png[align="center"]
